@@ -1,0 +1,16 @@
+# Verified with Python 3.13 on Windows; native libarchive required for RAR.
+# Offline installation requires a prepared wheelhouse and native libarchive.
+numpy==2.3.5
+pandas==3.0.1
+scipy==1.15.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+statsmodels==0.14.4
+tifffile==2025.2.18
+h5py==3.12.1
+openpyxl==3.1.5
+pyarrow==19.0.0
+libarchive-c==5.1
+cloudpickle==3.1.2
+joblib==1.6.0
+threadpoolctl==3.7.0

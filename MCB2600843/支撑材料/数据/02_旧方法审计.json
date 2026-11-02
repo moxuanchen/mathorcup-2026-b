@@ -1,0 +1,20 @@
+{
+  "status": "audit_only",
+  "legacy_record": "临时产物/审稿记录/冻结父版v5.1记录/v43_旧触发标定审计.json",
+  "legacy_record_sha256": "8312f7b7fd634b77fd2b57d0be2d8a45daf6e95825d19c3456d1157e74a67fbd",
+  "formal_model_uses_legacy_k": false,
+  "formal_mechanical_regime": "water_controlled",
+  "formal_q_crit_m2s": 67.587745,
+  "formal_C_N0": 85.0,
+  "formal_CN_provenance": "explicit engineering scenario independent of land-cover classes; 75/85/95 sensitivity reported",
+  "formal_temperature_geometry": {
+    "source_elevation_m": 5109.653049,
+    "station_elevation_m": 3980.0,
+    "lapse_K_per_m": 0.006,
+    "offset_C": -6.777918
+  },
+  "legacy_k": 11.19431,
+  "legacy_calibration_note": "v4.3 event-window k remains audit-only and must not be read downstream",
+  "event_window_T_peak": 0.070032,
+  "event_window_T_is_formal": true
+}

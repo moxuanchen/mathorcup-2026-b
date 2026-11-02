@@ -1,0 +1,171 @@
+{
+  "previous_attempts": {
+    "sources": [
+      {
+        "id": "usace_scs_cn",
+        "url": "https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/canopy-surface-infiltration-and-runoff-volume/infiltration/scs-curve-number-loss-model",
+        "retrieved_at_utc": "2026-10-30T03:55:31.707333+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='www.hec.usace.army.mil', port=443): Max retries exceeded with url: /confluence/hmsdocs/hmstrm/canopy-surface-infiltration-and-runoff-volume/infiltration/scs-curve-number-loss-model (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B6D50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "openmeteo_single_runs",
+        "url": "https://open-meteo.com/en/docs/single-runs-api",
+        "retrieved_at_utc": "2026-10-30T03:55:31.707958+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='open-meteo.com', port=443): Max retries exceeded with url: /en/docs/single-runs-api (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B6990>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "openmeteo_hourly",
+        "url": "https://open-meteo.com/en/docs",
+        "retrieved_at_utc": "2026-10-30T03:55:31.708289+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='open-meteo.com', port=443): Max retries exceeded with url: /en/docs (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A051FE00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "cghc_ice_rock",
+        "url": "https://zgdzzhyfzxb.com/cn/article/id/c03144d5-315b-40d3-88ad-1b54f870096b",
+        "retrieved_at_utc": "2026-10-30T03:55:31.708689+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='zgdzzhyfzxb.com', port=443): Max retries exceeded with url: /cn/article/id/c03144d5-315b-40d3-88ad-1b54f870096b (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B6E90>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "jms_cascade",
+        "url": "https://jms.imde.ac.cn/en/article/doi/10.1007/s11629-026-1482-y?viewType=HTML",
+        "retrieved_at_utc": "2026-10-30T03:55:31.709085+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='jms.imde.ac.cn', port=443): Max retries exceeded with url: /en/article/doi/10.1007/s11629-026-1482-y?viewType=HTML (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B6FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "gyirong_open_reconstruction",
+        "url": "https://arxiv.org/html/2609.04563v1",
+        "retrieved_at_utc": "2026-10-30T03:55:31.709348+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /html/2609.04563v1 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B7110>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "icimod_record",
+        "url": "https://lib.icimod.org/records/r745z-mvm84",
+        "retrieved_at_utc": "2026-10-30T03:55:31.709673+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='lib.icimod.org', port=443): Max retries exceeded with url: /records/r745z-mvm84 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B7390>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      },
+      {
+        "id": "csb_guo",
+        "url": "https://www.sciengine.com/CSB/doi/10.1360/CSB-2026-1255",
+        "retrieved_at_utc": "2026-10-30T03:55:31.710002+00:00",
+        "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+        "status": "retrieval_failed",
+        "error": "HTTPSConnectionPool(host='www.sciengine.com', port=443): Max retries exceeded with url: /CSB/doi/10.1360/CSB-2026-1255 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002D7A06B7250>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "usace_scs_cn",
+      "url": "https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/canopy-surface-infiltration-and-runoff-volume/infiltration/scs-curve-number-loss-model",
+      "retrieved_at_utc": "2026-10-30T03:55:58.349102+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status": "retrieval_failed",
+      "error": "HTTPSConnectionPool(host='www.hec.usace.army.mil', port=443): Max retries exceeded with url: /confluence/hmsdocs/hmstrm/canopy-surface-infiltration-and-runoff-volume/infiltration/scs-curve-number-loss-model (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000022210E3FB60>: Failed to resolve 'www.hec.usace.army.mil' ([Errno 11002] getaddrinfo failed)\"))"
+    },
+    {
+      "id": "openmeteo_single_runs",
+      "url": "https://open-meteo.com/en/docs/single-runs-api",
+      "retrieved_at_utc": "2026-10-30T03:55:58.350426+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://open-meteo.com/en/docs/single-runs-api",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/openmeteo_single_runs.html",
+      "bytes": 537422,
+      "sha256": "b26b046b9073b9c8ad3c9b5fd8ffa9ac24a5a21a63b3ee09431995b4df10d73c",
+      "content_type": "text/html; charset=utf-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "openmeteo_hourly",
+      "url": "https://open-meteo.com/en/docs",
+      "retrieved_at_utc": "2026-10-30T03:55:58.352404+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://open-meteo.com/en/docs",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/openmeteo_hourly.html",
+      "bytes": 613407,
+      "sha256": "7c63cb41859f759065a9ac85f919588d16ccbba82d34c483587eec6606e32566",
+      "content_type": "text/html; charset=utf-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "cghc_ice_rock",
+      "url": "https://zgdzzhyfzxb.com/cn/article/id/c03144d5-315b-40d3-88ad-1b54f870096b",
+      "retrieved_at_utc": "2026-10-30T03:55:58.353084+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://zgdzzhyfzxb.com/cn/article/id/c03144d5-315b-40d3-88ad-1b54f870096b",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/cghc_ice_rock.html",
+      "bytes": 312580,
+      "sha256": "b4c6742c3db3dbf8d43ee795660f0094fa860ff0c455bcf8d6ebba89b27f1700",
+      "content_type": "text/html;charset=UTF-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "jms_cascade",
+      "url": "https://jms.imde.ac.cn/en/article/doi/10.1007/s11629-026-1482-y?viewType=HTML",
+      "retrieved_at_utc": "2026-10-30T03:55:58.353737+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://jms.imde.ac.cn/en/article/doi/10.1007/s11629-026-1482-y?viewType=HTML",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/jms_cascade.html",
+      "bytes": 209068,
+      "sha256": "6cf316f8d40fee7d48ab40f9a62699a867cf632ef5ca17bcfe56a5df7ca04b41",
+      "content_type": "text/html;charset=UTF-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "gyirong_open_reconstruction",
+      "url": "https://arxiv.org/html/2609.04563v1",
+      "retrieved_at_utc": "2026-10-30T03:55:58.354354+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://arxiv.org/html/2609.04563v1",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/gyirong_open_reconstruction.html",
+      "bytes": 321554,
+      "sha256": "c4cca81f5bb3219187e577d78750edac725765b70f6137b2ca18105cef8dbd3a",
+      "content_type": "text/html; charset=utf-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "icimod_record",
+      "url": "https://lib.icimod.org/records/r745z-mvm84",
+      "retrieved_at_utc": "2026-10-30T03:55:58.354893+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://lib.icimod.org/records/r745z-mvm84",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/icimod_record.html",
+      "bytes": 54226,
+      "sha256": "50ceef5b0bf3dacd7679cfbc13708c58c1495871cbffe7256388c319d6204837",
+      "content_type": "text/html; charset=utf-8",
+      "status": "retrieved"
+    },
+    {
+      "id": "csb_guo",
+      "url": "https://www.sciengine.com/CSB/doi/10.1360/CSB-2026-1255",
+      "retrieved_at_utc": "2026-10-30T03:55:58.355363+00:00",
+      "purpose": "definition_or_independent_research_not_automatically_a_forecast_input",
+      "status_code": 200,
+      "final_url": "https://www.sciengine.com/CSB/doi/10.1360/CSB-2026-1255",
+      "response_file": "临时产物/外部数据/硬伤核查原始资料/csb_guo.html",
+      "bytes": 3133,
+      "sha256": "0f9881aecddd6a32337c058347951fb5e966e06c7403d304f9740a7bebb299dc",
+      "content_type": "text/html; charset=utf-8",
+      "status": "retrieved"
+    }
+  ]
+}

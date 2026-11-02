@@ -1,0 +1,42 @@
+[
+  {
+    "period": "2000-01-01_2005-01-01",
+    "n_tiles": 14,
+    "mean_dhdt_m_per_yr": -0.030307516605297274,
+    "mean_err_m_per_yr": 2.9060296194364192,
+    "valid_cells": 5999717,
+    "error_valid_cells": 5999717,
+    "aggregation": "valid_cell_weighted_v2",
+    "interpretation": "regional static background; mean error is not standard error of regional mean"
+  },
+  {
+    "period": "2005-01-01_2010-01-01",
+    "n_tiles": 14,
+    "mean_dhdt_m_per_yr": -0.03279472929551783,
+    "mean_err_m_per_yr": 1.8177824468663022,
+    "valid_cells": 5999717,
+    "error_valid_cells": 5999717,
+    "aggregation": "valid_cell_weighted_v2",
+    "interpretation": "regional static background; mean error is not standard error of regional mean"
+  },
+  {
+    "period": "2010-01-01_2015-01-01",
+    "n_tiles": 14,
+    "mean_dhdt_m_per_yr": -0.03352370454635605,
+    "mean_err_m_per_yr": 2.0630756479236663,
+    "valid_cells": 5999717,
+    "error_valid_cells": 5999717,
+    "aggregation": "valid_cell_weighted_v2",
+    "interpretation": "regional static background; mean error is not standard error of regional mean"
+  },
+  {
+    "period": "2015-01-01_2020-01-01",
+    "n_tiles": 14,
+    "mean_dhdt_m_per_yr": -0.03708447886243344,
+    "mean_err_m_per_yr": 3.3895229985231237,
+    "valid_cells": 5999717,
+    "error_valid_cells": 5999717,
+    "aggregation": "valid_cell_weighted_v2",
+    "interpretation": "regional static background; mean error is not standard error of regional mean"
+  }
+]

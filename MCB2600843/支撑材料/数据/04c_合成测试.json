@@ -1,0 +1,32 @@
+{
+  "tests_run": 23,
+  "passed": true,
+  "failures": [],
+  "errors": [],
+  "test_names": [
+    "test_M2_unique_mapping",
+    "test_degenerate_limits",
+    "test_flat_never_finite_stop",
+    "test_inventory_once_and_energy",
+    "test_inverse_internal_bottleneck",
+    "test_inverse_terminal_forward",
+    "test_inverse_with_nodes_and_M2",
+    "test_kappa_zero_energy_line",
+    "test_near_terminal",
+    "test_no_zero_velocity_restart",
+    "test_ode_all_signs_and_terminal_sides",
+    "test_requested_mode_resolution",
+    "test_signed_uphill_and_first_stop",
+    "test_stationary_mixing",
+    "test_stop_ode_and_finite_time",
+    "test_subdivision_fixed_nodes",
+    "test_subdivision_stop",
+    "test_target_inside_segment",
+    "test_terminal_exact",
+    "test_timeout_unknown",
+    "test_unvisited_inventory_remains",
+    "test_zero_speed_target_contact",
+    "test_zero_stock_identity"
+  ],
+  "randomness": "none; deterministic synthetic cases"
+}

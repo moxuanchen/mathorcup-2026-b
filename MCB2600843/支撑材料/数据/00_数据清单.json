@@ -1,0 +1,227 @@
+{
+  "station": {
+    "name": "吉隆高寒山区综合观测站",
+    "lon": 85.3,
+    "lat": 28.4,
+    "elev_m": 3978.85,
+    "elev_m_deprecated": 3955.0,
+    "elev_m_note": "elev_m 取本站气压反演值 3978.85 m；elev_m_deprecated = 3955.0 为 v2 遗留配置值，旧版推断值仅留作审计痕迹，不作为站点海拔。elev_m 不参与任何下游计算。",
+    "period": [
+      "2021-04-23 11:00",
+      "2026-08-27 08:00"
+    ],
+    "index_first": "2021-01-01 00:00",
+    "note": "坐标为吉隆沟高寒山区假定代表点（原始 CSV 无站点元数据）；海拔为标准大气由本站气压反演值，非实测安装高度；逐时序列按 2021-01-01 00:00 起的完整小时轴重采样，故 rows 大于 period 跨度对应的小时数；反演细节见 求解结果/数据/00_站点元信息.json 的 elevation_inferred_m",
+    "rows": 49545,
+    "valid_first": "2021-04-23 11:00:00",
+    "valid_last": "2026-08-27 08:00:00",
+    "valid_hours": 46755,
+    "missing_fraction_by_family": {
+      "风速": 0.07583812695529317,
+      "气温": 0.05613079019073569,
+      "相对湿度": 0.05624381875063074,
+      "降水": 0.05617115753355535,
+      "辐射": 0.07939247149056414,
+      "土壤温湿": 0.05764860228075487,
+      "湍流": 0.22508426682813604
+    },
+    "pressure_median_hPa": 618.1,
+    "elevation_inferred_m": 3978.8492663700695,
+    "precip_annual_sum_mm": {
+      "2021": 244.6,
+      "2022": 190.8,
+      "2023": 135.4,
+      "2024": 256.8,
+      "2025": 265.8,
+      "2026": 193.4
+    },
+    "precip_max_hourly_mm": 20.8,
+    "ta_2m_mean": 4.148501817637499,
+    "ws_10m_mean": 2.1113793245648305,
+    "energy_balance_closure": {
+      "n": 12032,
+      "slope": 0.36744895482059703,
+      "intercept": 20.31720315305664,
+      "r2": 0.6060527259035972,
+      "ratio_sum": 0.42110437844378595
+    }
+  },
+  "temperature": {
+    "county_count": 5,
+    "first": "2005-01-01",
+    "last": "2025-08-02",
+    "rows": 7519,
+    "columns": [
+      "吉隆县",
+      "聂拉木县",
+      "萨嘎县",
+      "定日县",
+      "昂仁县"
+    ]
+  },
+  "hazards": {
+    "count": 84,
+    "types": {
+      "降雨型": 41,
+      "冰水混合型": 25,
+      "冰雪融水型": 16,
+      "冰湖溃决型": 2
+    },
+    "scales": {
+      "中": 45,
+      "小": 30,
+      "大": 7,
+      "特大": 2
+    },
+    "frequencies": {
+      "高": 37,
+      "中": 26,
+      "低": 21
+    },
+    "lon_range": [
+      85.12710816,
+      85.48191153
+    ],
+    "lat_range": [
+      28.302233166,
+      28.92784776
+    ],
+    "grad_range": [
+      0.0838369340937,
+      0.83063884402
+    ],
+    "relief_range": [
+      138.0,
+      4291.0
+    ]
+  },
+  "dem": {
+    "shape": [
+      1148,
+      1816
+    ],
+    "grid": {
+      "lon0": 85.18989464800161,
+      "lat0": 28.564243413597275,
+      "dlon": 0.0002777467191455384,
+      "dlat": -0.00027774196409497727,
+      "anchor": "pixel_center",
+      "raster_type": 1,
+      "preprocess_version": "qc-center-v4"
+    },
+    "elev_range": [
+      1620.91015625,
+      7254.47705078125
+    ],
+    "cell_m": [
+      27.155380395615147,
+      30.711039937838017
+    ]
+  },
+  "landcover": {
+    "shape": [
+      3957,
+      6336
+    ],
+    "grid": {
+      "lon0": 84.45111393348247,
+      "lat0": 29.321684610124272,
+      "dlon": 0.0002694945852358567,
+      "dlat": -0.00026949458523585663,
+      "anchor": "pixel_center",
+      "raster_type": 1,
+      "preprocess_version": "qc-center-v4"
+    },
+    "classes": {
+      "覆被原码0": 0.5531519149672106,
+      "覆被原码1": 0.00059386032424319,
+      "覆被原码2": 0.020005183564224503,
+      "覆被原码3": 0.011569168115320504,
+      "覆被原码4": 0.17727378823616505,
+      "覆被原码5": 0.12998369626260073,
+      "覆被原码6": 0.015083828875053287,
+      "覆被原码7": 0.06148235258830407,
+      "覆被原码8": 0.00020876250500966194,
+      "覆被原码9": 2.261527327865463e-05,
+      "覆被原码10": 0.030624829288589714
+    }
+  },
+  "glacier_dhdt": [
+    {
+      "period": "2000-01-01_2005-01-01",
+      "n_tiles": 14,
+      "mean_dhdt_m_per_yr": -0.030307516605297274,
+      "mean_err_m_per_yr": 2.9060296194364192,
+      "valid_cells": 5999717,
+      "error_valid_cells": 5999717,
+      "aggregation": "valid_cell_weighted_v2",
+      "interpretation": "regional static background; mean error is not standard error of regional mean"
+    },
+    {
+      "period": "2005-01-01_2010-01-01",
+      "n_tiles": 14,
+      "mean_dhdt_m_per_yr": -0.03279472929551783,
+      "mean_err_m_per_yr": 1.8177824468663022,
+      "valid_cells": 5999717,
+      "error_valid_cells": 5999717,
+      "aggregation": "valid_cell_weighted_v2",
+      "interpretation": "regional static background; mean error is not standard error of regional mean"
+    },
+    {
+      "period": "2010-01-01_2015-01-01",
+      "n_tiles": 14,
+      "mean_dhdt_m_per_yr": -0.03352370454635605,
+      "mean_err_m_per_yr": 2.0630756479236663,
+      "valid_cells": 5999717,
+      "error_valid_cells": 5999717,
+      "aggregation": "valid_cell_weighted_v2",
+      "interpretation": "regional static background; mean error is not standard error of regional mean"
+    },
+    {
+      "period": "2015-01-01_2020-01-01",
+      "n_tiles": 14,
+      "mean_dhdt_m_per_yr": -0.03708447886243344,
+      "mean_err_m_per_yr": 3.3895229985231237,
+      "valid_cells": 5999717,
+      "error_valid_cells": 5999717,
+      "aggregation": "valid_cell_weighted_v2",
+      "interpretation": "regional static background; mean error is not standard error of regional mean"
+    }
+  ],
+  "census": {
+    "地名": "吉隆县",
+    "区划码": 540234.0,
+    "县级": "吉隆县",
+    "县级码": 540234.0,
+    "县级类": "县",
+    "地级": "日喀则市",
+    "地级码": 540200.0,
+    "地级类": "地级市",
+    "省级": "西藏自治区",
+    "省级码": 540000.0,
+    "省级类": "自治区",
+    "合计": 17536.0,
+    "男": 9338.0,
+    "女": 8198.0,
+    "性别比": 113.91,
+    "非汉族": 91.58,
+    "城镇人": 5015.0,
+    "乡村人": 12521.0,
+    "城区人": 0.0,
+    "户数": 4845.0,
+    "人口数": 16155.0,
+    "户规模": 3.33,
+    "一人户": 1394.0,
+    "一代户": 1909.0,
+    "二代户": 2028.0,
+    "三代户": 885.0,
+    "四代以": 23.0
+  },
+  "event": {
+    "name": "2026-08-26 吉隆口岸冰崩-泥石流",
+    "datetime_local": "2026-08-26 10:30",
+    "port_lon": 85.3826,
+    "port_lat": 28.2826,
+    "port_note": "量图近似位置，非题面给定、非实测；候选位置仍待现场核实；重演见求解结果/数据/06_坐标敏感性.json"
+  }
+}

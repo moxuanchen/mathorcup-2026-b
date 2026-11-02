@@ -1,0 +1,57 @@
+{
+  "training_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "PDD3": {
+    "threshold": 990.124,
+    "q": 0.95,
+    "n_days": 607,
+    "ci": [
+      954.77,
+      1002.44
+    ],
+    "bootstrap": "year-block"
+  },
+  "rise24": {
+    "threshold": 1.349417,
+    "q": 0.95,
+    "n_days": 610,
+    "ci": [
+      1.268894,
+      1.391042
+    ],
+    "bootstrap": "year-block"
+  },
+  "PDD_unit": "sum of positive hourly temperatures over 3 complete natural days, C*h",
+  "rise_definition": "difference of adjacent natural-day mean temperature, 24h",
+  "2026_observation_period": {
+    "observed_days": 238,
+    "candidate_days": 75,
+    "candidate_day_rate": 0.315126,
+    "first_date": "2026-01-01 00:00:00",
+    "last_date": "2026-08-26 00:00:00"
+  },
+  "2026_warm_observed": {
+    "observed_days": 87,
+    "candidate_days": 46,
+    "candidate_day_rate": 0.528736,
+    "first_date": "2026-06-01 00:00:00",
+    "last_date": "2026-08-26 00:00:00"
+  },
+  "event_day": {
+    "PDD3_C_h": 958.31,
+    "rise24_C": -0.153333,
+    "rain_mm": 0.0,
+    "rain_candidate": 0.0,
+    "melt_candidate": 0.0,
+    "PDD3_valid_hours": 72.0,
+    "Tw": 0.0
+  },
+  "daily_file": "02_逐日候选水源.csv",
+  "rain_screen": "complete process span/intensity evaluated retrospectively",
+  "interpretation": "candidate/alert-day rate is not a true false-alarm rate; unlabelled days are not confirmed negatives"
+}

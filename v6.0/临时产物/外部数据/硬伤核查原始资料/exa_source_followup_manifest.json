@@ -1,0 +1,47 @@
+[
+  {
+    "provider": "Exa",
+    "request": {
+      "query": "\"Langtang Lirung\" \"2026\" precursor displacement data release time Zenodo",
+      "numResults": 5,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T05:20:34.512318+00:00",
+    "response_file": "exa_source_followup_5.json",
+    "response_sha256": "017465cc064d64fa002bbee0526695f7287bd229a749f77f2e60485317b3fe7c",
+    "status_code": 200
+  },
+  {
+    "provider": "Exa",
+    "request": {
+      "query": "\"23466792\" source displacement time series data",
+      "numResults": 5,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T05:20:41.520963+00:00",
+    "response_file": "exa_source_followup_6.json",
+    "response_sha256": "9502e8cb22a5ca73ed8fbd10705cdbfc623bc06f7e57a5203a0d30ab54b2b143",
+    "status_code": 200
+  },
+  {
+    "provider": "Exa",
+    "request": {
+      "query": "\"Cascading Ice–Rock Avalanche Multi-Hazard Early Warning\" precursor data release prediction",
+      "numResults": 5,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T05:20:42.909761+00:00",
+    "response_file": "exa_source_followup_7.json",
+    "response_sha256": "ee4bf4e32ae80334fc62e915cc3dcb65bac643749fbb9eb11ae5a20d807558f9",
+    "status_code": 200
+  }
+]

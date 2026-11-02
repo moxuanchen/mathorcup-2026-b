@@ -1,0 +1,31 @@
+{
+  "training_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "horizon_h": 1,
+  "wet_threshold_mm_h": 0.1,
+  "wet_training_frequency": 0.028142,
+  "persistence_weight": 0.574161,
+  "BS": 0.022059,
+  "BS_climate": 0.03561,
+  "BSS": 0.380536,
+  "n_test_hours": 5719,
+  "T_diurnal_persistence": {
+    "RMSE_C": 0.795836,
+    "MAE_C": 0.551971,
+    "n": 5721
+  },
+  "T_plain_persistence": {
+    "RMSE_C": 1.508536,
+    "MAE_C": 1.145947,
+    "n": 5721
+  },
+  "hourly_file": "02_逐小时气象基线.csv",
+  "missing_not_filled": true,
+  "BSS_interpretation": "positive=better than frozen climatology, nonpositive=no skill",
+  "limitation": "retrospective one-hour baseline, not an external weather forecast; temperature and rain intensity are not Brier probabilities"
+}

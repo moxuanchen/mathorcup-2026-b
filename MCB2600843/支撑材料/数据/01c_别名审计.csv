@@ -1,0 +1,4 @@
+﻿excluded,included,reason
+Pmax_1h,P,1 h滑动最大值与同一小时P的NaN掩膜和数值逐行相同，是别名重复
+ustar,USTAR,ustar为USTAR的非负掩膜派生列，不另计物理候选
+TKE_obs,TKE,TKE_obs为TKE的非负掩膜派生列，不另计物理候选

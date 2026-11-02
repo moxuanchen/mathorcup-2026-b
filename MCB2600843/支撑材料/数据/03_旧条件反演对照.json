@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "legacy_audit_only_not_used",
+  "source_audit": {
+    "path": "临时产物/审稿记录/冻结父版v5.1记录/v43_旧反演审计.json",
+    "sha256": "f3bccde9bc6e15f3b8227b87cd9895a77ecd6af191ade9da8c23f77d3232387f"
+  },
+  "legacy_record": {
+    "source_file": "求解结果/数据/03_时间置信区间.json",
+    "source_file_sha256": "4ff945a3ff85072b8e0c302e651c5e13170a5e4ef309a72efcdc58a45c131028",
+    "physical_source_inverse": {
+      "n": 2000,
+      "seed": 20260826,
+      "minimum_valid": 100,
+      "status": "available",
+      "counts": {
+        "natural_stop": 1581,
+        "arrival": 419
+      },
+      "conditional_source_interval_h": [
+        7.7351977051162075,
+        9.618791108771083
+      ],
+      "conditional_source_median_h": 8.75784621261008,
+      "geometry_options": [
+        {
+          "name": "DEM4_surface",
+          "valid": true,
+          "drop_m": 1459.4120120000002,
+          "horizontal_m": 2041.449140396932,
+          "fall_s": 29.665131185076934,
+          "terminal_m_s": 169.18594981546076,
+          "passage_duration_diagnostic_s": 1.4111552602475883,
+          "clock": "source release to common injection; passage duration is not serial travel delay"
+        },
+        {
+          "name": "DEM4_bed_plus_ice",
+          "valid": true,
+          "drop_m": 1512.7686520000002,
+          "horizontal_m": 2041.449140396932,
+          "fall_s": 29.501874464307907,
+          "terminal_m_s": 172.25093730447912,
+          "passage_duration_diagnostic_s": 1.3860455378541716,
+          "clock": "source release to common injection; passage duration is not serial travel delay"
+        }
+      ],
+      "condition": "known port hit, valid geometry and arrival within 21600 s",
+      "prior": {
+        "log_volume": "N(0,.25^2)",
+        "n": "U(.06,.14)",
+        "width_multiplier": "U(.5,2)",
+        "Tpass_s": "U(300,2700)",
+        "mu": "empirical large/very large, with replacement",
+        "E0": "U(0,400)",
+        "height_semantics": "two choices, .5 each",
+        "independence": "engineering assumption"
+      },
+      "scope": "post-event conditional parameter inverse, not validated frequentist CI or advance prediction",
+      "volume_prior_std": 0.2580408130580705,
+      "prior_width_sensitivity": {
+        "change": "log-volume sigma .25 to .50, other priors fixed and seed paired",
+        "counts": {
+          "natural_stop": 1581,
+          "arrival": 419
+        },
+        "conditional_source_interval_h": [
+          7.5310965194104815,
+          9.676151341442077
+        ]
+      }
+    },
+    "scope": "v4.3 post-event conditional inverse retained only as an audit record; not an input to v5.0 prediction, coverage, warning or propagation"
+  },
+  "downstream_use": {
+    "forward_forecast": false,
+    "coverage": false,
+    "warning": false,
+    "propagation": false
+  },
+  "scope": "v4.3 post-event conditional inverse retained only as an audit record; not an input to v5.0 prediction, coverage, warning or propagation"
+}

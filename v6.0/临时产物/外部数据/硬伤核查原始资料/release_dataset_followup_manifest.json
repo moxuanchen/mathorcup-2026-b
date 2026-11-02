@@ -1,0 +1,130 @@
+[
+  {
+    "id": "figshare_34559436",
+    "url": "https://api.figshare.com/v2/articles/34559436",
+    "error": "403 Client Error: Forbidden for url: https://api.figshare.com/v2/articles/34559436"
+  },
+  {
+    "id": "zenodo_22676918",
+    "url": "https://zenodo.org/api/records/22676918",
+    "sha256": "91102d462bfc7ded5510decd0d58419593c81611585c9015bf758420bf2c61cd",
+    "retrieved_at_utc": "2026-10-30T05:21:00.078671+00:00",
+    "metadata": {
+      "title": "Derived data, figures and analysis code for calibrated Sentinel-1 detection limits before the 26 August 2026 Langtang Lirung rock–ice avalanche, Nepal",
+      "description": "<p>Analysis code, derived figures and supporting data for a study of what routine Sentinel-1 products contained on the source face of the 26 August 2026 Langtang Lirung rock&ndash;ice avalanche, at the last acquisition before failure. Three quantities are tested on a 500 m disc over the detachment &mdash; backscatter amplitude, interferometric coherence, and line-of-sight displacement from unwrapped phase &mdash; each against 120 control discs elsewhere in the same scene, matched on local incidence angle, aspect and slope, and against the source's own history over the preceding two months. The last usable descending acquisition precedes failure by 50.6 hours.</p>\n<p>This archive contains four Python scripts, three figures, one terrain geometry export and one seismic catalogue query. The scripts reproduce every reported value: coherence and single-pair displacement statistics against matched controls; the chained five-interval displacement test; track A amplitude under the incidence filter; and the coherence statistics computed at two candidate disc centres. All control-disc draws use a fixed seed and are deterministic.</p>\n<p>The Sentinel-1 products themselves are not included, being large and freely redistributable from their sources. The README gives the six HyP3 INSAR_GAMMA date pairs to order from the Alaska Satellite Facility, the area of interest bounds, the download settings, and both Copernicus Data Space evalscripts verbatim. Two inputs that cannot be regenerated identically are included: the terrain geometry export for frame 499, which was produced interactively from the Copernicus Data Space Browser, and the ANSS Comprehensive Catalog query result, since the catalogue is revised over time and one of its two entries was updated during the analysis.</p>\n<p>Expected output is stated in the README so that a reader can check their own run. On the source disc, 8,911 pixels at 10 m, with a median local incidence angle of 71.0 degrees and 24.6 per cent in radar shadow, restriction to incidence at or below 70 degrees and outside shadow leaves 3,945 usable pixels. The fraction of that disc below coherence 0.15 runs 4.1, 6.2, 1.1, 8.8 and 5.3 per cent across five quiet twelve-day intervals and reaches 18.0 per cent for the interval containing the failure, a departure of 4.57 standard deviations. Line-of-sight displacement across the 120 control discs scatters by 6.13 mm at one standard deviation and correlates with disc elevation at r = &minus;0.72.</p>\n<p>The README records one defect found and corrected during the work. An earlier version of the coherence script gated the unwrapped phase on whichever coherence file appeared first on the command line rather than on the pair the phase belongs to, so its output depended on argument order. The version archived here matches the phase product to its own coherence file by the date-pair prefix of the HyP3 filename, and is invariant to argument order. Values of 6.17 mm and r = &minus;0.75 in any earlier circulated version are superseded by 6.13 mm and r = &minus;0.72.</p>\n<p>This archive supports the preprint Calibrated detection limits in routine Sentinel-1 products 50.6 hours before the Langtang Lirung rock&ndash;ice avalanche, Nepal, EarthArXiv doi:10.31223/X5KZ3G. This is version 2.0.0. Version 1.0.0 of this record holds the derived data, figures and code for the companion amplitude study, Sah (2026), EarthArXiv doi:10.31223/X59N5N, and remains permanently accessible. The two versions contain different work rather than a correction of one by the other.</p>\n<p>Code is released under the MIT Licence and derived figures under CC BY 4.0. Contains modified Copernicus Sentinel data 2017&ndash;2026. Sentinel-1 products are available from the Copernicus Data Space Ecosystem and the Alaska Satellite Facility; seismic catalogue data from the USGS ANSS Comprehensive Catalog.</p>",
+      "files": [
+        {
+          "id": "ed49308c-b6c5-48bb-a4f6-cbb46c812ed5",
+          "key": "trackA_amplitude_lia_filter.py",
+          "size": 5456,
+          "checksum": "md5:b3c53065782bddc57a1d26da342c9209",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/trackA_amplitude_lia_filter.py/content"
+          }
+        },
+        {
+          "id": "fdd79210-733f-41bb-b23a-31a2b26130be",
+          "key": "usgs_anss_query_30day.csv",
+          "size": 506,
+          "checksum": "md5:d5318bf30ce9e492811fc1c905d4198b",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/usgs_anss_query_30day.csv/content"
+          }
+        },
+        {
+          "id": "29bffe32-638b-43a7-a117-05bab5aa560f",
+          "key": "cumulative_displacement.py",
+          "size": 8287,
+          "checksum": "md5:7badf1895a26f20a5a6ded6f12eb8832",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/cumulative_displacement.py/content"
+          }
+        },
+        {
+          "id": "4aa376e5-c78e-4618-a935-875f0bf8e213",
+          "key": "README.md",
+          "size": 6205,
+          "checksum": "md5:ff1dc1293ce5879ae06363a6dc2175b8",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/README.md/content"
+          }
+        },
+        {
+          "id": "a72a4b70-9087-440e-9410-9b5cdca9961e",
+          "key": "placement_test.py",
+          "size": 2481,
+          "checksum": "md5:7af75ab6ae56c5b6367bdd62cabaa6be",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/placement_test.py/content"
+          }
+        },
+        {
+          "id": "d0f08152-df43-441d-a5e2-f3102c645a3c",
+          "key": "geometry_frame499_2026-08-19.tiff",
+          "size": 14884735,
+          "checksum": "md5:e257d6df6e89dc0c2e6395251befe673",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/geometry_frame499_2026-08-19.tiff/content"
+          }
+        },
+        {
+          "id": "369d6051-48cb-48e4-afca-1547d7c71707",
+          "key": "fig_p2_2_geometry_matching.png",
+          "size": 89168,
+          "checksum": "md5:a0e48779e757ebe0a86db575acd0cb44",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/fig_p2_2_geometry_matching.png/content"
+          }
+        },
+        {
+          "id": "e9404047-827c-4180-9be1-313923aedc19",
+          "key": "coherence_test.py",
+          "size": 7890,
+          "checksum": "md5:61344af34012637dd57c3d99ac93b87a",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/coherence_test.py/content"
+          }
+        },
+        {
+          "id": "dd9647b9-648f-4770-b504-69de1877aba0",
+          "key": "fig_p2_1_coherence_series.png",
+          "size": 129748,
+          "checksum": "md5:d3a30d0d4bce5dd15c047e82f07fdcb9",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/fig_p2_1_coherence_series.png/content"
+          }
+        },
+        {
+          "id": "a33ae844-7e86-4215-aa38-900480288eb5",
+          "key": "fig_p2_3_phase_noise_floor.png",
+          "size": 147163,
+          "checksum": "md5:61153cbea52b3246d01cd995d739bf3e",
+          "links": {
+            "self": "https://zenodo.org/api/records/22676918/files/fig_p2_3_phase_noise_floor.png/content"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "zenodo_22717809",
+    "url": "https://zenodo.org/api/records/22717809",
+    "sha256": "60d20ff0c9f11b13433617b792ba5dfd9bc0121b1c227f5d0c08eea2364912e8",
+    "retrieved_at_utc": "2026-10-30T05:20:59.992292+00:00",
+    "metadata": {
+      "title": "Data and code for: Optical and radar signals before the 2026 Gyirong cascade (v1.2.1)",
+      "description": "Derived Sentinel-1/2 area-of-interest metrics, full Sentinel-1 RTC amplitude-offset pair table, control-glacier albedo comparison, RGI 7.0 hanging-ice/TSI tables, topographic summaries and derived 30 m grids, provisional third-party InSAR annotation metadata, dry-season HyP3-MintPy SBAS quality assurance, AGU-compliant Supporting Information (Text S1-S5, Tables S1-S4), figure scripts and configurations for the GRL Research Letter on the 26 August 2026 Langtang Lirung-Gyirong ice-rock avalanche cascade (manuscript 2026GL126799). Does not include the third-party InSAR provider GeoTIFF (provisional annotation metadata only) or the ~67 GB HyP3 interferogram archives (recoverable from ASF with the deposited job manifest and configurations). Code: MIT. Derived data: CC-BY-4.0.",
+      "files": [
+        {
+          "id": "f23b9aee-a701-470f-9653-511296c2d98a",
+          "key": "gyirong_grl_open_research_v1.2.1.zip",
+          "size": 10161648,
+          "checksum": "md5:0342c9863fdc74dc74b67e0468550fa2",
+          "links": {
+            "self": "https://zenodo.org/api/records/22717809/files/gyirong_grl_open_research_v1.2.1.zip/content"
+          }
+        }
+      ]
+    }
+  }
+]

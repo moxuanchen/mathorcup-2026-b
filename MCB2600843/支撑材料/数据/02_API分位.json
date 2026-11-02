@@ -1,0 +1,21 @@
+{
+  "q1": 3.574888,
+  "q3": 10.194567,
+  "source": "2021-2025 June-September observed training sample",
+  "training_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "training_months": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "training_valid_hours": 14640,
+  "index_start": "2021-01-01 00:00:00",
+  "index_end": "2026-08-27 08:00:00"
+}

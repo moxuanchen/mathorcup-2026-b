@@ -1,0 +1,2 @@
+﻿event_id,target_definition,status,first_alarm_time,actionable_alarm_time,port_hit_time,lead_trigger_lower,lead_trigger_upper,lead_port,missed_alarm,late_alarm,reason
+port_hit_20260826_1030,true_debris_flow_warning,not_estimable_release_model_unidentified,,,2026-08-26T10:30:00+08:00,,,,,,melt advisory and instant-release transport do not determine actual release

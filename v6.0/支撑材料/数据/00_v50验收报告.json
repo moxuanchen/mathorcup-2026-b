@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "errors": [],
+  "checks": {
+    "q1": {
+      "candidate_count": 31,
+      "top5": [
+        "API",
+        "Rn",
+        "rise_24h",
+        "VWC_0.1m",
+        "LE"
+      ],
+      "reference_windows": 93,
+      "candidate_full_ranking_rows": {
+        "168h": 31,
+        "72h": 31
+      },
+      "cluster_full_ranking_rows": {
+        "168h": 16,
+        "72h": 16
+      }
+    },
+    "q2": {
+      "mechanical_states": {
+        "water_controlled": 78,
+        "gravity_unstable": 6
+      },
+      "rank_tests": {
+        "sample_n": 78,
+        "zero_or_not_evaluable_n": 6,
+        "total_flow_Q_crit_m3s": {
+          "kendall_vs_scale": {
+            "tau": 0.408386,
+            "p_value": 5.471436410144295e-06,
+            "p_display": "5.471436e-06"
+          },
+          "kendall_vs_frequency": {
+            "tau": -0.124797,
+            "p_value": 0.1590323701011872,
+            "p_display": "1.590324e-01"
+          },
+          "spearman_vs_scale": {
+            "rho": 0.498676,
+            "p_value": 3.3745699520687622e-06,
+            "p_display": "3.374570e-06"
+          }
+        },
+        "unit_width_q_crit_m2s": {
+          "kendall_vs_scale": {
+            "tau": 0.318602,
+            "p_value": 0.0003904720246143714,
+            "p_display": "3.904720e-04"
+          },
+          "kendall_vs_frequency": {
+            "tau": -0.130544,
+            "p_value": 0.14069957923181514,
+            "p_display": "1.406996e-01"
+          },
+          "spearman_vs_scale": {
+            "rho": 0.40062,
+            "p_value": 0.0002784782801479891,
+            "p_display": "2.784783e-04"
+          }
+        },
+        "note": "总起动流量Q_crit= q_crit B/kappa与单宽起动流量q_crit的秩检验分别保存；p值以双精度结果和科学计数法并列保存，零表示禁止静默下溢。"
+      },
+      "formal_qcrit_m2s": 67.587745,
+      "event_window_T_peak": 0.070032,
+      "formal_C_N0": 85.0,
+      "cn_scenarios": {
+        "75": {
+          "C_N0": 75.0,
+          "is_formal_scenario": false,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 748.061601,
+          "rain_2026_Qrain_peak_m3s": 202.468683,
+          "rain_2026_runoff_sum_mm": 4.642622
+        },
+        "85": {
+          "C_N0": 85.0,
+          "is_formal_scenario": true,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 1896.221099,
+          "rain_2026_Qrain_peak_m3s": 669.308332,
+          "rain_2026_runoff_sum_mm": 56.775899
+        },
+        "95": {
+          "C_N0": 95.0,
+          "is_formal_scenario": false,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 1947.765274,
+          "rain_2026_Qrain_peak_m3s": 686.78612,
+          "rain_2026_runoff_sum_mm": 67.605074
+        }
+      },
+      "legacy_k_audit_only": true
+    },
+    "q3": {
+      "issue_time_local": "2026-08-26T08:00:00+08:00",
+      "legacy_audit_output": "求解结果/数据/03_旧条件反演对照.json",
+      "legacy_audit_sha256": "307ac1c59ecbd92842a0cb5247566b615361b57015f5e2184a91d60bf074b1af",
+      "source_state_counts": {
+        "finite": 3000,
+        "no_event": 0,
+        "active_at_issue": 0,
+        "right_censored": 0,
+        "not_evaluable": 0
+      },
+      "arrival_state_counts": {
+        "finite": 3000,
+        "no_event": 0,
+        "active_at_issue_left_censored": 0,
+        "no_arrival": 0,
+        "right_censored": 0,
+        "not_evaluable": 0
+      },
+      "source_interval_utc": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_scenario_interval_utc": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_scenario_single_event_inclusion": true,
+      "runout_terminal_flag_counts": {
+        "natural_stop": 0,
+        "time_limit_nonarrival": 0,
+        "right_censored": 3000
+      },
+      "true_trigger_coverage": "not_estimable",
+      "actual_port_coverage": null,
+      "actual_disaster_warning_lead_h": null,
+      "melt_advisory_information_lead_h": 2.5
+    },
+    "q4": {
+      "d8_config_count": 16,
+      "baseline_arrival_port_s": 1965.9961740103686,
+      "runout_L_m": 26045.494670325385,
+      "runout_right_censored": true,
+      "domain_front_max_m": 26045.494670325385,
+      "terminal_flags": {
+        "termination_reason": "domain_censor",
+        "natural_stop": false,
+        "time_limit": false,
+        "step_limit": false,
+        "domain_censor": true
+      }
+    }
+  },
+  "scope": "deterministic result-chain integrity only; not physical validation or task completion",
+  "task_completion": {
+    "status": "blocked",
+    "release_eligible": false,
+    "unmet_requirements": [
+      "Q3 identifiable real release/formation-time forecast and its 95% interval",
+      "Q3 real disaster warning and independently evaluable coverage"
+    ],
+    "reason": "melt onset and instant-release transport are auxiliary scenarios, not the requested target"
+  }
+}

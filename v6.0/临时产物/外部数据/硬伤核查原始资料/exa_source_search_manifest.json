@@ -1,0 +1,74 @@
+[
+  {
+    "provider": "Exa",
+    "endpoint": "https://api.exa.ai/search",
+    "request": {
+      "query": "\"s10346-026-02842-6\" displacement source data time series download",
+      "numResults": 6,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T04:14:42.183465+00:00",
+    "response_file": "exa_source_search_1.json",
+    "response_sha256": "a7e4cdba807d1b94ecd4b29074ef30009603ad9205b5af3778acd18bfd13a05d",
+    "bytes": 65146,
+    "status_code": 200,
+    "connection_note": "configured MCP endpoint TLS failed; same existing credential used through official REST search; TLS verification enabled"
+  },
+  {
+    "provider": "Exa",
+    "endpoint": "https://api.exa.ai/search",
+    "request": {
+      "query": "\"Langtang Lirung\" \"2026\" \"displacement\" \"csv\"",
+      "numResults": 6,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T04:14:37.969682+00:00",
+    "response_file": "exa_source_search_2.json",
+    "response_sha256": "c559602ba4b361082137cfb2c95702c8ed2f279fa7a1f9aa66fc12750d615ff1",
+    "bytes": 227974,
+    "status_code": 200,
+    "connection_note": "configured MCP endpoint TLS failed; same existing credential used through official REST search; TLS verification enabled"
+  },
+  {
+    "provider": "Exa",
+    "endpoint": "https://api.exa.ai/search",
+    "request": {
+      "query": "\"CSB-2026-1255\" raw data TICOI velocity supplementary",
+      "numResults": 6,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T04:14:37.883137+00:00",
+    "response_file": "exa_source_search_3.json",
+    "response_sha256": "638c910e5a97f21c870cd37980d30d039a1489d96c7b15c592a7181433796ce3",
+    "bytes": 47677,
+    "status_code": 200,
+    "connection_note": "configured MCP endpoint TLS failed; same existing credential used through official REST search; TLS verification enabled"
+  },
+  {
+    "provider": "Exa",
+    "endpoint": "https://api.exa.ai/search",
+    "request": {
+      "query": "\"Langtang Lirung\" \"2026\" \"pore pressure\" strength measurements",
+      "numResults": 6,
+      "type": "auto",
+      "contents": {
+        "text": true
+      }
+    },
+    "retrieved_at_utc": "2026-10-30T04:14:39.136807+00:00",
+    "response_file": "exa_source_search_4.json",
+    "response_sha256": "be4daad5ebc15899e4e6b5eca648e25883d6975def71d36f0ed365d88ef8e876",
+    "bytes": 151561,
+    "status_code": 200,
+    "connection_note": "configured MCP endpoint TLS failed; same existing credential used through official REST search; TLS verification enabled"
+  }
+]

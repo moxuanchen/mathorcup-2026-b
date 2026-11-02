@@ -1,0 +1,3135 @@
+{
+  "status": "computed_conditional_sensitivity",
+  "scenario_count": 24,
+  "scenario_selection": "all 24 specified combinations; no event truth used for fitting or selection",
+  "main_scenario": {
+    "MET": "point",
+    "RADM": "start_mean",
+    "SOIL": "start_mean",
+    "FLUX": "start_mean"
+  },
+  "main_scenario_basis": "unverified working hypothesis, not a metadata finding",
+  "release_forecast_status": "not_identified; these are only auxiliary melt and instant-release scenarios",
+  "scenarios": [
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11986,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -119.02522837558186,
+          -5.852610585837479,
+          0.47057987040550875,
+          1.7154462201653589
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 41.015695032482256,
+        "residual_marginal_sigma_W_m2": 44.71557734199002,
+        "residual_ar1_phi": 0.4003283571195287,
+        "residual_adjacent_pair_n": 11772,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -1.9592151843631743e-13,
+        "residual_quantiles_W_m2": [
+          -101.47359489545542,
+          0.4696926907510033,
+          95.8089549608618
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11984,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -127.53218940825523,
+          -2.4989640685200425,
+          0.4496137887911722,
+          1.6415967957185358
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 46.545211743519786,
+        "residual_marginal_sigma_W_m2": 46.99578003156485,
+        "residual_ar1_phi": 0.15054340290374055,
+        "residual_adjacent_pair_n": 11770,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 8.697270762948729e-14,
+        "residual_quantiles_W_m2": [
+          -100.70623227343019,
+          3.2803563662112865,
+          105.12915046603737
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:50.082119424+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:33.970637056+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11972,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -118.82866133735449,
+          -5.938172661992417,
+          0.4675254475295718,
+          1.7189665364587559
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 41.17388042096464,
+        "residual_marginal_sigma_W_m2": 44.93361332990638,
+        "residual_ar1_phi": 0.4024076999964043,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -2.322356584797729e-13,
+        "residual_quantiles_W_m2": [
+          -101.84841077153322,
+          0.39310231018204433,
+          96.4085427335804
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11970,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -127.44530942876588,
+          -2.578899167786973,
+          0.4465716502000935,
+          1.6460323876555354
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 46.55310739655847,
+        "residual_marginal_sigma_W_m2": 46.98367312608699,
+        "residual_ar1_phi": 0.14756235482228156,
+        "residual_adjacent_pair_n": 11757,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 1.5439375388492817e-13,
+        "residual_quantiles_W_m2": [
+          -100.45796760402611,
+          3.0835174514731705,
+          105.18434089048911
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:52.193104640+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:35.485956864+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11972,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -126.69659979515674,
+          -7.461696517101487,
+          0.5103721652157236,
+          1.9569868736705176
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 50.26046829486566,
+        "residual_marginal_sigma_W_m2": 54.140069157029686,
+        "residual_ar1_phi": 0.37407083971069616,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 7.640910215863776e-13,
+        "residual_quantiles_W_m2": [
+          -124.25313613339564,
+          -1.5183118020601398,
+          110.10230152056022
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11970,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -98.55934259935978,
+          -4.55129596134273,
+          0.4396879853914317,
+          1.4345766317042052
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.815608578425675,
+        "residual_marginal_sigma_W_m2": 43.321065182711926,
+        "residual_ar1_phi": 0.3384988116570245,
+        "residual_adjacent_pair_n": 11757,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -4.353721504727551e-14,
+        "residual_quantiles_W_m2": [
+          -94.25161288547771,
+          -0.08454196779992174,
+          95.13874718767373
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11986,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -126.98642799783435,
+          -7.5653564409644085,
+          0.5081866893522082,
+          1.969416994601234
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 50.44612235037785,
+        "residual_marginal_sigma_W_m2": 54.46553401989257,
+        "residual_ar1_phi": 0.3791324169389962,
+        "residual_adjacent_pair_n": 11772,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -2.424358061208498e-13,
+        "residual_quantiles_W_m2": [
+          -125.4602928535593,
+          -1.56943194936283,
+          111.27223738261574
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "point",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11985,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "point",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -98.95825088584947,
+          -4.686665732451842,
+          0.4377125222323578,
+          1.4489360152194675
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.940676358892595,
+        "residual_marginal_sigma_W_m2": 43.53829684741651,
+        "residual_ar1_phi": 0.34337833590348527,
+        "residual_adjacent_pair_n": 11771,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -3.03544331004732e-15,
+        "residual_quantiles_W_m2": [
+          -94.18011642594846,
+          -0.2607370192890812,
+          94.83972918869114
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11987,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -106.17208827957776,
+          -5.541768672720351,
+          0.45693416010915555,
+          1.5481046434774748
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.66781944659807,
+        "residual_marginal_sigma_W_m2": 43.770503371983665,
+        "residual_ar1_phi": 0.3719768763740195,
+        "residual_adjacent_pair_n": 11773,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -6.11084535586816e-13,
+        "residual_quantiles_W_m2": [
+          -96.68835768969205,
+          0.25174543717685083,
+          95.74827452918572
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11985,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -111.74400362013854,
+          -0.528730324976073,
+          0.42182972294828924,
+          1.3530364232605148
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 48.45461994765307,
+        "residual_marginal_sigma_W_m2": 48.59002338463742,
+        "residual_ar1_phi": 0.10106565092006632,
+        "residual_adjacent_pair_n": 11771,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -1.1367735196127213e-13,
+        "residual_quantiles_W_m2": [
+          -104.75289837649136,
+          5.460898169917314,
+          107.85444060879108
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:53.040644096+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:36.698097152+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11973,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -106.16865576519004,
+          -5.627003522857362,
+          0.4539305518057659,
+          1.5545037732334224
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.80958181793779,
+        "residual_marginal_sigma_W_m2": 43.945467944039855,
+        "residual_ar1_phi": 0.37308639992924364,
+        "residual_adjacent_pair_n": 11759,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -8.067179264034492e-14,
+        "residual_quantiles_W_m2": [
+          -96.72612839034072,
+          0.12601751881081213,
+          95.49968732789178
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11971,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -111.83616351552855,
+          -0.6104286127786264,
+          0.4188529424163421,
+          1.360204493230462
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 48.455898966018566,
+        "residual_marginal_sigma_W_m2": 48.57555577028742,
+        "residual_ar1_phi": 0.09751253540762182,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -1.0028677690587798e-14,
+        "residual_quantiles_W_m2": [
+          -105.7526586602229,
+          5.251791202869853,
+          107.7777245427066
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:53.040644096+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:36.698097152+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11973,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -108.27644361139825,
+          -6.773322855387077,
+          0.48589253566446533,
+          1.7194832658992105
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 50.50146474044862,
+        "residual_marginal_sigma_W_m2": 53.74426195562898,
+        "residual_ar1_phi": 0.34536295060200567,
+        "residual_adjacent_pair_n": 11759,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 1.0604314738787337e-13,
+        "residual_quantiles_W_m2": [
+          -119.50022378715295,
+          -2.0176474627609053,
+          111.3675594865836
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:50.082119424+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:33.970637056+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11971,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -84.83354298489117,
+          -3.941121096311752,
+          0.4217851752694067,
+          1.2471382595980818
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 41.51517077806154,
+        "residual_marginal_sigma_W_m2": 43.58476400043368,
+        "residual_ar1_phi": 0.30917619516583533,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -8.752300529967533e-14,
+        "residual_quantiles_W_m2": [
+          -94.53081470328445,
+          -0.07162972854624172,
+          96.46435140871488
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:50.082119424+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:33.970637056+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11987,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -108.73497117667694,
+          -6.860781102419279,
+          0.4835387246073771,
+          1.734017113859972
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 50.6792671693361,
+        "residual_marginal_sigma_W_m2": 54.03839247293035,
+        "residual_ar1_phi": 0.350070320289851,
+        "residual_adjacent_pair_n": 11773,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 2.71019861077242e-13,
+        "residual_quantiles_W_m2": [
+          -120.49700729207855,
+          -2.090361489565794,
+          111.93083297696563
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:50.082119424+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:33.970637056+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "start_mean",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11986,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "start_mean",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -85.30060036368754,
+          -4.061413387030032,
+          0.41957810667966444,
+          1.2623737219936275
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 41.63745466128634,
+        "residual_marginal_sigma_W_m2": 43.77846183578407,
+        "residual_ar1_phi": 0.31328650243179607,
+        "residual_adjacent_pair_n": 11772,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 4.385849638117408e-14,
+        "residual_quantiles_W_m2": [
+          -94.55484626642868,
+          -0.29922189604521776,
+          96.56055567638147
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:50.082119424+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:33.970637056+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11987,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -113.50642114369748,
+          -5.238404125868144,
+          0.4666969937817963,
+          1.5942346925874165
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 42.73203429242954,
+        "residual_marginal_sigma_W_m2": 46.96256994315097,
+        "residual_ar1_phi": 0.4175180928333422,
+        "residual_adjacent_pair_n": 11773,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 2.1790846612929421e-13,
+        "residual_quantiles_W_m2": [
+          -109.86566796728398,
+          2.069416131837059,
+          101.67562786924312
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11985,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "start_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -136.31190034894297,
+          -4.614594985745662,
+          0.47738715638635526,
+          1.8315443039687602
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 44.37017685667754,
+        "residual_marginal_sigma_W_m2": 45.21595932107391,
+        "residual_ar1_phi": 0.19895094980205116,
+        "residual_adjacent_pair_n": 11771,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 5.651995443308109e-13,
+        "residual_quantiles_W_m2": [
+          -96.18820038325777,
+          1.5476208993589182,
+          101.67359227085494
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11973,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -112.97287764059645,
+          -5.309290971917637,
+          0.4633690910096842,
+          1.5923587680045146
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 42.92017068958652,
+        "residual_marginal_sigma_W_m2": 47.232956643394445,
+        "residual_ar1_phi": 0.4201444560328352,
+        "residual_adjacent_pair_n": 11759,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -3.4942584382823604e-14,
+        "residual_quantiles_W_m2": [
+          -110.78955217940589,
+          1.9770350982348361,
+          102.2037141679156
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "start_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11971,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "start_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -135.89671053746596,
+          -4.677299007146047,
+          0.47404920691143104,
+          1.830608231550057
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 44.411379887975905,
+        "residual_marginal_sigma_W_m2": 45.23530045044309,
+        "residual_ar1_phi": 0.19646784446930982,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -6.852929755234995e-14,
+        "residual_quantiles_W_m2": [
+          -96.60322519903232,
+          1.438882688750283,
+          103.0294177795422
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11973,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -135.0827471568414,
+          -8.310708079010004,
+          0.534093260419536,
+          2.0525319156869823
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 51.070012706158,
+        "residual_marginal_sigma_W_m2": 55.509102399724526,
+        "residual_ar1_phi": 0.39383458677772304,
+        "residual_adjacent_pair_n": 11759,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -4.4734104224010477e-13,
+        "residual_quantiles_W_m2": [
+          -130.65512803487314,
+          0.056305155912980354,
+          112.84608410195577
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "end_mean",
+        "SOIL": "start_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11971,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "end_mean",
+          "SOIL": "start_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -106.16869314421096,
+          -5.38472080840817,
+          0.45877400743657387,
+          1.5386370950830595
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.522077076310616,
+        "residual_marginal_sigma_W_m2": 43.508572086112586,
+        "residual_ar1_phi": 0.3664477592173766,
+        "residual_adjacent_pair_n": 11758,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": -2.997207082527944e-13,
+        "residual_quantiles_W_m2": [
+          -95.41936347119227,
+          0.19717452550118253,
+          94.60808343983362
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11987,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "start_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -135.10281198026442,
+          -8.426127729649656,
+          0.5320011419476208,
+          2.0612409974346777
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 51.280475923716516,
+        "residual_marginal_sigma_W_m2": 55.882146302325374,
+        "residual_ar1_phi": 0.3991161623112356,
+        "residual_adjacent_pair_n": 11773,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 5.925714207763886e-14,
+        "residual_quantiles_W_m2": [
+          -131.6119851972971,
+          -0.03509878401160904,
+          113.71777283663378
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    {
+      "scenario": {
+        "MET": "end_mean",
+        "RADM": "end_mean",
+        "SOIL": "end_mean",
+        "FLUX": "end_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "fit": {
+        "status": "fitted",
+        "training_rows": 11986,
+        "training_years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "training_months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "station_support_assumption": {
+          "MET": "end_mean",
+          "RADM": "end_mean",
+          "SOIL": "end_mean",
+          "FLUX": "end_mean",
+          "metadata_verified": false,
+          "target_rebuilt_after_alignment": true
+        },
+        "source_elevation_m": 5109.653049238576,
+        "station_elevation_m": 3980.0,
+        "temperature_offset_C": -6.7779182954314585,
+        "beta": [
+          -106.38186104860463,
+          -5.531127221829789,
+          0.45695746104589163,
+          1.5502712178762776
+        ],
+        "coef_names": [
+          "intercept",
+          "positive_source_temperature",
+          "positive_shortwave",
+          "relative_humidity"
+        ],
+        "residual_sigma_W_m2": 40.669565042406305,
+        "residual_marginal_sigma_W_m2": 43.77053084981734,
+        "residual_ar1_phi": 0.3719562238286847,
+        "residual_adjacent_pair_n": 11772,
+        "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+        "residual_innovation": "N(0, sigma^2), including the first innovation",
+        "residual_mean_W_m2": 3.0958938622005234e-14,
+        "residual_quantiles_W_m2": [
+          -96.67839836096564,
+          0.2596943367649587,
+          95.8016156545283
+        ],
+        "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+        "coefficient_draws_n": 1000
+      },
+      "melt_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "instant_release_arrival_state": {
+        "total_members": 3000,
+        "counts": {
+          "finite": 3000,
+          "no_event": 0,
+          "active_at_issue_left_censored": 0,
+          "no_arrival": 0,
+          "right_censored": 0,
+          "not_evaluable": 0
+        },
+        "p_finite": 1.0,
+        "p_no_event": 0.0,
+        "p_right_censored": 0.0,
+        "p_not_evaluable": 0.0,
+        "p_active_at_issue_left_censored": 0.0,
+        "p_no_arrival": 0.0,
+        "p_actionable": 1.0,
+        "state_sum_check": true
+      },
+      "melt_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "instant_release_arrival_interval": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    }
+  ]
+}

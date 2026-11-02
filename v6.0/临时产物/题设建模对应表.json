@@ -1,0 +1,543 @@
+{
+  "status": "pass",
+  "source_artifacts": [
+    {
+      "id": "S0",
+      "locator": "2026年MathorCup大数据挑战赛-赛道B初赛.pdf 第1–4页（渲染图见 临时产物/题面图/，四合一读图已核）"
+    },
+    {
+      "id": "S1",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件1 地气相互作用逐时观测（MET/RADM/SOIL/FLUX，2021–2026 逐时）"
+    },
+    {
+      "id": "S2",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件2 县级逐日均温再分析 ERA5-Land（2005–2025 逐日）"
+    },
+    {
+      "id": "S3",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件3 冰川及地表高程变化 dh/dt（2000–2020 四期，rar）"
+    },
+    {
+      "id": "S4",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件4 冰崩前冰川地形/冰厚/表面速度（灾前，EPSG:32645 @30 m）"
+    },
+    {
+      "id": "S5",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件5 土地覆盖（2020–2023）"
+    },
+    {
+      "id": "S6",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件6 历史灾点 84 处面要素（含类型/规模/面积属性）"
+    },
+    {
+      "id": "S7",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件7 事件日期研究区（采集时刻未知） DEM（2026-08-26，85.19–85.69°E，28.25–28.56°N）"
+    },
+    {
+      "id": "S8",
+      "locator": "../2026年MathorCup大数据挑战赛-赛道B初赛/附件/ 附件8 第七次人口普查（县级）"
+    },
+    {
+      "id": "S9",
+      "locator": "临时产物/外部数据/ifs_single_run_manifest.json（SHA-256 dbfbe5262c26fc428179c5146b494b3ff7ef920683b8ec9911651732e002fc8b）；实际四个原始响应为 06/12/18 UTC 源区三档与 18 UTC 口岸候选一档"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R0",
+      "source_id": "S0",
+      "category": "condition",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第1页背景段：2026-08-26 10:30 冰崩—碎屑流—泥石流—山洪链式灾害冲击吉隆口岸；堰塞湖漫溢、溃泄风险高；泥石流固相体积含量 15%–80%。",
+      "requirement": "事件设定作为全部建模的公共条件：事件锚点时刻、链式灾种序列、固相含量区间。",
+      "theory_location": "建模成果/问题0-总体框架.md §0.1–§0.2；建模成果/问题4.md §4.7",
+      "paper_location": "建模论文/01_common.tex §任务与需要分开的时间对象、§资料、来源与用途；表 \\ref{tab:data}",
+      "verification": "论文同一小节分别定义 t_ice、t_trig、t_0 与 t_hit，并保持冰崩—碎屑流—泥石流—山洪链的顺序；固相体积分数 0.15≤Cv≤0.80 进入问题二密度与问题四流动参数；堰塞湖只列后续风险源，缺坝体和库容证据时不输出溃决量。",
+      "subproblems": [
+        "0",
+        "2",
+        "4"
+      ],
+      "explanation": "事件冲击口岸锚点、链式过程、固相体积分数约束保留；堰塞湖作为后续风险说明，不声称完成溃坝模型。公开报道转述的路程、到达时间、前锋速度与峰值流量未取得可核实原文与观测定义，不进入验证。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R0"
+    },
+    {
+      "id": "R1-1",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题1第1句：基于附件1四类逐时观测分析高寒山区大气边界层结构、天气过程及极端气象事件及其与吉隆泥石流的关联性。",
+      "requirement": "边界层结构、天气过程、极端气象事件三方面的诊断分析及其与泥石流的关联。",
+      "theory_location": "建模成果/问题1.md §1.4.1–§1.4.4",
+      "paper_location": "建模论文/02_q1.tex §五层静力订正与稳定度诊断、§辐射收支、天气过程与极端事件；图 \\ref{fig:boundary}、\\ref{fig:hydrostatic}",
+      "verification": "从逐时四类观测可复算位温/虚位温、层间直减率、逆温强度、整体理查森数分级、能量闭合、SVD过程型与POT-GPD去丛集；结果分别报告有效样本、近地层观测上限和失效点，不作整层大气、因果或灾害概率推断。",
+      "subproblems": [
+        "1"
+      ],
+      "explanation": "边界层结构以位温/虚位温、层间直减率、逆温强度、整体理查森数五级分级、近地层有效厚度刻画（显式声明观测最高 20 m 故仅限近地层）；天气过程以 16 维廓线 SVD 模态 + 四型物理分位划分；极端事件以 POT-GPD（游程去丛集、按独立事件计年超阈率）刻画。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R1-1"
+    },
+    {
+      "id": "R1-2",
+      "source_id": "S0",
+      "category": "required_output",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题1第2句：给出关联性排序最高的 5 个特征因素。",
+      "requirement": "输出关联性排序 Top5 特征。",
+      "theory_location": "建模成果/问题1.md §1.5–§1.8、§1.10",
+      "paper_location": "建模论文/02_q1.tex §31项统一候选关联模型、§正式前五与解释；表 \\ref{tab:q1-top5}、图 \\ref{fig:q1-unified}",
+      "verification": "候选字典须有31个唯一键且四家族计数为19/5/3/4，并逐项登记原始字段、派生式、单位、可用时刻、有效小时、跨模型角色和可排序性；前五只由冻结的覆盖、事件窗、历史相关簇与去冗余规则产生，同时报告168h主榜及72h/留年/伪事件敏感性；结论限定为本次事件前环境异常关联。",
+      "subproblems": [
+        "1"
+      ],
+      "explanation": "冻结31项去重候选：MET 19、RADM 5、SOIL 3、FLUX 4。逐候选80%覆盖；2021–2024暖季逐对Spearman（每对至少200共同小时）|rho|>0.8连通簇去冗余。前五是本次事件前环境异常关联，不是因果、概率或普适排序。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R1-2"
+    },
+    {
+      "id": "R2-1",
+      "source_id": "S0",
+      "category": "condition",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题2首句（承接第4页数据来源说明段）：自行选取并补充吉隆县的卫星遥感、天气预报等相关数据，注明数据来源。",
+      "requirement": "补充卫星遥感/天气预报类数据并注明来源。",
+      "theory_location": "建模成果/问题2.md §2.4.1–§2.4.2、§2.5.3；问题与数据说明 §四",
+      "paper_location": "建模论文/01_common.tex §资料、来源与用途；建模论文/03_q2.tex §水源流量与冻结前处理；表 \\ref{tab:data}、\\ref{tab:extmet}",
+      "verification": "IFS Single Runs清单逐文件核对产品、init/valid/lead、请求位置、原始响应字节数与SHA-256；主链只使用init+6h≤08:00当地发布时刻可用的源区成员，口岸格点作为独立上下文且不得替代D8口岸代理；论文必须列出实际取得的数据，不得只列接口名称。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "实际取得四个IFS Single Runs响应：源区06/12/18 UTC三档，口岸候选18 UTC一档。全球模式4–6h文档延迟取6h上界，事件日08:00当地发布。口岸IFS格点与D8口岸代理相距约2.87km，只作独立上下文。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R2-1"
+    },
+    {
+      "id": "R2-2",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题2第2句：根据泥石流的触发条件研究触发关键参数的临界条件。",
+      "requirement": "给出触发关键参数的临界条件。",
+      "theory_location": "建模成果/问题2.md §2.5.1–§2.5.3、§2.7.1–§2.7.2",
+      "paper_location": "建模论文/03_q2.tex §完整受力、临界链条与三个分支；式 \\eqref{eq:qcrit}",
+      "verification": "由 rho_w=1000 kg/m3、rho_s=2650 kg/m3 和 0<Cv≤1 推导 rho_sat=1000+1650Cv、Δrho=1650Cv；仅当Δrho>0、z_b>0、S>0时计算 tau_w、tau_g_parallel、tau_r、tau_wc、h_c、q_c、Q_c；Cv=0或几何非法输出not_evaluable；theta小于、等于和大于atan(tan phi)分别进入water_controlled、friction_equilibrium和gravity_unstable。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "采用竖直床厚z_b、单位坡面面积：tau_g=Δρ g z_b sinθ cosθ，tau_r=Δρ g z_b cos²θ tanφ，tau_w=ρw g h sinθ；净门槛tau_wc=Δρ g z_b cos²θ(tanφ−tanθ)。εS=1e-6。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R2-2"
+    },
+    {
+      "id": "R2-3",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题2第3句：构建泥石流触发的评估模型。",
+      "requirement": "构建泥石流触发评估模型。",
+      "theory_location": "建模成果/问题2.md §2.6.1–§2.6.4、§2.9",
+      "paper_location": "建模论文/03_q2.tex §对象级状态元组与冰崩链不可识别性、§事件窗求解与水力状态；图 \\ref{fig:q2-trigger}",
+      "verification": "仅在water_controlled且Q_c>0时计算T_w；所有对象状态计数合计N，输出(G_j,H_j,Theta_j,(F_ice,U_ice,C_ice))元组；零门槛状态不得称安全或已触发；事件窗标定k只作旧触发标定审计，不进入正式评估、预报或参数选择路径。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "先判机械分支：只有water_controlled且Qc>0才计算Tw；friction_equilibrium与gravity_unstable保留零门槛状态，不称安全或已触发。水源侧C_N0=85为独立工程情景，并由75/85/95敏感性检查；它不由土地覆盖类码字典映射。输出(G_j,H_j,Theta_j,(F_ice,U_ice,C_ice))状态元组，不把冰崩链未识别状态压成单一final_state。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R2-3"
+    },
+    {
+      "id": "R2-4",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题2末句：讨论该模型在时间与空间尺度上的可靠性。",
+      "requirement": "时间与空间尺度的可靠性讨论。",
+      "theory_location": "建模成果/问题2.md §2.8.1–§2.8.3、§2.9、§2.11",
+      "paper_location": "建模论文/03_q2.tex §时间与空间可靠性；图 \\ref{fig:q2-common-domain}",
+      "verification": "在正式门槛上重做1/3/6h与日聚合、年际峰值、DEM分辨率、空间迁移、共同候选域和连通组对照；比较使用一致的事件/有效样本资格，样本不足原样报insufficient；历史灾点不是非灾真值，不计算伪警率或发生概率AUC。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "时间可靠性报告水力/热力状态频率与未识别冰崩标志；空间可靠性保留84个已发生对象的规模排序、状态构成和共同域空间样本。历史灾点不是非灾真值，不计算真实伪警率或发生概率AUC。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R2-4"
+    },
+    {
+      "id": "R3-1",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题3第1–2句：构建吉隆泥石流预报模型，给出泥石流触发时间的 95% 置信区间。",
+      "requirement": "预报模型 + 触发时间 95% 置信区间。",
+      "theory_location": "建模成果/问题3.md §3.4.1–§3.6.2",
+      "paper_location": "建模论文/04_q3.tex §任务目标与可识别边界、§变量时间支持与历史能量关系、§条件区间与支持包络；表 \\ref{tab:q3-targets}、\\ref{tab:q3-event-intervals}、\\ref{tab:q3-envelopes}、图 \\ref{fig:q3-time-products}",
+      "verification": "每个配对成员登记init、valid、available、来源与配置；主发布成员满足init+6h≤issue；发布前最后完成小时已满足融水判据者记active_at_issue，不得改记未来finite；其余成员在[t,t+1)抽取单一代表时刻并按同一配置传播。I_{0.95|finite}由finite成员代表时刻的2.5%/97.5%分位得到；每个finite成员另报半开支持[L_i,U_i)，凸支持包络报[min_i L_i,max_i U_i)，它不是跨空档的精确并集；端点收缩诊断另用[q0.025(L_i),q0.975(U_i)]，三类对象不得混称。N_finite=0时三个区间对象、覆盖指标、宽度和端点提前量均为null且状态not_constructible_zero_finite；0<N_finite<100时状态insufficient_finite_members并同样禁用端点运算。真实t_trig无独立真值时标not_estimable。",
+      "subproblems": [
+        "3"
+      ],
+      "explanation": "固定2026-08-26 08:00当地（00 UTC）发布；18 UTC起报按全球模式6 h延迟上界在发布时可用，06/12/18源区起报生成3000个配对成员。发布前最后完成小时已活动的成员单列active_at_issue；其余成员在发布后24 h内形成future finite或no_event等状态。有限代表时刻分位、成员半开支持和完整支持包络分别报告。",
+      "coverage_scope": "主预测向前运行；真实t_trig仍不可观测，不得标为validated。",
+      "evidence_status": "implemented",
+      "solution_status_ref": "临时产物/求解运行状态.json#R3-1"
+    },
+    {
+      "id": "R3-2",
+      "source_id": "S0",
+      "category": "required_output",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题3：给出泥石流发生的预警时间。",
+      "requirement": "输出预警时间。",
+      "theory_location": "建模成果/问题3.md §3.8.1–§3.8.2",
+      "paper_location": "建模论文/04_q3.tex §单事件包含、提示时差与真实预警；图 \\ref{fig:q3-coverage}",
+      "verification": "报警质量显式定义为p_actionable=p_active_at_issue+p_finite并以≥0.5为冻结规则；p_active_at_issue与p_finite必须分开报告，right_censored、no_event与not_evaluable不得混入；发布时已活动者在发布时刻报警，未来有限起始也在同一发布时刻形成风险报文。相对10:30口岸冲击输出单事件事后提前量；相对有限起始中位数的提前量另列且不称真实形成提前量，负值、未报警和缺失均保留。",
+      "subproblems": [
+        "3"
+      ],
+      "explanation": "冻结报警质量为p_actionable=p_active_at_issue+p_finite：发布时已活动或模型集合中至少一半成员存在未来有限起始，即在08:00发布源区融水风险信息。该质量不是发生概率；相对10:30口岸冲击的单事件事后提前量与相对有限起始中位数的内部时差分开报告。",
+      "coverage_scope": "相对口岸10:30为单事件事后个案；模型起始提前量不是真实形成时刻提前量。",
+      "evidence_status": "implemented",
+      "solution_status_ref": "临时产物/求解运行状态.json#R3-2"
+    },
+    {
+      "id": "R3-3",
+      "source_id": "S0",
+      "category": "required_output",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题3：给出区间覆盖率。",
+      "requirement": "输出区间覆盖率。",
+      "theory_location": "建模成果/问题3.md §3.6.1、§3.7.1–§3.7.4",
+      "paper_location": "建模论文/04_q3.tex §单事件包含、提示时差与真实预警；图 \\ref{fig:q3-coverage}",
+      "verification": "源区forecast_intervals必须报告p_finite、p_active_at_issue、p_no_event、p_right_censored、p_not_evaluable且五项合计为1；口岸行必须报告p_finite、p_no_event、p_active_at_issue_left_censored、p_no_arrival、p_right_censored、p_not_evaluable且六项合计为1。unconditional_interval不可构造时为null，条件区间统一标注I_{0.95|finite}；coverage_events保留truth缺失项、各状态质量、分母和排除理由，区间不可构造时C_h、definite_cover、possible_cover、width和端点提前量均为null，禁止输出0/1。源区t_trig报不可估计，口岸仅报单点条件覆盖。",
+      "subproblems": [
+        "3"
+      ],
+      "explanation": "真实t_trig无独立真值，覆盖率不可估计；口岸10:30只有一个点事件，只报条件单点覆盖。源区五类和口岸六类状态质量逐项求和为1，未来已活动口岸到达记为左删失，不删除、不赋零。",
+      "coverage_scope": "有模型与条件性输出；真实源区灾前绝对预测与真实灾害覆盖率验证无法由现有资料识别，未宣称完成。",
+      "evidence_status": "not_estimable",
+      "solution_status_ref": "临时产物/求解运行状态.json#R3-3"
+    },
+    {
+      "id": "R3-4",
+      "source_id": "S0",
+      "category": "required_output",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2页问题3：给出空间距离范围。",
+      "requirement": "输出空间距离范围。",
+      "theory_location": "建模成果/问题3.md §3.9.1–§3.9.2；建模成果/问题4.md §4.9.1–§4.9.2",
+      "paper_location": "建模论文/04_q3.tex §空间距离与右删失运程；建模论文/05_q4.tex §D8过程、峰值与域末端右删失；图 \\ref{fig:q3-distance}、\\ref{fig:q4-arrival}",
+      "verification": "runout_ranges对每个配对配置登记口岸首达、natural_stop、time_limit_nonarrival、right_censored及沿沟/平面距离；未到达与右删失不丢弃，域末端湿润外缘不得称自然最大运程或实测危险区；源区触发、公共注入和口岸到达的成员ID必须可追溯。",
+      "subproblems": [
+        "3"
+      ],
+      "explanation": "沿沟路线和平面直线距离分开；源区—注入—口岸与D8配置ID同源。域末端湿润外缘不是自然最大运程或实测危险区。",
+      "coverage_scope": "有模型与条件性输出；真实源区灾前绝对预测与真实灾害覆盖率验证无法由现有资料识别，未宣称完成。",
+      "evidence_status": "implemented",
+      "solution_status_ref": "临时产物/求解运行状态.json#R3-4"
+    },
+    {
+      "id": "R4-1",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2–3页问题4第1句：构建吉隆泥石流发生的仿真环境。",
+      "requirement": "构建仿真环境。",
+      "theory_location": "建模成果/问题4.md §4.4.1–§4.5.2、§4.8.1–§4.8.5",
+      "paper_location": "建模论文/05_q4.tex §D8屈服门槛—Manning路由与临界量；表 \\ref{tab:q4-routing}",
+      "verification": "实现D8经纬网格屈服门槛—Manning运动波并真实时间推进；逐项验证解析源积分、非负、CFL≤1和边界收支；论文明确其为单流向网络而非横向二维动力，一维Manning/Heim/扇形计算只作诊断对照。",
+      "subproblems": [
+        "4"
+      ],
+      "explanation": "嵌入二维经纬网格的D8运动波路由（非横向二维动力）+屈服门槛，真实时间推进；解析源项积分、非负、特征波速CFL、边界收支分开验收。一维Manning/Heim/扇形几何为诊断引擎，不宣称输运守恒。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R4-1"
+    },
+    {
+      "id": "R4-2",
+      "source_id": "S0",
+      "category": "objective",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2–3页问题4第2句：设定明确的关键参数。",
+      "requirement": "设定明确的关键参数。",
+      "theory_location": "建模成果/问题4.md §4.5.5、§4.6.1、§4.8.9",
+      "paper_location": "建模论文/05_q4.tex §公共几何、源区体积与注入边界、§D8屈服门槛—Manning路由与临界量；表 \\ref{tab:q4-routing}",
+      "verification": "参数表逐项列来源、单位、模型角色、可辨识性和扫描范围；Cv、Smin、体积、糙率/屈服参数及90m网格重演使用冻结场景表；κrel·γ作为组合参数报告；未到达场景保留并按完整参数组去重，不能从不同引擎拼接最有利结果。",
+      "subproblems": [
+        "4"
+      ],
+      "explanation": "各参数的来源、单位、可辨识性逐项声明；κrel·γ是组合参数。Cv三水平、Smin独立扫描、体积和糙率/屈服参数、网格90m重演。独立场景按完整参数组去重，未到达不丢弃。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R4-2"
+    },
+    {
+      "id": "R4-3",
+      "source_id": "S0",
+      "category": "required_output",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第2–3页问题4第3句：给出仿真过程及可视化的仿真结果。",
+      "requirement": "仿真过程与可视化结果。",
+      "theory_location": "建模成果/问题4.md §4.5.3、§4.6.2–§4.6.3、§4.9.2–§4.9.4",
+      "paper_location": "建模论文/05_q4.tex §D8过程、峰值与域末端右删失、§质量收支与数值闭合；表 \\ref{tab:q4-results}、图 \\ref{fig:q4-arrival}、\\ref{fig:mass-ledger}",
+      "verification": "过程快照、首达、历史峰值和终态从同一主运行数组生成；真实口岸与域出口、自然停止、时限未到达和右删失分开；质量与CFL闭合只作数值验收，不表述为物理验证；图中文字为中文且与机器输出同源。",
+      "subproblems": [
+        "4"
+      ],
+      "explanation": "逐时快照、历史峰值与终态分开、hmin首次到达前锋、真实口岸与域出口分别记录；出入域收支、源积分误差、CFL比、非负、网格尺度、敏感性图均提供，不把数值闭合等同物理精度。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R4-3"
+    },
+    {
+      "id": "R9",
+      "source_id": "S0",
+      "category": "condition",
+      "disposition": "semantics_preserved_abstraction",
+      "status": "covered",
+      "source_locator": "第1页背景段：堰塞湖漫溢、溃泄风险高（背景陈述，非四问的直接要求）。",
+      "requirement": "堰塞湖溃决风险（背景条件）。",
+      "theory_location": "建模成果/问题0-总体框架.md §0.1；建模成果/问题4.md §4.7",
+      "paper_location": "建模论文/01_common.tex §证据分层与实质修正；建模论文/06_discussion.tex §不确定度的责任边界",
+      "verification": "论文说明堰塞湖漫溢/溃决是未建模的后续风险，不输出缺少依据的坝体、库容或溃决量；若未来加入二次洪峰，必须作为另行取证的外加源项。",
+      "subproblems": [
+        "0",
+        "4"
+      ],
+      "explanation": "说明堰塞湖溢流/溃决为后续场景，缺湖容和坝体资料，不虚构溃决量；可作为未来外加源项。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R9"
+    },
+    {
+      "id": "R10",
+      "source_id": "S0",
+      "category": "constraint",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第1页泥石流定义句：泥石流固体碎屑物体积含量 15%–80% 作为定义性特征。",
+      "requirement": "固相体积含量 15%–80% 区间作为定义性约束进入模型。",
+      "theory_location": "建模成果/问题2.md §2.5.1；建模成果/问题4.md §4.5.1、§4.5.5",
+      "paper_location": "建模论文/03_q2.tex §完整受力、临界链条与三个分支；建模论文/05_q4.tex §D8屈服门槛—Manning路由与临界量；表 \\ref{tab:symbols}",
+      "verification": "问题二床体固相体积分数Cb与问题四流动固相体积分数Cv使用不同符号；冻结合同范围0.15≤Cv≤0.80进入rho=1000+1650Cv及I=rho h v^2；固定τ_y下只报告当前模型屈服趋势，不推断现实高Cv必然更流动。",
+      "subproblems": [
+        "2",
+        "4"
+      ],
+      "explanation": "Cv处于0.15–0.80，进入混合密度与I=ρhv²、固定τy下屈服门槛；不宣称高Cv现实中必然更流动。床面Cb与流动Cv为不同参数，须区分。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R10"
+    },
+    {
+      "id": "R11",
+      "source_id": "S0",
+      "category": "condition",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "第4页数据来源说明段：使用的数据须注明来源。",
+      "requirement": "全部数据注明来源。",
+      "theory_location": "建模成果/问题0-总体框架.md §0.3.1–§0.3.3、§0.7；问题与数据说明 §四–§五",
+      "paper_location": "建模论文/01_common.tex §资料、来源与用途；表 \\ref{tab:data}、\\ref{tab:extmet}",
+      "verification": "论文对每个题给附件与外部数据给出机构名、产品名及观测/起报/有效/可用时刻和用途；正文与PDF不含URL与DOI；完整请求、原始响应字节数和SHA-256保存在结果或临时证据中。",
+      "subproblems": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "explanation": "题给附件、实际四个IFS Single Runs响应与其他外部对照逐项登记机构、产品、起报/有效/可用时刻和哈希。旧Historical Forecast有效时刻档案不作为单次起报。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#R11"
+    },
+    {
+      "id": "D1",
+      "source_id": "S1",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件1 地气相互作用逐时观测（MET/RADM/SOIL/FLUX 四类，2021–2026 逐时）。",
+      "requirement": "附件1 作为问题1特征体系与问题2/3水源构造的数据依赖。",
+      "theory_location": "建模成果/问题1.md §1.5；建模成果/问题2.md §2.6；建模成果/问题3.md §3.4.1；问题与数据说明 §二",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件1行；建模论文/02_q1.tex §31项统一候选关联模型；建模论文/03_q2.tex §水源流量与冻结前处理",
+      "verification": "31个去重候选逐项登记来源、原始字段、派生式、单位、可用时刻、目标有效小时、缺失处理及是否进入另一模型；问题一不使用Q_w标签，问题二/三历史关系只使用2021–2025且保留共同样本资格；共享输入不得称统计独立。",
+      "subproblems": [
+        "1",
+        "2",
+        "3"
+      ],
+      "explanation": "MET/RADM/SOIL/FLUX均有合理候选。共享输入不是统计独立；候选并入同一池不是因为机械叠加全部高度，而是按物理变量键去重。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D1"
+    },
+    {
+      "id": "D2",
+      "source_id": "S2",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件2 县级逐日均温再分析 ERA5-Land（2005–2025 逐日）。",
+      "requirement": "附件2 作为长期气候背景与阈值外推检验的数据依赖。",
+      "theory_location": "建模成果/问题0-总体框架.md §0.3.1–§0.3.2；问题与数据说明 §五",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件2行；建模论文/03_q2.tex §时间与空间可靠性",
+      "verification": "附件2只比较逐日均温与逐日聚合正积温的长期分位，不用于I-D降水检验；按共同单位、季节和重叠期检查偏差，并报告日均正部与逐小时正部累加的聚合差。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "附件2只有逐日均温，不含降水也不支持日内温度极值；长期比较限日均温/PDD日聚合口径，不能把日均正部等同逐小时正部累加，须报告聚合差。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D2"
+    },
+    {
+      "id": "D3",
+      "source_id": "S3",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件3 冰川及地表高程变化 dh/dt（2000–2020 四期，含误差栅格）。",
+      "requirement": "附件3 作为冰川减薄趋势背景与 RGI6 融水面积口径的数据依赖。",
+      "theory_location": "建模成果/问题2.md §2.6.1；建模成果/问题0-总体框架.md §0.3.1；问题与数据说明 §二",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件3与RGI6行；建模论文/03_q2.tex §水源流量与冻结前处理",
+      "verification": "区域dh/dt及其误差只作冰川变化背景；问题二融水面积按RGI6编目边界与集水区面积交比、在DEM像元中心栅格化并保留内部孔洞；高程带与附件4厚冰掩膜并集只作审计对照；编目年代差与未观测积雪进入失效点。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "多时段 dh/dt 的区域统计刻画冰川减薄速率，作为遥感类补充数据与物源供给叙述的定量背景，不直接进入触发方程；RGI6 边界承担融水面积权重，高程带（≥4800 m）与附件4 冰厚场的旧并集 0.54586 只保留为审计对照，不进入融水量。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D3"
+    },
+    {
+      "id": "D4",
+      "source_id": "S4",
+      "category": "data_dependency",
+      "disposition": "semantics_preserved_abstraction",
+      "status": "covered",
+      "source_locator": "附件4 冰崩前冰川地形/冰厚/表面速度（灾前，EPSG:32645 @30 m）。",
+      "requirement": "附件4 冰厚/地形用于源区定义与体积链；表面速度场为可选输入。",
+      "theory_location": "建模成果/问题4.md §4.4.2–§4.6.2；建模成果/问题3.md §3.5.3",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件4行；建模论文/05_q4.tex §公共几何、源区体积与注入边界、§D8屈服门槛—Manning路由与临界量",
+      "verification": "附件4厚冰陡坡源区按原生网格积分，基准体积链与高体积替代情景分开；源DEM与DEM加厚度两种语义显式敏感性；速度叠置只作一致性旁证，低重叠作为负面结果披露，不冒称验证。",
+      "subproblems": [
+        "2",
+        "4"
+      ],
+      "explanation": "附件4厚冰陡坡源区原生网格积分，基准链与高体积替代情景分开；源DEM/DEM+厚度两种语义显式敏感性；速度叠置只作一致性旁证，低重叠是负面结果不冒称验证。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D4"
+    },
+    {
+      "id": "D5",
+      "source_id": "S5",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件5 土地覆盖（2020–2023）。",
+      "requirement": "附件5 作为像元模型原类码 one-hot 环境特征的数据依赖；物理可蚀性权重停用。",
+      "theory_location": "建模成果/问题2.md §2.4.1；建模成果/问题4.md §4.6.3；问题与数据说明 §二",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件5行；建模论文/03_q2.tex §水源流量与冻结前处理",
+      "verification": "附件5未随附分类字典时，类码到物理地类的映射不可核实，不赋可蚀性权重，也不从类码推导CN；松散物质可蚀性指数及依赖它的易感性评分返回not_estimable，原始类码仅作one-hot环境对照。水源模型的C_N0=85是独立声明的工程情景，并以75/85/95三点检查敏感性，不是土地覆盖类码映射结果。",
+      "subproblems": [
+        "2"
+      ],
+      "explanation": "附件5按实际观测原始类码one-hot，不固定为10类；映射语义未确认时不声称建设用地。人工可蚀性与类码到CN的物理映射停用；水源模型的C_N0=85是独立声明的工程情景，必须与土地覆盖字典缺口分开解释。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D5"
+    },
+    {
+      "id": "D6",
+      "source_id": "S6",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件6 历史灾点 84 处面要素（含类型/规模/面积属性）。",
+      "requirement": "附件6 作为统计临界域、易发性检验与堆积规模对照的数据依赖。",
+      "theory_location": "建模成果/问题2.md §2.8.1–§2.8.3；建模成果/问题4.md §4.6.2",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件6行；建模论文/03_q2.tex §时间与空间可靠性",
+      "verification": "84处历史对象按任务所需有效属性全部保留；承灾体字段缺失只排除该字段，不删除对象；统计临界域按类型分组并采用5%–95%分位；沟道规模排序与仿真堆积面积只作量级对照，不称本次事件实测验证。",
+      "subproblems": [
+        "2",
+        "4"
+      ],
+      "explanation": "灾点属性5%–95%分位构成统计临界域（按类型分组；承灾体文本字段不参与临界域，不删除30个历史对象）；沟道尺度排序以既有规模等级检验；问题4以历史堆积面积分布对仿真影响范围做量级对照，非本次事件实测验证。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D6"
+    },
+    {
+      "id": "D7",
+      "source_id": "S7",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件7事件日期研究区DEM，采集在事件前后未知，不能确定含本次堆积。",
+      "requirement": "附件7 作为地形衍生量（坡度/汇流/中心线/比降口径）与二维演算网格的数据依赖。",
+      "theory_location": "建模成果/问题4.md §4.4.1–§4.4.2",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件7行；建模论文/05_q4.tex §公共几何、源区体积与注入边界；建模论文/03_q2.tex §完整受力、临界链条与三个分支",
+      "verification": "附件7按事件日期但采集时刻未知登记；经纬网近30m距离按纬度转换，填洼、单调化和中心线修改完整记录；不认定其为灾后DEM，也不假定高程偏差必然同号。",
+      "subproblems": [
+        "2",
+        "4"
+      ],
+      "explanation": "附件7为事件日期、采集时刻未知的经纬网DEM，近30m米制距离按纬度转换；不认定为灾后或偏差必然同号。完整记录填洼与单调化修改。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D7"
+    },
+    {
+      "id": "D8",
+      "source_id": "S8",
+      "category": "data_dependency",
+      "disposition": "preserved",
+      "status": "covered",
+      "source_locator": "附件8 第七次人口普查（县级面要素）。",
+      "requirement": "附件8 作为承灾体暴露分析的县级约束数据依赖。",
+      "theory_location": "建模成果/问题4.md §4.6.3、§4.7",
+      "paper_location": "建模论文/01_common.tex 表 \\ref{tab:data} 的附件8行；建模论文/06_discussion.tex §分层预警与监测建议",
+      "verification": "附件8只作县级承灾体暴露背景，不进行亚县级人口栅格化，不虚构伤亡或精确暴露人数；土地覆盖类码未确认时只作类别对照。",
+      "subproblems": [
+        "4"
+      ],
+      "explanation": "县级人口只作背景约束，未进行亚县级人口栅格化，不虚构伤亡或精确暴露人数。覆被类码未确认时只作类别对照。",
+      "evidence_status": "implemented",
+      "coverage_scope": "内容已映射；是否达到真实世界验证以evidence_status单独判断。",
+      "solution_status_ref": "临时产物/求解运行状态.json#D8"
+    }
+  ],
+  "review_note": "当前理论基线已按只读理论审查意见修订：问题三区分代表时刻分位、成员支持与完整支持包络；发布时已活动与未来有限起始显式分离；元温度订正符号、条件区间概率系数、零有限成员分支和水源CN情景均已冻结；题设25项均有可定位的理论与论文计划锚点。运行状态继续只登记在临时产物/求解运行状态.json，不回写理论表。",
+  "status_note": "status=covered仅表示题面要求到模型要素、验收条件与计划输出的映射完整；evidence_status严格取validated/implemented/not_estimable/blocked；本表不保存current run state、aggregate run id或结果数值。",
+  "status_scope": "theoretical_mapping_only",
+  "solution_layer": {
+    "status_file": "临时产物/求解运行状态.json",
+    "registry": "per-requirement runtime status, current output paths, aggregate run id and coverage result",
+    "invalidation_scope": "solution layer only; theory mapping remains semantic and numeric-result free"
+  }
+}

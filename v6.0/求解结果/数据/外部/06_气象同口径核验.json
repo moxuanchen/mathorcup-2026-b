@@ -1,0 +1,242 @@
+{
+  "version": "v5.0",
+  "event_day_timezone": "Asia/Shanghai",
+  "hour_stamp_assumption": "hour labels treated as hour-start; actual instrument label convention unknown",
+  "open_meteo_era5": {
+    "request_model": "era5",
+    "elevation_downscaling": "disabled: elevation=nan",
+    "returned_grid": {
+      "latitude": 28.25,
+      "longitude": 85.5,
+      "elevation": 4322.0,
+      "timezone": "GMT"
+    },
+    "days": [
+      {
+        "date": "2026-08-21",
+        "n_hours": 24,
+        "mean_T_C": 9.270833333333334,
+        "max_T_C": 13.0,
+        "min_T_C": 6.8,
+        "precip_mm": 11.5
+      },
+      {
+        "date": "2026-08-22",
+        "n_hours": 24,
+        "mean_T_C": 9.254166666666668,
+        "max_T_C": 12.8,
+        "min_T_C": 7.3,
+        "precip_mm": 26.9
+      },
+      {
+        "date": "2026-08-23",
+        "n_hours": 24,
+        "mean_T_C": 9.133333333333333,
+        "max_T_C": 13.6,
+        "min_T_C": 6.6,
+        "precip_mm": 11.200000000000001
+      },
+      {
+        "date": "2026-08-24",
+        "n_hours": 24,
+        "mean_T_C": 9.891666666666666,
+        "max_T_C": 14.5,
+        "min_T_C": 7.4,
+        "precip_mm": 5.9
+      },
+      {
+        "date": "2026-08-25",
+        "n_hours": 24,
+        "mean_T_C": 9.8125,
+        "max_T_C": 12.5,
+        "min_T_C": 6.4,
+        "precip_mm": 6.5
+      },
+      {
+        "date": "2026-08-26",
+        "n_hours": 24,
+        "mean_T_C": 9.4125,
+        "max_T_C": 13.1,
+        "min_T_C": 6.4,
+        "precip_mm": 7.5
+      },
+      {
+        "date": "2026-08-27",
+        "n_hours": 24,
+        "mean_T_C": 9.975,
+        "max_T_C": 13.8,
+        "min_T_C": 7.4,
+        "precip_mm": 18.5
+      }
+    ]
+  },
+  "nasa_power_merra2": {
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Hourly Data",
+      "api": {
+        "version": "v2.10.3",
+        "name": "POWER Hourly API"
+      },
+      "sources": [
+        "MERRA2"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20260819",
+      "end": "20260828"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.378,
+        28.28,
+        4836.18
+      ]
+    },
+    "days": [
+      {
+        "date": "2026-08-20",
+        "n_hours": 24,
+        "mean_T_C": 5.972083333333334,
+        "max_T_C": 11.57,
+        "min_T_C": 1.29,
+        "precip_mm": 3.3
+      },
+      {
+        "date": "2026-08-21",
+        "n_hours": 24,
+        "mean_T_C": 6.268750000000001,
+        "max_T_C": 10.57,
+        "min_T_C": 3.36,
+        "precip_mm": 9.649999999999999
+      },
+      {
+        "date": "2026-08-22",
+        "n_hours": 24,
+        "mean_T_C": 5.820416666666667,
+        "max_T_C": 10.87,
+        "min_T_C": 1.24,
+        "precip_mm": 16.07
+      },
+      {
+        "date": "2026-08-23",
+        "n_hours": 24,
+        "mean_T_C": 6.13,
+        "max_T_C": 10.9,
+        "min_T_C": 1.9,
+        "precip_mm": 5.030000000000001
+      },
+      {
+        "date": "2026-08-24",
+        "n_hours": 24,
+        "mean_T_C": 6.89125,
+        "max_T_C": 12.79,
+        "min_T_C": 2.4,
+        "precip_mm": 1.06
+      },
+      {
+        "date": "2026-08-25",
+        "n_hours": 24,
+        "mean_T_C": 7.4816666666666665,
+        "max_T_C": 12.74,
+        "min_T_C": 2.93,
+        "precip_mm": 1.9000000000000004
+      },
+      {
+        "date": "2026-08-26",
+        "n_hours": 24,
+        "mean_T_C": 6.09375,
+        "max_T_C": 11.06,
+        "min_T_C": 2.43,
+        "precip_mm": 1.2200000000000002
+      },
+      {
+        "date": "2026-08-27",
+        "n_hours": 24,
+        "mean_T_C": 5.897500000000001,
+        "max_T_C": 11.25,
+        "min_T_C": 1.38,
+        "precip_mm": 1.58
+      },
+      {
+        "date": "2026-08-28",
+        "n_hours": 24,
+        "mean_T_C": 6.884583333333334,
+        "max_T_C": 11.89,
+        "min_T_C": 2.23,
+        "precip_mm": 8.94
+      }
+    ]
+  },
+  "station_comparison": {
+    "coordinate_status": "assumed representative point, not verified real station",
+    "station_timezone_assumption": "UTC+8 converted to UTC",
+    "daily_policy": "exactly 24 valid observed hours for BOTH temperature and precipitation; paired common UTC dates only",
+    "annual_matched_subsets": [
+      {
+        "year": 2021,
+        "common_complete_UTC_days": 247,
+        "first": "2021-04-27 00:00:00+00:00",
+        "last": "2021-12-30 00:00:00+00:00",
+        "station_precip_mm": 220.6,
+        "nasa_precip_mm": 1505.56,
+        "ratio_nasa_to_station": 6.824841341795104,
+        "temperature_bias_nasa_minus_station_C": -1.7268534075573547
+      },
+      {
+        "year": 2022,
+        "common_complete_UTC_days": 363,
+        "first": "2022-01-01 00:00:00+00:00",
+        "last": "2022-12-30 00:00:00+00:00",
+        "station_precip_mm": 190.79999999999998,
+        "nasa_precip_mm": 1416.3400000000001,
+        "ratio_nasa_to_station": 7.423165618448639,
+        "temperature_bias_nasa_minus_station_C": -1.1987735307621672
+      },
+      {
+        "year": 2023,
+        "common_complete_UTC_days": 361,
+        "first": "2023-01-01 00:00:00+00:00",
+        "last": "2023-12-30 00:00:00+00:00",
+        "station_precip_mm": 135.4,
+        "nasa_precip_mm": 1163.93,
+        "ratio_nasa_to_station": 8.596233382570162,
+        "temperature_bias_nasa_minus_station_C": -1.4087451523545707
+      },
+      {
+        "year": 2024,
+        "common_complete_UTC_days": 363,
+        "first": "2024-01-01 00:00:00+00:00",
+        "last": "2024-12-30 00:00:00+00:00",
+        "station_precip_mm": 256.8,
+        "nasa_precip_mm": 1380.2800000000002,
+        "ratio_nasa_to_station": 5.374922118380063,
+        "temperature_bias_nasa_minus_station_C": -1.357931129476584
+      },
+      {
+        "year": 2025,
+        "common_complete_UTC_days": 214,
+        "first": "2025-01-01 00:00:00+00:00",
+        "last": "2025-08-02 00:00:00+00:00",
+        "station_precip_mm": 102.00000000000003,
+        "nasa_precip_mm": 742.4099999999999,
+        "ratio_nasa_to_station": 7.278529411764702,
+        "temperature_bias_nasa_minus_station_C": -1.9649947429906542
+      }
+    ]
+  },
+  "forecast_archive": {
+    "model": "ecmwf_ifs04",
+    "returned_grid": {
+      "latitude": 28.400002,
+      "longitude": 85.20001,
+      "elevation": 4768.0,
+      "timezone": "GMT"
+    },
+    "days": [],
+    "initialization": null,
+    "lead_time": null,
+    "status": "valid-time archive retrieved; not proof of pre-event issuance or forecast skill"
+  },
+  "interpretation": "Inter-product comparison at coarse grids; no independence guarantee or same-site validation. Old default-product and 18 K altitude-only explanation withdrawn."
+}

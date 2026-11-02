@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "available",
+  "source_definition": [
+    85.533321,
+    28.284642
+  ],
+  "injection_definition": [
+    85.512636,
+    28.286779
+  ],
+  "port_proxy_definition": [
+    85.382651,
+    28.282613
+  ],
+  "route_metrics": {
+    "source_to_injection_horizontal_m": 2041.449140396932,
+    "injection_to_port_centerline_m": 20882.237,
+    "combined_route_m": 22923.686140396934,
+    "source_to_port_straight_m": 14771.715485293204,
+    "distances_not_added_across_metrics": true
+  },
+  "d8_port_arrival_s_range": [
+    1054.2262558361788,
+    2683.6684013949225
+  ],
+  "d8_final_runout_m_range": [
+    26045.494670325385,
+    26045.494670325385
+  ],
+  "right_censored": true,
+  "scope": "D8 network route and model-advected port proxy; not observed hazard extent or natural stopping distance"
+}

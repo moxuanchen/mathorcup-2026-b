@@ -1,0 +1,27 @@
+{
+  "version": "v5.0",
+  "actual_disaster_trigger_95CI": null,
+  "actual_disaster_coverage": null,
+  "issued_forecast_validation": null,
+  "landcover_physical_weights": null,
+  "station_metadata": "unverified coordinates, altitude, timezone and hour-label semantics",
+  "resolved": [
+    "inclusive floating endpoints",
+    "training-only constant baseline",
+    "RGI6 inventory boundary supply area",
+    "unknown landcover physical weights disabled",
+    "common UTC complete-day external comparison",
+    "target-coordinate sensitivity",
+    "source response archive",
+    "IFS single-run pre-issue availability at frozen 08:00 issue"
+  ],
+  "unresolved": [
+    "real multi-event start times and confirmed non-events",
+    "real station installation metadata",
+    "2026 glacier and snow extent",
+    "verified landcover code dictionary",
+    "actual affected target section",
+    "verification of actual operational distribution latency",
+    "real source release and along-route inventory"
+  ]
+}

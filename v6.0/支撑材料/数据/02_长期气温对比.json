@@ -1,0 +1,229 @@
+{
+  "products": {
+    "吉隆县": {
+      "long_daily_PDD3_C_day": {
+        "n": 2503,
+        "q05": 2.841864,
+        "q25": 10.978707,
+        "q50": 15.080708,
+        "q75": 17.505459,
+        "q95": 20.324504
+      },
+      "recent_daily_PDD3_C_day": {
+        "n": 551,
+        "q05": 3.424264,
+        "q25": 12.40551,
+        "q50": 16.347016,
+        "q75": 18.907063,
+        "q95": 21.513016
+      },
+      "long_available_period": [
+        "2005-06-01 00:00:00",
+        "2025-08-02 00:00:00"
+      ],
+      "overlap_days": 551,
+      "common_date_PDD3_days": 551,
+      "common_date_station_PDD3": {
+        "n": 551,
+        "q05": 26.999542,
+        "q25": 33.216667,
+        "q50": 36.094167,
+        "q75": 38.475833,
+        "q95": 41.381583
+      },
+      "common_date_product_PDD3": {
+        "n": 551,
+        "q05": 3.424264,
+        "q25": 12.40551,
+        "q50": 16.347016,
+        "q75": 18.907063,
+        "q95": 21.513016
+      },
+      "common_date_PDD3_correlation": 0.900095,
+      "temperature_correlation": 0.872704,
+      "station_minus_product_mean_C": 6.770287
+    },
+    "聂拉木县": {
+      "long_daily_PDD3_C_day": {
+        "n": 2503,
+        "q05": 2.481474,
+        "q25": 10.110612,
+        "q50": 14.053565,
+        "q75": 16.563487,
+        "q95": 19.578521
+      },
+      "recent_daily_PDD3_C_day": {
+        "n": 551,
+        "q05": 4.153081,
+        "q25": 11.862929,
+        "q50": 15.731782,
+        "q75": 18.347558,
+        "q95": 20.725093
+      },
+      "long_available_period": [
+        "2005-06-01 00:00:00",
+        "2025-08-02 00:00:00"
+      ],
+      "overlap_days": 551,
+      "common_date_PDD3_days": 551,
+      "common_date_station_PDD3": {
+        "n": 551,
+        "q05": 26.999542,
+        "q25": 33.216667,
+        "q50": 36.094167,
+        "q75": 38.475833,
+        "q95": 41.381583
+      },
+      "common_date_product_PDD3": {
+        "n": 551,
+        "q05": 4.153081,
+        "q25": 11.862929,
+        "q50": 15.731782,
+        "q75": 18.347558,
+        "q95": 20.725093
+      },
+      "common_date_PDD3_correlation": 0.903492,
+      "temperature_correlation": 0.873492,
+      "station_minus_product_mean_C": 6.941253
+    },
+    "萨嘎县": {
+      "long_daily_PDD3_C_day": {
+        "n": 2503,
+        "q05": 3.911915,
+        "q25": 11.854973,
+        "q50": 15.326695,
+        "q75": 18.14567,
+        "q95": 21.63557
+      },
+      "recent_daily_PDD3_C_day": {
+        "n": 551,
+        "q05": 3.380429,
+        "q25": 13.070788,
+        "q50": 16.921649,
+        "q75": 19.374848,
+        "q95": 22.67746
+      },
+      "long_available_period": [
+        "2005-06-01 00:00:00",
+        "2025-08-02 00:00:00"
+      ],
+      "overlap_days": 551,
+      "common_date_PDD3_days": 551,
+      "common_date_station_PDD3": {
+        "n": 551,
+        "q05": 26.999542,
+        "q25": 33.216667,
+        "q50": 36.094167,
+        "q75": 38.475833,
+        "q95": 41.381583
+      },
+      "common_date_product_PDD3": {
+        "n": 551,
+        "q05": 3.380429,
+        "q25": 13.070788,
+        "q50": 16.921649,
+        "q75": 19.374848,
+        "q95": 22.67746
+      },
+      "common_date_PDD3_correlation": 0.896552,
+      "temperature_correlation": 0.863908,
+      "station_minus_product_mean_C": 6.601486
+    },
+    "定日县": {
+      "long_daily_PDD3_C_day": {
+        "n": 2503,
+        "q05": 6.485057,
+        "q25": 12.223745,
+        "q50": 15.492196,
+        "q75": 17.731396,
+        "q95": 20.755335
+      },
+      "recent_daily_PDD3_C_day": {
+        "n": 551,
+        "q05": 7.516501,
+        "q25": 13.443631,
+        "q50": 16.859421,
+        "q75": 19.169406,
+        "q95": 21.587636
+      },
+      "long_available_period": [
+        "2005-06-01 00:00:00",
+        "2025-08-02 00:00:00"
+      ],
+      "overlap_days": 551,
+      "common_date_PDD3_days": 551,
+      "common_date_station_PDD3": {
+        "n": 551,
+        "q05": 26.999542,
+        "q25": 33.216667,
+        "q50": 36.094167,
+        "q75": 38.475833,
+        "q95": 41.381583
+      },
+      "common_date_product_PDD3": {
+        "n": 551,
+        "q05": 7.516501,
+        "q25": 13.443631,
+        "q50": 16.859421,
+        "q75": 19.169406,
+        "q95": 21.587636
+      },
+      "common_date_PDD3_correlation": 0.889364,
+      "temperature_correlation": 0.851689,
+      "station_minus_product_mean_C": 6.477124
+    },
+    "昂仁县": {
+      "long_daily_PDD3_C_day": {
+        "n": 2503,
+        "q05": 6.468198,
+        "q25": 13.108327,
+        "q50": 16.585796,
+        "q75": 19.500078,
+        "q95": 23.563462
+      },
+      "recent_daily_PDD3_C_day": {
+        "n": 551,
+        "q05": 6.767051,
+        "q25": 15.186972,
+        "q50": 18.525057,
+        "q75": 21.002664,
+        "q95": 24.666112
+      },
+      "long_available_period": [
+        "2005-06-01 00:00:00",
+        "2025-08-02 00:00:00"
+      ],
+      "overlap_days": 551,
+      "common_date_PDD3_days": 551,
+      "common_date_station_PDD3": {
+        "n": 551,
+        "q05": 26.999542,
+        "q25": 33.216667,
+        "q50": 36.094167,
+        "q75": 38.475833,
+        "q95": 41.381583
+      },
+      "common_date_product_PDD3": {
+        "n": 551,
+        "q05": 6.767051,
+        "q25": 15.186972,
+        "q50": 18.525057,
+        "q75": 21.002664,
+        "q95": 24.666112
+      },
+      "common_date_PDD3_correlation": 0.826915,
+      "temperature_correlation": 0.798949,
+      "station_minus_product_mean_C": 5.984818
+    }
+  },
+  "station_daily_PDD3_C_day": {
+    "n": 610,
+    "q05": 27.153981,
+    "q25": 33.157927,
+    "q50": 36.107021,
+    "q75": 38.484594,
+    "q95": 41.252542
+  },
+  "definition": "both products: max(daily mean temperature,0), sum over 3 natural days",
+  "limitation": "daily-mean PDD is not hourly-positive PDD; no rainfall or I-D inference from temperature-only attachment"
+}

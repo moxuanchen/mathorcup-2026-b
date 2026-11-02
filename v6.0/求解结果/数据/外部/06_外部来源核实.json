@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "version": "v5.0",
+  "network_access": "none during this run; hashes recomputed from archived responses",
+  "sources": [
+    {
+      "tag": "open_meteo_era5_port_utc",
+      "product": "Open-Meteo Archive API, model=era5",
+      "request": {
+        "latitude": 28.2797,
+        "longitude": 85.3777,
+        "start_date": "2026-08-20",
+        "end_date": "2026-08-27",
+        "hourly": [
+          "temperature_2m",
+          "precipitation",
+          "wind_speed_10m"
+        ],
+        "timezone": "UTC",
+        "elevation": "nan (automatic downscaling disabled)"
+      },
+      "raw_file": "临时产物/外部数据/open_meteo_era5_port_utc.json",
+      "bytes": 6746,
+      "sha256": "2b5f536eeef80d6651c3dab80f8437653576a817929d8dd82ad8953e72e965b2",
+      "json_keys": [
+        "latitude",
+        "longitude",
+        "generationtime_ms",
+        "utc_offset_seconds",
+        "timezone",
+        "timezone_abbreviation",
+        "elevation",
+        "hourly_units",
+        "hourly"
+      ],
+      "retrieval": "archived during the single online session; this record is recomputed offline",
+      "status": "archived",
+      "scope": "event-window external comparison only; not a model input"
+    },
+    {
+      "tag": "nasa_power_port_hourly_utc",
+      "product": "NASA POWER hourly point, MERRA-2 based",
+      "request": {
+        "parameters": [
+          "T2M",
+          "PRECTOTCORR"
+        ],
+        "longitude": 85.3777,
+        "latitude": 28.2797,
+        "start": "20260819",
+        "end": "20260828",
+        "time-standard": "UTC"
+      },
+      "raw_file": "临时产物/外部数据/nasa_power_port_hourly_utc.json",
+      "bytes": 9184,
+      "sha256": "018e71bee42b8348c06531b3e683f7e22828fd6265e05d9ac23374352110ef80",
+      "json_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "retrieval": "archived during the single online session; this record is recomputed offline",
+      "status": "archived",
+      "scope": "event-window external comparison only; not a model input"
+    },
+    {
+      "tag": "nasa_power_station_daily_utc",
+      "product": "NASA POWER daily point, MERRA-2 based",
+      "request": {
+        "parameters": [
+          "T2M",
+          "PRECTOTCORR"
+        ],
+        "longitude": 85.3,
+        "latitude": 28.4,
+        "start": "20210101",
+        "end": "20250802",
+        "time-standard": "UTC"
+      },
+      "raw_file": "临时产物/外部数据/nasa_power_station_daily_utc.json",
+      "bytes": 54231,
+      "sha256": "a08d4d858806ccc31e80a31f76457bf99e6181a1974aa412a20b2caf30c0fade",
+      "json_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "retrieval": "archived during the single online session; this record is recomputed offline",
+      "status": "archived",
+      "scope": "assumed representative station point; not verified installation metadata"
+    },
+    {
+      "tag": "historical_forecast_ifs",
+      "product": "Open-Meteo Historical Forecast API, model=ecmwf_ifs04",
+      "request": {
+        "latitude": 28.2797,
+        "longitude": 85.3777,
+        "start_date": "2026-08-20",
+        "end_date": "2026-08-27",
+        "hourly": [
+          "temperature_2m",
+          "precipitation"
+        ],
+        "timezone": "UTC",
+        "elevation": "nan"
+      },
+      "raw_file": "临时产物/外部数据/historical_forecast_ifs.json",
+      "bytes": 5875,
+      "sha256": "07c514cf61cee90650020ce0e3c2e6ee1a1d967b8e1c3ed60168c4f8b4bd3da5",
+      "json_keys": [
+        "latitude",
+        "longitude",
+        "generationtime_ms",
+        "utc_offset_seconds",
+        "timezone",
+        "timezone_abbreviation",
+        "elevation",
+        "hourly_units",
+        "hourly"
+      ],
+      "retrieval": "archived during the single online session; this record is recomputed offline",
+      "status": "archived",
+      "scope": "valid-time archive only; no stored initialization or lead time, so not an issued-forecast validation"
+    }
+  ],
+  "documentation": [
+    {
+      "tag": "open_meteo_product_docs",
+      "product": "Open-Meteo historical weather API documentation",
+      "raw_file": "临时产物/外部数据/open_meteo_docs.html",
+      "sha256": "a3e9d82b5bb3e0adeca1c02c26f47dfea5c520f39d1981a1827cd5fbe3ce1c37",
+      "status": "archived"
+    },
+    {
+      "tag": "nasa_daily_time_standard",
+      "product": "NASA POWER daily temporal API documentation",
+      "raw_file": "临时产物/外部数据/nasa_power_daily_docs.html",
+      "sha256": "e2c8553c91af20b62a326fdd732e62ade027f114258c51b740844a44537c3f52",
+      "status": "archived"
+    }
+  ],
+  "missing_raw_files": [],
+  "withdrawn_claims": {
+    "open_meteo_default_product": "unqualified default is Best Match (IFS HRES + ERA5 + ERA5-Land); an unqualified ERA5 claim is not supportable",
+    "nasa_default_day_boundary": "default is local standard time, so a UTC+8 versus default-LST daily comparison is not a valid same-day comparison",
+    "event_parameters_from_media": "reported runout, travel time, front speed and peak discharge have no verifiable original text or observation definition for this event and are withdrawn from validation",
+    "station_metadata": "public station metadata endpoint returned no usable record; assumed coordinates, inferred altitude, UTC+8 and hour-label convention remain hypotheses",
+    "issued_forecast": "archived forecast response carries valid times only; without initialization and lead time it cannot demonstrate pre-event availability or skill"
+  }
+}

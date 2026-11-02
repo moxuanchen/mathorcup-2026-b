@@ -1,0 +1,2272 @@
+When a high-mountain slope failure cascades downstream: reconstructing the 26 August 2026 Gyirong mixed rock–ice disaster
+Skip to main content
+Report GitHub Issue
+×
+Title:
+Content selection saved. Describe the issue below:
+Description:
+Submit without GitHub
+Submit in GitHub
+Why HTML?
+Report Issue
+Back to Abstract
+Download PDF
+Contents
+Reading mode
+Colour theme
+Abstract
+1
+Study area and event
+2
+Data and methods
+2.1
+Analysis scope, evidence classes and event clock
+2.2
+Satellite and ancillary data
+2.3
+Source mapping and classification
+2.4
+Terrain and process-chain reconstruction
+2.5
+Pre-event optical observations
+2.6
+Radar change
+2.7
+Hydroclimatic context
+2.8
+Historical environmental and exposure context
+2.9
+Channel change, damage and exposure
+3
+Results
+3.1
+Source identification and geometry
+3.2
+Source-to-downstream cascade
+3.3
+Pre-event surface observations and observational limits
+3.4
+Short- and long-term environmental context
+3.5
+Geomorphic consequences
+3.6
+Infrastructure impacts and historical exposure
+4
+Discussion
+4.1
+Source classification and uncertainty
+4.2
+Cascade transformation and mobility
+4.3
+Environmental context and limits of causal inference
+4.4
+Pre-event observability across time scales
+4.5
+Downstream consequences and changing exposure
+4.6
+What open Earth observation can and cannot reconstruct
+4.7
+Limitations
+References
+Supplement: 2026 Gyirong cascade
+1
+Supplementary data provenance and quality control
+2
+Source-bound uncertainty
+3
+Image visibility and source evidence
+4
+Fixed transects and channel-observation limits
+5
+Hydroclimate detail and sensitivity
+6
+Historical environmental and exposure context
+7
+Damage, exposure and evidence classes
+8
+Observation chronology and negative displacement result
+9
+Comparison with the contemporaneous event-specific reconstruction
+10
+Machine-readable supplementary tables
+References
+License: arXiv.org perpetual non-exclusive license
+arXiv:2609.04563v1 [physics.ao-ph] 03 Sep 2026
+\Author
+[1]Rui Li
+\pubdiscuss
+\published
+When a high-mountain slope failure cascades downstream: reconstructing the 26 August 2026 Gyirong mixed rock–ice disaster
+Abstract
+On 26 August 2026, a high-elevation slope failure involving rock and glacier ice near the China–Nepal border developed into a channelised mass-flow and flood-affected cascade that reached Gyirong Port/Timure. We reconstructed this source–pathway–receptor system from open and publicly released Earth-observation records, combining event-bracketing Sentinel-2, Landsat-9, PlanetScope and Sentinel-1 observations, Copernicus DEM terrain analysis, and UNOSAT and Copernicus Emergency Management Service rapid mapping. Nested multisensor envelopes constrained the post-event changed/source surface to a preferred area of 1.009 km
+2
+(conservative–inclusive range 0.491–1.841 km
+2
+). A terrain- and drainage-constrained representative route extended 21.843 km in plan to Gyirong Port and descended approximately 3396 m; it is a corridor descriptor, not a particle trajectory. The prespecified pre-event Sentinel-2 sequence showed no unambiguous large-scale surface change, and the final usable optical observation preceded failure by 45.85 h. Neither GPM IMERG V07 Late nor ERA5-Land placed any of five prespecified precipitation windows in an unusually wet upper tail, although their amounts and historical ranks differed strongly. The 7 d ERA5-Land mean 2 m temperature (9.43
+∘
+C) and positive-degree-day total (65.94
+∘
+C d) ranked above all 25 matched years from 2001–2025. These gridded values provide regional thermal context and do not identify a trigger. Longer-term records support anthropogenic influence on regional summer climate and growth of downstream built-up exposure, while any mechanical link to the rupture remains unresolved. Independent rapid mapping delineated a 37.353 km
+2
+downstream disturbed footprint and contained 695 building points and 15.671 km of roads graded destroyed; these are preliminary mapped features rather than a complete damage census. The principal contribution is an uncertainty-explicit, reproducible reconstruction of the full cascade and its observation-scale limits: open Earth observation recovered robust first-order source, propagation, environmental-context and impact constraints, while the exact detached perimeter, source volume, short-lived pre-failure activity, initiation mechanics and source-scale hydrology remained unresolved.
+†
+†
+firstpage:
+1
+\introduction
+High-mountain rock–ice cascades are source–pathway–receptor systems. A failure involving bedrock, glacier ice, seasonal snow or unconsolidated sediment may fragment, entrain valley-floor material, enter a confined drainage, impound or displace water, and transform into a debris flow or sediment-laden flood. The resulting downstream footprint can greatly exceed the initial source area
+(
+Schneider et al., 2011
+;
+Mani et al., 2023
+;
+Zhong et al., 2025
+)
+. Understanding such an event therefore requires more than mapping a scar: the source, propagation corridor, process transitions and affected receptors must be reconstructed together.
+Complete reconstruction is difficult because the components are observed by different systems and at different times. Source areas are remote and steep; cloud, seasonal snow and terrain shadow obscure optical imagery; radar responses are affected by viewing geometry and surface state; and rapid-response maps record selected consequences rather than a complete process history. Field access may also be delayed, and a single cascade can cross administrative or national boundaries. These conditions make uncertainty representation and separation of direct observation from interpretation central scientific requirements rather than secondary reporting details.
+Recent events demonstrate the diversity of source conditions and cascade evolution. The 2016 Aru events were low-angle glacier detachments associated with surge-like instability, whereas repeated Flat Creek detachments involved a dynamically constrained glacier with a soft bed and high meltwater availability
+(
+TIAN et al., 2017
+;
+Kääb et al., 2018
+;
+Gilbert et al., 2018
+;
+Jacquemart et al., 2020
+)
+. At Chamoli in 2021, steep bedrock and glacier ice fragmented and entrained material before evolving into a destructive debris flow; later work also documented long-term motion and cracking
+(
+Shugar et al., 2021
+;
+de Vries et al., 2022
+)
+. Repeated Sedongpu events show how glacier and rock–ice failures can produce exceptional erosion, river blockage and landscape reorganisation
+(
+An et al., 2022
+;
+Zhao et al., 2022
+;
+Kääb and Girod, 2023
+;
+Li et al., 2024
+;
+Zhang et al., 2025
+)
+. Together, these cases show that source type, entrainment, process transformation and downstream effects vary substantially, and that glacier collapse, rock avalanche, glacier detachment and glacial-lake outburst flood are not interchangeable labels.
+Environmental context, source preconditioning and immediate triggering also require different evidence. Permafrost degradation, glacier retreat, extreme warmth and liquid water are physically relevant to high-mountain slope stability, but their roles depend on local lithology, fracture structure, thermal state and hydrology, which are seldom observed directly
+(
+Gruber et al., 2004
+;
+Huggel, 2009
+;
+Huggel et al., 2010b
+;
+Huggel et al., 2010a
+;
+Gruber et al., 2017
+)
+. An environmental anomaly can be consistent with preconditioning without identifying the immediate trigger. Likewise, regional anthropogenic climate attribution does not establish event attribution, and historical development can increase exposure without amplifying hazard magnitude. These distinctions are essential when regional warming, unresolved source mechanics and changing settlement patterns coexist
+(
+Kargel et al., 2016
+;
+Fujita et al., 2017
+;
+Zhuang et al., 2024
+;
+Jiang and Zhou, 2023
+;
+Pesaresi et al., 2024
+)
+.
+Multi-source Earth observation can nevertheless recover complementary parts of an inaccessible cascade. Optical imagery can locate changed surfaces and map snow, ice, debris and channel disturbance; radar amplitude can provide an independent all-weather change signal; digital elevation models can constrain source and route geometry; reanalysis and satellite precipitation can describe regional environmental conditions; and rapid maps can document selected downstream effects. Pre-failure surface motion or morphological change is one additional observational dimension, but its interpretation depends on sensor resolution, cadence, cloud, snow, texture and terrain geometry. The value of a multisensor reconstruction is therefore greatest when direct observations, derived quantities, supported interpretations and unresolved mechanisms remain explicit
+(
+Huggel et al., 2005
+;
+Shugar et al., 2021
+;
+Zhao et al., 2022
+;
+Kirschbaum et al., 2019
+)
+.
+For Gyirong,
+Guo et al. (2026)
+provide the event-specific process benchmark. They reconstructed the source-to-port chain and progressive entrainment using GF-1/GF-7 and other satellite imagery, field photographs, KKN seismic records, monitoring video, eyewitness constraints and a dedicated 2024–2026 Sentinel-2 glacier-velocity analysis. Their study reported limited source precipitation during the final 72 h, anomalously warm seasonal conditions, relatively high surface velocities in part of the source glacier and candidate seismic signals during the hours before the main event, without identifying a single immediate trigger. This evidential scope provides a process-rich reference against which an independent open-data reconstruction can be compared.
+Here we present an uncertainty-aware reconstruction of the full Gyirong source–pathway–receptor cascade using open and publicly released Earth-observation data. The GF imagery, field photographs, seismic waveforms, video and autoRIFT/TICOI velocity results of
+Guo et al. (2026)
+were not used to define our measurements and served only as an independent comparison. This design permits cross-validation of first-order geometry and source classification while treating source-perimeter uncertainty, prespecified-window optical visibility limits, hydroclimatic product sensitivity, rapid-map damage grades and exposure intersections as distinct evidence classes.
+We address three integrated questions: (1) what source geometry, propagation route and downstream consequences can be reconstructed and quantified while representing uncertainty; (2) what pre-event environmental and surface-observation conditions are supported, including hydroclimate, long-term regional context and the limits of routine optical detectability; and (3) what does the Gyirong event reveal about the capabilities and limits of open Earth observation for reconstructing rapidly evolving high-mountain hazard chains? The study does not perform formal event attribution or dynamic runout simulation, and pre-event observability is one component of the event reconstruction rather than its organizing question.
+1
+Study area and event
+The mapped source is on the northern flank of the Langtang Lirung massif near the China–Nepal border, in steep glacierised terrain draining northward towards the Gyirong/Timure border corridor (Fig.
+1
+). The preferred source centroid is 85.52701
+∘
+E, 28.28858
+∘
+N. Regional relief is high: the preferred source reaches 5221 m, whereas Gyirong Port lies near 1823 m. The upper route is steep and confined; farther downstream the drainage intersects settlements, roads, border facilities and the Bhote Koshi–Trishuli corridor. The area was also affected by snow and ice avalanches during the 2015 Gorkha earthquake, but the 2026 event was not classified here as earthquake-triggered
+(
+Kargel et al., 2016
+)
+.
+We use 26 August 2026 at 02:52:00 UTC (10:52 Beijing time) as the reference event time, corresponding to the reported mass-movement signal. An official account gives an approximate time near 10:30 Beijing time, and another signal time is 20 s later; these differences define the timing uncertainty
+(
+Jiangsu Earthquake Agency, 2026
+;
+China Geological Survey, 2026
+)
+. All acquisition offsets and pre/post classifications use exact UTC timestamps rather than calendar dates.
+Initial public descriptions variously used glacier collapse, ice avalanche, landslide, mudslide and flood. The China Geological Survey’s preliminary assessment described a high-elevation ice collapse that entrained moraine material and developed into a debris flow
+(
+China Geological Survey, 2026
+)
+. We delineated the source independently before comparing it with these external descriptions. Place names are used descriptively and no boundary line is intended to express a jurisdictional position.
+Figure 1:
+Regional setting of the 26 August 2026 Gyirong event. (a) Location near the China–Nepal border. (b) Preferred source bound and terrain-derived source-to-port centreline over Copernicus DEM hillshade. The 21.843 km centreline is a representative route constrained by drainage and post-event evidence, not a mapped inundation boundary. Data: Natural Earth country context, Copernicus DEM GLO-30, OpenStreetMap waterways, preferred source boundary and representative centreline. Place-name and boundary depiction is neutral.
+2
+Data and methods
+2.1
+Analysis scope, evidence classes and event clock
+We reconstructed the event retrospectively using post-event multisensor observations to identify the source, route and downstream impacts. Source identification was based on convergent optical and radar evidence across plausible headwalls in the affected drainage; the reported source geometry was defined independently from earlier exploratory source-location attempts. To limit overinterpretation, we distinguish direct observations, derived measurements, supported process interpretations and unresolved questions throughout the analysis. Direct observations are visible features or features in independent mapping products; derived measurements are reproducible quantities calculated from defined data and geometries; supported interpretations connect multiple observations through process reasoning; and unresolved questions are not constrained by the available data. The accompanying reproducibility materials link the principal claims to their evidence and limitations.
+The event time in Sect.
+1
+was applied before calculating all acquisition offsets. Images ending strictly before 02:52:00 UTC were pre-event; images starting afterward were post-event. No same-day acquisition was classified from date alone.
+2.2
+Satellite and ancillary data
+Sentinel-2 Level-2A supplied 10 m bottom-of-atmosphere reflectance and scene-classification information
+(
+Drusch et al., 2012
+)
+. Landsat-9 Collection 2 Level-2 supplied the first open post-event optical acquisition at 30 m sampling
+(
+Earth Resources Observation and Science
+Center, 2020
+)
+. Public Planet disaster imagery supplied 3–4 m PlanetScope observations and footprint metadata under a CC BY-NC 4.0 licence
+(
+Planet Labs PBC, 2026
+)
+.
+Sentinel-1 radiometrically terrain-corrected backscatter supplied an event-bracketing amplitude-change layer; it was not processed as a full SLC, phase-interferometric or coherence stack
+(
+Torres et al., 2012
+)
+. Copernicus DEM GLO-30 provided terrain elevation, slope, aspect and relief
+(
+European Space Agency and Copernicus
+Programme, 2021
+)
+. OpenStreetMap waterways and roads helped constrain the representative corridor and exposure intersections
+(
+OpenStreetMap contributors, 2026
+)
+. UNOSAT and Copernicus EMSR927 products were retained as independent rapid-response observations of the downstream footprint and damage grades, not as training labels or complete-census denominators
+(
+United Nations Satellite Centre, 2026
+;
+Copernicus Emergency Management Service, 2026
+)
+. Table
+1
+summarizes the principal observations.
+Table 1:
+Principal observations used in the reconstruction. Spatial sampling is nominal; locally usable coverage, timing and licence restrictions determine the effective evidence.
+\tophline
+Source
+Product or date
+Sampling
+Principal use and limitation
+\middlehline
+Sentinel-2
+Level-2A, 2025–2026
+10 m
+Prespecified pre-event sequence and pre/post source change; affected by cloud, shadow, snow and illumination.
+Landsat-9
+Collection 2 Level-2, 26 Aug 04:47:48 UTC
+30 m
+First open post-event optical bracket, 1.93 h after failure; only 10.8 % of the source comparison area passed the validity mask.
+PlanetScope
+26 and 28 Aug
+3.4–3.8 m
+Partial high-resolution source support; source-covering clear fractions were 1.2–2.5 % and 6.1–11.3 %.
+Sentinel-1
+RTC amplitude, 16–28 Aug
+approximately 10 m
+Independent amplitude-change support; non-unique response, not InSAR, coherence or displacement.
+Copernicus DEM
+GLO-30
+approximately 30 m
+Source terrain and representative route geometry; a surface model with local registration limitations.
+IMERG
+V07 Late
+0.1
+∘
+, 30 min
+Antecedent precipitation and matched 2001–2025 ranks; no source-scale rainfall.
+ERA5-Land
+Hourly
+0.1
+∘
+, 1 h
+Regional precipitation, temperature and PDD context; grid elevation is 539 m below the source median.
+UNOSAT/CEMS
+Rapid maps, 26–28 Aug
+product-dependent
+Independent footprint and damage grades; preliminary and not a complete or field-validated census.
+\bottomhline
+\belowtable
+Planet imagery is used under its public disaster-data licence; redistribution requirements must be checked by the accountable authors.
+2.3
+Source mapping and classification
+The source search covered all plausible headwalls around the candidate drainage and did not begin from a scar-shaped region. Pre- and post-event optical images were compared on common grids. Mapping cues were a new fresh or scoured surface, disappearance or reorganisation of snow/ice, exposed darker rock or debris, headwall change and spatial continuity with the downstream affected corridor. Radar amplitude change was used as supporting convergence only because snow state, wetness and geometry can also change amplitude.
+Three nested polygons express interpretive uncertainty in the perimeter of the mapped post-event changed/source surface. The conservative envelope contains only the fresh/scoured surface, snow/ice loss or reorganisation, and exposed rock/debris supported most consistently across visible observations. The preferred envelope represents the connected changed/source surface best supported by the combined observations. The inclusive envelope additionally contains plausible edges obscured or rendered ambiguous by cloud, haze, shadow and mixed surface change. These polygons do not represent measured failure depth, volume, rock/ice fractions or probabilistic confidence intervals, and they need not be identical to the initially detached body. The source geometry was finalized before comparison with external source locations. The source term was then selected from glacier detachment, hanging-glacier failure, ice avalanche, rock avalanche, mixed rock–ice slope failure or unresolved, with composition and initial kinematics treated separately.
+2.4
+Terrain and process-chain reconstruction
+Source metrics were calculated in UTM zone 45N. Elevation, slope and aspect were sampled on a 10 m analysis grid derived from Copernicus DEM GLO-30. Aspect distribution used eight 45
+∘
+sectors; mean aspect was circular. Local relief was the elevation range within a 500 m-radius neighbourhood. Maximum source dimension was the maximum planimetric separation within each polygon.
+A representative centreline connected the source to Gyirong Port while remaining within the independent UNOSAT affected footprint, except for a 15 m half-pixel support buffer. DEM and mapped waterways guided the centreline. Planar length was measured in UTM coordinates, surface length accumulated three-dimensional segment lengths, vertical drop used start and port endpoint elevations, and mean endpoint angle was
+tan
+−
+1
+⁡
+(
+H
+/
+L
+)
+\tan^{-1}(H/L)
+, where
+H
+H
+is endpoint drop and
+L
+L
+is planar route length. The profile retains raw 60 m DEM samples and a Savitzky–Golay smoothed curve over approximately 1.2 km. Local uphill steps in the raw record were considered DEM/centreline registration artefacts and were not interpreted dynamically. Process reaches were mapped as supported interpretations, not particle trajectories.
+2.5
+Pre-event optical observations
+Six Sentinel-2 windows were selected before visual interpretation to represent approximately one year, six months, three months, one month, two weeks and the latest usable observation before failure. Within each target window, selection prioritized source-local scene-classification usability and then proximity to the nominal date; no date was chosen for apparent anomaly. All panels use a common projection, extent and comparable reflectance display. Interpretation was restricted to large-scale change resolvable at 10 m. We separately tested a feature-tracking configuration defined before inspecting the source results, but no source displacement estimate met both the stable-terrain-error and spatial-coherence requirements; displacement was therefore excluded from the main results.
+2.6
+Radar change
+Sentinel-1 VV and VH radiometrically terrain-corrected amplitude observations bracketing the event were co-registered on the event grid and compared in logarithmic space. We interpreted only spatially coincident source or corridor changes supported by optical or rapid-map evidence. Conventional InSAR was not attempted because steep topography, layover/shadow, snow/ice decorrelation and potentially non-phase-resolvable displacement made a robust phase result unlikely. Coherence and amplitude-change methods can assist rapid landslide mapping, but are non-unique and must be checked against independent information
+(
+Burrows et al., 2020
+;
+Jacquemart and Tiampo, 2021
+)
+.
+2.7
+Hydroclimatic context
+ERA5-Land hourly 2 m temperature and total precipitation and GPM IMERG V07 Late half-hourly precipitation were obtained from their official archives
+(
+Copernicus Climate Change Service, 2019
+;
+Muñoz-Sabater et al., 2021
+;
+Huffman et al., 2023
+;
+Huffman et al., 2020
+)
+. Only the five prespecified antecedent windows were evaluated: 24 h, 3 d, 7 d, 14 d and 30 d. The ERA5-Land cutoff was the complete hour ending at 02:00 UTC (52 min before failure); the IMERG cutoff was the complete half-hour ending at 02:30 UTC (22 min before failure). Event values were compared with matched 26 August windows for 2001–2025 (
+n
+=
+25
+n=25
+), excluding 2026.
+The empirical percentile was
+100
+​
+(
+n
+<
++
+0.5
+​
+n
+=
+)
+/
+n
+100(n_{<}+0.5n_{=})/n
+, where
+n
+<
+n_{<}
+and
+n
+=
+n_{=}
+are historical values below and equal to the event value. Robust anomalies used the median and median absolute deviation; no formal independent-window
+p
+p
+values were assigned because the accumulation windows overlap. Daily ERA5-Land temperature statistics used complete UTC days. A warm spell was defined before analysis as consecutive complete days ending 25 August on which daily mean temperature exceeded the matched day-specific 90th percentile. Positive degree days (PDD) were
+∑
+max
+⁡
+(
+T
+daily
+,
+0
+)
+\sum\max(T_{\mathrm{daily}},0)
+for complete days. PDD is a temperature-index proxy and is not a direct measurement of melt
+(
+Wake and Marshall, 2015
+)
+.
+The primary temperature and PDD values were not lapse-rate corrected. The ERA5-Land grid elevation (approximately 4452 m) is 539 m below the preferred source median (4991 m). Spatial sensitivity was evaluated with the source cell, neighbouring cells and a predefined
+3
+×
+3
+3\times 3
+support. Both products have approximately 0.1
+∘
+spatial sampling and cannot resolve headwall-scale precipitation, local convection, source-scale snowfall, subsurface water, meltwater routing, permafrost state or failure-plane hydrology.
+2.8
+Historical environmental and exposure context
+Longer-term July–August temperature was evaluated using the same predefined spatial supports and seasonal definition. Hourly ERA5-Land data for 1951–2025 were reduced to annual July–August means at the source-nearest grid cell and over the fixed Central Himalaya regional support. We calculated ordinary-least-squares (OLS) trends with 95 % confidence intervals, Theil–Sen slopes, Mann–Kendall statistics, and 10- and 20-year running means for 1951–2025, 1976–2025 and 2001–2025. The extended record was validated by reproducing the previously calculated 2001–2025 trends before analysis of the longer time series
+(
+Muñoz-Sabater et al., 2021
+)
+.
+Berkeley Earth monthly land temperature over the same regional box, where available, supplied an independent July–August sensitivity record for 1951–2024
+(
+Rohde et al., 2013
+;
+Rohde and Hausfather, 2020
+)
+. CMIP6/DAMIP forcing consistency used four prespecified models with paired historical/all-forcing and historical-natural simulations, one member per model and equal model weight, over the same regional box. Comparisons were restricted to July–August 1951–2020 and 1971–2020 because the observational record used here is seasonal rather than full-year. This comparison tests whether the observed trend lies more consistently within the small all-forcing or natural-only model distributions; it is not optimal fingerprinting, formal event attribution or an estimate of the anthropogenic fraction of warming
+(
+Gillett et al., 2016
+)
+.
+Six historical source-image epochs (1972, 1987, 2000, 2008, 2020 and 2026) were inspected within a fixed source-context region. Cross-sensor interpretation was harmonised to a 120 m minimum mapping unit. Because seasonal snow, terrain shadow and sensor differences prevented like-for-like delineation, we did not estimate a quantitative source-cryosphere trend. We also examined the images for direct surface disturbance within fixed 0.5, 1, 2 and 5 km source buffers. Historical built-up exposure was measured independently with GHSL R2023A built-up-surface grids for 1975, 1990, 2000, 2015 and 2020 in four fixed zones: the UNOSAT affected footprint, Timure/Gyirong Port, Syapru Besi and a fixed 500 m corridor buffer. Built-up area and fraction were calculated at nominal zone geometry and with low/high boundary-sampling sensitivity; they measure exposure, not population, damage, casualties or hazard magnitude
+(
+Pesaresi et al., 2024
+)
+.
+2.9
+Channel change, damage and exposure
+Twelve cross-valley transects were placed at terrain- and channel-defined positions before widths were inspected. At each transect we separately attempted to measure a channel-connected pre/post water segment and the width of the independent mapped disturbed footprint. A water width was reported only when both dates met the prespecified valid-pixel and connectivity rule. Disturbed width therefore does not imply flowing-water width. Its reported uncertainty contains a
+±
+20
+\pm 20
+m pixel-edge component but not a formal interpreter-boundary term.
+Copernicus damage grades were summarized by delivered feature class and area of interest. Road lengths were calculated from mapped line geometry; buildings, transport points and facilities were counted as mapped features. OpenStreetMap roads and bridge-tagged features were intersected with the UNOSAT footprint to characterize exposure only. No casualty or population estimate was inferred, and rapid-map counts were not treated as complete inventories.
+3
+Results
+3.1
+Source identification and geometry
+The final pre-event Sentinel-2 image was acquired at 05:00:49 UTC on 24 August, 45.85 h before the failure clock. Post-event Landsat-9, Sentinel-2 and partly unobscured PlanetScope imagery showed a new fresh or scoured surface, loss or reorganisation of snow and ice, and exposure of darker debris or rock in the same high-elevation slope sector (Fig.
+2
+). Sentinel-1 RTC amplitude change between 16 and 28 August was spatially coincident with the optical change, although the radar response was not unique to mass movement. The Pelican and SkySat strips examined did not cover the mapped source; source-covering PlanetScope scenes were strongly affected by cloud and haze.
+Figure 2:
+Common-grid source-region evidence comparison without external source labels. Acquisition times (UTC) were Sentinel-2 pre-event, 24 August 05:11; Landsat-9, 26 August 04:47; Sentinel-2, 27 August 05:10; PlanetScope, 26 August 05:44 and 28 August 04:57; and Sentinel-1 RTC, 16 and 28 August 12:21. The observations show convergent but variably cloud-limited surface change. White or obscured areas are not interpreted, and radar amplitude change alone is not diagnostic. Data: Sentinel-2 Level-2A, Landsat Collection 2 Level-2, PlanetScope public disaster imagery and Sentinel-1 RTC.
+The preferred mapped post-event changed/source surface was 1.009 km
+2
+, bracketed by conservative and inclusive envelopes of 0.491 and 1.841 km
+2
+(Fig.
+3
+; Table
+2
+). Within the preferred envelope, Copernicus DEM elevations ranged from 4355 to 5221 m, with median and mean elevations of 4991 and 4940 m. Median and mean slopes were 34.8 and 34.1
+∘
+. The circular mean aspect was 280.8
+∘
+; west- and northwest-facing pixels comprised 48.2 % and 33.8 % of the mapped area. Median local relief within a 500 m radius was 840 m, and the maximum planimetric source dimension was 1151 m.
+Figure 3:
+Mapped changed/source-surface geometry and terrain uncertainty. (a) Conservative, preferred and inclusive mapping envelopes over elevation. (b) DEM-derived slope. (c) Aspect distribution within the preferred envelope. The nested polygons describe perimeter interpretation, not the volume or material fractions of the initially detached body and not probabilistic confidence intervals. No source volume is estimated. Data: multisensor source boundaries and Copernicus DEM GLO-30.
+Direct observations establish change involving both snow/ice-covered and exposed rock/debris surfaces. Combined with the steep source terrain, this supports the term
+mixed rock–ice slope failure
+. The data do not resolve whether rupture initiated in bedrock, glacier ice or their interface, nor the rock-to-ice proportion, failure depth or initial kinematics. No volume was calculated because no suitable co-registered pre/post DEM pair was available.
+Table 2:
+Mapped changed/source-surface and route geometry. Conservative, preferred and inclusive envelopes express perimeter interpretation and are not confidence intervals or detached-volume estimates.
+\tophline
+Metric
+Conservative
+Preferred
+Inclusive
+Qualification
+\middlehline
+Changed/source-surface area (km
+2
+)
+0.491
+1.009
+1.841
+Nested multisensor mapping envelopes
+Elevation range (m)
+4543–5200
+4355–5221
+4261–5261
+Copernicus DEM GLO-30
+Median elevation (m)
+5045
+4991
+4977
+DEM-derived
+Median slope (
+∘
+)
+35.7
+34.8
+32.1
+DEM-derived
+Circular mean aspect (
+∘
+)
+280.5
+280.8
+285.2
+Clockwise from north
+Median local relief (m)
+804
+840
+849
+500 m-radius neighbourhood
+Maximum source dimension (m)
+798
+1151
+1526
+Maximum planimetric separation
+\middlehline
+Planar route to port (km)
+–
+21.843
+–
+Representative centreline, not a particle trajectory
+Surface route to port (km)
+–
+22.710
+–
+DEM-derived three-dimensional length
+Endpoint drop (m)
+–
+3396
+–
+Approx. 5220 to 1823 m
+Mean endpoint angle (
+∘
+)
+–
+8.84
+–
+First-order geometric descriptor
+\bottomhline
+\belowtable
+No source volume is reported because no suitable co-registered pre/post DEM pair exists.
+3.2
+Source-to-downstream cascade
+A representative centreline constrained by the independent UNOSAT footprint and mapped drainage connected the source to Gyirong Port/Timure (Fig.
+4
+). The planar source-to-port length was 21.843 km and the DEM-derived surface length was 22.710 km. The route descended from approximately 5220 m at the source crown to 1823 m at the port, an endpoint drop of 3396 m and a mean endpoint angle of 8.84
+∘
+(Fig.
+5
+). The adopted topographic transition from the steep initial avalanche reach, where entrainment may have occurred, to channelised transport was placed at the first sustained descent below 3200 m, 5.94 km from the source. This divider is interpretive rather than a directly observed flow transition.
+Figure 4:
+Reconstructed source-to-downstream process chain. The preferred source connects to a steep initial avalanche reach, channelised transport to Gyirong Port/Timure, and a downstream mudflow/flood route towards Syapru Besi. Entrainment within the upper reach is plausible but is not independently quantified by these data. Process lines and reach boundaries are interpretations supported by terrain and mapped change; shaded UNOSAT and Copernicus EMS polygons are independent rapid-response observations. Data: Copernicus DEM GLO-30, UNOSAT, Copernicus EMSR927, OpenStreetMap and the event GIS dataset.
+The mapped sequence comprised the source polygon, an interpreted initial avalanche reach in which entrainment may have occurred, channelised transport to the port and a downstream mudflow/flood route. The independent UNOSAT product mapped a 37.353 km
+2
+combined mudflow/rockflow footprint. Copernicus mapped 1.259 km
+2
+and 1.111 km
+2
+event polygons in its Timure/Gyirong Port and Syapru Besi areas, respectively. The available observations did not resolve a separate short-lived blockage or breach geometry.
+Figure 5:
+Longitudinal source-to-port terrain profile. Raw 60 m samples are shown with a Savitzky–Golay smoothed elevation and rolling-slope representation. The route descends approximately 3396 m over a 21.843 km planar distance. Shading denotes supported process reaches; J1–J3 mark major mapped drainage junctions. Data: Copernicus DEM GLO-30, representative centreline and OpenStreetMap waterways. The displayed elevation is smoothed over approximately 1.2 km; local raw-profile uphill steps are registration artefacts and are not flow behaviour.
+3.3
+Pre-event surface observations and observational limits
+The six prespecified Sentinel-2 windows were 6 October 2025, 13 February 2026, 16 May 2026, 2 July 2026, 12 August 2026 and 24 August 2026 (Fig.
+6
+). Source-region usable fractions varied from 42 % to 100 % because of cloud, shadow, seasonal snow and illumination. This routine Sentinel-2 sequence showed no unambiguous large-scale pre-failure surface change at 10 m sampling, and the final usable optical observation preceded failure by 45.85 h. This result does not exclude persistent motion detectable through dense feature tracking, sub-pixel or obscured changes, or activity during the final observation gap.
+Figure 6:
+Sentinel-2 source-region sequence for six prespecified pre-event windows using a common extent, projection and display. The sequence shows no unambiguous large-scale pre-failure surface change at 10 m sampling. Cloud, shadow and seasonal snow vary among panels; the latest usable observation preceded failure by 45.85 h. This does not exclude persistent motion, sub-pixel or obscured changes, or activity during the final observation gap. Data: Sentinel-2 Level-2A and the preferred source boundary.
+The first open post-event optical acquisition was Landsat-9 at 04:47:48 UTC, 1.93 h after failure, but only 10.8 % of the source comparison area passed the validity mask. PlanetScope first covered the source at 05:44:56 UTC, 2.88 h after failure; clear fractions within covered pixels were only 1.2–2.5 %. Sentinel-2 at 05:10:45 UTC on 27 August provided 37.5 % locally usable source coverage, and PlanetScope on 28 August provided 6.1–11.3 % clear coverage. The acquisitions jointly bracket the source change but do not provide one uniformly clear high-resolution post-event perimeter. No displacement estimate met the predefined stable-terrain-error and spatial-coherence criteria.
+3.4
+Short- and long-term environmental context
+All five precipitation windows were complete to the final product-specific cutoff. IMERG recorded 4.0 and 8.3 mm over 24 h and 3 d, at the 20th and 4th percentiles of matched 2001–2025 periods. Its 7, 14 and 30 d totals were 16.8, 44.6 and 103.4 mm, each lower than all 25 matched historical years. ERA5-Land totals were 5.7, 20.2, 74.5, 194.0 and 422.0 mm over 24 h, 3 d, 7 d, 14 d and 30 d, at the 16th, 16th, 44th, 64th and 68th percentiles, respectively (Fig.
+7
+; Table
+3
+).
+The products disagreed substantially in amount and historical rank, especially over 7–30 d. Their common result was the absence of an unusually wet gridded antecedent period. This is not evidence that the source was dry and does not exclude unresolved local precipitation.
+Regional thermal conditions were anomalously warm. The ERA5-Land 7 d mean 2 m temperature was 9.43
+∘
+C, above all 25 matched years; the 14 d mean was 9.36
+∘
+C, at the 96th percentile. Daily mean temperature exceeded the matched daily 90th-percentile threshold for five consecutive complete days ending 25 August.
+Unadjusted PDD accumulation was 65.94
+∘
+C d over 7 d, above all 25 matched historical years. Totals over 14 d, 30 d and 1 July–25 August were 131.11, 279.44 and 526.02
+∘
+C d, at the 96th, 88th and 96th percentiles. The 539 m elevation mismatch and 0.1
+∘
+grid spacing mean that these values describe regional melt-season thermal conditions, not source temperature or source-ice melt.
+Figure 7:
+Hydroclimatic conditions preceding failure. (a) GPM IMERG V07 Late half-hourly precipitation during the final 7 d. (b) Empirical precipitation percentiles for five prespecified windows, with the 90th percentile marked; the IMERG 7–30 d ranks were lower than all 25 matched years. (c) ERA5-Land daily mean 2 m temperature, matched historical median and daily 90th-percentile threshold; shading marks the five-day warm spell ending 25 August. (d) Unadjusted PDD totals in 2026 relative to the 25 matched historical years. Dashed lines mark failure at 02:52 UTC. The 7 d temperature and PDD exceeded all matched years, whereas neither precipitation product indicated unusually wet conditions. These are regional environmental data, not trigger attribution.
+Table 3:
+Hydroclimatic conditions preceding failure. Historical ranks compare matched 26 August periods in 2001–2025 (
+n
+=
+25
+n=25
+). Values describe gridded regional context and do not classify a trigger.
+\tophline
+Variable
+Window
+IMERG
+ERA5-Land
+Historical rank
+\middlehline
+Precipitation (mm)
+24 h
+4.0
+5.7
+20th; 16th percentile
+3 d
+8.3
+20.2
+4th; 16th percentile
+7 d
+16.8
+74.5
+lower than all 25; 44th percentile
+14 d
+44.6
+194.0
+lower than all 25; 64th percentile
+30 d
+103.4
+422.0
+lower than all 25; 68th percentile
+\middlehline
+Mean 2 m temperature (
+∘
+C)
+24 h
+–
+9.41
+92nd percentile
+3 d
+–
+9.59
+above all 25
+7 d
+–
+9.43
+above all 25
+14 d
+–
+9.36
+96th percentile
+30 d
+–
+9.31
+88th percentile
+\middlehline
+PDD (
+∘
+C d)
+7 d
+–
+65.94
+above all 25
+14 d
+–
+131.11
+96th percentile
+30 d
+–
+279.44
+88th percentile
+1 Jul–25 Aug
+–
+526.02
+96th percentile
+\bottomhline
+\belowtable
+IMERG and ERA5-Land have approximately 0.1
+∘
+sampling. The ERA5-Land grid elevation is approximately 4452 m, 539 m below the preferred source median. Temperature and PDD are not lapse-rate corrected; PDD is not a direct melt measurement.
+Regional July–August ERA5-Land temperature increased by 0.1208
+∘
+C decade
+-1
+during 1951–2025 (95 % OLS confidence interval 0.0894–0.1521
+∘
+C decade
+-1
+; Theil–Sen slope 0.1203
+∘
+C decade
+-1
+; Mann–Kendall
+p
+=
+1.47
+×
+10
+−
+9
+p=1.47\times 10^{-9}
+). The corresponding source-nearest grid-cell trend was 0.0666
+∘
+C decade
+-1
+. For 1976–2025, the regional and source-nearest trends were 0.1482 and 0.0675
+∘
+C decade
+-1
+, respectively. These differences show that the regional mean cannot be treated as a source-temperature measurement (Fig.
+8
+a).
+Berkeley Earth independently gave a positive 1951–2024 July–August regional trend of 0.1531
+∘
+C decade
+-1
+(95 % confidence interval 0.1128–0.1933), compared with 0.1156
+∘
+C decade
+-1
+(0.0840–0.1472) from ERA5-Land over the directly comparable period. For 1951–2020, the observed ERA5-Land trend was 0.0966
+∘
+C decade
+-1
+, within the four-model all-forcing range (0.052–0.702) and outside the natural-only range (
+−
+0.052
+-0.052
+to
+−
+0.005
+-0.005
+). For 1971–2020, the observed 0.1252
+∘
+C decade
+-1
+trend again lay inside the all-forcing range (0.061–0.687) and outside the natural-only range (
+−
+0.031
+-0.031
+–0.053; Fig.
+8
+b). This small-ensemble result establishes forcing consistency, not event attribution.
+Figure 8:
+Historical regional temperature, forcing consistency and downstream built-up exposure. (a) Annual July–August ERA5-Land regional mean temperature, 20-year running mean and OLS trend for 1951–2025. (b) Observed ERA5-Land trends with 95 % confidence intervals compared with one-member-per-model July–August CMIP6/DAMIP all-forcing and natural-only trends from four paired models. The comparison indicates forcing consistency and is not formal event attribution. (c) GHSL R2023A mapped built-up surface in four fixed downstream zones for 1975–2020; bands show boundary-sampling sensitivity and the logarithmic axis accommodates the different zone magnitudes. GHSL measures built-up exposure, not population, damage or hazard magnitude. Data: ERA5-Land, CMIP6/DAMIP and GHSL R2023A.
+3.5
+Geomorphic consequences
+The independent UNOSAT footprint intersected all 12 terrain-positioned transects (Supplement). Disturbed-corridor widths ranged from 145 to 1298 m, with a median of 533 m. The nine source-to-port transects had a median width of 970 m, whereas the three downstream transects had a median width of 195 m. The
+±
+20
+\pm 20
+m pixel-edge component does not include formal uncertainty in the independently mapped boundary.
+No transect yielded a defensible pre/post water-width pair under the prespecified valid-pixel and channel-connectivity rule. The 24 August baseline was obscured at several lower-valley transects, and elsewhere the automated masks did not resolve a channel-connected water segment above the sensor-specific minimum width. Water-width change is therefore not measured, rather than zero. Available imagery likewise did not support consistent separation of scour, entrainment, transport, deposition, new/lost water and temporary blockage into distinct areal classes.
+The transect map and complete width profile are presented in the Supplement because they characterize observation limits rather than provide a direct measurement of water-width change.
+3.6
+Infrastructure impacts and historical exposure
+Copernicus EMSR927 layers contained 433 affected building points in AOI01 (Syapru Besi) and 431 in AOI02 (Timure/Gyirong Port). Across both areas, 695 building points were graded destroyed, 65 damaged and 104 possibly damaged. The same products mapped 15.671 km of destroyed road, 1.661 km of possibly damaged road and 3.872 km of road with no visible damage in the published affected-feature layers. Six transport points and two facility polygons were graded destroyed (Fig.
+9
+; Table
+4
+).
+OpenStreetMap overlay identified 7.414 km of mapped road, represented by 25 line features, and two bridge-tagged features intersecting the UNOSAT footprint. These are exposure intersections, not observations of damage. OpenStreetMap segmentation and completeness affect both counts, and no building-population exposure or casualty estimate was produced.
+GHSL built-up surface increased between 1975 and 2020 in every fixed downstream zone (Fig.
+8
+c). Within the UNOSAT affected footprint, mapped built-up area increased from 0.0359 to 0.4412 km
+2
+; Timure/Gyirong Port increased from 0.00541 to 0.0363 km
+2
+, Syapru Besi from 0.00258 to 0.0246 km
+2
+, and the fixed corridor from 0.000728 to 0.00952 km
+2
+. In each zone, the 2020 lower boundary-sensitivity estimate exceeded the 1975 upper estimate. These changes quantify growth of built-up exposure only; they do not measure damage, population growth or hazard amplification.
+Figure 9:
+Independent rapid-mapping evidence for downstream impacts. Copernicus EMSR927 maps affected buildings and roads in Syapru Besi and Timure/Gyirong Port. Across the published layers, 695 building points and 15.671 km of roads were graded destroyed. Counts describe preliminary mapped features only and are not a complete census. Data: Copernicus EMSR927 and UNOSAT.
+Table 4:
+Independent rapid-map damage grades and exposure intersections. Feature counts and lengths describe the published product layers, not complete inventories.
+\tophline
+Metric
+Value
+Evidence type
+Qualification
+\middlehline
+UNOSAT affected footprint
+37.353 km
+2
+Rapid-map observation
+Preliminary; not field validated
+Destroyed building points
+695
+CEMS damage grade
+Mapped points, not a building census
+Damaged building points
+65
+CEMS damage grade
+Mapped points
+Possibly damaged building points
+104
+CEMS damage grade
+Mapped points
+Destroyed road length
+15.671 km
+CEMS damage grade
+Mapped lines, not network completeness
+Possibly damaged road length
+1.661 km
+CEMS damage grade
+Mapped lines
+Destroyed transport/facility features
+6 / 2
+CEMS damage grade
+Points / polygons in the mapped products
+OSM road exposure intersection
+7.414 km
+Exposure
+Not observed damage; completeness unknown
+OSM bridge-tagged intersections
+2
+Exposure
+Not observed damage; inventory incomplete
+\bottomhline
+\belowtable
+No casualties or population exposure are inferred.
+4
+Discussion
+4.1
+Source classification and uncertainty
+Our strongest source evidence is the convergence of a new optical surface change, snow/ice loss or reorganisation, exposed darker rock/debris, steep topography and spatially coincident Sentinel-1 amplitude change. This combination makes
+mixed rock–ice slope failure
+more defensible than either glacier collapse or rock avalanche alone. Independent GF imagery and field photographs presented by
+Guo et al. (2026)
+show glacier ice and rock involvement and residual hanging ice, providing external consistency with this material classification. Those observations were not used to define our source geometry.
+The two studies attach different areas to the source. Our preferred 1.009 km
+2
+value, bounded by conservative and inclusive mapping envelopes of 0.491–1.841 km
+2
+, describes the connected post-event changed/source surface visible across our optical and radar evidence.
+Guo et al. (2026)
+report an approximately 0.72 km
+2
+collapsed ice–rock body using GF and other event-specific observations. The estimates should not be treated as interchangeable or statistically combined: one is explicitly a changed-surface perimeter with obscured-edge envelopes, whereas the other is described as the collapsed source body. Differences in sensor resolution, observation dates, cloud and haze, inclusion of fresh/scoured margins, and manual perimeter interpretation are plausible non-exclusive explanations. Without both digital polygons on a common grid, their overlap and boundary displacement cannot be quantified.
+The classification remains interpretive. Optical appearance cannot quantify rock-to-ice proportion, and the lack of a co-registered pre/post DEM prevents failure-depth and volume estimates. The source envelopes express visible perimeter ambiguity, not volumetric uncertainty. The mapped geometry also differs from the low-angle, soft-bed detachment settings documented at Aru and Flat Creek
+(
+Kääb et al., 2018
+;
+Jacquemart et al., 2020
+;
+Kääb et al., 2021
+)
+. Because neither our data nor the external consistency establishes whether rupture began in bedrock, glacier ice or their interface, a more specific initiation label would overstate the evidence.
+No mapped evidence of large persistent direct anthropogenic surface disturbance was identified at the source within the observable historical record, subject to the stated resolution and visibility limits. This bounded non-detection is not proof that no human activity occurred: narrow, transient, subsurface, unmapped or terrain-shadowed disturbance could remain unresolved in the 1972–2026 images.
+4.2
+Cascade transformation and mobility
+Continuity from the source through a steep confined valley to the independently mapped downstream footprint supports a channel-coupled cascade in which the initial mass fragmented and entered channelised transport. Our independent 21.843 km plan length, 3396 m endpoint drop and 8.84
+∘
+endpoint angle constrain the source-to-port geometry. They do not quantify rheology, velocity, discharge, entrained volume or the trajectory of individual particles. The terrain-based transition at 5.94 km is likewise an interpretive reach boundary.
+Event-specific evidence for progressive erosion and entrainment is stronger in
+Guo et al. (2026)
+, who combine GF imagery, field observations and process information to infer bed and bank scour, incorporation of unconsolidated material, and interaction with channel water and sediment. Our mapped corridor is consistent with such amplification, as are analogues from Kolka, Chamoli and Sedongpu
+(
+Huggel et al., 2005
+;
+Shugar et al., 2021
+;
+Kääb and Girod, 2023
+;
+Zhang et al., 2025
+)
+, but our data neither isolate erosion and deposition volumes nor demonstrate how much mass was added. Accordingly, progressive entrainment is external event-specific support for the cascade interpretation, not an independently quantified result of this study. A dynamic model would add false precision without source volume, material fractions, hydrograph or suitable validation.
+4.3
+Environmental context and limits of causal inference
+Our prespecified 3 d IMERG Late accumulation of 8.3 mm is numerically consistent with the approximately 8.3 mm source-area accumulation over the final 72 h reported independently by
+Guo et al. (2026)
+. This agreement supports limited immediate antecedent rainfall in that gridded product. It does not establish source-scale rainfall, because product version, cut-off convention, grid-cell selection and complex-orographic sampling still require care.
+The broader five-window comparison adds information beyond that common 72 h value. Neither IMERG nor ERA5-Land placed any of the five prespecified event windows in an unusually wet upper tail, but the products disagreed strongly in amount and historical rank over 7–30 d. ERA5-Land indicated anomalously warm regional conditions: the 3 and 7 d mean temperatures and 7 d PDD ranked above all 25 matched 2001–2025 years, and an objectively defined five-day warm spell ended on 25 August. This is consistent with the warmer spring and summer conditions reported by
+Guo et al. (2026)
+, while our contribution is the matched-year ranking, prespecified windows, two-product comparison and explicit representativeness analysis.
+The warm regional period is physically compatible with enhanced seasonal melt or thermal/hydrological preconditioning in ice-bearing terrain, but such preconditioning is not demonstrated here. The approximately 0.1
+∘
+products smooth complex orography, and the ERA5-Land grid elevation is 539 m below the preferred source median. PDD is a temperature-index proxy, not an energy-balance melt observation
+(
+Wake and Marshall, 2015
+)
+. No observation constrains source-scale meltwater production, water storage or routing, pore pressure, ice temperature, permafrost distribution, fracture ice or failure-plane hydrology. Permafrost conditions are particularly poorly known across the Hindu Kush Himalaya
+(
+Gruber et al., 2017
+)
+. Consequently, neither our analysis nor the external comparison proves or disproves a thermal, melt or rainfall trigger.
+Regional July–August warming is supported by ERA5-Land and Berkeley Earth and is more consistent with CMIP6 simulations including anthropogenic forcing than with natural-only simulations. The agreement is strongest for the sign and multidecadal scale of regional summer warming; model spread, sparse topographic sampling and the seasonal observational target preclude a more specific attribution statement. This regional attribution does not establish that anthropogenic warming caused or mechanically contributed to the 2026 rupture. The source-specific links involving permafrost, meltwater, pore pressure, fracture weakening, ice or rock temperature and failure-plane hydrology remain unresolved. The independently observed short warm period is therefore regional environmental context, not evidence of a human-induced trigger or source-scale causal mechanism
+(
+Jiang and Zhou, 2023
+)
+.
+4.4
+Pre-event observability across time scales
+The routine Sentinel-2 sequence showed no unambiguous large-scale pre-failure surface change, and the final usable optical observation preceded failure by 45.85 h. No corrected source-displacement estimate met the predefined stable-terrain-error and spatial-coherence criteria. These findings apply only to resolvable surface change in the six prespecified optical snapshots. They do not exclude persistent motion detectable through dense feature tracking, sub-pixel change, change obscured by cloud, shadow or snow, or activity within the final observation gap
+(
+Lacroix et al., 2018
+;
+Chudley et al., 2022
+;
+Zheng et al., 2023
+;
+Altena et al., 2022
+)
+.
+The dedicated analysis of
+Guo et al. (2026)
+addresses a different observable. Their supplement describes autoRIFT displacement measurements from 211 Sentinel-2 scenes acquired between January 2024 and August 2026, 60–400 d image-pair baselines, stable-area correction, robust TICOI inversion and 15 d velocity output. They report relatively high 2024–2026 velocity in parts of the source glacier. A multi-image velocity inversion can recover persistent motion that is not visible as an unambiguous morphological change in six snapshots; our snapshot-based non-detection therefore neither reproduces nor refutes their velocity result. Reviews of avalanching-glacier instability likewise caution that velocity patterns are process-regime dependent and are not deterministic indicators by themselves
+(
+Faillettaz et al., 2015
+;
+Kääb et al., 2021
+)
+.
+Guo et al. additionally identify several candidate KKN seismic signals during the approximately 3 h before the principal event and relate some timing to eyewitness or video observations, while declining to interpret them as deterministic indicators
+(
+Guo et al., 2026
+)
+. Those signals fall well inside our 45.85 h optical observation gap. The combined record therefore illustrates an observation-scale hierarchy: multi-year velocity and seasonal climate describe long-term state; days-to-weeks optical snapshots and thermal anomalies describe intermediate conditions; seismic or video records can sample activity over hours; and the main cascade propagates over minutes. Agreement or non-detection at one scale cannot be transferred automatically to another.
+The source’s steep geometry and snow/ice cover also weaken a conventional InSAR interpretation. Layover, shadow, decorrelation and phase ambiguity may suppress or distort deformation, while amplitude change is non-unique. We therefore retain Sentinel-1 only as post-event amplitude-change support and do not claim a radar-derived deformation history.
+4.5
+Downstream consequences and changing exposure
+The observed consequence extended far beyond the source. Independent rapid maps show a broad disturbed corridor and mapped damage at Timure/Gyirong Port and Syapru Besi. The 695 building points and 15.671 km of road graded destroyed summarize the published Copernicus EMS products, but their denominator, omission rate and field accuracy are unknown. The UNOSAT polygon and transect intersections describe a mapped affected corridor, not instantaneous flow width, water width, deposition area or inundation depth.
+This impact emphasis is complementary to the process-amplification focus of
+Guo et al. (2026)
+. OpenStreetMap intersections answer which mapped assets lie within the rapid-map footprint, not which assets were damaged. Separating imagery-based change mapped in this study, independent rapid-map damage grades and exposure intersections avoids converting incomplete inventories into loss rates or casualty estimates. Water-width change could not be measured because cloud-obscured baselines and mixed pixels prevented channel-connected segments from meeting the prespecified criteria; disturbed widths therefore cannot be recast as flood-water widths.
+Historical GHSL data independently show substantial growth of downstream built-up exposure. This represents anthropogenic amplification of exposure, not amplification of hazard magnitude or of the source failure itself. Built-up surface is not a complete measure of population, occupancy, asset value or vulnerability; it demonstrates only that more mapped development was situated within the fixed downstream zones by 2020
+(
+Pesaresi et al., 2024
+)
+.
+4.6
+What open Earth observation can and cannot reconstruct
+The comparison shows that observing systems should be combined without being conflated. High-resolution forensic imagery and field photographs constrain source composition and erosion evidence; multi-year feature tracking constrains glacier motion; seismic, infrasound or video can sample short-lived activity; reanalysis and satellite precipitation describe regional environmental context; and rapid maps capture selected downstream consequences. Reviews of High Mountain Asia similarly identify spatial resolution, cloud, terrain, acquisition timing and incomplete end-to-end process observations as central limitations
+(
+Kirschbaum et al., 2019
+)
+.
+Our open-data reconstruction recovers first-order source location and changed-surface uncertainty, route geometry, matched hydroclimatic context and operationally mapped impacts from data that can be independently re-accessed or traced. It also identifies hard limits: open optical snapshots did not resolve the hours-scale activity described externally; radar amplitude did not yield a deformation mechanism; regional climate did not resolve source hydrology; and rapid mapping did not produce a complete field inventory. The absence of unambiguous large-scale change in the prespecified optical sequence is therefore compatible with higher-frequency seismic activity, persistent motion derived from a denser image archive, or changes below the spatial or temporal resolution of the observations.
+4.7
+Limitations
+The principal limitations are: (1) cloud and haze in all early source-covering post-event optical observations; (2) mapped-source envelopes informed by convergent multisensor evidence but not a second independent delineation; (3) no appropriate pre/post DEM and therefore no source, erosion or deposition volume; (4) a representative centreline and smoothed 30 m DEM profile rather than observed particle trajectories; (5) non-specific Sentinel-1 amplitude change and no validated source displacement; (6) a 45.85 h final optical gap; (7) gridded hydroclimate at approximately 0.1
+∘
+and an elevation mismatch; (8) inability to separate water width and disturbed width; (9) operational rapid maps without field validation or complete-census denominators; and (10) unresolved temporary blockage, material fractions and initiation mechanics.
+A contemporaneous study also uses GF imagery, field photography, KKN seismic records, surveillance video, eyewitness timing and a dedicated Sentinel-2 velocity inversion that were not included in our analysis
+(
+Guo et al., 2026
+)
+. Our conclusions therefore concern the constraints available from the analysed open and publicly released record. This narrower evidential scope limits direct statements about entrainment, source composition and short-lived pre-failure activity, while retaining independently reproducible measurements of source change, first-order route geometry, regional climate ranks and mapped impacts.
+\conclusions
+An independent reconstruction from open and publicly released Earth-observation records recovers the first-order source, cascade geometry, environmental context and downstream consequences of the 26 August 2026 Gyirong event. The preferred post-event changed/source surface is 1.009 km
+2
+within conservative–inclusive mapping envelopes of 0.491–1.841 km
+2
+. A representative source-to-port route extends 21.843 km in plan and descends approximately 3396 m. These values agree in scale with a contemporaneous event-specific reconstruction, while the source-area estimates remain definition- and sensor-dependent and should not be merged. The open record supports classification as a mixed rock–ice slope failure followed by a channel-coupled mass-flow/flood cascade, but it does not independently quantify progressive entrainment, failure volume, rheology or a temporary blockage. Event-specific field, high-resolution, seismic and velocity evidence published elsewhere provides stronger constraints on some of those processes. Our separation of external evidence from analytical inputs preserves the independence and reproducibility of the present results.
+The prespecified pre-event Sentinel-2 sequence showed no unambiguous large-scale surface change, and the final usable optical observation preceded failure by 45.85 h. This finding is limited by 10 m sampling and variable cloud, snow and illumination; it neither demonstrates stability nor excludes persistent motion, sub-pixel or obscured change, or hours-scale activity recoverable with denser or higher-frequency observations. Neither gridded precipitation product indicated an unusually wet antecedent period within the five prespecified windows. Regional thermal conditions were unusually warm: the 7 d ERA5-Land mean temperature and PDD ranked above all matched 2001–2025 years. These climate observations provide environmental context, not causal attribution. Independent rapid mapping delineated a 37.353 km
+2
+downstream disturbed footprint and contained 695 building points and 15.671 km of roads graded destroyed, but the layers are preliminary rather than a complete census. Historical GHSL data independently demonstrate substantial growth of mapped built-up exposure in the affected downstream zones, while the source-image record is insufficient for a quantitative multidecadal source-cryosphere trend. The present evidence supports anthropogenic influence on regional climate and substantial growth of downstream built-up exposure, but it does not establish a direct anthropogenic cause of the 2026 Gyirong slope failure.
+The transferable conclusion is that open Earth observation can reconstruct the first-order source–pathway–receptor chain of a rapidly evolving high-mountain cascade while making observation-scale limits explicit. Regional anthropogenic climate influence is not event attribution; non-detection of large persistent local disturbance is not proof that no human activity occurred; lack of visible change in the prespecified optical sequence is not evidence of no pre-failure motion; and historical exposure growth is not hazard amplification. Source perimeters, short-lived activity and causal mechanisms remain dependent on sensor definition, cadence and complementary field or geophysical evidence.
+\codedataavailability
+Sentinel-2 and Sentinel-1 data are available from the Copernicus Data Space Ecosystem; Landsat Collection 2 data are available from the U.S. Geological Survey; ERA5-Land is available from the Copernicus Climate Data Store (
+https://doi.org/10.24381/cds.e2161bac
+); GPM IMERG is available from NASA GES DISC (
+https://doi.org/10.5067/GPM/IMERG/3B-HH-L/07
+); Berkeley Earth monthly land-temperature data are available from Berkeley Earth; CMIP6/DAMIP data were obtained from the cloud-optimised Pangeo CMIP6 catalogue; and GHSL R2023A built-up-surface data are available from the European Commission Joint Research Centre. Planet public disaster imagery is subject to its CC BY-NC 4.0 terms and should be accessed from the source catalogue rather than redistributed without confirmation. UNOSAT, Copernicus EMSR927 and OpenStreetMap retain their provider licences and attribution requirements.
+References
+Altena et al. (2022)
+Altena, B., Kääb, A., and Wouters, B.: Correlation dispersion as a
+measure to better estimate uncertainty in remotely sensed glacier
+displacements, The Cryosphere, 16, 2285–2300,
+10.5194/tc-16-2285-2022
+,
+2022.
+An et al. (2022)
+An, B., Wang, W., Yang, W., Wu, G., Guo, Y., Zhu, H., Gao, Y., Bai, L., Zhang,
+F., Zeng, C., Wang, L., Zhou, J., Li, X., Li, J., Zhao, Z., Chen, Y., Liu,
+J., Li, J., Wang, Z., Chen, W., and Yao, T.: Process, mechanisms, and early
+warning of glacier collapse-induced river blocking disasters in the Yarlung
+Tsangpo Grand Canyon, southeastern Tibetan Plateau, Science of The Total
+Environment, 816, 151 652,
+10.1016/j.scitotenv.2021.151652
+, 2022.
+Burrows et al. (2020)
+Burrows, K., Walters, R. J., Milledge, D., and Densmore, A. L.: A systematic
+exploration of satellite radar coherence methods for rapid landslide
+detection, Natural Hazards and Earth System Sciences, 20, 3197–3214,
+10.5194/nhess-20-3197-2020
+, 2020.
+China Geological Survey (2026)
+China Geological Survey: Preliminary assessment of the Gyirong debris-flow
+disaster,
+https://www.cgs.gov.cn/ywdt/ddyw/202608/t20260828_867531.html
+,
+published 28 August 2026; Chinese, 2026.
+Chudley et al. (2022)
+Chudley, T. R., Howat, I. M., Yadav, B., and Noh, M.-J.: Empirical correction
+of systematic orthorectification error in Sentinel-2 velocity fields for
+Greenlandic outlet glaciers, The Cryosphere, 16, 2629–2642,
+10.5194/tc-16-2629-2022
+, 2022.
+Copernicus Climate Change Service (2019)
+Copernicus Climate Change Service: ERA5-Land hourly data from 1950 to
+present,
+10.24381/cds.e2161bac
+, accessed 1 September 2026, 2019.
+Copernicus Emergency Management Service (2026)
+Copernicus Emergency Management Service: EMSR927: flood damage grading in
+Syapru Besi and Timure, Rasuwa District, Nepal,
+https://rapidmapping.emergency.copernicus.eu/EMSR927/
+, rapid
+mapping; accessed 2 September 2026, 2026.
+de Vries et al. (2022)
+de Vries, M. V. W., Bhushan, S., Jacquemart, M., Deschamps-Berger, C.,
+Berthier, E., Gascoin, S., Shean, D. E., Shugar, D. H., and Kääb, A.:
+Pre-collapse motion of the February 2021 Chamoli rock–ice avalanche, Indian
+Himalaya, Natural Hazards and Earth System Sciences, 22, 3309–3327,
+10.5194/nhess-22-3309-2022
+, 2022.
+Drusch et al. (2012)
+Drusch, M., Del Bello, U., Carlier, S., Colin, O., Fernandez, V., Gascon, F.,
+Hoersch, B., Isola, C., Laberinti, P., Martimort, P., Meygret, A., Spoto, F.,
+Sy, O., Marchese, F., and Bargellini, P.: Sentinel-2: ESA’s optical
+high-resolution mission for GMES operational services, Remote Sensing of
+Environment, 120, 25–36,
+10.1016/j.rse.2011.11.026
+, 2012.
+Earth Resources Observation and Science
+Center (2020)
+Earth Resources Observation and Science Center: Landsat 8–9 Operational Land
+Imager/Thermal Infrared Sensor Level-2, Collection 2,
+10.5066/P9OGBGM6
+,
+accessed 26 August 2026, 2020.
+European Space Agency and Copernicus
+Programme (2021)
+European Space Agency and Copernicus Programme: Copernicus Digital Elevation
+Model GLO-30,
+10.5270/ESA-c5d3d65
+, accessed 2026, 2021.
+Faillettaz et al. (2015)
+Faillettaz, J., Funk, M., and Vincent, C.: Avalanching glacier instabilities:
+Review on processes and early warning perspectives, Reviews of Geophysics,
+53, 203–224,
+10.1002/2014rg000466
+, 2015.
+Fujita et al. (2017)
+Fujita, K., Inoue, H., Izumi, T., Yamaguchi, S., Sadakane, A., Sunako, S.,
+Nishimura, K., Immerzeel, W. W., Shea, J. M., Kayastha, R. B., Sawagaki, T.,
+Breashears, D. F., Yagi, H., and Sakai, A.: Anomalous winter-snow-amplified
+earthquake-induced disaster of the 2015 Langtang avalanche in Nepal, Natural
+Hazards and Earth System Sciences, 17, 749–764,
+10.5194/nhess-17-749-2017
+, 2017.
+Gilbert et al. (2018)
+Gilbert, A., Leinss, S., Kargel, J., Kääb, A., Gascoin, S., Leonard,
+G., Berthier, E., Karki, A., and Yao, T.: Mechanisms leading to the 2016
+giant twin glacier collapses, Aru Range, Tibet, The Cryosphere, 12,
+2883–2900,
+10.5194/tc-12-2883-2018
+, 2018.
+Gillett et al. (2016)
+Gillett, N. P., Shiogama, H., Funke, B., Hegerl, G., Knutti, R., Matthes, K.,
+Santer, B. D., Stone, D. A., and Tebaldi, C.: The Detection and Attribution
+Model Intercomparison Project (DAMIP v1.0) contribution to CMIP6,
+Geoscientific Model Development, 9, 3685–3697,
+10.5194/gmd-9-3685-2016
+, 2016.
+Gruber et al. (2004)
+Gruber, S., Hoelzle, M., and Haeberli, W.: Permafrost thaw and destabilization
+of Alpine rock walls in the hot summer of 2003, Geophysical Research Letters,
+31, 2004GL020 051,
+10.1029/2004gl020051
+, 2004.
+Gruber et al. (2017)
+Gruber, S., Fleiner, R., Guegan, E., Panday, P., Schmid, M.-O., Stumm, D.,
+Wester, P., Zhang, Y., and Zhao, L.: Review article: Inferring permafrost and
+permafrost thaw in the mountains of the Hindu Kush Himalaya region, The
+Cryosphere, 11, 81–99,
+10.5194/tc-11-81-2017
+, 2017.
+Guo et al. (2026)
+Guo, L., Xu, J., Wang, Y., Hu, Y., Peng, F., Sun, Y., Dian, J., Jiang, D., Li,
+X., Che, T., Chen, F., Qi, Y., Cao, Z., Li, J., Feng, M., Zhang, B., Chen,
+F., and Li, X.: Progressive entrainment transformed a high-elevation
+ice–rock avalanche in Nepal into the 26 August debris flow in Gyirong,
+Xizang, Chinese Science Bulletin,
+10.1360/CSB-2026-1255
+, accepted
+manuscript; published online 1 September 2026, 2026.
+Huffman et al. (2020)
+Huffman, G. J., Bolvin, D. T., Braithwaite, D., Hsu, K., Joyce, R., Kidd, C.,
+Nelkin, E. J., Sorooshian, S., Stocker, E. F., Tan, J., Wolff, D. B., and
+Xie, P.: Integrated Multi-satellitE Retrievals for the Global Precipitation
+Measurement mission (IMERG), Journal of Hydrometeorology, 21, 1017–1035,
+10.1175/JHM-D-19-0149.1
+, 2020.
+Huffman et al. (2023)
+Huffman, G. J., Stocker, E. F., Bolvin, D. T., Nelkin, E. J., and Tan, J.: GPM
+IMERG Late Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07,
+10.5067/GPM/IMERG/3B-HH-L/07
+, accessed 2 September 2026, 2023.
+Huggel (2009)
+Huggel, C.: Recent extreme slope failures in glacial environments: effects of
+thermal perturbation, Quaternary Science Reviews, 28, 1119–1130,
+10.1016/j.quascirev.2008.06.007
+, 2009.
+Huggel et al. (2005)
+Huggel, C., Zgraggen-Oswald, S., Haeberli, W., Kääb, A., Polkvoj, A.,
+Galushkin, I., and Evans, S. G.: The 2002 rock/ice avalanche at
+Kolka/Karmadon, Russian Caucasus: assessment of extraordinary avalanche
+formation and mobility, and application of QuickBird satellite imagery,
+Natural Hazards and Earth System Sciences, 5, 173–187,
+10.5194/nhess-5-173-2005
+, 2005.
+Huggel et al. (2010a)
+Huggel, C., Fischer, L., Schneider, D., and Haeberli, W.: Research advances on
+climate-induced slope instability in glacier and permafrost high-mountain
+environments, Geographica Helvetica, 65, 146–156,
+10.5194/gh-65-146-2010
+, 2010a.
+Huggel et al. (2010b)
+Huggel, C., Salzmann, N., Allen, S., Caplan-Auerbach, J., Fischer, L.,
+Haeberli, W., Larsen, C., Schneider, D., and Wessels, R.: Recent and future
+warm extreme events and high-mountain slope stability, Philosophical
+Transactions of the Royal Society A: Mathematical, Physical and Engineering
+Sciences, 368, 2435–2459,
+10.1098/rsta.2010.0078
+, 2010b.
+Jacquemart and Tiampo (2021)
+Jacquemart, M. and Tiampo, K.: Leveraging time series analysis of radar
+coherence and normalized difference vegetation index ratios to characterize
+pre-failure activity of the Mud Creek landslide, California, Natural Hazards
+and Earth System Sciences, 21, 629–642,
+10.5194/nhess-21-629-2021
+,
+2021.
+Jacquemart et al. (2020)
+Jacquemart, M., Loso, M., Leopold, M., Welty, E., Berthier, E., Hansen, J. S.,
+Sykes, J., and Tiampo, K.: What drives large-scale glacier detachments?
+Insights from Flat Creek glacier, St. Elias Mountains, Alaska, Geology, 48,
+703–707,
+10.1130/g47211.1
+, 2020.
+Jiang and Zhou (2023)
+Jiang, D. and Zhou, T.: Observational Constraint on the Contributions of
+Greenhouse Gas Emission and Anthropogenic Aerosol Removal to Tibetan Plateau
+Future Warming, Geophysical Research Letters, 50, e2023GL105 427,
+10.1029/2023GL105427
+, 2023.
+Jiangsu Earthquake Agency (2026)
+Jiangsu Earthquake Agency: Seismic and mass-movement timing report for the 26
+August 2026 Gyirong event,
+https://www.jsdzj.gov.cn/art/2026/8/31/art_91_21710.html
+,
+published 31 August 2026; Chinese, 2026.
+Kääb and Girod (2023)
+Kääb, A. and Girod, L.: Brief communication: Rapid
+∼
+335
+×
+10
+6
+\sim 335\times 10^{6}
+m
+3
+bed erosion after detachment of the Sedongpu Glacier
+(Tibet), The Cryosphere, 17, 2533–2541,
+10.5194/tc-17-2533-2023
+, 2023.
+Kääb et al. (2018)
+Kääb, A., Leinss, S., Gilbert, A., Bühler, Y., Gascoin, S., Evans,
+S. G., Bartelt, P., Berthier, E., Brun, F., Chao, W.-A., Farinotti, D.,
+Gimbert, F., Guo, W., Huggel, C., Kargel, J. S., Leonard, G. J., Tian, L.,
+Treichler, D., and Yao, T.: Massive collapse of two glaciers in western Tibet
+in 2016 after surge-like instability, Nature Geoscience, 11, 114–120,
+10.1038/s41561-017-0039-7
+, 2018.
+Kääb et al. (2021)
+Kääb, A., Jacquemart, M., Gilbert, A., Leinss, S., Girod, L., Huggel,
+C., Falaschi, D., Ugalde, F., Petrakov, D., Chernomorets, S., Dokukin, M.,
+Paul, F., Gascoin, S., Berthier, E., and Kargel, J. S.: Sudden large-volume
+detachments of low-angle mountain glaciers – more frequent than thought?,
+The Cryosphere, 15, 1751–1785,
+10.5194/tc-15-1751-2021
+, 2021.
+Kargel et al. (2016)
+Kargel, J. S., Leonard, G. J., Shugar, D. H., Haritashya, U. K., Bevington, A.,
+Fielding, E. J., Fujita, K., Geertsema, M., Miles, E. S., Steiner, J.,
+Anderson, E., Bajracharya, S., Bawden, G. W., Breashears, D. F., Byers, A.,
+Collins, B., Dhital, M. R., Donnellan, A., Evans, T. L., Geai, M. L.,
+Glasscoe, M. T., Green, D., Gurung, D. R., Heijenk, R., Hilborn, A., Hudnut,
+K., Huyck, C., Immerzeel, W. W., Liming, J., Jibson, R., Kääb, A.,
+Khanal, N. R., Kirschbaum, D., Kraaijenbrink, P. D. A., Lamsal, D., Shiyin,
+L., Mingyang, L., McKinney, D., Nahirnick, N. K., Zhuotong, N., Ojha, S.,
+Olsenholler, J., Painter, T. H., Pleasants, M., Pratima, K. C., Yuan, Q. I.,
+Raup, B. H., Regmi, D., Rounce, D. R., Sakai, A., Donghui, S., Shea, J. M.,
+Shrestha, A. B., Shukla, A., Stumm, D., van der Kooij, M., Voss, K., Xin, W.,
+Weihs, B., Wolfe, D., Lizong, W., Xiaojun, Y., Yoder, M. R., and Young, N.:
+Geomorphic and geologic controls of geohazards induced by Nepal’s 2015 Gorkha
+earthquake, Science, 351, aac8353,
+10.1126/science.aac8353
+, 2016.
+Kirschbaum et al. (2019)
+Kirschbaum, D., Watson, C. S., Rounce, D. R., Shugar, D. H., Kargel, J. S.,
+Haritashya, U. K., Amatya, P., Shean, D., Anderson, E. R., and Jo, M.: The
+State of Remote Sensing Capabilities of Cascading Hazards Over High Mountain
+Asia, Frontiers in Earth Science, 7, 197,
+10.3389/feart.2019.00197
+,
+2019.
+Lacroix et al. (2018)
+Lacroix, P., Bièvre, G., Pathier, E., Kniess, U., and Jongmans, D.: Use of
+Sentinel-2 images for the detection of precursory motions before landslide
+failures, Remote Sensing of Environment, 215, 507–516,
+10.1016/j.rse.2018.03.042
+, 2018.
+Li et al. (2024)
+Li, Y., Cui, Y., Hu, X., Lu, Z., Guo, J., Wang, Y., Wang, H., Wang, S., and
+Zhou, X.: Glacier Retreat in Eastern Himalaya Drives Catastrophic Glacier
+Hazard Chain, Geophysical Research Letters, 51, e2024GL108 202,
+10.1029/2024gl108202
+, 2024.
+Mani et al. (2023)
+Mani, P., Allen, S., Evans, S. G., Kargel, J. S., Mergili, M., Petrakov, D.,
+and Stoffel, M.: Geomorphic Process Chains in High-Mountain Regions—A
+Review and Classification Approach for Natural Hazards Assessment, Reviews of
+Geophysics, 61, e2022RG000 791,
+10.1029/2022rg000791
+, 2023.
+Muñoz-Sabater et al. (2021)
+Muñoz-Sabater, J., Dutra, E., Agustí-Panareda, A., Albergel, C.,
+Arduini, G., Balsamo, G., Boussetta, S., Choulga, M., Harrigan, S., Hersbach,
+H., Martens, B., Miralles, D., Piles, M., Rodríguez-Fernández, N.,
+Zsoter, E., Buontempo, C., and Thépaut, J.-N.: ERA5-Land: a
+state-of-the-art global reanalysis dataset for land applications, Earth
+System Science Data, 13, 4349–4383,
+10.5194/essd-13-4349-2021
+, 2021.
+OpenStreetMap contributors (2026)
+OpenStreetMap contributors: OpenStreetMap data for the Gyirong–Timure
+corridor,
+https://www.openstreetmap.org/
+, open Database
+License; data accessed 2026, 2026.
+Pesaresi et al. (2024)
+Pesaresi, M., Schiavina, M., Politis, P., Freire, S., Krasnodębska, K.,
+Uhl, J. H., Carioli, A., Corbane, C., Dijkstra, L., Florio, P., Friedrich,
+H. K., Gao, J., Leyk, S., Lu, L., Maffenini, L., Mari-Rivero, I., Melchiorri,
+M., Syrris, V., Van Den Hoek, J., and Kemper, T.: Advances on the Global
+Human Settlement Layer by joint assessment of Earth Observation and
+population survey data, International Journal of Digital Earth, 17,
+2390 454,
+10.1080/17538947.2024.2390454
+, 2024.
+Planet Labs PBC (2026)
+Planet Labs PBC: Nepal flash flood 2026-08-26: Planet Disaster Data static
+STAC catalogue,
+https://source.coop/planet/disasterdata/nepal-flash-flood-2026-08-26
+,
+cC BY-NC 4.0; catalogue re-checked 3 September 2026, 2026.
+Rohde et al. (2013)
+Rohde, R., Muller, R. A., Jacobsen, R., Perlmutter, S., Rosenfeld, A., Wurtele,
+J., Groom, D., and Wickham, C.: A New Estimate of the Average Earth Surface
+Land Temperature Spanning 1753 to 2011, Geoinformatics & Geostatistics: An
+Overview, 1,
+10.4172/2327-4581.1000101
+, 2013.
+Rohde and Hausfather (2020)
+Rohde, R. A. and Hausfather, Z.: The Berkeley Earth Land/Ocean Temperature
+Record, Earth System Science Data, 12, 3469–3479,
+10.5194/essd-12-3469-2020
+, 2020.
+Schneider et al. (2011)
+Schneider, D., Huggel, C., Haeberli, W., and Kaitna, R.: Unraveling driving
+factors for large rock–ice avalanche mobility, Earth Surface Processes and
+Landforms, 36, 1948–1966,
+10.1002/esp.2218
+, 2011.
+Shugar et al. (2021)
+Shugar, D. H., Jacquemart, M., Shean, D., Bhushan, S., Upadhyay, K., Sattar,
+A., Schwanghart, W., McBride, S., de Vries, M. V. W., Mergili, M., Emmer, A.,
+Deschamps-Berger, C., McDonnell, M., Bhambri, R., Allen, S., Berthier, E.,
+Carrivick, J. L., Clague, J. J., Dokukin, M., Dunning, S. A., Frey, H.,
+Gascoin, S., Haritashya, U. K., Huggel, C., Kääb, A., Kargel, J. S.,
+Kavanaugh, J. L., Lacroix, P., Petley, D., Rupper, S., Azam, M. F., Cook,
+S. J., Dimri, A. P., Eriksson, M., Farinotti, D., Fiddes, J., Gnyawali,
+K. R., Harrison, S., Jha, M., Koppes, M., Kumar, A., Leinss, S., Majeed, U.,
+Mal, S., Muhuri, A., Noetzli, J., Paul, F., Rashid, I., Sain, K., Steiner,
+J., Ugalde, F., Watson, C. S., and Westoby, M. J.: A massive rock and ice
+avalanche caused the 2021 disaster at Chamoli, Indian Himalaya, Science, 373,
+300–306,
+10.1126/science.abh4455
+, 2021.
+TIAN et al. (2017)
+TIAN, L., YAO, T., GAO, Y., THOMPSON, L., MOSLEY-THOMPSON, E., MUHAMMAD, S.,
+ZONG, J., WANG, C., JIN, S., and LI, Z.: Two glaciers collapse in western
+Tibet, Journal of Glaciology, 63, 194–197,
+10.1017/jog.2016.122
+, 2017.
+Torres et al. (2012)
+Torres, R., Snoeij, P., Geudtner, D., Bibby, D., Davidson, M., Attema, E.,
+Potin, P., Rommen, B., Floury, N., Brown, M., Traver, I., Deghaye, P.,
+Duesmann, B., Rosich, B., Miranda, N., Bruno, C., L’Abbate, M., Croci, R.,
+Pietropaolo, A., Huchler, M., and Rostan, F.: GMES Sentinel-1 mission, Remote
+Sensing of Environment, 120, 9–24,
+10.1016/j.rse.2011.05.028
+, 2012.
+United Nations Satellite Centre (2026)
+United Nations Satellite Centre: Mudflow/rockflow impact assessment in Rasuwa
+and Nuwakot districts, Nepal, as of 26–27 August 2026,
+https://www.unosat.org/products/
+, rapid mapping; accessed 2
+September 2026, 2026.
+Wake and Marshall (2015)
+Wake, L. and Marshall, S.: Assessment of current methods of positive degree-day
+calculation using in situ observations from glaciated regions, Journal of
+Glaciology, 61, 329–344,
+10.3189/2015jog14j116
+, 2015.
+Zhang et al. (2025)
+Zhang, T., He, K., Li, B., Yin, Y., Gao, H., and Gao, S.: Rock-ice
+avalanche-generated erosion behaviors at the Sedongpu gully, Tibet, China:
+New insights from the geomorphologic perspective, Journal of Asian Earth
+Sciences, 277, 106 403,
+10.1016/j.jseaes.2024.106403
+, 2025.
+Zhao et al. (2022)
+Zhao, C., Yang, W., Westoby, M., An, B., Wu, G., Wang, W., Wang, Z., Wang, Y.,
+and Dunning, S.: Brief communication: An approximately 50 Mm 3 ice-rock
+avalanche on 22 March 2021 in the Sedongpu valley, southeastern Tibetan
+Plateau, The Cryosphere, 16, 1333–1340,
+10.5194/tc-16-1333-2022
+, 2022.
+Zheng et al. (2023)
+Zheng, W., Bhushan, S., Vries, M. V. W. D., Kochtitzky, W., Shean, D., Copland,
+L., Dow, C., Jones-Ivey, R., and Pérez, F.: GLAcier Feature Tracking
+testkit (GLAFT): a statistically and physically based framework for
+evaluating glacier velocity products derived from optical satellite image
+feature tracking, The Cryosphere, 17, 4063–4078,
+10.5194/tc-17-4063-2023
+, 2023.
+Zhong et al. (2025)
+Zhong, Y., Allen, S., Li, D., Corona, C., Zheng, G., Liu, Q., and Stoffel, M.:
+Unravelling driving conditions of rock and ice avalanches and resulting
+cascading processes in High Mountain Asia, Landslides, 22, 989–1001,
+10.1007/s10346-024-02421-7
+, 2025.
+Zhuang et al. (2024)
+Zhuang, Y., Dawadi, B., Steiner, J., Dash, R. K., Bühler, Y., Munch, J.,
+and Bartelt, P.: An earthquake-triggered avalanche in Nepal in 2015 was
+exacerbated by climate variability and snowfall anomalies, Communications
+Earth & Environment, 5, 465,
+10.1038/s43247-024-01624-z
+, 2024.
+Supplement of: Observational constraints on the 26 August 2026 Gyirong mixed rock–ice cascade from open Earth observation
+\Author
+[1]Author names to be supplied by the accountable authors
+1]Affiliations to be supplied before submission
+WORKING DRAFT — NOT FOR DIRECT SUBMISSION. This supplement must be independently checked and rewritten by the accountable human authors under the current Copernicus Publications AI policy.
+1
+Supplementary data provenance and quality control
+The supplementary tables point to the versioned, machine-readable project outputs rather than reproducing the underlying satellite data. Scene identifiers, acquisition times, processing levels, quality masks and access restrictions are recorded in the acquisition and evidence ledgers. All internal time comparisons use UTC and the frozen reference time of 26 August 2026 at 02:52 UTC. The Planet catalogue was re-queried on 3 September 2026. It contained three post-event Pelican acquisitions from 1 September that were not present in the frozen analysed scene set; these later catalogue additions were documented but were not introduced into the analysis.
+The mapped changed/source-surface envelopes are stored with the machine-readable event-report vectors under the following file name:
+source_detachment_uncertainty_bounds.geojson
+The integrated process evidence and representative centreline are stored separately.
+File checksums and the protocol-amendment log preserve the distinction between the unsuccessful Phase 3A candidate screen and the final multisensor forensic source mapping. Planet imagery is not redistributed in this package.
+2
+Source-bound uncertainty
+Table
+1
+reports the complete conservative, preferred and inclusive changed/source-surface metrics. Areas are polygon measurements; elevation, slope, aspect and relief derive from Copernicus DEM GLO-30 sampled to the 10 m analysis grid. The nested polygons express perimeter ambiguity under cloud, haze and mixed surface change. They are not confidence intervals for failure volume and may include fresh/scoured surfaces beyond the initially detached body.
+Table 1:
+Full changed/source-surface envelope metrics. Circular aspect is reported clockwise from north. Relief is the median 500 m-window elevation range.
+\tophline
+Bound
+Area
+Elev. min–max
+Elev. median
+Slope median
+Aspect
+Relief
+Max. dim.
+(km
+2
+)
+(m)
+(m)
+(
+∘
+)
+(
+∘
+)
+(m)
+(m)
+\middlehline
+Conservative
+0.491
+4543–5200
+5045
+35.7
+280.5
+804
+798
+Preferred
+1.009
+4355–5221
+4991
+34.8
+280.8
+840
+1151
+Inclusive
+1.841
+4261–5261
+4977
+32.1
+285.2
+849
+1526
+\bottomhline
+The preferred polygon is dominated by west- and north-west-facing terrain (48.2 % and 33.8 %, respectively), with 15.0 % south-west-facing terrain. These bins describe DEM-derived orientation within the mapped changed surface; they do not identify the rupture plane.
+3
+Image visibility and source evidence
+Table 2:
+Event-bracketing source observations and primary visibility limitations. Percentages refer to the project source-audit chip and are not scene-wide cloud fractions.
+\tophline
+Sensor
+Acquisition (UTC)
+Sampling
+Visibility
+Source evidence and limitation
+\middlehline
+Sentinel-2
+24 Aug 2026 05:00
+10 m
+partial/good
+Pre-event baseline; 70.7 % locally usable and 13.8 % cloud/shadow in audit chip.
+Landsat-9
+26 Aug 2026 04:47
+30 m
+poor/partial
+First open optical observation after the reference time; 10.8 % valid source coverage and only partial change visible.
+PlanetScope
+26 Aug 2026 05:44
+3.4 m
+poor/partial
+Fresh surface partly visible; UDM2 clear fractions of 1.2–2.5 % within covered pixels.
+Sentinel-2
+27 Aug 2026 05:10
+10 m
+partial
+Changed source surface visible in unobscured pixels; 37.5 % locally usable.
+PlanetScope
+28 Aug 2026 04:57
+3.8 m
+poor/partial
+Fresh/scoured surface and exposed debris/rock partly visible; UDM2 clear fractions of 6.1–11.3 %.
+Sentinel-2
+1 Sep 2026 05:10
+10 m
+partial
+Later view retains the changed-surface pattern; 39.2 % locally usable.
+\bottomhline
+The evidence classification is: direct observation for event-bracketing surface and backscatter differences; derived for polygon areas and terrain statistics; supported interpretation for the mixed rock–ice material class and channelised cascade; and unresolved for material fractions, rupture-plane mechanics, failure depth, volume and source-scale hydrology.
+4
+Fixed transects and channel-observation limits
+Twelve transects were fixed by centreline distance and local channel-perpendicular geometry before width inspection. Table
+3
+gives intersections with the independently mapped disturbed footprint. A one-pixel edge allowance of
+±
+20
+\pm 20
+m was attached to each footprint intersection. No transect produced a defensible paired pre/post water width; cloud, quality masking, mixed pixels and the absence of channel-connected water segments prevented the frozen criterion from being met.
+Table 3:
+Fixed-transect disturbed-corridor widths. These are footprint intersections, not water widths, bankfull widths, inundation depths or changes from a measurable pre-event corridor.
+\tophline
+ID
+Reach
+Dist.
+Width
+ID
+Reach
+Dist.
+Width
+(km)
+(m)
+(km)
+(m)
+\middlehline
+T01
+Upper confined
+1.00
+1098
+T07
+Timure approach
+15.00
+389
+T02
+Upper confined
+2.50
+1069
+T08
+Timure approach
+18.50
+220
+T03
+Upper confined
+4.00
+1165
+T09
+Gyirong Port/Timure
+21.40
+287
+T04
+Middle transport
+5.94
+1298
+T10
+Downstream
+24.84
+282
+T05
+Middle transport
+8.50
+970
+T11
+Downstream
+28.84
+145
+T06
+Middle transport
+11.50
+677
+T12
+Syapru Besi
+32.84
+195
+\bottomhline
+Figure 1:
+Fixed-transect profile. The plotted quantity is the post-event disturbed-corridor intersection with the rapid-mapping footprint, with a
+±
+20
+\pm 20
+m pixel-edge allowance. Missing paired water widths are retained explicitly rather than imputed.
+5
+Hydroclimate detail and sensitivity
+The primary analysis used only the prespecified 24 h, 3, 7, 14 and 30 d windows ending at the reference event time. Historical comparisons used matched cut-offs in 2001–2025, excluding 2026. IMERG V07 Late half-hourly rates were multiplied by 0.5 h before accumulation. ERA5-Land precipitation accumulations were de-accumulated according to the archived request structure and converted from metres to millimetres. Two-metre temperature was converted from kelvin to degrees Celsius. Daily PDD was
+max
+⁡
+(
+T
+¯
+daily
+,
+0
+)
+\max(\overline{T}_{\mathrm{daily}},0)
+and was summed; it is a temperature-index quantity rather than an energy-balance melt estimate.
+Table 4:
+Product comparison for the five primary precipitation windows. “Below all” means lower than all 25 matched historical values and is not presented as a population zeroth percentile.
+\tophline
+Window
+IMERG (mm)
+IMERG rank
+ERA5-Land (mm)
+ERA5-Land percentile
+\middlehline
+24 h
+4.0
+20th
+5.7
+16th
+3 d
+8.3
+4th
+20.2
+16th
+7 d
+16.8
+below all
+74.5
+44th
+14 d
+44.6
+below all
+194.0
+64th
+30 d
+103.4
+below all
+422.0
+68th
+\bottomhline
+The two products agree only in not placing any primary event window in an unusually wet upper tail. They disagree strongly in amount and rank, particularly at 7–30 d. Neither is treated as ground truth. Spatial-sensitivity, robust-anomaly and lapse-rate scenarios are retained in four machine-readable tables:
+•
+hydroclimate_spatial_sensitivity.csv
+;
+•
+hydroclimate_product_comparison.csv
+;
+•
+hydroclimate_temperature.csv
+;
+•
+hydroclimate_pdd.csv
+.
+Table 5:
+Regional ERA5-Land temperature and positive-degree-day (PDD) context. Primary values are not lapse-rate corrected.
+\tophline
+Window
+Mean
+T
+T
+(
+∘
+C)
+T
+T
+rank
+PDD (
+∘
+C d)
+PDD rank
+\middlehline
+24 h
+9.41
+92nd
+–
+–
+3 d
+9.59
+above all 25
+–
+–
+7 d
+9.43
+above all 25
+65.94
+above all 25
+14 d
+9.36
+96th
+131.11
+96th
+30 d
+9.31
+88th
+279.44
+88th
+1 Jul–25 Aug
+–
+–
+526.02
+96th
+\bottomhline
+The warm spell comprised five complete days ending 25 August. The analysed ERA5-Land grid elevation was approximately 4452 m, 539 m below the preferred source median (4991 m). Lapse-rate scenarios therefore illustrate possible elevation sensitivity only; they do not transform the grid values into measurements of the source surface, glacier ice or meltwater production.
+Figure 2:
+Detailed matched-year hydroclimatic comparison. Windows are correlated nested accumulations and are descriptive rather than independent hypothesis tests.
+Figure 3:
+Spatial precipitation sensitivity for IMERG V07 Late and ERA5-Land. The approximately 0.1
+∘
+products cannot resolve headwall-scale precipitation or phase.
+Figure 4:
+ERA5-Land temperature and PDD spatial context. Values are regional model-grid estimates, not observations of source-surface temperature or melt.
+6
+Historical environmental and exposure context
+Table 6:
+ERA5-Land July–August trends under the frozen source-nearest and regional spatial supports. OLS and Theil–Sen slopes are reported per decade. PDD trends have units
+∘
+C d decade
+-1
+.
+\tophline
+Support
+Metric
+Period
+OLS slope
+95 % CI
+Theil–Sen
+MK
+p
+p
+\middlehline
+Source-nearest
+Temperature
+1951–2025
+0.0666
+0.0318–0.1014
+0.0691
+2.11
+×
+10
+−
+4
+2.11\times 10^{-4}
+Source-nearest
+Temperature
+1976–2025
+0.0675
+0.0137–0.1212
+0.0778
+0.0133
+Source-nearest
+Temperature
+2001–2025
+0.3117
+0.2135–0.4099
+0.3097
+4.21
+×
+10
+−
+6
+4.21\times 10^{-6}
+Regional
+Temperature
+1951–2025
+0.1208
+0.0894–0.1521
+0.1203
+1.47
+×
+10
+−
+9
+1.47\times 10^{-9}
+Regional
+Temperature
+1976–2025
+0.1482
+0.0954–0.2011
+0.1429
+8.58
+×
+10
+−
+6
+8.58\times 10^{-6}
+Regional
+Temperature
+2001–2025
+0.3522
+0.2291–0.4752
+0.3488
+9.61
+×
+10
+−
+5
+9.61\times 10^{-5}
+Source-nearest
+PDD
+1951–2025
+4.129
+1.972–6.287
+4.285
+2.11
+×
+10
+−
+4
+2.11\times 10^{-4}
+Source-nearest
+PDD
+1976–2025
+4.182
+0.851–7.514
+4.825
+0.0133
+Source-nearest
+PDD
+2001–2025
+19.326
+13.235–25.417
+19.200
+4.21
+×
+10
+−
+6
+4.21\times 10^{-6}
+Regional
+PDD
+1951–2025
+7.488
+5.546–9.430
+7.461
+1.47
+×
+10
+−
+9
+1.47\times 10^{-9}
+Regional
+PDD
+1976–2025
+9.191
+5.914–12.467
+8.862
+8.58
+×
+10
+−
+6
+8.58\times 10^{-6}
+Regional
+PDD
+2001–2025
+21.833
+14.205–29.462
+21.627
+9.61
+×
+10
+−
+5
+9.61\times 10^{-5}
+\bottomhline
+\belowtable
+The 2001–2025 recalculation reproduced the previously accepted series within numerical tolerance. These seasonal grid-scale trends are not source-temperature measurements or event attribution.
+Table 7:
+Independent July–August temperature-product comparison. Values are OLS trends in
+∘
+C decade
+-1
+with 95 % confidence intervals.
+\tophline
+Period
+Berkeley Earth
+ERA5-Land
+Sign agreement
+Classification
+\middlehline
+1951–2024
+0.1531 (0.1128–0.1933)
+0.1156 (0.0840–0.1472)
+Yes
+Strong agreement
+1976–2024
+0.2597 (0.1951–0.3243)
+0.1378 (0.0842–0.1914)
+Yes
+Qualitative agreement
+2001–2024
+0.3691 (0.1824–0.5557)
+0.3313 (0.2000–0.4627)
+Yes
+Strong agreement
+\bottomhline
+\belowtable
+Berkeley Earth uses the frozen 27–30
+∘
+N, 84–87
+∘
+E box; ERA5-Land is limited to its smaller frozen 27.6–29.2
+∘
+N, 84.8–86.2
+∘
+E support. Numerical equality is neither expected nor inferred.
+Table 8:
+Frozen four-model CMIP6/DAMIP July–August forcing comparison. One paired member per model was used with equal weight. Values are
+∘
+C decade
+-1
+.
+\tophline
+Model
+Member
+Grid
+Period
+ALL
+NAT
+Observed
+Observed relation
+\middlehline
+BCC-CSM2-MR
+r1i1p1f1
+gn
+1951–2020
+0.1277
+−
+0.0166
+-0.0166
+0.0966
+within ALL; outside NAT
+CNRM-CM6-1
+r1i1p1f2
+gr
+1951–2020
+0.0523
+−
+0.0050
+-0.0050
+0.0966
+within ensemble ALL range
+CanESM5
+r1i1p1f1
+gn
+1951–2020
+0.7016
+−
+0.0519
+-0.0519
+0.0966
+within ensemble ALL range
+GFDL-CM4
+r1i1p1f1
+gr1
+1951–2020
+0.1282
+−
+0.0153
+-0.0153
+0.0966
+within ALL; outside NAT
+BCC-CSM2-MR
+r1i1p1f1
+gn
+1971–2020
+0.2104
+0.0240
+0.1252
+within ensemble ALL range
+CNRM-CM6-1
+r1i1p1f2
+gr
+1971–2020
+0.0608
+0.0356
+0.1252
+within ensemble ALL range
+CanESM5
+r1i1p1f1
+gn
+1971–2020
+0.6870
+0.0534
+0.1252
+within ensemble ALL range
+GFDL-CM4
+r1i1p1f1
+gr1
+1971–2020
+0.2399
+−
+0.0307
+-0.0307
+0.1252
+within ensemble ALL range
+\bottomhline
+\belowtable
+For 1951–2020, two of four ALL trends fall inside the observed 95 % interval and all four have the observed positive sign; no NAT trend is positive or inside that interval. For 1971–2020, all four ALL trends are positive but none is inside the observed interval; three NAT trends are positive but none is inside the interval. This is a descriptive forcing-consistency comparison, not formal detection–attribution or event attribution.
+Figure 5:
+Fixed-region historical source sequence for six QA-qualified epochs. No unambiguous large-scale source-surface disappearance was detected before failure at the 120 m minimum mapping unit; smaller or seasonally obscured change cannot be excluded. Variable snow, shadow and cross-sensor resolution prevent a quantitative source-cryosphere trend.
+The same historical images were audited for road cuts, mines or quarries, excavation, buildings, hydropower infrastructure, artificial terraces and persistent disturbed ground within fixed 0.5, 1, 2 and 5 km buffers. No mapped evidence of large persistent anthropogenic surface disturbance was identified within the observable historical record. This statement is bounded by the approximately 120 m persistent-feature mapping unit, the approximately 20 m sensitivity of the corrected 2026 Sentinel-2 view, terrain shadow and intermittent source visibility; it does not exclude small, temporary, subsurface, narrow or unmapped activity.
+Table 9:
+GHSL R2023A built-up surface (km
+2
+) in fixed downstream zones.
+\tophline
+Zone
+1975
+1990
+2000
+2015
+2020
+Net change
+\middlehline
+UNOSAT affected footprint
+0.035947
+0.133584
+0.187522
+0.335715
+0.441243
+0.405296
+Timure/Gyirong Port
+0.005408
+0.012201
+0.016671
+0.031510
+0.036293
+0.030885
+Syapru Besi
+0.002575
+0.014830
+0.019082
+0.024575
+0.024615
+0.022040
+Fixed 500 m corridor
+0.000728
+0.002048
+0.002674
+0.007669
+0.009516
+0.008788
+\bottomhline
+\belowtable
+Centre-cell estimates are bracketed by eroded-core and all-touched boundary-sampling results in the machine-readable table. GHSL records built-up exposure; it is not a population series, damage census or measure of hazard magnitude.
+Table 10:
+Evidence grades for four anthropogenic-influence pathways.
+\tophline
+Pathway
+Grade
+Evidence boundary
+\middlehline
+Direct local disturbance
+Not detected
+No mapped large persistent source disturbance in the observable record; smaller, transient, subsurface or obscured activity is not excluded.
+Regional climate forcing
+Supported
+ERA5-Land and Berkeley Earth warming plus four-model ALL/NAT forcing consistency at July–August regional scale; not event attribution.
+Source environmental change
+Insufficient
+Six visible epochs do not support a quantitative source-cryosphere trend at the 120 m mapping unit.
+Human amplification of exposure
+Supported
+GHSL built-up surface increases in all fixed downstream zones; not hazard amplification or a damage census.
+\bottomhline
+Table 11:
+Scale-specific causal evidence chain. Each arrow is graded independently.
+\tophline
+Link
+Grade
+Inference limit
+\middlehline
+Anthropogenic forcing
+→
+\rightarrow
+regional temperature change
+Supported
+Regional July–August consistency assessment; not formal detection–attribution or event attribution.
+Regional temperature change
+→
+\rightarrow
+regional cryosphere change
+Consistent with
+Published regional evidence is relevant, but response is heterogeneous and not source-specific.
+Regional/cryosphere change
+→
+\rightarrow
+source-specific environmental change
+Insufficient
+No quantitative source-specific multidecadal trend passed mapping QA.
+Source-specific change
+→
+\rightarrow
+mechanical preconditioning
+Unresolved
+No source hydrology, ground/ice temperature, permafrost or fracture-damage observation.
+Mechanical preconditioning
+→
+\rightarrow
+immediate failure
+Unresolved
+Hours-to-days initiation processes and competing mechanisms cannot be separated.
+Human development
+→
+\rightarrow
+downstream exposure
+Supported
+Built-up exposure increased; population, damage and hazard amplification are not inferred.
+\bottomhline
+7
+Damage, exposure and evidence classes
+Copernicus EMSR927 records 323 and 372 building points graded destroyed in its two analysed areas of interest, respectively, for a delivered-layer total of 695. Roads graded destroyed total 6.148 and 9.523 km, respectively (15.671 km combined). The same layers include other damage grades, transport points and facility polygons. UNOSAT delineates a 37.354 km
+2
+affected footprint. These operational layers have neither a complete-census denominator nor field validation in this analysis.
+OpenStreetMap intersections are exposure indicators: 7.414 km of mapped roads and two bridge-tagged features intersect the UNOSAT footprint. OSM segmentation and completeness affect these values. They are not independent confirmations of damage. Building-footprint and population exposure were not estimated, and no casualty inference was made.
+Table 12:
+Evidence-class separation used throughout the manuscript.
+\tophline
+Class
+Examples
+Permitted inference
+\middlehline
+Observed
+Event-bracketing surface/backscatter difference; rapid-map attributes
+Report what the image or delivered layer contains, retaining sensor and product limitations.
+Derived
+Polygon area; DEM terrain metric; footprint/transect intersection; matched-year rank
+Report the calculation and uncertainty basis; do not convert a geometric proxy into a process measurement.
+Supported interpretation
+Mixed rock–ice source; source-to-channel cascade; possible thermal preconditioning
+Use only where multiple observations and relevant process literature converge; retain alternatives.
+Unresolved
+Rock/ice fractions; failure depth and volume; initiation plane; source hydrology; short-lived blockage
+State explicitly; do not fill the gap through analogy or gridded climate context.
+\bottomhline
+8
+Observation chronology and negative displacement result
+Figure 6:
+Integrated acquisition and rapid-response chronology relative to 26 August 2026 at 02:52 UTC. Same-day acquisitions are classified using exact timestamps, not calendar dates.
+Low-cost optical correlation tests used the frozen Phase 3A configuration and stable-terrain calibration. Available near-event residuals were not retained as a manuscript pre-failure motion result because apparent source displacement was not demonstrated to be materially larger than pair-specific error and spatially coherent. The result is therefore
+inconclusive
+, not zero motion. Detailed pair limits and calibration outputs are provided in three machine-readable tables:
+•
+optical_pair_detection_limits.csv
+;
+•
+optical_stable_terrain_calibration.csv
+;
+•
+optical_synthetic_shift_calibration.csv
+.
+No full Sentinel-1 SLC stack or post-hoc parameter tuning was undertaken.
+9
+Comparison with the contemporaneous event-specific reconstruction
+Table
+13
+compares only constraints that are sufficiently commensurable to clarify evidential scope. It is not a validation scorecard. Guo et al.’s GF imagery, field photographs, seismic records, video and velocity inversion remain external literature evidence and were not added to our Methods or Results
+(
+Guo et al., 2026
+)
+.
+Table 13:
+Comparison of independently derived constraints for the 26 August 2026 Gyirong event. Differences can reflect observational definition as well as measurement.
+\tophline
+Constraint
+This study
+Guo et al. (2026)
+Interpretation
+\middlehline
+Event timing
+Reference clock 10:52:00 Beijing time
+USGS start 10:52:10; port arrival 10:59 Beijing time
+Ten-second source-clock difference is immaterial to satellite classification; arrival timing is external video evidence.
+Source area
+1.009 km
+2
+preferred changed/source surface; 0.491–1.841 km
+2
+envelopes
+Approx. 0.72 km
+2
+collapsed ice–rock body
+Quantities are partly definition- and sensor-dependent; no polygon-overlap statistic is available.
+Source elevation
+Preferred envelope 4355–5221 m; median 4991 m
+Origin near 5200 m
+Range statistics and an approximate origin elevation are not identical quantities.
+Route and relief
+21.843 km plan length; 3396 m endpoint drop
+Approx. 22 km; approx. 3400 m relief
+Independent first-order geometric agreement.
+Source type
+Mixed rock–ice slope failure, supported interpretation
+High-elevation ice–rock avalanche; GF and field evidence show both materials
+Material-class agreement; initiation surface and fractions remain unresolved here.
+Final 72 h rainfall
+3 d IMERG Late 8.3 mm; 4th percentile of 25 matched years
+Source IMERG V07 8.3 mm
+Numerical agreement for limited immediate rainfall; source-scale precipitation remains unresolved.
+Thermal context
+3 and 7 d temperature and 7 d PDD above all 25 matched years; five-day warm spell
+Warmer 2026 spring/summer and possible melt/permafrost conditioning
+Consistent regional warmth; neither study identifies a single immediate trigger.
+Pre-event optical evidence
+Six fixed snapshots: no unambiguous large-scale surface change; 45.85 h final gap
+211-scene autoRIFT/TICOI inversion: relatively high 2024–2026 source-glacier velocity
+Different observables; snapshot non-detection does not refute velocity inversion.
+Short-term activity
+Not observed by the analyzed open optical record
+Candidate seismic signals and eyewitness/video evidence within approx. 3 h
+Short-term observations fall inside our optical gap and are outside our workflow.
+Principal data scope
+Sentinel/Landsat/public Planet, Sentinel-1 RTC, Copernicus DEM, IMERG, ERA5-Land, UNOSAT/CEMS, OSM
+GF-1/GF-7 and other imagery, field photographs, KKN seismic, video/eyewitness, Sentinel-2 velocity, ERA5-Land/IMERG
+Complementary evidential scopes; external datasets were not retrofitted into our analysis.
+\bottomhline
+10
+Machine-readable supplementary tables
+The validated machine-readable files named in the data-availability statement form the auditable supplement. Core files comprise:
+•
+manuscript_source_metrics.csv
+;
+•
+source_observation_evidence_matrix.csv
+;
+•
+river_width_change.csv
+;
+•
+manuscript_process_zone_metrics.csv
+;
+•
+damage_exposure_summary.csv
+;
+•
+event_evidence_register.csv
+;
+•
+the Phase 5 hydroclimate tables and the manuscript number and citation audits.
+Persistent repository identifiers and a final file manifest must be added by the accountable authors before submission.
+References
+Guo et al. (2026)
+Guo, L., Xu, J., Wang, Y., Hu, Y., Peng, F., Sun, Y., Dian, J., Jiang, D., Li,
+X., Che, T., Chen, F., Qi, Y., Cao, Z., Li, J., Feng, M., Zhang, B., Chen,
+F., and Li, X.: Progressive entrainment transformed a high-elevation
+ice–rock avalanche in Nepal into the 26 August debris flow in Gyirong,
+Xizang, Chinese Science Bulletin,
+10.1360/CSB-2026-1255
+, accepted
+manuscript; published online 1 September 2026, 2026.
+Experimental support, please
+view the build logs
+for errors. Generated by
+L
+A
+T
+E
+xml
+.
+Instructions for reporting errors
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below:
+Click the "Report Issue"
+(
+)
+button, located in the page header.
+Tip:
+You can select the relevant text first, to include it in your report.
+Our team has already identified
+the following issues
+. We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all.
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a
+list of packages that need conversion
+, and welcome
+developer contributions
+.
+We gratefully acknowledge support from our
+major funders
+,
+member institutions
+,
+,
+        and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status
+(opens in new tab)

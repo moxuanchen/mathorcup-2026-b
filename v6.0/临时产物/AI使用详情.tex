@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{2em}
+\linespread{1.45}\selectfont
+\setlist[itemize]{leftmargin=2em,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=4pt,topsep=2pt}
+
+\begin{document}
+
+\begin{center}
+{\zihao{2}\heiti AI 工具使用详情说明}\\[8pt]
+{\zihao{4}队伍编号：MCB2600843\quad 题号：B}\\[2pt]
+{\zihao{5}\today}
+\end{center}
+
+\vspace{0.5em}
+
+\section*{一、工具名称与版本}
+本文使用 DeepSeek 公司的 \texttt{deepseek-v4.1-flash} 模型，使用日期为 2026 年 10 月 30 日。除该模型外，未使用其他人工智能工具。
+
+\section*{二、使用目的与应用环节}
+AI 工具仅作为辅助手段，用于以下三个环节：
+\begin{itemize}
+  \item 数据查找：检索公开气象、地理与冰川产品的名称、发布机构、单位及时间标签，供队员回到原始文档和响应文件核对。
+  \item 代码修改：检查绘图与数据处理脚本的语法、变量命名、单位换算和注释，提出修改建议。
+  \item 论文语言润色：对中文段落的通顺性、术语一致性和图表标注措辞提出修改建议，不改变数值与结论。
+\end{itemize}
+核心建模、算法设计、参数标定、结果计算、图表定稿与结论形成均由参赛队员独立完成，AI 工具未参与上述核心环节。
+
+\section*{三、关键交互记录}
+以下记录为使用过程中的代表性交互，均经过队员复核，未直接采用未经核实的内容。
+
+\begin{enumerate}
+  \item 提示词：“请检查这段 Python 绘图代码的变量命名和单位换算是否一致。”
+
+  回复摘要：指出两处变量名不一致，并建议统一坐标轴单位、补充必要注释。
+
+  人工处理：队员对照源数据与结果文件逐项核对后修改代码，保留与本文口径一致的写法。
+
+  \item 提示词：“请把这段中文摘要改得更简洁，保留全部数值和限定条件。”
+
+  回复摘要：给出删减重复表述的版本，未改动数值、时段和限定语。
+
+  人工处理：队员逐项比对原文数值与限定条件，仅采纳部分措辞，最终表述由队员定稿。
+
+  \item 提示词：“请核对下列公开气象产品的名称、发布机构和时间标签，并提示需要以哪类原始文档为准。”
+
+  回复摘要：列出产品名称与发布机构，并提示以接口文档和原始响应文件为准。
+
+  人工处理：队员按原始文档与请求参数复核，未采用无法溯源的表述。
+\end{enumerate}
+
+\section*{四、采纳内容与人工修改}
+\begin{itemize}
+  \item 采纳内容：少量代码注释、变量命名建议、中文措辞和图表标注排版建议。
+  \item 人工修改：所有数值、公式、参数、图表和结论均由队员对照求解结果与原始资料复核；对不准确、不可溯源或与本文口径不一致的模型输出予以删除或改写。
+  \item 责任说明：参赛队对论文全部内容的准确性、可靠性及学术规范性负责。
+\end{itemize}
+
+\section*{五、声明}
+除上述用途外，未使用 AI 工具生成论文正文、模型、算法或计算结果。论文中的 AI 使用声明位于附录3。
+
+\end{document}

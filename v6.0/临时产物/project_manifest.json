@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "enhanced-modeling-repair",
+  "contest": "mathorcup",
+  "language": "zh",
+  "network_policy": "offline_no_web_search",
+  "template_authority": "configured_local_template_unless_direct_user_override",
+  "version": "v6.0",
+  "frozen_parent": null,
+  "folder": "v6.0",
+  "released_at": "2026-11-02",
+  "release_status": "released",
+  "release_note": "硬伤修复与排版修订版，由无版本号的硬伤修复工作目录定版为 v6.0。问题二改为完整降雨事件累计 SCS-CN 并逐时取累计曲线差；问题三按变量真实时间支持对齐 IFS 短波与降水，单列真实释放、形成和实际到达的不可识别性，图件按当地时间刻度重绘；全文表格水平与垂直居中，图注表注精简，AI 使用声明按要求收敛；新增附录4 源码全量清单。数值结果除图件刻度与标注外未改变。按用户要求，旧版本目录、版本报告、过程性审查记录与旧 Git 历史已全部删除，故 frozen_parent 置空且不再维护快照/回执绑定。"
+}

@@ -1,0 +1,68 @@
+{
+  "tm": {
+    "total_members": 3000,
+    "counts": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "p_finite": 1.0,
+    "p_no_event": 0.0,
+    "p_right_censored": 0.0,
+    "p_not_evaluable": 0.0,
+    "p_active_at_issue": 0.0,
+    "p_actionable": 1.0,
+    "state_sum_check": true
+  },
+  "ta": {
+    "total_members": 3000,
+    "counts": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue_left_censored": 0,
+      "no_arrival": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "p_finite": 1.0,
+    "p_no_event": 0.0,
+    "p_right_censored": 0.0,
+    "p_not_evaluable": 0.0,
+    "p_active_at_issue_left_censored": 0.0,
+    "p_no_arrival": 0.0,
+    "p_actionable": 1.0,
+    "state_sum_check": true
+  },
+  "tm_interval": {
+    "status": "available",
+    "finite_n": 3000,
+    "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+    "median_time": "2026-08-26 02:13:44.989810432+00:00",
+    "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+    "width_hours": 1.9078332778666667,
+    "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+    "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+    "support_envelope_width_hours": 2.0,
+    "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+    "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+    "support_endpoint_95_width_hours": 2.0,
+    "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+  },
+  "ta_interval": {
+    "status": "available",
+    "finite_n": 3000,
+    "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+    "median_time": "2026-08-26 02:46:31.992000768+00:00",
+    "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+    "width_hours": 1.942594924728889,
+    "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+    "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+    "support_envelope_width_hours": 2.452668167299722,
+    "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+    "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+    "support_endpoint_95_width_hours": 2.308469679928889,
+    "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+  }
+}

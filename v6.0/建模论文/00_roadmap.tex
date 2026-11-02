@@ -1,0 +1,31 @@
+\section{问题分析与建模思路}
+四个问题共享同一套资料、时间轴和公共几何，但回答对象不同：问题一识别事件前环境异常，问题二判断水源与床面是否达到起动条件，问题三在固定发布时刻给出条件时间产品，问题四在给定体积与地形下演算传播。图\ref{fig:roadmap}给出全文技术路线。
+
+四问共享时间基准、坐标和注入断面，箭头只表示计算依赖；本文将结果分为计算闭合、模型内的条件分布与真实灾害外推三层，结论限于前两层。
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  base/.style={draw=black!55, rounded corners=2pt, align=center, inner sep=3pt},
+  data/.style={base, fill=gray!8, text width=13.8cm, minimum height=1.05cm},
+  q/.style={base, fill=teal!7, text width=3.30cm, minimum height=3.55cm, font=\scriptsize},
+  outbox/.style={base, fill=orange!8, text width=13.8cm, minimum height=1.2cm},
+  arr/.style={-{Latex[length=2mm]}, semithick, draw=black!65}
+]
+\node[data] (data) at (0,0) {\textbf{题给资料与公共预处理}\\四类逐时观测、DEM、冰川编目、历史灾点、IFS\\时间基准对齐｜质量控制｜公共注入断面｜源区体积};
+\node[q] (q1) at (-5.1,-2.65) {\textbf{问题一}\\环境关联\\31项候选\\稳健异常→相关簇\\正式前五};
+\node[q] (q2) at (-1.7,-2.65) {\textbf{问题二}\\起动判别\\床面受力→水控/\\重力分支\\事件累计SCS-CN\\→$T(t)$};
+\node[q] (q3) at (1.7,-2.65) {\textbf{问题三}\\条件预报\\固定08:00\\3000成员\\$t_m$、$t_a^{(0)}$区间};
+\node[q] (q4) at (5.1,-2.65) {\textbf{问题四}\\情景传播\\一维自然停止\\D8路由\\首达、峰值、右删失};
+\node[outbox] (ev) at (0,-5.75) {\textbf{结果层次与适用范围}\\计算闭合（单位/状态/账本/CFL）→ 条件成员分布 → 真实触发外推\\真实 $t_r$、$t_f$、$t_a$、真实预警与覆盖率尚未给出};
+\draw[arr] (data.south) -- (q1.north);
+\draw[arr] (data.south) -- (q2.north);
+\draw[arr] (data.south) -- (q3.north);
+\draw[arr] (data.south) -- (q4.north);
+\draw[arr] (q1.south) -- (ev.north -| q1.south);
+\draw[arr] (q2.south) -- (ev.north -| q2.south);
+\draw[arr] (q3.south) -- (ev.north -| q3.south);
+\draw[arr] (q4.south) -- (ev.north -| q4.south);
+\end{tikzpicture}
+\caption{全文建模思路与结果层次}\label{fig:roadmap}
+\end{figure}

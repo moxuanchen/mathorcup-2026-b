@@ -1,0 +1,15 @@
+# Reproducible local inputs and generated working files remain on disk.
+*.zip
+*.rar
+**/原始数据/
+**/cache/
+**/渲染/
+**/题面图/
+**/构建/
+**/__pycache__/
+*.pyc
+*.aux
+*.toc
+*.out
+*.synctex.gz
+*.xdv

@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "status": "auxiliary_available_real_forecast_blocked",
+  "target_definition": "source meltwater onset proxy and conditional D8 port arrival; not true t_trig",
+  "release_model": {
+    "status": "not_identified",
+    "release_state": "unknown_not_no_release",
+    "release_time_interval": null,
+    "formation_time_interval": null,
+    "actual_arrival_interval": null,
+    "needed": [
+      "causally available source deformation/strength/pressure constraints",
+      "measurement errors and dependence",
+      "release-to-flow transformation model"
+    ]
+  },
+  "task_fulfillment": {
+    "q3_true_trigger_forecast": "not_completed",
+    "release_allowed": false
+  },
+  "issue_time_local": "2026-08-26T08:00:00+08:00",
+  "issue_time_utc": "2026-08-26T00:00:00+00:00",
+  "window_local": [
+    "2026-08-26T08:00:00+08:00",
+    "2026-08-27T08:00:00+08:00"
+  ],
+  "window_semantics": "half-open prediction window [issue, issue+24h)",
+  "ifs_manifest": {
+    "path": "临时产物/外部数据/ifs_single_run_manifest.json",
+    "sha256": "dbfbe5262c26fc428179c5146b494b3ff7ef920683b8ec9911651732e002fc8b",
+    "actual_file_count": 4,
+    "source_runs": [
+      {
+        "file": "ifs_single_run_20260825T06_source.json",
+        "sha256": "435f7e393462efaadb33bd12fa40142e5ac19b66686389947c72837d0a9ca8ec",
+        "init_time_utc": "2026-08-25T06:00",
+        "available_at_utc": "2026-08-25 12:00:00+00:00",
+        "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+        "preissue_hour_available": true,
+        "valid_available_hours_including_preissue": 25,
+        "required_hours_including_preissue": 25,
+        "valid_future_hours": 24,
+        "required_future_hours": 24,
+        "trajectory_end_utc": "2026-09-01T04:00:00+00:00",
+        "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+        "time_support": {
+          "model_support": "[t,t+1h)",
+          "SW": "raw label t+1h; preceding-hour mean W/m2",
+          "P": "raw label t+1h; preceding-hour accumulation mm",
+          "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+          "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+          "nonlinearity_order": "hourly average first, then positive part and gate",
+          "missing_endpoint": "missing support; never a one-endpoint mean"
+        },
+        "all_future_hours_available": true
+      },
+      {
+        "file": "ifs_single_run_20260825T12_source.json",
+        "sha256": "2b72ed473fa517d1044ee87d0053d6f8b9f8c555bb9251392ca92d0eb6a9d29e",
+        "init_time_utc": "2026-08-25T12:00",
+        "available_at_utc": "2026-08-25 18:00:00+00:00",
+        "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+        "preissue_hour_available": true,
+        "valid_available_hours_including_preissue": 25,
+        "required_hours_including_preissue": 25,
+        "valid_future_hours": 24,
+        "required_future_hours": 24,
+        "trajectory_end_utc": "2026-09-01T10:00:00+00:00",
+        "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+        "time_support": {
+          "model_support": "[t,t+1h)",
+          "SW": "raw label t+1h; preceding-hour mean W/m2",
+          "P": "raw label t+1h; preceding-hour accumulation mm",
+          "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+          "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+          "nonlinearity_order": "hourly average first, then positive part and gate",
+          "missing_endpoint": "missing support; never a one-endpoint mean"
+        },
+        "all_future_hours_available": true
+      },
+      {
+        "file": "ifs_single_run_20260825T18_source.json",
+        "sha256": "0cb4936db76f4e5c2c5bbe53fd44c00ca1515cc97a5803c7507dbc77a2212a98",
+        "init_time_utc": "2026-08-25T18:00",
+        "available_at_utc": "2026-08-26 00:00:00+00:00",
+        "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+        "preissue_hour_available": true,
+        "valid_available_hours_including_preissue": 25,
+        "required_hours_including_preissue": 25,
+        "valid_future_hours": 24,
+        "required_future_hours": 24,
+        "trajectory_end_utc": "2026-09-01T16:00:00+00:00",
+        "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+        "time_support": {
+          "model_support": "[t,t+1h)",
+          "SW": "raw label t+1h; preceding-hour mean W/m2",
+          "P": "raw label t+1h; preceding-hour accumulation mm",
+          "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+          "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+          "nonlinearity_order": "hourly average first, then positive part and gate",
+          "missing_endpoint": "missing support; never a one-endpoint mean"
+        },
+        "all_future_hours_available": true
+      }
+    ],
+    "port_context_not_used_in_main_chain": [
+      "ifs_single_run_20260825T18_port.json"
+    ]
+  },
+  "fit": {
+    "status": "fitted",
+    "training_rows": 11986,
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "training_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "station_support_assumption": {
+      "MET": "point",
+      "RADM": "start_mean",
+      "SOIL": "start_mean",
+      "FLUX": "start_mean",
+      "metadata_verified": false,
+      "target_rebuilt_after_alignment": true
+    },
+    "source_elevation_m": 5109.653049238576,
+    "station_elevation_m": 3980.0,
+    "temperature_offset_C": -6.7779182954314585,
+    "beta": [
+      -119.02522837558186,
+      -5.852610585837479,
+      0.47057987040550875,
+      1.7154462201653589
+    ],
+    "coef_names": [
+      "intercept",
+      "positive_source_temperature",
+      "positive_shortwave",
+      "relative_humidity"
+    ],
+    "residual_sigma_W_m2": 41.015695032482256,
+    "residual_marginal_sigma_W_m2": 44.71557734199002,
+    "residual_ar1_phi": 0.4003283571195287,
+    "residual_adjacent_pair_n": 11772,
+    "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+    "residual_innovation": "N(0, sigma^2), including the first innovation",
+    "residual_mean_W_m2": -1.9592151843631743e-13,
+    "residual_quantiles_W_m2": [
+      -101.47359489545542,
+      0.4696926907510033,
+      95.8089549608618
+    ],
+    "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+    "coefficient_draws_n": 1000
+  },
+  "state_summary_tm": {
+    "total_members": 3000,
+    "counts": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "p_finite": 1.0,
+    "p_no_event": 0.0,
+    "p_right_censored": 0.0,
+    "p_not_evaluable": 0.0,
+    "p_active_at_issue": 0.0,
+    "p_actionable": 1.0,
+    "state_sum_check": true
+  },
+  "state_summary_ta": {
+    "total_members": 3000,
+    "counts": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue_left_censored": 0,
+      "no_arrival": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "p_finite": 1.0,
+    "p_no_event": 0.0,
+    "p_right_censored": 0.0,
+    "p_not_evaluable": 0.0,
+    "p_active_at_issue_left_censored": 0.0,
+    "p_no_arrival": 0.0,
+    "p_actionable": 1.0,
+    "state_sum_check": true
+  },
+  "validation": {
+    "member_count": 3000,
+    "source_support_counts_by_forecast_hour": {
+      "2": 2000,
+      "1": 1000
+    },
+    "all_source_supports_one_hour": true,
+    "all_paired_arrival_supports_one_hour": true,
+    "state_mass_checks": {
+      "tm": true,
+      "ta": true
+    },
+    "source_state_sum": 3000,
+    "arrival_state_sum": 3000,
+    "p_actionable": {
+      "source": 1.0,
+      "arrival": 1.0
+    },
+    "active_at_issue_n": 0,
+    "active_at_issue_left_censored_n": 0,
+    "active_left_censored_bounds_present": true,
+    "interval_status": {
+      "tm": "available",
+      "ta": "available"
+    },
+    "runout_weight_sum": 1.0000000000000002,
+    "runout_member_rows": 3000,
+    "port_single_event_covered": true,
+    "true_t_trig_evaluable": false
+  },
+  "intervals": {
+    "t_m": {
+      "status": "available",
+      "finite_n": 3000,
+      "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+      "median_time": "2026-08-26 02:13:44.989810432+00:00",
+      "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+      "width_hours": 1.9078332778666667,
+      "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+      "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+      "support_envelope_width_hours": 2.0,
+      "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+      "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+      "support_endpoint_95_width_hours": 2.0,
+      "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+    },
+    "t_a": {
+      "status": "available",
+      "finite_n": 3000,
+      "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+      "median_time": "2026-08-26 02:46:31.992000768+00:00",
+      "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+      "width_hours": 1.942594924728889,
+      "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+      "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+      "support_envelope_width_hours": 2.452668167299722,
+      "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+      "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+      "support_endpoint_95_width_hours": 2.308469679928889,
+      "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+    },
+    "unconditional_interval": {
+      "t_m": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+        "median_time": "2026-08-26 02:13:44.989810432+00:00",
+        "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+        "width_hours": 1.9078332778666667,
+        "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_envelope_width_hours": 2.0,
+        "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+        "support_endpoint_95_width_hours": 2.0,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      },
+      "t_a": {
+        "status": "available",
+        "finite_n": 3000,
+        "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+        "median_time": "2026-08-26 02:46:31.992000768+00:00",
+        "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+        "width_hours": 1.942594924728889,
+        "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+        "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+        "support_envelope_width_hours": 2.452668167299722,
+        "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+        "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+        "support_endpoint_95_width_hours": 2.308469679928889,
+        "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+      }
+    },
+    "unconditional_status": "available",
+    "unconditional_status_by_target": {
+      "t_m": "available",
+      "t_a": "available"
+    },
+    "unconditional_probability_upper_bound": {
+      "t_m": 0.95,
+      "t_a": 0.95
+    }
+  },
+  "coverage": {
+    "product_role": "auxiliary_instant_release_scenario_inclusion_only",
+    "true_t_trig": "not_estimable",
+    "actual_port_arrival": "not_estimable_release_model_unidentified",
+    "actual_port_coverage": null,
+    "port_hit_event": "1/1",
+    "port_hit_covered": true,
+    "evaluation_denominator": 1,
+    "interval_status": {
+      "t_m": "available",
+      "t_a": "available"
+    }
+  },
+  "warning": {
+    "event_id": "port_hit_20260826_1030",
+    "target_definition": "true_debris_flow_warning",
+    "status": "not_estimable_release_model_unidentified",
+    "first_alarm_time": null,
+    "actionable_alarm_time": null,
+    "port_hit_time": "2026-08-26T10:30:00+08:00",
+    "lead_trigger_lower": null,
+    "lead_trigger_upper": null,
+    "lead_port": null,
+    "missed_alarm": null,
+    "late_alarm": null,
+    "reason": "melt advisory and instant-release transport do not determine actual release"
+  },
+  "melt_advisory": {
+    "event_id": "port_hit_20260826_1030",
+    "rule_version": "v5.0_issue_if_p_tm_actionable_ge_0.5",
+    "first_alarm_time": "2026-08-26T08:00:00+08:00",
+    "actionable_alarm_time": "2026-08-26T08:00:00+08:00",
+    "source_p_finite": 1.0,
+    "source_p_active_at_issue": 0.0,
+    "source_p_actionable": 1.0,
+    "arrival_p_finite": 1.0,
+    "arrival_p_active_at_issue_left_censored": 0.0,
+    "arrival_p_actionable": 1.0,
+    "trigger_truth_left": null,
+    "trigger_truth_right": null,
+    "port_hit_time": "2026-08-26T10:30:00+08:00",
+    "lead_trigger_lower": null,
+    "lead_trigger_upper": null,
+    "model_start_lead_hours": 2.2291638361111112,
+    "arrival_interval_lead_lower": -1.033169311111111,
+    "arrival_interval_lead_upper": 0.9094256136111111,
+    "lead_port": 2.5,
+    "missed_alarm": false,
+    "late_alarm": false,
+    "latency_assumptions": "no communication delay; 0/5/10/15/30 min treated as post-processing sensitivity in theory",
+    "lead_port_0min": 2.5,
+    "lead_port_5min": 2.4166666666666665,
+    "lead_port_10min": 2.3333333333333335,
+    "lead_port_15min": 2.25,
+    "lead_port_30min": 2.0,
+    "product_role": "melt_advisory_only_not_a_disaster_warning"
+  },
+  "geometry": {
+    "source_centroid": [
+      85.533321,
+      28.284642
+    ],
+    "injection": [
+      85.512636,
+      28.286779
+    ],
+    "port_proxy": [
+      85.382651,
+      28.282613
+    ],
+    "source_to_injection_horizontal_m": 2041.449140396932,
+    "centerline_injection_to_port_m": 20882.237,
+    "combined_route_m": 22923.686140396934,
+    "source_to_port_straight_m": 14771.715485293204,
+    "geometry_options": [
+      {
+        "name": "DEM4_surface",
+        "valid": true,
+        "source_centroid": [
+          85.533321,
+          28.284642
+        ],
+        "injection": [
+          85.512636,
+          28.286779
+        ],
+        "source_to_injection_horizontal_m": 2041.449140396932,
+        "source_to_injection_route_m": 2509.461697973743,
+        "drop_m": 1459.4120120000002,
+        "fall_s": 29.665131185076934
+      },
+      {
+        "name": "DEM4_bed_plus_ice",
+        "valid": true,
+        "source_centroid": [
+          85.533321,
+          28.284642
+        ],
+        "injection": [
+          85.512636,
+          28.286779
+        ],
+        "source_to_injection_horizontal_m": 2041.449140396932,
+        "source_to_injection_route_m": 2540.8627643580576,
+        "drop_m": 1512.7686520000002,
+        "fall_s": 29.501874464307907
+      }
+    ],
+    "source_semantics": "链A源区质心；不证明真实释放面或冰体失稳时刻",
+    "port_semantics": "D8口岸代理断面；与题面地点存在模型吸附误差"
+  },
+  "d8_configuration_ids": [
+    "base",
+    "V_low",
+    "V_high",
+    "V_chainB",
+    "n_low",
+    "n_high",
+    "tauy_low",
+    "tauy_high",
+    "Cv_low",
+    "Cv_high",
+    "smin_low",
+    "smin_high",
+    "duration_low",
+    "duration_high",
+    "arrival_low",
+    "arrival_high"
+  ],
+  "legacy_inverse_audit": {
+    "status": "legacy_audit_only_not_used",
+    "source": "临时产物/审稿记录/冻结父版v5.1记录/v43_旧反演审计.json",
+    "source_sha256": "f3bccde9bc6e15f3b8227b87cd9895a77ecd6af191ade9da8c23f77d3232387f",
+    "output": "求解结果/数据/03_旧条件反演对照.json",
+    "output_sha256": "307ac1c59ecbd92842a0cb5247566b615361b57015f5e2184a91d60bf074b1af",
+    "downstream_use": {
+      "forward_forecast": false,
+      "coverage": false,
+      "warning": false,
+      "propagation": false
+    },
+    "scope": "v4.3 post-event conditional inverse retained only as an audit record; not an input to v5.0 prediction, coverage, warning or propagation"
+  },
+  "outputs": {
+    "forecast_intervals": "forecast_intervals.csv",
+    "coverage_events": "coverage_events.csv",
+    "warning_events": "warning_events.csv",
+    "melt_advisory_events": "melt_advisory_events.csv",
+    "variable_time_support": "03_IFS逐变量时间支持.csv",
+    "runout_ranges": "runout_ranges.csv",
+    "forecast_members": "03_前向预报成员.csv",
+    "distance": "03_空间距离范围.json",
+    "legacy_inverse_audit": "03_旧条件反演对照.json"
+  },
+  "limitations": [
+    "source meltwater onset is an operational proxy, not independent true t_trig",
+    "active-at-issue members are left-censored at the port; their pre-issue arrival is not recoverable",
+    "IFS station-to-source transfer is structural, not ice-surface validation",
+    "D8 configuration sampling is a model-design distribution, not a real probability law",
+    "one port hit cannot validate long-run 95% coverage"
+  ]
+}

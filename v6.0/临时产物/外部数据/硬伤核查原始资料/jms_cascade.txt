@@ -1,0 +1,135 @@
+The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes
+All
+Title
+Author
+Keyword
+Abstract
+DOI
+Category
+Address
+Fund
+Advanced Search
+Home
+About JMS
+About JMS
+Journal Metrics
+Subscription
+Ethics & Disclosure
+Full-Text Access
+Contact Us
+Editorial Board
+Archives
+Reviewer List
+News
+Gallery
+Service
+Downloads
+All
+Title
+Author
+Keyword
+Abstract
+DOI
+Category
+Address
+Fund
+Home
+About JMS
+About JMS
+Journal Metrics
+Subscription
+Ethics & Disclosure
+Full-Text Access
+Contact Us
+Editorial Board
+Archives
+Reviewer List
+News
+Gallery
+Service
+Downloads
+LI Hao, LI Pu, HU Kaiheng, LIU Junyu, LIU Shuang, KANG Shichang, SU Pengcheng, YOU Yong. 2026: The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes. Journal of Mountain Science. DOI: 10.1007/s11629-026-1482-y
+Citation:
+LI Hao, LI Pu, HU Kaiheng, LIU Junyu, LIU Shuang, KANG Shichang, SU Pengcheng, YOU Yong. 2026: The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes. Journal of Mountain Science. DOI: 10.1007/s11629-026-1482-y
+LI Hao, LI Pu, HU Kaiheng, LIU Junyu, LIU Shuang, KANG Shichang, SU Pengcheng, YOU Yong. 2026: The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes. Journal of Mountain Science. DOI: 10.1007/s11629-026-1482-y
+Citation:
+LI Hao, LI Pu, HU Kaiheng, LIU Junyu, LIU Shuang, KANG Shichang, SU Pengcheng, YOU Yong. 2026: The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes. Journal of Mountain Science. DOI: 10.1007/s11629-026-1482-y
+The 26 August 2026 Chhochen Khola ice-rock avalanche-debris flow cascade on the Nepal-China border: dynamics,numerical computation,and causes
+LI Hao
+,
+LI Pu
+,
+HU Kaiheng
+,
+LIU Junyu
+,
+LIU Shuang
+,
+KANG Shichang
+,
+SU Pengcheng
+,
+YOU Yong
+Graphical Abstract
+Abstract
+Abstract
+On 26 August 2026, a large ice-rock slides initiated in the Chhochen Khola catchment of the Nepal Himalaya and evolved into a high-speed debris flow that travelled down the transboundary Lende Khola river, crossing the Nepal-China border. This cascading geohazard devastated China's Gyirong Port, 22.8 km downstream, as well as villages and infrastructure farther downstream in Nepal. By integrating remote sensing, seismological, hydrological, and field evidence, we reconstruct a three-stage cascade. (1) A 0.76 km
+2
+ice-rock mass failed on the north flank of the Langtang Lirung massif at ~5,190 m a.s.l.. The initial slide had a total volume of ~103 Mm
+3
+, of which ~12.6 Mm
+3
+(≈12%) was ice. (2) After ~30 s of the descent, the slide struck and entrained a detached glacier tongue of 0.92 km
+2
+at ~4,010 m a.s.l., generating a seismic signal equivalent to an Mw 5.1 event, and rapidly developed into a large ice-rock avalanche. Within the following ~100 s, ~67 Mm
+3
+of debris was deposited in the Chhochen Khola, whereas the remaining ~36 Mm
+3
+was remobilized as a highly mobile debris flow and entered the Lende Khola. (3) The debris flow travelled 14.2 km along the Lende Khola in ~350 s. At a bedrock-gorge cross-section near Gyirong Port, it attained a peak discharge of 2.46×10
+5
+m
+3
+s
+-1
+with a cross-sectional mean velocity of 36.2 m s
+-1
+. We simulated the ice-rockslides and the debris flows using a one-dimensional depth-averaged Voellmy model and a Saint-Venant shallow-water model, respectively. The simulations yield a maximum slide velocity of 129.2 m s
+-1
+in the first stage and show that the peak discharge at the Gyirong section had attenuated to ~11% of that at the confluence of the Chhochen Khola and the Lende Khola. Meteorological and seismic records preceding the event reveal no single extreme rainfall or temperature anomaly, nor any recent tectonic trigger; rather, the disaster was a compound event arising from the combined effects of long-term climate warming, glacier retreat, adverse geological preconditioning, and freeze-thaw cycling.
+FullText(HTML)
+References
+(34)
+Related Articles
+Supplements
+(0)
+Cited By
+Catalog
+Turn off MathJax
+Article Contents
+川公网安备51010702001669号
+和
+蜀ICP备 05003828号
+/
+DownLoad:
+Full-Size Img
+PowerPoint
+Return
+Return
+×
+Close
+Export File
+Citation
+Format
+RIS(for EndNote,Reference Manager,ProCite)
+BibTex
+Txt
+Content
+Citation Only
+Citation and Abstract
+Export
+Close
+×
+Close
+Citation
+Copy
+Close

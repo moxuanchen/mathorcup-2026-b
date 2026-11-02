@@ -1,0 +1,56 @@
+{
+  "version": "v5.0",
+  "targets": [
+    {
+      "target": "working",
+      "lonlat": [
+        85.3826,
+        28.2826
+      ],
+      "route_snap_rc": [
+        1014,
+        694
+      ],
+      "route_snap_offset_m": 5.186581833941051,
+      "route_length_m": 20882.236524054286,
+      "route_section_upstream_area_km2": 814.6644761700074,
+      "water_model_outlet_rc": [
+        1014,
+        694
+      ],
+      "water_model_upstream_area_km2": 814.6644761700074,
+      "arrival_s": 1965.9961740103686,
+      "peak_depth_m": 10.08530186014262,
+      "peak_velocity_m_s": 6.601474228094511,
+      "peak_intensity_N_m": 765849.7105555475,
+      "mass_closure": 2.075820191829099e-15
+    },
+    {
+      "target": "alternative_reference",
+      "lonlat": [
+        85.3777,
+        28.2797
+      ],
+      "route_snap_rc": [
+        1025,
+        677
+      ],
+      "route_snap_offset_m": 27.395387078173272,
+      "route_length_m": 21524.325077712834,
+      "route_section_upstream_area_km2": 815.204894587186,
+      "water_model_outlet_rc": [
+        1025,
+        677
+      ],
+      "water_model_upstream_area_km2": 815.204894587186,
+      "arrival_s": 2034.0633872884714,
+      "peak_depth_m": 7.416986178882038,
+      "peak_velocity_m_s": 8.82199120096446,
+      "peak_intensity_N_m": 1005850.6410923352,
+      "mass_closure": 2.075820191829099e-15
+    }
+  ],
+  "alternative_coordinate_status": "inherited public-reference candidate; live Wikidata retrieval failed, exact affected section unresolved",
+  "method": "same source, grid, volume and physical parameters; only target section changed. Route and trigger-outlet snapping reported separately.",
+  "scope": "location sensitivity, not observed affected-section verification; peak intensity is not observed peak discharge"
+}

@@ -1,0 +1,51 @@
+{
+  "出口像元": [
+    1014,
+    694
+  ],
+  "出口汇流累积": 975333,
+  "集水区像元数": 975333,
+  "集水区面积_km2": 814.664,
+  "像元面积_m2": 835.3,
+  "冰川覆盖率": 0.23602,
+  "覆盖率分解": {
+    "高程带代理_ge4800m": 0.54438,
+    "冰厚场源区": 0.00715,
+    "旧高程代理并集_仅审计": 0.54586,
+    "RGI6编目边界": 0.23602
+  },
+  "冰川面积来源": {
+    "signature": {
+      "boundary_sha256": "35154f430b67ae1a50e7b07639e294a302c37830ef7ceff30b8148a9cba750de",
+      "shape": [
+        1148,
+        1816
+      ],
+      "grid": {
+        "lon0": 85.189895,
+        "lat0": 28.564243,
+        "dlon": 0.000278,
+        "dlat": -0.000278,
+        "anchor": "pixel_center",
+        "raster_type": 1,
+        "preprocess_version": "qc-center-v4"
+      },
+      "version": "rgi6-centre-xor-v1"
+    },
+    "source": "临时产物\\原始数据\\（3）冰川高程变化\\西藏日喀则市吉隆县特大洪水—200km周围内的冰川和冰川厚度变化数据集\\RGI_V6_JilongFlood_Buffer_200km.shp",
+    "crs_wkt": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+    "features_intersecting_dem": 212,
+    "pixels": 409491,
+    "scope": "RGI6 inventory epoch, not observed 2026 glacier/snow extent; centre rasterization with ring parity"
+  },
+  "冰川覆盖语义": "RGI6编目边界栅格化；非2026年消融区、积雪或实时冰川范围",
+  "冰川区平均高程_m": 5446.8,
+  "集水区平均高程_m": 4711.2,
+  "集水区最高高程_m": 7247.9,
+  "集水区最低高程_m": 1810.9,
+  "集水区高差_m": 5437.0,
+  "集水区主沟长_m": 47404.3,
+  "集水区比降": 0.11469,
+  "追迹主沟长_m": 44409.7,
+  "追迹比降": 0.08548
+}

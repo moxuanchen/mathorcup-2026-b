@@ -1,0 +1,39 @@
+{
+  "fields": [
+    "G",
+    "H",
+    "Theta",
+    "F_ice",
+    "U_ice",
+    "C_ice"
+  ],
+  "ice_mechanics_unresolved": true,
+  "F_ice_definition": "附件4存在冰厚和坡度同时达到源区阈值的编目像元",
+  "source_thresholds": {
+    "h_thr_m": 50.0,
+    "sl_thr_deg": 25.0
+  },
+  "source_pixel_count": 335,
+  "target_catchment_G": "water_controlled",
+  "target_catchment_H_counts": {
+    "below_threshold": 33130,
+    "not_evaluable": 16415
+  },
+  "target_catchment_Theta_counts": {
+    "below_thermal_reference": 30504,
+    "not_evaluable": 17529,
+    "thermal_precondition": 1512
+  },
+  "gully_G_counts": {
+    "water_controlled": 78,
+    "gravity_unstable": 6
+  },
+  "gully_H_counts": {
+    "below_threshold": 44,
+    "hydraulic_candidate": 34,
+    "inapplicable": 6
+  },
+  "event_day_Theta": "below_thermal_reference",
+  "hourly_csv": "02_状态元组_逐小时.csv",
+  "objects_csv": "02_状态元组_逐沟道.csv"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "not_applicable",
+  "reason": "一维基线未抵达口岸，不能以中心线口岸终点生成扇体扩散区",
+  "reached_outlet": false,
+  "affected_cells": 0,
+  "affected_area_km2": 0.0,
+  "max_intensity": 0.0,
+  "I0": 0.0,
+  "apex_rc": null,
+  "main_direction_deg": null,
+  "half_angle_deg": null,
+  "reach_km": 0.0
+}

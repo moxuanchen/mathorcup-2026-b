@@ -1,0 +1,192 @@
+{
+  "模型形式": "P(t) = σ[k_T·(T(t) − 1)]，T(t) = Q_w(t)/Q_c",
+  "状态变量": "触发指数 T",
+  "T_事件时刻_10:00": 0.018814,
+  "显式先验斜率_kT": 4.0,
+  "kT来源": "显式先验4，扫描1/2/4/8；没有用事件窗口拟合或标定",
+  "kT敏感性": {
+    "1.0": {
+      "score_gt05_hours": 0,
+      "score_gt08_hours": 0
+    },
+    "2.0": {
+      "score_gt05_hours": 0,
+      "score_gt08_hours": 0
+    },
+    "4.0": {
+      "score_gt05_hours": 0,
+      "score_gt08_hours": 0
+    },
+    "8.0": {
+      "score_gt05_hours": 0,
+      "score_gt08_hours": 0
+    }
+  },
+  "使用边界": "事件窗口回顾系数k已退出正式模型；T/P仅作回顾相对强度评分，单事件不识别发生概率；空间S不与时间评分相乘",
+  "集水区易发性": null,
+  "集水区评分状态": "unavailable: land-cover class semantics unverified",
+  "沟道易发性中位数": 0.149262,
+  "P最大值": 0.137433,
+  "P最大时刻": "2024-09-28 18:00:00",
+  "P超过0.5的小时数": 0,
+  "P超过0.5的小时占比": 0.0,
+  "事件窗口首次超过0.5": null,
+  "空间排序AUC_易发性预测大规模": 0.201288,
+  "空间排序AUC_置换检验": {
+    "AUC": 0.201288,
+    "置换次数": 2000,
+    "双侧p值": 0.0035,
+    "判读": "已发生灾点的大规模排序反向；不能推断发生概率方向"
+  },
+  "样本内规模Kendall_tau": 0.408386,
+  "规模关联_n": 78,
+  "分级阈值": {
+    "蓝色": [
+      0.2,
+      0.4
+    ],
+    "黄色": [
+      0.4,
+      0.6
+    ],
+    "橙色": [
+      0.6,
+      0.8
+    ],
+    "红色": [
+      0.8,
+      1.0
+    ]
+  },
+  "各级小时数": {
+    "蓝色(0.2-0.4)": 0,
+    "黄色(0.4-0.6)": 0,
+    "橙色(0.6-0.8)": 0,
+    "红色(≥0.8)": 0
+  },
+  "曲线数情景": {
+    "formal_C_N0": 85.0,
+    "formal_event_window": [
+      "2026-08-26 08:00",
+      "2026-08-26 13:00"
+    ],
+    "event_window_semantics": "inclusive hourly labels on the frozen 08:00--13:00 local event window",
+    "scenario_values": [
+      75.0,
+      85.0,
+      95.0
+    ],
+    "AMC_adjustment": "API terciles from 2021-2025 training; factors 0.75/1.00/1.15 and clip [30,98]",
+    "provenance": "independent engineering scenario, not derived from unverified land-cover class codes and not calibrated to the 2026 event",
+    "scenarios": {
+      "75": {
+        "C_N0": 75.0,
+        "is_formal_scenario": false,
+        "formal_event_window_start": "2026-08-26 08:00",
+        "formal_event_window_end": "2026-08-26 13:00",
+        "event_Qwater_peak_m3s": 202.650179,
+        "event_Qrain_peak_m3s": 0.0,
+        "event_Qmelt_peak_m3s": 202.650179,
+        "event_T_peak": 0.070032,
+        "event_T_peak_time": "2026-08-26 13:00:00",
+        "event_hours_T_ge_1": 0,
+        "event_valid_hours": 6,
+        "series_Qrain_peak_m3s": 748.061601,
+        "rain_2026_Qrain_peak_m3s": 202.468683,
+        "rain_2026_runoff_sum_mm": 4.642622
+      },
+      "85": {
+        "C_N0": 85.0,
+        "is_formal_scenario": true,
+        "formal_event_window_start": "2026-08-26 08:00",
+        "formal_event_window_end": "2026-08-26 13:00",
+        "event_Qwater_peak_m3s": 202.650179,
+        "event_Qrain_peak_m3s": 0.0,
+        "event_Qmelt_peak_m3s": 202.650179,
+        "event_T_peak": 0.070032,
+        "event_T_peak_time": "2026-08-26 13:00:00",
+        "event_hours_T_ge_1": 0,
+        "event_valid_hours": 6,
+        "series_Qrain_peak_m3s": 1896.221099,
+        "rain_2026_Qrain_peak_m3s": 669.308332,
+        "rain_2026_runoff_sum_mm": 56.775899
+      },
+      "95": {
+        "C_N0": 95.0,
+        "is_formal_scenario": false,
+        "formal_event_window_start": "2026-08-26 08:00",
+        "formal_event_window_end": "2026-08-26 13:00",
+        "event_Qwater_peak_m3s": 202.650179,
+        "event_Qrain_peak_m3s": 0.0,
+        "event_Qmelt_peak_m3s": 202.650179,
+        "event_T_peak": 0.070032,
+        "event_T_peak_time": "2026-08-26 13:00:00",
+        "event_hours_T_ge_1": 0,
+        "event_valid_hours": 6,
+        "series_Qrain_peak_m3s": 1947.765274,
+        "rain_2026_Qrain_peak_m3s": 686.78612,
+        "rain_2026_runoff_sum_mm": 67.605074
+      }
+    }
+  },
+  "API_q1_q3": {
+    "q1": 3.574888,
+    "q3": 10.194567,
+    "source": "2021-2025 June-September observed training sample",
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "training_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "training_valid_hours": 14640,
+    "index_start": "2021-01-01 00:00:00",
+    "index_end": "2026-08-27 08:00:00"
+  },
+  "状态元组": {
+    "fields": [
+      "G",
+      "H",
+      "Theta",
+      "F_ice",
+      "U_ice",
+      "C_ice"
+    ],
+    "ice_mechanics_unresolved": true,
+    "F_ice_definition": "附件4存在冰厚和坡度同时达到源区阈值的编目像元",
+    "source_thresholds": {
+      "h_thr_m": 50.0,
+      "sl_thr_deg": 25.0
+    },
+    "source_pixel_count": 335,
+    "target_catchment_G": "water_controlled",
+    "target_catchment_H_counts": {
+      "below_threshold": 33130,
+      "not_evaluable": 16415
+    },
+    "target_catchment_Theta_counts": {
+      "below_thermal_reference": 30504,
+      "not_evaluable": 17529,
+      "thermal_precondition": 1512
+    },
+    "gully_G_counts": {
+      "water_controlled": 78,
+      "gravity_unstable": 6
+    },
+    "gully_H_counts": {
+      "below_threshold": 44,
+      "hydraulic_candidate": 34,
+      "inapplicable": 6
+    },
+    "event_day_Theta": "below_thermal_reference",
+    "hourly_csv": "02_状态元组_逐小时.csv",
+    "objects_csv": "02_状态元组_逐沟道.csv"
+  }
+}

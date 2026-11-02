@@ -1,0 +1,7361 @@
+{
+  "schema_version": 1,
+  "module": "step01b_preimpact",
+  "seed": 20260826,
+  "frozen_protocol": {
+    "target_release": "2026-08-26 00:00:00",
+    "last_usable_hour": "2026-08-25 22:00:00",
+    "unused_buffer_label": "2026-08-25 23:00:00",
+    "main_length_h": 168,
+    "sensitivity_length_h": 72,
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "pseudo_year": 2025,
+    "calendar": "共同非闰年日历±15日；2月29日不作为发布日",
+    "coverage_per_candidate": 0.8,
+    "all_candidates_must_pass": true,
+    "imputation": "不插补；每项窗口均值仅用该项有效小时，十二项均达80%才接纳",
+    "scoring": "训练窗口中位数与MAD×1.4826；零MAD仅回退IQR/1.349；A=|Z|降序，固定候选顺序决胜",
+    "tail_rank": "(1+参照幅度>=查询幅度的窗数)/(Nref+1)，不参与加权",
+    "labels_or_priors_used": false,
+    "candidates": [
+      {
+        "feature": "WS_10m",
+        "name": "10米风速",
+        "unit": "m/s",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "vector_shear_2_20m",
+        "name": "2—20米矢量风切变",
+        "unit": "1/s",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "Pressure",
+        "name": "MET气压",
+        "unit": "hPa",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "VWC_0.1m",
+        "name": "0.1米土壤含水率",
+        "unit": "m3/m3",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "VWC_0.4m",
+        "name": "0.4米土壤含水率",
+        "unit": "m3/m3",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "soilT_0.1m",
+        "name": "0.1米土温",
+        "unit": "degC",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "ustar",
+        "name": "摩擦速度",
+        "unit": "m/s",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "TKE_obs",
+        "name": "观测湍流动能",
+        "unit": "m2/s2",
+        "relationship": "未直接入水源式"
+      },
+      {
+        "feature": "Ri_b",
+        "name": "订正整体理查森数",
+        "unit": "1",
+        "relationship": "共享温湿廓线"
+      },
+      {
+        "feature": "dtheta_1_20",
+        "name": "订正1—20米位温差",
+        "unit": "K",
+        "relationship": "共享温湿廓线"
+      },
+      {
+        "feature": "inv_max",
+        "name": "实际温度逆温强度",
+        "unit": "K/100m",
+        "relationship": "共享温湿廓线"
+      },
+      {
+        "feature": "RH_2m",
+        "name": "2米相对湿度",
+        "unit": "%",
+        "relationship": "共享温湿廓线"
+      }
+    ]
+  },
+  "clusters": {
+    "confirmed": true,
+    "common_hours": 9238,
+    "training": "相关聚类用2021–2024年6–9月十二项共同有效小时9238小时（分年{2021: 2669, 2022: 1120, 2023: 2894, 2024: 2555}）；窗口参照年及2022年缺测情况见training_year_audit（窗口要求80%共同覆盖，与逐时相关聚类不是同一资格）；窗口参照有效年168h=2021/2023/2024，72h=2021/2023/2024，2022年因80%共同覆盖为0不进入窗口参照",
+    "hours_by_year": {
+      "2021": 2669,
+      "2022": 1120,
+      "2023": 2894,
+      "2024": 2555
+    },
+    "hourly_cluster_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "excluded_years": [],
+    "method": "Spearman绝对相关>0.8完整连通簇；至少200共同小时",
+    "unknown_pairs": [],
+    "edges": [
+      [
+        "WS_10m",
+        "vector_shear_2_20m",
+        0.9311882405318731
+      ],
+      [
+        "WS_10m",
+        "ustar",
+        0.8928124752753916
+      ],
+      [
+        "WS_10m",
+        "TKE_obs",
+        0.9063989086184909
+      ],
+      [
+        "vector_shear_2_20m",
+        "ustar",
+        0.8475781171254675
+      ],
+      [
+        "vector_shear_2_20m",
+        "TKE_obs",
+        0.8189390485367148
+      ],
+      [
+        "VWC_0.1m",
+        "VWC_0.4m",
+        0.8685803628894704
+      ],
+      [
+        "ustar",
+        "TKE_obs",
+        0.929076370089891
+      ],
+      [
+        "TKE_obs",
+        "RH_2m",
+        -0.8452777378693542
+      ]
+    ],
+    "clusters": [
+      [
+        "WS_10m",
+        "vector_shear_2_20m",
+        "ustar",
+        "TKE_obs",
+        "RH_2m"
+      ],
+      [
+        "Pressure"
+      ],
+      [
+        "VWC_0.1m",
+        "VWC_0.4m"
+      ],
+      [
+        "soilT_0.1m"
+      ],
+      [
+        "Ri_b"
+      ],
+      [
+        "dtheta_1_20"
+      ],
+      [
+        "inv_max"
+      ]
+    ],
+    "correlation": {
+      "WS_10m": {
+        "WS_10m": 1.0,
+        "vector_shear_2_20m": 0.9311882405318731,
+        "Pressure": -0.43544157963534325,
+        "VWC_0.1m": -0.05011694920799734,
+        "VWC_0.4m": -0.08078047201299163,
+        "soilT_0.1m": 0.676262506780872,
+        "ustar": 0.8928124752753916,
+        "TKE_obs": 0.9063989086184909,
+        "Ri_b": 0.3043448316480326,
+        "dtheta_1_20": -0.6482553818200741,
+        "inv_max": -0.4024525854523788,
+        "RH_2m": -0.7303713640735864
+      },
+      "vector_shear_2_20m": {
+        "WS_10m": 0.9311882405318731,
+        "vector_shear_2_20m": 1.0,
+        "Pressure": -0.42260898249090767,
+        "VWC_0.1m": -0.03767671283457238,
+        "VWC_0.4m": -0.06278933196585208,
+        "soilT_0.1m": 0.6707189829191513,
+        "ustar": 0.8475781171254675,
+        "TKE_obs": 0.8189390485367148,
+        "Ri_b": 0.46260549058731393,
+        "dtheta_1_20": -0.5010530112356244,
+        "inv_max": -0.3237316517786907,
+        "RH_2m": -0.6008949754284848
+      },
+      "Pressure": {
+        "WS_10m": -0.43544157963534325,
+        "vector_shear_2_20m": -0.42260898249090767,
+        "Pressure": 1.0,
+        "VWC_0.1m": -0.006959854423234439,
+        "VWC_0.4m": 0.09069309861717516,
+        "soilT_0.1m": -0.39467716968042865,
+        "ustar": -0.4394293501226438,
+        "TKE_obs": -0.45063375819655765,
+        "Ri_b": -0.15104685262713752,
+        "dtheta_1_20": 0.3062175602891977,
+        "inv_max": 0.20550390806122057,
+        "RH_2m": 0.35720213369872483
+      },
+      "VWC_0.1m": {
+        "WS_10m": -0.05011694920799734,
+        "vector_shear_2_20m": -0.03767671283457238,
+        "Pressure": -0.006959854423234439,
+        "VWC_0.1m": 1.0,
+        "VWC_0.4m": 0.8685803628894704,
+        "soilT_0.1m": -0.2794601600275923,
+        "ustar": -0.05632781829360924,
+        "TKE_obs": -0.0561554431045038,
+        "Ri_b": -0.06719825978853143,
+        "dtheta_1_20": 0.039156361130626,
+        "inv_max": -0.05413214777670883,
+        "RH_2m": 0.17971714862890742
+      },
+      "VWC_0.4m": {
+        "WS_10m": -0.08078047201299163,
+        "vector_shear_2_20m": -0.06278933196585208,
+        "Pressure": 0.09069309861717516,
+        "VWC_0.1m": 0.8685803628894704,
+        "VWC_0.4m": 1.0,
+        "soilT_0.1m": -0.30854262311311226,
+        "ustar": -0.0861320598765355,
+        "TKE_obs": -0.08702022190304874,
+        "Ri_b": -0.07644211292305052,
+        "dtheta_1_20": 0.05158090272751045,
+        "inv_max": -0.04733560124513731,
+        "RH_2m": 0.16485268609572024
+      },
+      "soilT_0.1m": {
+        "WS_10m": 0.676262506780872,
+        "vector_shear_2_20m": 0.6707189829191513,
+        "Pressure": -0.39467716968042865,
+        "VWC_0.1m": -0.2794601600275923,
+        "VWC_0.4m": -0.30854262311311226,
+        "soilT_0.1m": 1.0,
+        "ustar": 0.6822750060949133,
+        "TKE_obs": 0.6905975041868134,
+        "Ri_b": 0.3115678491558127,
+        "dtheta_1_20": -0.37316772665187026,
+        "inv_max": -0.2364596869276291,
+        "RH_2m": -0.5825817943738245
+      },
+      "ustar": {
+        "WS_10m": 0.8928124752753916,
+        "vector_shear_2_20m": 0.8475781171254675,
+        "Pressure": -0.4394293501226438,
+        "VWC_0.1m": -0.05632781829360924,
+        "VWC_0.4m": -0.0861320598765355,
+        "soilT_0.1m": 0.6822750060949133,
+        "ustar": 1.0,
+        "TKE_obs": 0.929076370089891,
+        "Ri_b": 0.2533904259490254,
+        "dtheta_1_20": -0.6490199150425394,
+        "inv_max": -0.40351620485267464,
+        "RH_2m": -0.7482016010006676
+      },
+      "TKE_obs": {
+        "WS_10m": 0.9063989086184909,
+        "vector_shear_2_20m": 0.8189390485367148,
+        "Pressure": -0.45063375819655765,
+        "VWC_0.1m": -0.0561554431045038,
+        "VWC_0.4m": -0.08702022190304874,
+        "soilT_0.1m": 0.6905975041868134,
+        "ustar": 0.929076370089891,
+        "TKE_obs": 1.0,
+        "Ri_b": 0.19501960936356358,
+        "dtheta_1_20": -0.7193944672463263,
+        "inv_max": -0.4125303669150928,
+        "RH_2m": -0.8452777378693542
+      },
+      "Ri_b": {
+        "WS_10m": 0.3043448316480326,
+        "vector_shear_2_20m": 0.46260549058731393,
+        "Pressure": -0.15104685262713752,
+        "VWC_0.1m": -0.06719825978853143,
+        "VWC_0.4m": -0.07644211292305052,
+        "soilT_0.1m": 0.3115678491558127,
+        "ustar": 0.2533904259490254,
+        "TKE_obs": 0.19501960936356358,
+        "Ri_b": 1.0,
+        "dtheta_1_20": 0.35643288276863083,
+        "inv_max": 0.3584054782298674,
+        "RH_2m": 0.004592268912097017
+      },
+      "dtheta_1_20": {
+        "WS_10m": -0.6482553818200741,
+        "vector_shear_2_20m": -0.5010530112356244,
+        "Pressure": 0.3062175602891977,
+        "VWC_0.1m": 0.039156361130626,
+        "VWC_0.4m": 0.05158090272751045,
+        "soilT_0.1m": -0.37316772665187026,
+        "ustar": -0.6490199150425394,
+        "TKE_obs": -0.7193944672463263,
+        "Ri_b": 0.35643288276863083,
+        "dtheta_1_20": 1.0,
+        "inv_max": 0.6136352406592853,
+        "RH_2m": 0.7898960119240135
+      },
+      "inv_max": {
+        "WS_10m": -0.4024525854523788,
+        "vector_shear_2_20m": -0.3237316517786907,
+        "Pressure": 0.20550390806122057,
+        "VWC_0.1m": -0.05413214777670883,
+        "VWC_0.4m": -0.04733560124513731,
+        "soilT_0.1m": -0.2364596869276291,
+        "ustar": -0.40351620485267464,
+        "TKE_obs": -0.4125303669150928,
+        "Ri_b": 0.3584054782298674,
+        "dtheta_1_20": 0.6136352406592853,
+        "inv_max": 1.0,
+        "RH_2m": 0.3692372407848439
+      },
+      "RH_2m": {
+        "WS_10m": -0.7303713640735864,
+        "vector_shear_2_20m": -0.6008949754284848,
+        "Pressure": 0.35720213369872483,
+        "VWC_0.1m": 0.17971714862890742,
+        "VWC_0.4m": 0.16485268609572024,
+        "soilT_0.1m": -0.5825817943738245,
+        "ustar": -0.7482016010006676,
+        "TKE_obs": -0.8452777378693542,
+        "Ri_b": 0.004592268912097017,
+        "dtheta_1_20": 0.7898960119240135,
+        "inv_max": 0.3692372407848439,
+        "RH_2m": 1.0
+      }
+    },
+    "missing_policy": "缺相关不填零；结构不可确认时不声称去冗余前五",
+    "window_reference_years_by_length": {
+      "168": [
+        2021,
+        2023,
+        2024
+      ],
+      "72": [
+        2021,
+        2023,
+        2024
+      ]
+    }
+  },
+  "training_year_audit": {
+    "configured_training_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "effective_training_years_by_length": {
+      "168": [
+        2021,
+        2023,
+        2024
+      ],
+      "72": [
+        2021,
+        2023,
+        2024
+      ]
+    },
+    "excluded_training_years": {
+      "2022": "该年无共同有效参照窗（ustar/TKE_obs缺测）"
+    },
+    "by_length": {
+      "168": {
+        "2021": {
+          "reference_rows": 31,
+          "common_valid_rows": 31,
+          "failed_features": []
+        },
+        "2022": {
+          "reference_rows": 31,
+          "common_valid_rows": 0,
+          "failed_features": [
+            "TKE_obs",
+            "ustar"
+          ]
+        },
+        "2023": {
+          "reference_rows": 31,
+          "common_valid_rows": 31,
+          "failed_features": []
+        },
+        "2024": {
+          "reference_rows": 31,
+          "common_valid_rows": 25,
+          "failed_features": [
+            "TKE_obs",
+            "ustar"
+          ]
+        }
+      },
+      "72": {
+        "2021": {
+          "reference_rows": 31,
+          "common_valid_rows": 31,
+          "failed_features": []
+        },
+        "2022": {
+          "reference_rows": 31,
+          "common_valid_rows": 0,
+          "failed_features": [
+            "TKE_obs",
+            "ustar"
+          ]
+        },
+        "2023": {
+          "reference_rows": 31,
+          "common_valid_rows": 31,
+          "failed_features": []
+        },
+        "2024": {
+          "reference_rows": 31,
+          "common_valid_rows": 28,
+          "failed_features": [
+            "TKE_obs",
+            "ustar"
+          ]
+        }
+      }
+    },
+    "policy": "留一年仅对有效年份执行；无窗年份标为不可评估，不用空操作结果冒充敏感性；年块自举仅从有效年份重抽样"
+  },
+  "target": {
+    "168": {
+      "release": "2026-08-26 00:00:00",
+      "start": "2026-08-18 23:00:00",
+      "end": "2026-08-25 22:00:00",
+      "length_h": 168,
+      "common_valid": true,
+      "candidate_reference_windows": 124,
+      "reference_windows": 87,
+      "reference_counts_by_year": {
+        "2021": 31,
+        "2023": 31,
+        "2024": 25
+      },
+      "coverage": {
+        "WS_10m": 1.0,
+        "vector_shear_2_20m": 0.9821428571428571,
+        "Pressure": 1.0,
+        "VWC_0.1m": 1.0,
+        "VWC_0.4m": 1.0,
+        "soilT_0.1m": 1.0,
+        "ustar": 0.9880952380952381,
+        "TKE_obs": 0.9880952380952381,
+        "Ri_b": 0.9761904761904762,
+        "dtheta_1_20": 1.0,
+        "inv_max": 1.0,
+        "RH_2m": 1.0
+      },
+      "all12_complete_hours": 162,
+      "status": "可评估",
+      "rows": [
+        {
+          "feature": "WS_10m",
+          "name": "10米风速",
+          "unit": "m/s",
+          "mean": 1.7681130952380952,
+          "baseline_median": 1.9384226190476193,
+          "robust_scale": 0.1986608509036144,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.17030952380952402,
+          "Z": -0.8572877999609204,
+          "A": 0.8572877999609204,
+          "tail_rank": 0.4431818181818182,
+          "rankable": true,
+          "full_rank": 4
+        },
+        {
+          "feature": "vector_shear_2_20m",
+          "name": "2—20米矢量风切变",
+          "unit": "1/s",
+          "mean": 0.07517313992428182,
+          "baseline_median": 0.0811296607429272,
+          "robust_scale": 0.010005397461372854,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.0059565208186453805,
+          "Z": -0.5953307543894492,
+          "A": 0.5953307543894492,
+          "tail_rank": 0.6136363636363636,
+          "rankable": true,
+          "full_rank": 8
+        },
+        {
+          "feature": "Pressure",
+          "name": "MET气压",
+          "unit": "hPa",
+          "mean": 619.8285714285715,
+          "baseline_median": 619.5583333333334,
+          "robust_scale": 0.9936950000000353,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.2702380952381418,
+          "Z": 0.2719527573733713,
+          "A": 0.2719527573733713,
+          "tail_rank": 0.8295454545454546,
+          "rankable": true,
+          "full_rank": 11
+        },
+        {
+          "feature": "VWC_0.1m",
+          "name": "0.1米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.12710451845238094,
+          "baseline_median": 0.09267857142857142,
+          "robust_scale": 0.024454074999999995,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.03442594702380952,
+          "Z": 1.4077795632756311,
+          "A": 1.4077795632756311,
+          "tail_rank": 0.20454545454545456,
+          "rankable": true,
+          "full_rank": 2
+        },
+        {
+          "feature": "VWC_0.4m",
+          "name": "0.4米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.13038699404761905,
+          "baseline_median": 0.14005899404761907,
+          "robust_scale": 0.06432621042499996,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.009672000000000014,
+          "Z": -0.15035861643484993,
+          "A": 0.15035861643484993,
+          "tail_rank": 0.8863636363636364,
+          "rankable": true,
+          "full_rank": 12
+        },
+        {
+          "feature": "soilT_0.1m",
+          "name": "0.1米土温",
+          "unit": "degC",
+          "mean": 17.405367857142856,
+          "baseline_median": 18.591250000000002,
+          "robust_scale": 1.250767249999994,
+          "scale_method": "MAD×1.4826",
+          "delta": -1.185882142857146,
+          "Z": -0.948123755924335,
+          "A": 0.948123755924335,
+          "tail_rank": 0.3181818181818182,
+          "rankable": true,
+          "full_rank": 3
+        },
+        {
+          "feature": "ustar",
+          "name": "摩擦速度",
+          "unit": "m/s",
+          "mean": 0.265593821626506,
+          "baseline_median": 0.2969278439285714,
+          "robust_scale": 0.03997983669575001,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.03133402230206539,
+          "Z": -0.7837456300914881,
+          "A": 0.7837456300914881,
+          "tail_rank": 0.42045454545454547,
+          "rankable": true,
+          "full_rank": 6
+        },
+        {
+          "feature": "TKE_obs",
+          "name": "观测湍流动能",
+          "unit": "m2/s2",
+          "mean": 0.9547604228313253,
+          "baseline_median": 1.0814441473809524,
+          "robust_scale": 0.26661474076775,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.12668372454962706,
+          "Z": -0.4751564905407168,
+          "A": 0.4751564905407168,
+          "tail_rank": 0.6704545454545454,
+          "rankable": true,
+          "full_rank": 9
+        },
+        {
+          "feature": "Ri_b",
+          "name": "订正整体理查森数",
+          "unit": "1",
+          "mean": -0.4071586110429447,
+          "baseline_median": -1.4670434867908169,
+          "robust_scale": 1.500447248032416,
+          "scale_method": "MAD×1.4826",
+          "delta": 1.0598848757478723,
+          "Z": 0.7063792993307382,
+          "A": 0.7063792993307382,
+          "tail_rank": 0.48863636363636365,
+          "rankable": true,
+          "full_rank": 7
+        },
+        {
+          "feature": "dtheta_1_20",
+          "name": "订正1—20米位温差",
+          "unit": "K",
+          "mean": -0.44197678046907096,
+          "baseline_median": -0.6062217576938925,
+          "robust_scale": 0.108450764893781,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.16424497722482156,
+          "Z": 1.514465825904378,
+          "A": 1.514465825904378,
+          "tail_rank": 0.022727272727272728,
+          "rankable": true,
+          "full_rank": 1
+        },
+        {
+          "feature": "inv_max",
+          "name": "实际温度逆温强度",
+          "unit": "K/100m",
+          "mean": 2.0527777777777785,
+          "baseline_median": 1.1172619047619055,
+          "robust_scale": 1.1516624999999994,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.935515873015873,
+          "Z": 0.8123177345931413,
+          "A": 0.8123177345931413,
+          "tail_rank": 0.42045454545454547,
+          "rankable": true,
+          "full_rank": 5
+        },
+        {
+          "feature": "RH_2m",
+          "name": "2米相对湿度",
+          "unit": "%",
+          "mean": 68.755,
+          "baseline_median": 66.90202380952381,
+          "robust_scale": 4.468009249999996,
+          "scale_method": "MAD×1.4826",
+          "delta": 1.8529761904761841,
+          "Z": 0.4147207596931868,
+          "A": 0.4147207596931868,
+          "tail_rank": 0.7613636363636364,
+          "rankable": true,
+          "full_rank": 10
+        }
+      ],
+      "full_order": [
+        "dtheta_1_20",
+        "VWC_0.1m",
+        "soilT_0.1m",
+        "WS_10m",
+        "inv_max",
+        "ustar",
+        "Ri_b",
+        "vector_shear_2_20m",
+        "TKE_obs",
+        "RH_2m",
+        "Pressure",
+        "VWC_0.4m"
+      ],
+      "display": [
+        {
+          "feature": "dtheta_1_20",
+          "name": "订正1—20米位温差",
+          "unit": "K",
+          "mean": -0.44197678046907096,
+          "baseline_median": -0.6062217576938925,
+          "robust_scale": 0.108450764893781,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.16424497722482156,
+          "Z": 1.514465825904378,
+          "A": 1.514465825904378,
+          "tail_rank": 0.022727272727272728,
+          "rankable": true,
+          "full_rank": 1,
+          "cluster_id": 6,
+          "members": [
+            "dtheta_1_20"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "VWC_0.1m",
+          "name": "0.1米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.12710451845238094,
+          "baseline_median": 0.09267857142857142,
+          "robust_scale": 0.024454074999999995,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.03442594702380952,
+          "Z": 1.4077795632756311,
+          "A": 1.4077795632756311,
+          "tail_rank": 0.20454545454545456,
+          "rankable": true,
+          "full_rank": 2,
+          "cluster_id": 3,
+          "members": [
+            "VWC_0.1m",
+            "VWC_0.4m"
+          ],
+          "excluded": [
+            "VWC_0.4m"
+          ]
+        },
+        {
+          "feature": "soilT_0.1m",
+          "name": "0.1米土温",
+          "unit": "degC",
+          "mean": 17.405367857142856,
+          "baseline_median": 18.591250000000002,
+          "robust_scale": 1.250767249999994,
+          "scale_method": "MAD×1.4826",
+          "delta": -1.185882142857146,
+          "Z": -0.948123755924335,
+          "A": 0.948123755924335,
+          "tail_rank": 0.3181818181818182,
+          "rankable": true,
+          "full_rank": 3,
+          "cluster_id": 4,
+          "members": [
+            "soilT_0.1m"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "WS_10m",
+          "name": "10米风速",
+          "unit": "m/s",
+          "mean": 1.7681130952380952,
+          "baseline_median": 1.9384226190476193,
+          "robust_scale": 0.1986608509036144,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.17030952380952402,
+          "Z": -0.8572877999609204,
+          "A": 0.8572877999609204,
+          "tail_rank": 0.4431818181818182,
+          "rankable": true,
+          "full_rank": 4,
+          "cluster_id": 1,
+          "members": [
+            "WS_10m",
+            "vector_shear_2_20m",
+            "ustar",
+            "TKE_obs",
+            "RH_2m"
+          ],
+          "excluded": [
+            "vector_shear_2_20m",
+            "ustar",
+            "TKE_obs",
+            "RH_2m"
+          ]
+        },
+        {
+          "feature": "inv_max",
+          "name": "实际温度逆温强度",
+          "unit": "K/100m",
+          "mean": 2.0527777777777785,
+          "baseline_median": 1.1172619047619055,
+          "robust_scale": 1.1516624999999994,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.935515873015873,
+          "Z": 0.8123177345931413,
+          "A": 0.8123177345931413,
+          "tail_rank": 0.42045454545454547,
+          "rankable": true,
+          "full_rank": 5,
+          "cluster_id": 7,
+          "members": [
+            "inv_max"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "Ri_b",
+          "name": "订正整体理查森数",
+          "unit": "1",
+          "mean": -0.4071586110429447,
+          "baseline_median": -1.4670434867908169,
+          "robust_scale": 1.500447248032416,
+          "scale_method": "MAD×1.4826",
+          "delta": 1.0598848757478723,
+          "Z": 0.7063792993307382,
+          "A": 0.7063792993307382,
+          "tail_rank": 0.48863636363636365,
+          "rankable": true,
+          "full_rank": 7,
+          "cluster_id": 5,
+          "members": [
+            "Ri_b"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "Pressure",
+          "name": "MET气压",
+          "unit": "hPa",
+          "mean": 619.8285714285715,
+          "baseline_median": 619.5583333333334,
+          "robust_scale": 0.9936950000000353,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.2702380952381418,
+          "Z": 0.2719527573733713,
+          "A": 0.2719527573733713,
+          "tail_rank": 0.8295454545454546,
+          "rankable": true,
+          "full_rank": 11,
+          "cluster_id": 2,
+          "members": [
+            "Pressure"
+          ],
+          "excluded": []
+        }
+      ],
+      "top5": [
+        "dtheta_1_20",
+        "VWC_0.1m",
+        "soilT_0.1m",
+        "WS_10m",
+        "inv_max"
+      ],
+      "maximum_A": 1.514465825904378
+    },
+    "72": {
+      "release": "2026-08-26 00:00:00",
+      "start": "2026-08-22 23:00:00",
+      "end": "2026-08-25 22:00:00",
+      "length_h": 72,
+      "common_valid": true,
+      "candidate_reference_windows": 124,
+      "reference_windows": 90,
+      "reference_counts_by_year": {
+        "2021": 31,
+        "2023": 31,
+        "2024": 28
+      },
+      "coverage": {
+        "WS_10m": 1.0,
+        "vector_shear_2_20m": 0.9861111111111112,
+        "Pressure": 1.0,
+        "VWC_0.1m": 1.0,
+        "VWC_0.4m": 1.0,
+        "soilT_0.1m": 1.0,
+        "ustar": 1.0,
+        "TKE_obs": 1.0,
+        "Ri_b": 0.9861111111111112,
+        "dtheta_1_20": 1.0,
+        "inv_max": 1.0,
+        "RH_2m": 1.0
+      },
+      "all12_complete_hours": 71,
+      "status": "可评估",
+      "rows": [
+        {
+          "feature": "WS_10m",
+          "name": "10米风速",
+          "unit": "m/s",
+          "mean": 2.044513888888889,
+          "baseline_median": 1.9188366588419405,
+          "robust_scale": 0.25908170249999984,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.12567723004694842,
+          "Z": 0.48508724789991103,
+          "A": 0.48508724789991103,
+          "tail_rank": 0.6593406593406593,
+          "rankable": true,
+          "full_rank": 7
+        },
+        {
+          "feature": "vector_shear_2_20m",
+          "name": "2—20米矢量风切变",
+          "unit": "1/s",
+          "mean": 0.08369289416338616,
+          "baseline_median": 0.08210420774955413,
+          "robust_scale": 0.014616123047060826,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.00158868641383203,
+          "Z": 0.10869410504528429,
+          "A": 0.10869410504528429,
+          "tail_rank": 0.8351648351648352,
+          "rankable": true,
+          "full_rank": 10
+        },
+        {
+          "feature": "Pressure",
+          "name": "MET气压",
+          "unit": "hPa",
+          "mean": 620.0250000000001,
+          "baseline_median": 619.8013888888888,
+          "robust_scale": 1.1706362500001573,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.22361111111126775,
+          "Z": 0.19101673223534443,
+          "A": 0.19101673223534443,
+          "tail_rank": 0.8241758241758241,
+          "rankable": true,
+          "full_rank": 9
+        },
+        {
+          "feature": "VWC_0.1m",
+          "name": "0.1米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.10336358472222223,
+          "baseline_median": 0.09122571527777777,
+          "robust_scale": 0.025080650000000024,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.012137869444444463,
+          "Z": 0.48395354364597615,
+          "A": 0.48395354364597615,
+          "tail_rank": 0.6483516483516484,
+          "rankable": true,
+          "full_rank": 8
+        },
+        {
+          "feature": "VWC_0.4m",
+          "name": "0.4米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.13150872222222224,
+          "baseline_median": 0.13308494444444446,
+          "robust_scale": 0.05848511162958334,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.0015762222222222289,
+          "Z": -0.02695082865200403,
+          "A": 0.02695082865200403,
+          "tail_rank": 0.9560439560439561,
+          "rankable": true,
+          "full_rank": 12
+        },
+        {
+          "feature": "soilT_0.1m",
+          "name": "0.1米土温",
+          "unit": "degC",
+          "mean": 17.92048472222222,
+          "baseline_median": 18.919763888888887,
+          "robust_scale": 1.505353791666668,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.9992791666666676,
+          "Z": -0.6638168198057318,
+          "A": 0.6638168198057318,
+          "tail_rank": 0.5164835164835165,
+          "rankable": true,
+          "full_rank": 3
+        },
+        {
+          "feature": "ustar",
+          "name": "摩擦速度",
+          "unit": "m/s",
+          "mean": 0.30053674583333334,
+          "baseline_median": 0.2974874370905887,
+          "robust_scale": 0.045235934154250035,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.0030493087427446164,
+          "Z": 0.06740899242506582,
+          "A": 0.06740899242506582,
+          "tail_rank": 0.967032967032967,
+          "rankable": true,
+          "full_rank": 11
+        },
+        {
+          "feature": "TKE_obs",
+          "name": "观测湍流动能",
+          "unit": "m2/s2",
+          "mean": 1.2293377983333333,
+          "baseline_median": 1.068219802847222,
+          "robust_scale": 0.29005081245233366,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.16111799548611128,
+          "Z": 0.5554819658110389,
+          "A": 0.5554819658110389,
+          "tail_rank": 0.5824175824175825,
+          "rankable": true,
+          "full_rank": 5
+        },
+        {
+          "feature": "Ri_b",
+          "name": "订正整体理查森数",
+          "unit": "1",
+          "mean": 0.25844622860488925,
+          "baseline_median": -0.8277110342591787,
+          "robust_scale": 1.155689145453368,
+          "scale_method": "MAD×1.4826",
+          "delta": 1.0861572628640679,
+          "Z": 0.9398351339866368,
+          "A": 0.9398351339866368,
+          "tail_rank": 0.3956043956043956,
+          "rankable": true,
+          "full_rank": 1
+        },
+        {
+          "feature": "dtheta_1_20",
+          "name": "订正1—20米位温差",
+          "unit": "K",
+          "mean": -0.5032410112151146,
+          "baseline_median": -0.6214915983136756,
+          "robust_scale": 0.12831644577479895,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.11825058709856107,
+          "Z": 0.9215544148261096,
+          "A": 0.9215544148261096,
+          "tail_rank": 0.3516483516483517,
+          "rankable": true,
+          "full_rank": 2
+        },
+        {
+          "feature": "inv_max",
+          "name": "实际温度逆温强度",
+          "unit": "K/100m",
+          "mean": 1.4097222222222214,
+          "baseline_median": 0.8425925925925946,
+          "robust_scale": 0.9794769444444505,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.5671296296296269,
+          "Z": 0.579012740265466,
+          "A": 0.579012740265466,
+          "tail_rank": 0.6153846153846154,
+          "rankable": true,
+          "full_rank": 4
+        },
+        {
+          "feature": "RH_2m",
+          "name": "2米相对湿度",
+          "unit": "%",
+          "mean": 62.81972222222222,
+          "baseline_median": 65.5286111111111,
+          "robust_scale": 5.513933541666659,
+          "scale_method": "MAD×1.4826",
+          "delta": -2.708888888888886,
+          "Z": -0.49128065625362777,
+          "A": 0.49128065625362777,
+          "tail_rank": 0.5824175824175825,
+          "rankable": true,
+          "full_rank": 6
+        }
+      ],
+      "full_order": [
+        "Ri_b",
+        "dtheta_1_20",
+        "soilT_0.1m",
+        "inv_max",
+        "TKE_obs",
+        "RH_2m",
+        "WS_10m",
+        "VWC_0.1m",
+        "Pressure",
+        "vector_shear_2_20m",
+        "ustar",
+        "VWC_0.4m"
+      ],
+      "display": [
+        {
+          "feature": "Ri_b",
+          "name": "订正整体理查森数",
+          "unit": "1",
+          "mean": 0.25844622860488925,
+          "baseline_median": -0.8277110342591787,
+          "robust_scale": 1.155689145453368,
+          "scale_method": "MAD×1.4826",
+          "delta": 1.0861572628640679,
+          "Z": 0.9398351339866368,
+          "A": 0.9398351339866368,
+          "tail_rank": 0.3956043956043956,
+          "rankable": true,
+          "full_rank": 1,
+          "cluster_id": 5,
+          "members": [
+            "Ri_b"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "dtheta_1_20",
+          "name": "订正1—20米位温差",
+          "unit": "K",
+          "mean": -0.5032410112151146,
+          "baseline_median": -0.6214915983136756,
+          "robust_scale": 0.12831644577479895,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.11825058709856107,
+          "Z": 0.9215544148261096,
+          "A": 0.9215544148261096,
+          "tail_rank": 0.3516483516483517,
+          "rankable": true,
+          "full_rank": 2,
+          "cluster_id": 6,
+          "members": [
+            "dtheta_1_20"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "soilT_0.1m",
+          "name": "0.1米土温",
+          "unit": "degC",
+          "mean": 17.92048472222222,
+          "baseline_median": 18.919763888888887,
+          "robust_scale": 1.505353791666668,
+          "scale_method": "MAD×1.4826",
+          "delta": -0.9992791666666676,
+          "Z": -0.6638168198057318,
+          "A": 0.6638168198057318,
+          "tail_rank": 0.5164835164835165,
+          "rankable": true,
+          "full_rank": 3,
+          "cluster_id": 4,
+          "members": [
+            "soilT_0.1m"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "inv_max",
+          "name": "实际温度逆温强度",
+          "unit": "K/100m",
+          "mean": 1.4097222222222214,
+          "baseline_median": 0.8425925925925946,
+          "robust_scale": 0.9794769444444505,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.5671296296296269,
+          "Z": 0.579012740265466,
+          "A": 0.579012740265466,
+          "tail_rank": 0.6153846153846154,
+          "rankable": true,
+          "full_rank": 4,
+          "cluster_id": 7,
+          "members": [
+            "inv_max"
+          ],
+          "excluded": []
+        },
+        {
+          "feature": "TKE_obs",
+          "name": "观测湍流动能",
+          "unit": "m2/s2",
+          "mean": 1.2293377983333333,
+          "baseline_median": 1.068219802847222,
+          "robust_scale": 0.29005081245233366,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.16111799548611128,
+          "Z": 0.5554819658110389,
+          "A": 0.5554819658110389,
+          "tail_rank": 0.5824175824175825,
+          "rankable": true,
+          "full_rank": 5,
+          "cluster_id": 1,
+          "members": [
+            "WS_10m",
+            "vector_shear_2_20m",
+            "ustar",
+            "TKE_obs",
+            "RH_2m"
+          ],
+          "excluded": [
+            "WS_10m",
+            "vector_shear_2_20m",
+            "ustar",
+            "RH_2m"
+          ]
+        },
+        {
+          "feature": "VWC_0.1m",
+          "name": "0.1米土壤含水率",
+          "unit": "m3/m3",
+          "mean": 0.10336358472222223,
+          "baseline_median": 0.09122571527777777,
+          "robust_scale": 0.025080650000000024,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.012137869444444463,
+          "Z": 0.48395354364597615,
+          "A": 0.48395354364597615,
+          "tail_rank": 0.6483516483516484,
+          "rankable": true,
+          "full_rank": 8,
+          "cluster_id": 3,
+          "members": [
+            "VWC_0.1m",
+            "VWC_0.4m"
+          ],
+          "excluded": [
+            "VWC_0.4m"
+          ]
+        },
+        {
+          "feature": "Pressure",
+          "name": "MET气压",
+          "unit": "hPa",
+          "mean": 620.0250000000001,
+          "baseline_median": 619.8013888888888,
+          "robust_scale": 1.1706362500001573,
+          "scale_method": "MAD×1.4826",
+          "delta": 0.22361111111126775,
+          "Z": 0.19101673223534443,
+          "A": 0.19101673223534443,
+          "tail_rank": 0.8241758241758241,
+          "rankable": true,
+          "full_rank": 9,
+          "cluster_id": 2,
+          "members": [
+            "Pressure"
+          ],
+          "excluded": []
+        }
+      ],
+      "top5": [
+        "Ri_b",
+        "dtheta_1_20",
+        "soilT_0.1m",
+        "inv_max",
+        "TKE_obs"
+      ],
+      "maximum_A": 0.9398351339866368
+    }
+  },
+  "pseudo_2025": {
+    "168": {
+      "candidate_days": 31,
+      "common_valid_days": 31,
+      "evaluable_days": 31,
+      "days": [
+        {
+          "release": "2025-08-11 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 91,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "vector_shear_2_20m",
+            "inv_max"
+          ],
+          "maximum_A": 2.32554244829908,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-12 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 92,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "Pressure",
+            "vector_shear_2_20m"
+          ],
+          "maximum_A": 2.03199935412109,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2121212121212121,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-13 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 93,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "Pressure",
+            "Ri_b"
+          ],
+          "maximum_A": 1.7987353138540816,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-14 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 92,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "Pressure",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 5.551494095905201,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.1515151515151515,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-15 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 91,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "Pressure",
+            "RH_2m"
+          ],
+          "maximum_A": 5.418496279460332,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.1515151515151515,
+          "top5_overlap": 1
+        },
+        {
+          "release": "2025-08-16 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "Pressure",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 5.4449801788223535,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0606060606060606,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-17 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 89,
+          "top5": [
+            "Ri_b",
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "Pressure"
+          ],
+          "maximum_A": 6.088544428268793,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0606060606060606,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-18 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 88,
+          "top5": [
+            "Ri_b",
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "Pressure"
+          ],
+          "maximum_A": 6.129220923393241,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0909090909090909,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-19 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "Ri_b",
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "Pressure"
+          ],
+          "maximum_A": 5.9759713884763315,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0606060606060606,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-20 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "Ri_b",
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "vector_shear_2_20m",
+            "VWC_0.4m"
+          ],
+          "maximum_A": 5.855402703744269,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.1818181818181818,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-21 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "vector_shear_2_20m",
+            "VWC_0.4m",
+            "inv_max"
+          ],
+          "maximum_A": 2.2930137551342233,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.3636363636363636,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-22 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 2.6048935342879953,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4545454545454545,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-23 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 2.9318671339779527,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4545454545454545,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-24 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 2.9284091636406986,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.39393939393939387,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-25 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "vector_shear_2_20m",
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 2.9221758588459203,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.39393939393939387,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-26 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 3.327036436463882,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4242424242424242,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-27 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 3.85057854486362,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.3636363636363636,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-28 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Pressure"
+          ],
+          "maximum_A": 3.9694184673857857,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.3333333333333333,
+          "top5_overlap": 4
+        },
+        {
+          "release": "2025-08-29 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "WS_10m",
+            "VWC_0.1m",
+            "Pressure"
+          ],
+          "maximum_A": 3.8510017201284006,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2727272727272727,
+          "top5_overlap": 4
+        },
+        {
+          "release": "2025-08-30 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "Pressure"
+          ],
+          "maximum_A": 3.0384701881959546,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2727272727272727,
+          "top5_overlap": 4
+        },
+        {
+          "release": "2025-08-31 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "inv_max",
+            "RH_2m",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 2.2825138694023446,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.1818181818181818,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-01 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "inv_max",
+            "VWC_0.4m",
+            "RH_2m",
+            "Ri_b"
+          ],
+          "maximum_A": 1.5134532479701897,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0606060606060606,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-09-02 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "inv_max",
+            "RH_2m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "soilT_0.1m"
+          ],
+          "maximum_A": 1.20632703043796,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-03 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "WS_10m",
+            "inv_max",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "Ri_b"
+          ],
+          "maximum_A": 1.6472712862722827,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.1515151515151515,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-04 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "WS_10m",
+            "dtheta_1_20",
+            "inv_max",
+            "soilT_0.1m",
+            "VWC_0.4m"
+          ],
+          "maximum_A": 2.0733784043528645,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.303030303030303,
+          "top5_overlap": 4
+        },
+        {
+          "release": "2025-09-05 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "WS_10m",
+            "soilT_0.1m",
+            "VWC_0.1m",
+            "dtheta_1_20",
+            "inv_max"
+          ],
+          "maximum_A": 1.576452160207954,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4242424242424242,
+          "top5_overlap": 5
+        },
+        {
+          "release": "2025-09-06 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.1m",
+            "WS_10m",
+            "Ri_b",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 1.116189625691337,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4545454545454545,
+          "top5_overlap": 4
+        },
+        {
+          "release": "2025-09-07 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "VWC_0.1m",
+            "soilT_0.1m",
+            "Ri_b",
+            "Pressure",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 0.8274861595216143,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.1818181818181818,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-08 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "Pressure",
+            "vector_shear_2_20m",
+            "inv_max"
+          ],
+          "maximum_A": 0.7951788018936096,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.2121212121212121,
+          "top5_overlap": 1
+        },
+        {
+          "release": "2025-09-09 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "Pressure",
+            "VWC_0.4m",
+            "TKE_obs",
+            "inv_max",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 0.7310725408974389,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.4848484848484848,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-09-10 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 87,
+          "top5": [
+            "Ri_b",
+            "Pressure",
+            "VWC_0.4m",
+            "TKE_obs",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 0.9633176852945595,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.2121212121212121,
+          "top5_overlap": 1
+        }
+      ],
+      "top5_selection_fraction": {
+        "WS_10m": 0.22580645161290322,
+        "vector_shear_2_20m": 0.3548387096774194,
+        "Pressure": 0.4838709677419355,
+        "VWC_0.1m": 0.3870967741935484,
+        "VWC_0.4m": 0.6129032258064516,
+        "soilT_0.1m": 0.8709677419354839,
+        "ustar": 0.0,
+        "TKE_obs": 0.06451612903225806,
+        "Ri_b": 0.6451612903225806,
+        "dtheta_1_20": 0.9032258064516129,
+        "inv_max": 0.3225806451612903,
+        "RH_2m": 0.12903225806451613
+      },
+      "scope": "2025只作冻结规则外检；不是有真值的非灾日，不计算伪警率"
+    },
+    "72": {
+      "candidate_days": 31,
+      "common_valid_days": 31,
+      "evaluable_days": 31,
+      "days": [
+        {
+          "release": "2025-08-11 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 88,
+          "top5": [
+            "Ri_b",
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "Pressure",
+            "inv_max"
+          ],
+          "maximum_A": 1.701741128442984,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2727272727272727,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-12 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 89,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "Pressure",
+            "RH_2m"
+          ],
+          "maximum_A": 1.502414893017839,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0909090909090909,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-13 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 89,
+          "top5": [
+            "WS_10m",
+            "VWC_0.4m",
+            "inv_max",
+            "soilT_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 1.426340518227031,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.3333333333333333,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-14 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 89,
+          "top5": [
+            "Ri_b",
+            "inv_max",
+            "VWC_0.4m",
+            "RH_2m",
+            "soilT_0.1m"
+          ],
+          "maximum_A": 15.966993359870134,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-15 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 89,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "inv_max",
+            "soilT_0.1m",
+            "vector_shear_2_20m"
+          ],
+          "maximum_A": 17.89410175389684,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-16 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "Pressure",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 17.609582702181292,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-17 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "TKE_obs",
+            "Pressure"
+          ],
+          "maximum_A": 1.6146692892640375,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2121212121212121,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-18 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "WS_10m",
+            "inv_max"
+          ],
+          "maximum_A": 2.0919996411543087,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-19 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "inv_max"
+          ],
+          "maximum_A": 2.2741794440245773,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0909090909090909,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-20 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "vector_shear_2_20m",
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "inv_max"
+          ],
+          "maximum_A": 2.875875071336808,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.1818181818181818,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-21 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "vector_shear_2_20m",
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "inv_max"
+          ],
+          "maximum_A": 2.886959303457105,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.1818181818181818,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-22 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "vector_shear_2_20m",
+            "Ri_b",
+            "dtheta_1_20",
+            "VWC_0.1m"
+          ],
+          "maximum_A": 2.5440517438482777,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0909090909090909,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-23 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "Ri_b",
+            "dtheta_1_20",
+            "vector_shear_2_20m",
+            "VWC_0.1m"
+          ],
+          "maximum_A": 2.84266611682854,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2424242424242424,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-24 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "Ri_b",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "vector_shear_2_20m"
+          ],
+          "maximum_A": 2.8588191331198436,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0909090909090909,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-25 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "WS_10m",
+            "VWC_0.1m",
+            "Pressure"
+          ],
+          "maximum_A": 2.629747689951535,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0303030303030303,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-26 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Pressure"
+          ],
+          "maximum_A": 2.74417495045669,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0909090909090909,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-27 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Pressure"
+          ],
+          "maximum_A": 2.9629524494853663,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0303030303030303,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-08-28 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "dtheta_1_20",
+            "WS_10m",
+            "VWC_0.1m",
+            "inv_max"
+          ],
+          "maximum_A": 3.2516991200331957,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-29 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "soilT_0.1m",
+            "VWC_0.1m",
+            "WS_10m",
+            "dtheta_1_20",
+            "inv_max"
+          ],
+          "maximum_A": 2.7014774825610797,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.0909090909090909,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-30 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "inv_max",
+            "RH_2m",
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 2.4324521352749824,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0606060606060606,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-08-31 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "inv_max",
+            "RH_2m",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "Ri_b"
+          ],
+          "maximum_A": 3.527927011436605,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0909090909090909,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-01 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "inv_max",
+            "RH_2m",
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "Ri_b"
+          ],
+          "maximum_A": 3.530781628291659,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.2424242424242424,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-02 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "VWC_0.1m",
+            "RH_2m",
+            "inv_max",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 1.984995007104885,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.3333333333333333,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-03 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "VWC_0.1m",
+            "soilT_0.1m",
+            "inv_max",
+            "RH_2m"
+          ],
+          "maximum_A": 1.9902566958185108,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-04 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "VWC_0.1m",
+            "soilT_0.1m",
+            "inv_max",
+            "Pressure"
+          ],
+          "maximum_A": 3.0528086521103734,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.1212121212121212,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-05 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "VWC_0.1m",
+            "soilT_0.1m",
+            "Ri_b",
+            "inv_max",
+            "vector_shear_2_20m"
+          ],
+          "maximum_A": 0.963321145895113,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-06 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "VWC_0.4m",
+            "Pressure",
+            "vector_shear_2_20m",
+            "Ri_b",
+            "soilT_0.1m"
+          ],
+          "maximum_A": 0.7679586958086111,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.3636363636363636,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-09-07 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "vector_shear_2_20m",
+            "Pressure",
+            "VWC_0.4m",
+            "inv_max",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 0.6891343736199531,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": -0.5454545454545454,
+          "top5_overlap": 2
+        },
+        {
+          "release": "2025-09-08 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Pressure",
+            "soilT_0.1m",
+            "VWC_0.4m",
+            "inv_max",
+            "dtheta_1_20"
+          ],
+          "maximum_A": 0.6863788155342442,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-09 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "TKE_obs",
+            "soilT_0.1m",
+            "inv_max",
+            "VWC_0.4m",
+            "Pressure"
+          ],
+          "maximum_A": 0.6970117301660695,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "release": "2025-09-10 00:00:00",
+          "status": "可评估",
+          "common_valid": true,
+          "reference_windows": 90,
+          "top5": [
+            "Ri_b",
+            "TKE_obs",
+            "dtheta_1_20",
+            "soilT_0.1m",
+            "inv_max"
+          ],
+          "maximum_A": 3.9713979083504816,
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.4848484848484848,
+          "top5_overlap": 5
+        }
+      ],
+      "top5_selection_fraction": {
+        "WS_10m": 0.25806451612903225,
+        "vector_shear_2_20m": 0.2903225806451613,
+        "Pressure": 0.3870967741935484,
+        "VWC_0.1m": 0.4838709677419355,
+        "VWC_0.4m": 0.4838709677419355,
+        "soilT_0.1m": 0.8709677419354839,
+        "ustar": 0.0,
+        "TKE_obs": 0.0967741935483871,
+        "Ri_b": 0.5483870967741935,
+        "dtheta_1_20": 0.6774193548387096,
+        "inv_max": 0.6774193548387096,
+        "RH_2m": 0.22580645161290322
+      },
+      "scope": "2025只作冻结规则外检；不是有真值的非灾日，不计算伪警率"
+    }
+  },
+  "sensitivity": {
+    "168": {
+      "year_block_bootstrap": {
+        "replicates": 200,
+        "seed": 20260994,
+        "status": "可评估",
+        "available_training_years": [
+          2021,
+          2023,
+          2024
+        ],
+        "excluded_training_years": {
+          "2022": "该年无共同有效参照窗（ustar/TKE_obs缺测）"
+        },
+        "sampled_training_years": [
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ]
+        ],
+        "feature_intervals": [
+          {
+            "feature": "WS_10m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.15027512098063303,
+                0.8572877999609204,
+                1.4330950338524497
+              ],
+              "Z": [
+                -1.4330950338524497,
+                -0.8572877999609204,
+                -0.15027512098063303
+              ],
+              "delta": [
+                -0.24507967584624213,
+                -0.17030952380952402,
+                -0.036054569432563355
+              ],
+              "baseline_median": [
+                1.8041676646706586,
+                1.9384226190476193,
+                2.0131927710843374
+              ],
+              "robust_scale": [
+                0.1710142524096384,
+                0.1986608509036144,
+                0.242045547305389
+              ],
+              "tail_rank": [
+                0.10638297872340426,
+                0.4431818181818182,
+                0.9512195121951219
+              ]
+            },
+            "top5_selection_fraction": 0.43
+          },
+          {
+            "feature": "vector_shear_2_20m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.061427447401738604,
+                0.5953307543894492,
+                0.8828145697512497
+              ],
+              "Z": [
+                -0.8828145697512497,
+                -0.5953307543894492,
+                -0.061427447401738604
+              ],
+              "delta": [
+                -0.007954827654783406,
+                -0.0059565208186453805,
+                -0.0006164117186404361
+              ],
+              "baseline_median": [
+                0.07578955164292225,
+                0.0811296607429272,
+                0.08312796757906522
+              ],
+              "robust_scale": [
+                0.009010757102734308,
+                0.010005397461372854,
+                0.012038218518909601
+              ],
+              "tail_rank": [
+                0.39361702127659576,
+                0.6136363636363636,
+                0.9512195121951219
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          },
+          {
+            "feature": "Pressure",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.11861387424458039,
+                0.44393963473634424,
+                1.0448962497751313
+              ],
+              "Z": [
+                -0.5828021718599761,
+                0.2719527573733713,
+                1.0448962497751313
+              ],
+              "delta": [
+                -0.3291666666665378,
+                0.2702380952381418,
+                0.8815476190476375
+              ],
+              "baseline_median": [
+                618.9470238095239,
+                619.5583333333334,
+                620.1577380952381
+              ],
+              "robust_scale": [
+                0.56480000000004,
+                0.9936950000000353,
+                1.5373150000000464
+              ],
+              "tail_rank": [
+                0.26595744680851063,
+                0.7159090909090909,
+                0.926829268292683
+              ]
+            },
+            "top5_selection_fraction": 0.135
+          },
+          {
+            "feature": "VWC_0.1m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.5513777064712327,
+                1.4077795632756311,
+                5.734097983648822
+              ],
+              "Z": [
+                0.5513777064712327,
+                1.4077795632756311,
+                5.734097983648822
+              ],
+              "delta": [
+                0.014027137499999981,
+                0.03442594702380952,
+                0.03901523273809522
+              ],
+              "baseline_median": [
+                0.08808928571428572,
+                0.09267857142857142,
+                0.11307738095238096
+              ],
+              "robust_scale": [
+                0.006804074999999976,
+                0.02368630000000002,
+                0.03311573925250001
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.20454545454545456,
+                0.6463414634146342
+              ]
+            },
+            "top5_selection_fraction": 0.5
+          },
+          {
+            "feature": "VWC_0.4m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.15035861643484993,
+                0.8894201541294873,
+                26.524391272089513
+              ],
+              "Z": [
+                -1.500584869763186,
+                -0.15035861643484993,
+                26.524391272089513
+              ],
+              "delta": [
+                -0.039238005952380944,
+                -0.009672000000000014,
+                0.05617866071428572
+              ],
+              "baseline_median": [
+                0.07420833333333333,
+                0.14005899404761907,
+                0.169625
+              ],
+              "robust_scale": [
+                0.002118000000000005,
+                0.029024118900000014,
+                0.06432621042499996
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.44680851063829785,
+                0.8863636363636364
+              ]
+            },
+            "top5_selection_fraction": 0.5
+          },
+          {
+            "feature": "soilT_0.1m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.5154849589402123,
+                0.948123755924335,
+                1.5999349548979303
+              ],
+              "Z": [
+                -1.5999349548979303,
+                -0.948123755924335,
+                -0.5154849589402123
+              ],
+              "delta": [
+                -1.8658821428571457,
+                -1.185882142857146,
+                -0.7292750000000012
+              ],
+              "baseline_median": [
+                18.134642857142858,
+                18.591250000000002,
+                19.271250000000002
+              ],
+              "robust_scale": [
+                0.8624672500000033,
+                1.2088167299999972,
+                1.4147357500000015
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.3181818181818182,
+                0.7127659574468085
+              ]
+            },
+            "top5_selection_fraction": 1.0
+          },
+          {
+            "feature": "ustar",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.0861479090316325,
+                0.7837456300914881,
+                1.8358854920117413
+              ],
+              "Z": [
+                -1.8358854920117413,
+                -0.7837456300914881,
+                -0.0861479090316325
+              ],
+              "delta": [
+                -0.050135885516351175,
+                -0.03133402230206539,
+                -0.002286856111589186
+              ],
+              "baseline_median": [
+                0.2678806777380952,
+                0.2969278439285714,
+                0.3157297071428572
+              ],
+              "robust_scale": [
+                0.026545694925102354,
+                0.031570608038250014,
+                0.03997983669575001
+              ],
+              "tail_rank": [
+                0.0425531914893617,
+                0.42045454545454547,
+                0.926829268292683
+              ]
+            },
+            "top5_selection_fraction": 0.435
+          },
+          {
+            "feature": "TKE_obs",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.024132570597818894,
+                0.4751564905407168,
+                1.5636132440762471
+              ],
+              "Z": [
+                -1.5636132440762471,
+                -0.4751564905407168,
+                0.16184282082046997
+              ],
+              "delta": [
+                -0.25677976740677,
+                -0.12668372454962706,
+                0.029146332950372833
+              ],
+              "baseline_median": [
+                0.9256140898809525,
+                1.0814441473809524,
+                1.2115401902380953
+              ],
+              "robust_scale": [
+                0.16422204683899988,
+                0.229009384945173,
+                0.3176327376149999
+              ],
+              "tail_rank": [
+                0.0425531914893617,
+                0.6704545454545454,
+                0.9772727272727273
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          },
+          {
+            "feature": "Ri_b",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.35134504383085047,
+                0.7063792993307382,
+                0.9104019199806692
+              ],
+              "Z": [
+                0.35134504383085047,
+                0.7063792993307382,
+                0.9104019199806692
+              ],
+              "delta": [
+                0.7178721150924755,
+                1.0598848757478723,
+                1.2829169929543731
+              ],
+              "baseline_median": [
+                -1.690075603997318,
+                -1.4670434867908169,
+                -1.1250307261354202
+              ],
+              "robust_scale": [
+                1.2151080695724779,
+                1.5054149957121843,
+                2.1316590759465037
+              ],
+              "tail_rank": [
+                0.3617021276595745,
+                0.48899903288201163,
+                0.6463414634146342
+              ]
+            },
+            "top5_selection_fraction": 0.22
+          },
+          {
+            "feature": "dtheta_1_20",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                1.197647152044441,
+                1.540675590617084,
+                3.1463081103039316
+              ],
+              "Z": [
+                1.197647152044441,
+                1.540675590617084,
+                3.1463081103039316
+              ],
+              "delta": [
+                0.09555349202853869,
+                0.16424497722482156,
+                0.20777118273894002
+              ],
+              "baseline_median": [
+                -0.649747963208011,
+                -0.6062217576938925,
+                -0.5375302724976097
+              ],
+              "robust_scale": [
+                0.062020513994297026,
+                0.08632315505046885,
+                0.11765500856553074
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.022727272727272728,
+                0.36585365853658536
+              ]
+            },
+            "top5_selection_fraction": 1.0
+          },
+          {
+            "feature": "inv_max",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.22569551036162075,
+                0.8291612173234706,
+                14.560068791897487
+              ],
+              "Z": [
+                -0.22569551036162075,
+                0.8291612173234706,
+                14.560068791897487
+              ],
+              "delta": [
+                -0.22944444444444168,
+                0.935515873015873,
+                1.875992063492064
+              ],
+              "baseline_median": [
+                0.1767857142857146,
+                1.1172619047619055,
+                2.28222222222222
+              ],
+              "robust_scale": [
+                0.1288450000000022,
+                0.7854249999999996,
+                1.6361550000000047
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.42045454545454547,
+                0.8404255319148937
+              ]
+            },
+            "top5_selection_fraction": 0.78
+          },
+          {
+            "feature": "RH_2m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.09396233479364911,
+                0.4465619715967237,
+                0.6055047677480424
+              ],
+              "Z": [
+                0.09396233479364911,
+                0.4465619715967237,
+                0.6055047677480424
+              ],
+              "delta": [
+                0.6015476190476221,
+                1.8529761904761841,
+                2.7282142857142873
+              ],
+              "baseline_median": [
+                66.02678571428571,
+                66.90202380952381,
+                68.15345238095237
+              ],
+              "robust_scale": [
+                3.5669767500000034,
+                4.468009249999996,
+                6.402008000000023
+              ],
+              "tail_rank": [
+                0.6097560975609756,
+                0.7127659574468085,
+                0.9090909090909091
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          }
+        ],
+        "scope": "整年重抽样仅从有效训练年重估参照中位数与尺度；相关簇不重拟合；非灾害置信区间"
+      },
+      "leave_one_training_year_out": [
+        {
+          "omitted_year": 2021,
+          "status": "可评估",
+          "reference_windows": 56,
+          "top5": [
+            "VWC_0.4m",
+            "dtheta_1_20",
+            "soilT_0.1m",
+            "Ri_b",
+            "inv_max"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.303030303030303,
+          "top5_overlap": 3
+        },
+        {
+          "omitted_year": 2022,
+          "status": "不可评估：该训练年无共同有效参照窗",
+          "reference_windows": 0,
+          "top5": [],
+          "common_ranked_features": 0,
+          "full_rank_Kendall_tau": null,
+          "top5_overlap": null,
+          "reason": "该年无共同有效参照窗（ustar/TKE_obs缺测）"
+        },
+        {
+          "omitted_year": 2023,
+          "status": "可评估",
+          "reference_windows": 56,
+          "top5": [
+            "inv_max",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "soilT_0.1m",
+            "ustar"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.3333333333333333,
+          "top5_overlap": 3
+        },
+        {
+          "omitted_year": 2024,
+          "status": "可评估",
+          "reference_windows": 62,
+          "top5": [
+            "dtheta_1_20",
+            "VWC_0.1m",
+            "inv_max",
+            "ustar",
+            "soilT_0.1m"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.7575757575757575,
+          "top5_overlap": 4
+        }
+      ],
+      "fixed_seven_day_nonoverlap": {
+        "release": "2026-08-26 00:00:00",
+        "start": "2026-08-18 23:00:00",
+        "end": "2026-08-25 22:00:00",
+        "length_h": 168,
+        "common_valid": true,
+        "candidate_reference_windows": 20,
+        "reference_windows": 14,
+        "reference_counts_by_year": {
+          "2021": 5,
+          "2023": 5,
+          "2024": 4
+        },
+        "coverage": {
+          "WS_10m": 1.0,
+          "vector_shear_2_20m": 0.9821428571428571,
+          "Pressure": 1.0,
+          "VWC_0.1m": 1.0,
+          "VWC_0.4m": 1.0,
+          "soilT_0.1m": 1.0,
+          "ustar": 0.9880952380952381,
+          "TKE_obs": 0.9880952380952381,
+          "Ri_b": 0.9761904761904762,
+          "dtheta_1_20": 1.0,
+          "inv_max": 1.0,
+          "RH_2m": 1.0
+        },
+        "all12_complete_hours": 162,
+        "status": "可评估",
+        "rows": [
+          {
+            "feature": "WS_10m",
+            "name": "10米风速",
+            "unit": "m/s",
+            "mean": 1.7681130952380952,
+            "baseline_median": 1.9680496280166941,
+            "robust_scale": 0.20199231439167067,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.1999365327785989,
+            "Z": -0.9898224760716117,
+            "A": 0.9898224760716117,
+            "tail_rank": 0.3333333333333333,
+            "rankable": true,
+            "full_rank": 4
+          },
+          {
+            "feature": "vector_shear_2_20m",
+            "name": "2—20米矢量风切变",
+            "unit": "1/s",
+            "mean": 0.07517313992428182,
+            "baseline_median": 0.07969757223762498,
+            "robust_scale": 0.009787742603292056,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.004524432313343166,
+            "Z": -0.46225493422981895,
+            "A": 0.46225493422981895,
+            "tail_rank": 0.7333333333333333,
+            "rankable": true,
+            "full_rank": 9
+          },
+          {
+            "feature": "Pressure",
+            "name": "MET气压",
+            "unit": "hPa",
+            "mean": 619.8285714285715,
+            "baseline_median": 619.5193452380952,
+            "robust_scale": 1.081503750000106,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.3092261904763518,
+            "Z": 0.285922439451848,
+            "A": 0.285922439451848,
+            "tail_rank": 0.7333333333333333,
+            "rankable": true,
+            "full_rank": 10
+          },
+          {
+            "feature": "VWC_0.1m",
+            "name": "0.1米土壤含水率",
+            "unit": "m3/m3",
+            "mean": 0.12710451845238094,
+            "baseline_median": 0.09177678571428571,
+            "robust_scale": 0.028085562500000008,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.035327732738095224,
+            "Z": 1.2578609646182166,
+            "A": 1.2578609646182166,
+            "tail_rank": 0.26666666666666666,
+            "rankable": true,
+            "full_rank": 3
+          },
+          {
+            "feature": "VWC_0.4m",
+            "name": "0.4米土壤含水率",
+            "unit": "m3/m3",
+            "mean": 0.13038699404761905,
+            "baseline_median": 0.14166937797619047,
+            "robust_scale": 0.0713854488275,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.011282383928571421,
+            "Z": -0.15804879164988983,
+            "A": 0.15804879164988983,
+            "tail_rank": 0.8666666666666667,
+            "rankable": true,
+            "full_rank": 11
+          },
+          {
+            "feature": "soilT_0.1m",
+            "name": "0.1米土温",
+            "unit": "degC",
+            "mean": 17.405367857142856,
+            "baseline_median": 18.301160714285714,
+            "robust_scale": 1.051785121249999,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.8957928571428582,
+            "Z": -0.8516880863253219,
+            "A": 0.8516880863253219,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 6
+          },
+          {
+            "feature": "ustar",
+            "name": "摩擦速度",
+            "unit": "m/s",
+            "mean": 0.265593821626506,
+            "baseline_median": 0.3072147148809524,
+            "robust_scale": 0.028865860969249913,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.0416208932544464,
+            "Z": -1.4418725739302947,
+            "A": 1.4418725739302947,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 2
+          },
+          {
+            "feature": "TKE_obs",
+            "name": "观测湍流动能",
+            "unit": "m2/s2",
+            "mean": 0.9547604228313253,
+            "baseline_median": 1.1227025098214285,
+            "robust_scale": 0.295232889679125,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.16794208699010316,
+            "Z": -0.5688461308380366,
+            "A": 0.5688461308380366,
+            "tail_rank": 0.6,
+            "rankable": true,
+            "full_rank": 8
+          },
+          {
+            "feature": "Ri_b",
+            "name": "订正整体理查森数",
+            "unit": "1",
+            "mean": -0.4071586110429447,
+            "baseline_median": -1.2961537890416417,
+            "robust_scale": 1.4472302519896352,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.888995177998697,
+            "Z": 0.6142734901903252,
+            "A": 0.6142734901903252,
+            "tail_rank": 0.5333333333333333,
+            "rankable": true,
+            "full_rank": 7
+          },
+          {
+            "feature": "dtheta_1_20",
+            "name": "订正1—20米位温差",
+            "unit": "K",
+            "mean": -0.44197678046907096,
+            "baseline_median": -0.606948068035476,
+            "robust_scale": 0.10631837570260738,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.164971287566405,
+            "Z": 1.5516723847236051,
+            "A": 1.5516723847236051,
+            "tail_rank": 0.06666666666666667,
+            "rankable": true,
+            "full_rank": 1
+          },
+          {
+            "feature": "inv_max",
+            "name": "实际温度逆温强度",
+            "unit": "K/100m",
+            "mean": 2.0527777777777785,
+            "baseline_median": 1.0452480158730144,
+            "robust_scale": 1.1500592916666643,
+            "scale_method": "MAD×1.4826",
+            "delta": 1.007529761904764,
+            "Z": 0.8760676681674849,
+            "A": 0.8760676681674849,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 5
+          },
+          {
+            "feature": "RH_2m",
+            "name": "2米相对湿度",
+            "unit": "%",
+            "mean": 68.755,
+            "baseline_median": 68.96607142857144,
+            "robust_scale": 4.702092375000003,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.21107142857144368,
+            "Z": -0.04488883070304282,
+            "A": 0.04488883070304282,
+            "tail_rank": 1.0,
+            "rankable": true,
+            "full_rank": 12
+          }
+        ],
+        "full_order": [
+          "dtheta_1_20",
+          "ustar",
+          "VWC_0.1m",
+          "WS_10m",
+          "inv_max",
+          "soilT_0.1m",
+          "Ri_b",
+          "TKE_obs",
+          "vector_shear_2_20m",
+          "Pressure",
+          "VWC_0.4m",
+          "RH_2m"
+        ],
+        "display": [
+          {
+            "feature": "dtheta_1_20",
+            "name": "订正1—20米位温差",
+            "unit": "K",
+            "mean": -0.44197678046907096,
+            "baseline_median": -0.606948068035476,
+            "robust_scale": 0.10631837570260738,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.164971287566405,
+            "Z": 1.5516723847236051,
+            "A": 1.5516723847236051,
+            "tail_rank": 0.06666666666666667,
+            "rankable": true,
+            "full_rank": 1,
+            "cluster_id": 6,
+            "members": [
+              "dtheta_1_20"
+            ],
+            "excluded": []
+          },
+          {
+            "feature": "ustar",
+            "name": "摩擦速度",
+            "unit": "m/s",
+            "mean": 0.265593821626506,
+            "baseline_median": 0.3072147148809524,
+            "robust_scale": 0.028865860969249913,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.0416208932544464,
+            "Z": -1.4418725739302947,
+            "A": 1.4418725739302947,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 2,
+            "cluster_id": 1,
+            "members": [
+              "WS_10m",
+              "vector_shear_2_20m",
+              "ustar",
+              "TKE_obs",
+              "RH_2m"
+            ],
+            "excluded": [
+              "WS_10m",
+              "vector_shear_2_20m",
+              "TKE_obs",
+              "RH_2m"
+            ]
+          },
+          {
+            "feature": "VWC_0.1m",
+            "name": "0.1米土壤含水率",
+            "unit": "m3/m3",
+            "mean": 0.12710451845238094,
+            "baseline_median": 0.09177678571428571,
+            "robust_scale": 0.028085562500000008,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.035327732738095224,
+            "Z": 1.2578609646182166,
+            "A": 1.2578609646182166,
+            "tail_rank": 0.26666666666666666,
+            "rankable": true,
+            "full_rank": 3,
+            "cluster_id": 3,
+            "members": [
+              "VWC_0.1m",
+              "VWC_0.4m"
+            ],
+            "excluded": [
+              "VWC_0.4m"
+            ]
+          },
+          {
+            "feature": "inv_max",
+            "name": "实际温度逆温强度",
+            "unit": "K/100m",
+            "mean": 2.0527777777777785,
+            "baseline_median": 1.0452480158730144,
+            "robust_scale": 1.1500592916666643,
+            "scale_method": "MAD×1.4826",
+            "delta": 1.007529761904764,
+            "Z": 0.8760676681674849,
+            "A": 0.8760676681674849,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 5,
+            "cluster_id": 7,
+            "members": [
+              "inv_max"
+            ],
+            "excluded": []
+          },
+          {
+            "feature": "soilT_0.1m",
+            "name": "0.1米土温",
+            "unit": "degC",
+            "mean": 17.405367857142856,
+            "baseline_median": 18.301160714285714,
+            "robust_scale": 1.051785121249999,
+            "scale_method": "MAD×1.4826",
+            "delta": -0.8957928571428582,
+            "Z": -0.8516880863253219,
+            "A": 0.8516880863253219,
+            "tail_rank": 0.4,
+            "rankable": true,
+            "full_rank": 6,
+            "cluster_id": 4,
+            "members": [
+              "soilT_0.1m"
+            ],
+            "excluded": []
+          },
+          {
+            "feature": "Ri_b",
+            "name": "订正整体理查森数",
+            "unit": "1",
+            "mean": -0.4071586110429447,
+            "baseline_median": -1.2961537890416417,
+            "robust_scale": 1.4472302519896352,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.888995177998697,
+            "Z": 0.6142734901903252,
+            "A": 0.6142734901903252,
+            "tail_rank": 0.5333333333333333,
+            "rankable": true,
+            "full_rank": 7,
+            "cluster_id": 5,
+            "members": [
+              "Ri_b"
+            ],
+            "excluded": []
+          },
+          {
+            "feature": "Pressure",
+            "name": "MET气压",
+            "unit": "hPa",
+            "mean": 619.8285714285715,
+            "baseline_median": 619.5193452380952,
+            "robust_scale": 1.081503750000106,
+            "scale_method": "MAD×1.4826",
+            "delta": 0.3092261904763518,
+            "Z": 0.285922439451848,
+            "A": 0.285922439451848,
+            "tail_rank": 0.7333333333333333,
+            "rankable": true,
+            "full_rank": 10,
+            "cluster_id": 2,
+            "members": [
+              "Pressure"
+            ],
+            "excluded": []
+          }
+        ],
+        "top5": [
+          "dtheta_1_20",
+          "ustar",
+          "VWC_0.1m",
+          "inv_max",
+          "soilT_0.1m"
+        ],
+        "maximum_A": 1.5516723847236051,
+        "scheduled_dates_before_validity": [
+          "2021-08-11 00:00:00",
+          "2021-08-18 00:00:00",
+          "2021-08-25 00:00:00",
+          "2021-09-01 00:00:00",
+          "2021-09-08 00:00:00",
+          "2022-08-11 00:00:00",
+          "2022-08-18 00:00:00",
+          "2022-08-25 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-09-08 00:00:00",
+          "2023-08-11 00:00:00",
+          "2023-08-18 00:00:00",
+          "2023-08-25 00:00:00",
+          "2023-09-01 00:00:00",
+          "2023-09-08 00:00:00",
+          "2024-08-11 00:00:00",
+          "2024-08-18 00:00:00",
+          "2024-08-25 00:00:00",
+          "2024-09-01 00:00:00",
+          "2024-09-08 00:00:00"
+        ],
+        "comparison_with_daily": {
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.7272727272727272,
+          "top5_overlap": 4
+        }
+      }
+    },
+    "72": {
+      "year_block_bootstrap": {
+        "replicates": 200,
+        "seed": 20260898,
+        "status": "可评估",
+        "available_training_years": [
+          2021,
+          2023,
+          2024
+        ],
+        "excluded_training_years": {
+          "2022": "该年无共同有效参照窗（ustar/TKE_obs缺测）"
+        },
+        "sampled_training_years": [
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2024
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2024
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2023,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2024
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2021
+          ],
+          [
+            2021,
+            2023,
+            2024
+          ],
+          [
+            2021,
+            2021,
+            2021
+          ],
+          [
+            2023,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2021
+          ],
+          [
+            2024,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2023,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2023
+          ],
+          [
+            2021,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2024
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2023,
+            2021,
+            2023
+          ],
+          [
+            2024,
+            2024,
+            2021
+          ],
+          [
+            2021,
+            2024,
+            2023
+          ],
+          [
+            2023,
+            2023,
+            2021
+          ],
+          [
+            2024,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2023
+          ],
+          [
+            2023,
+            2024,
+            2023
+          ],
+          [
+            2021,
+            2023,
+            2021
+          ]
+        ],
+        "feature_intervals": [
+          {
+            "feature": "WS_10m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.04072427381276877,
+                0.48508724789991103,
+                1.0214093752373035
+              ],
+              "Z": [
+                0.04072427381276877,
+                0.48508724789991103,
+                1.0214093752373035
+              ],
+              "delta": [
+                0.012978677621283463,
+                0.12567723004694842,
+                0.18405663145539908
+              ],
+              "baseline_median": [
+                1.8604572574334899,
+                1.9188366588419405,
+                2.0315352112676055
+              ],
+              "robust_scale": [
+                0.18019869008215958,
+                0.25908170249999984,
+                0.3395359916666666
+              ],
+              "tail_rank": [
+                0.36470588235294116,
+                0.6593406593406593,
+                0.925531914893617
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          },
+          {
+            "feature": "vector_shear_2_20m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.04299316595128811,
+                0.10869410504528429,
+                0.8325940174592221
+              ],
+              "Z": [
+                -0.04299316595128811,
+                0.10869410504528429,
+                0.8325940174592221
+              ],
+              "delta": [
+                -0.0006619571051477008,
+                0.00158868641383203,
+                0.007759871700967869
+              ],
+              "baseline_median": [
+                0.07593302246241829,
+                0.08210420774955413,
+                0.08435485126853386
+              ],
+              "robust_scale": [
+                0.009320114651614012,
+                0.014616123047060826,
+                0.016484018184305907
+              ],
+              "tail_rank": [
+                0.36470588235294116,
+                0.8351648351648352,
+                0.9680851063829787
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          },
+          {
+            "feature": "Pressure",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.034112176341478964,
+                0.19101673223534443,
+                0.6423193252252626
+              ],
+              "Z": [
+                -0.4897334407456444,
+                0.19101673223534443,
+                0.6423193252252626
+              ],
+              "delta": [
+                -0.2687499999999545,
+                0.22361111111126775,
+                0.8041666666667879
+              ],
+              "baseline_median": [
+                619.2208333333333,
+                619.8013888888888,
+                620.29375
+              ],
+              "robust_scale": [
+                0.548767916666603,
+                1.1706362500001573,
+                1.464067500000101
+              ],
+              "tail_rank": [
+                0.5531914893617021,
+                0.8241758241758241,
+                0.945054945054945
+              ]
+            },
+            "top5_selection_fraction": 0.275
+          },
+          {
+            "feature": "VWC_0.1m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.07684758292709315,
+                0.48395354364597615,
+                1.4001063902191908
+              ],
+              "Z": [
+                -0.5103689020178979,
+                0.48395354364597615,
+                1.4001063902191908
+              ],
+              "delta": [
+                -0.00877530416666665,
+                0.012137869444444463,
+                0.01908580694444445
+              ],
+              "baseline_median": [
+                0.08427777777777778,
+                0.09122571527777777,
+                0.11213888888888889
+              ],
+              "robust_scale": [
+                0.01363168333333334,
+                0.02382455833333335,
+                0.03455281666666666
+              ],
+              "tail_rank": [
+                0.20212765957446807,
+                0.6483516483516484,
+                0.9042553191489362
+              ]
+            },
+            "top5_selection_fraction": 0.15
+          },
+          {
+            "feature": "VWC_0.4m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.02695082865200403,
+                0.4390025412205615,
+                36.61444688207807
+              ],
+              "Z": [
+                -1.3027847022181276,
+                -0.02695082865200403,
+                36.61444688207807
+              ],
+              "delta": [
+                -0.03275516666666664,
+                -0.0015762222222222289,
+                0.0573003888888889
+              ],
+              "baseline_median": [
+                0.07420833333333333,
+                0.13308494444444446,
+                0.16426388888888888
+              ],
+              "robust_scale": [
+                0.0015649666666666519,
+                0.03718740716249999,
+                0.05848511162958334
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.574468085106383,
+                0.9560439560439561
+              ]
+            },
+            "top5_selection_fraction": 0.355
+          },
+          {
+            "feature": "soilT_0.1m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.30980423755476455,
+                0.6638168198057318,
+                0.8947912123633196
+              ],
+              "Z": [
+                -0.8947912123633196,
+                -0.6638168198057318,
+                -0.30980423755476455
+              ],
+              "delta": [
+                -1.3852097222222248,
+                -0.9992791666666676,
+                -0.3811097222222273
+              ],
+              "baseline_median": [
+                18.301594444444447,
+                18.919763888888887,
+                19.305694444444445
+              ],
+              "robust_scale": [
+                1.1176332999999936,
+                1.505353791666668,
+                1.771912916666665
+              ],
+              "tail_rank": [
+                0.2978723404255319,
+                0.5164835164835165,
+                0.8863636363636364
+              ]
+            },
+            "top5_selection_fraction": 0.875
+          },
+          {
+            "feature": "ustar",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.06740899242506582,
+                0.1960563203152479,
+                0.5126510418929657
+              ],
+              "Z": [
+                -0.2938640552660371,
+                0.06740899242506582,
+                0.5126510418929657
+              ],
+              "delta": [
+                -0.013828368472222186,
+                0.0030493087427446164,
+                0.019105716666666717
+              ],
+              "baseline_median": [
+                0.2814310291666666,
+                0.2974874370905887,
+                0.3143651143055555
+              ],
+              "robust_scale": [
+                0.03580287641641661,
+                0.04551241455016662,
+                0.049952449638583425
+              ],
+              "tail_rank": [
+                0.5764705882352941,
+                0.8241758241758241,
+                0.967032967032967
+              ]
+            },
+            "top5_selection_fraction": 0.0
+          },
+          {
+            "feature": "TKE_obs",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.009356885287807464,
+                0.5554819658110389,
+                1.9548962889385062
+              ],
+              "Z": [
+                -0.1558150516686415,
+                0.5554819658110389,
+                1.9548962889385062
+              ],
+              "delta": [
+                -0.0341260901388889,
+                0.16111799548611128,
+                0.27369782791666664
+              ],
+              "baseline_median": [
+                0.9556399704166667,
+                1.068219802847222,
+                1.2634638884722222
+              ],
+              "robust_scale": [
+                0.14000631617408332,
+                0.2773598796934585,
+                0.31074268228733326
+              ],
+              "tail_rank": [
+                0.15294117647058825,
+                0.5824175824175825,
+                0.9787234042553191
+              ]
+            },
+            "top5_selection_fraction": 0.59
+          },
+          {
+            "feature": "Ri_b",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.6900820472898903,
+                0.9398351339866368,
+                1.5564434500577216
+              ],
+              "Z": [
+                0.6900820472898903,
+                0.9398351339866368,
+                1.5564434500577216
+              ],
+              "delta": [
+                1.015511745736534,
+                1.0861572628640679,
+                1.1223012267331134
+              ],
+              "baseline_median": [
+                -0.8638549981282242,
+                -0.8277110342591787,
+                -0.7570655171316447
+              ],
+              "robust_scale": [
+                0.6524565641616296,
+                1.155689145453368,
+                1.626330131526601
+              ],
+              "tail_rank": [
+                0.3516483516483517,
+                0.3956043956043956,
+                0.48936170212765956
+              ]
+            },
+            "top5_selection_fraction": 1.0
+          },
+          {
+            "feature": "dtheta_1_20",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.6321161124261238,
+                0.9402809941682341,
+                1.459239875584637
+              ],
+              "Z": [
+                0.6321161124261238,
+                0.9402809941682341,
+                1.459239875584637
+              ],
+              "delta": [
+                0.07341678185429068,
+                0.11825058709856107,
+                0.1518423052048029
+              ],
+              "baseline_median": [
+                -0.6550833164199175,
+                -0.6214915983136756,
+                -0.5766577930694052
+              ],
+              "robust_scale": [
+                0.1029873968208677,
+                0.12295618615301424,
+                0.14660076954279797
+              ],
+              "tail_rank": [
+                0.10638297872340426,
+                0.3516483516483517,
+                0.5411764705882353
+              ]
+            },
+            "top5_selection_fraction": 1.0
+          },
+          {
+            "feature": "inv_max",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.06005465417010339,
+                0.579012740265466,
+                5.371620102498349
+              ],
+              "Z": [
+                -0.648040141457913,
+                0.579012740265466,
+                5.371620102498349
+              ],
+              "delta": [
+                -0.6601388888888899,
+                0.5671296296296269,
+                1.2277777777777792
+              ],
+              "baseline_median": [
+                0.1819444444444423,
+                0.8425925925925946,
+                2.0698611111111114
+              ],
+              "robust_scale": [
+                0.2285674999999977,
+                0.9794769444444505,
+                1.5032603055555585
+              ],
+              "tail_rank": [
+                0.010638297872340425,
+                0.6153846153846154,
+                0.9361702127659575
+              ]
+            },
+            "top5_selection_fraction": 0.665
+          },
+          {
+            "feature": "RH_2m",
+            "valid_replicates": 200,
+            "intervals_025_50_975": {
+              "A": [
+                0.10573198739230608,
+                0.49128065625362777,
+                0.8536685841766025
+              ],
+              "Z": [
+                -0.8536685841766025,
+                -0.49128065625362777,
+                -0.10573198739230608
+              ],
+              "delta": [
+                -2.938888888888904,
+                -2.708888888888886,
+                -0.8701388888888957
+              ],
+              "baseline_median": [
+                63.689861111111114,
+                65.5286111111111,
+                65.75861111111112
+              ],
+              "robust_scale": [
+                3.345528083333331,
+                5.513933541666659,
+                8.229665499999994
+              ],
+              "tail_rank": [
+                0.43529411764705883,
+                0.5824175824175825,
+                0.9361702127659575
+              ]
+            },
+            "top5_selection_fraction": 0.09
+          }
+        ],
+        "scope": "整年重抽样仅从有效训练年重估参照中位数与尺度；相关簇不重拟合；非灾害置信区间"
+      },
+      "leave_one_training_year_out": [
+        {
+          "omitted_year": 2021,
+          "status": "可评估",
+          "reference_windows": 59,
+          "top5": [
+            "VWC_0.4m",
+            "TKE_obs",
+            "Ri_b",
+            "dtheta_1_20",
+            "soilT_0.1m"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.0,
+          "top5_overlap": 4
+        },
+        {
+          "omitted_year": 2022,
+          "status": "不可评估：该训练年无共同有效参照窗",
+          "reference_windows": 0,
+          "top5": [],
+          "common_ranked_features": 0,
+          "full_rank_Kendall_tau": null,
+          "top5_overlap": null,
+          "reason": "该年无共同有效参照窗（ustar/TKE_obs缺测）"
+        },
+        {
+          "omitted_year": 2023,
+          "status": "可评估",
+          "reference_windows": 59,
+          "top5": [
+            "inv_max",
+            "Ri_b",
+            "dtheta_1_20",
+            "VWC_0.4m",
+            "soilT_0.1m"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.5454545454545454,
+          "top5_overlap": 4
+        },
+        {
+          "omitted_year": 2024,
+          "status": "可评估",
+          "reference_windows": 62,
+          "top5": [
+            "dtheta_1_20",
+            "inv_max",
+            "Ri_b",
+            "soilT_0.1m",
+            "VWC_0.4m"
+          ],
+          "common_ranked_features": 12,
+          "full_rank_Kendall_tau": 0.39393939393939387,
+          "top5_overlap": 4
+        }
+      ],
+      "fixed_seven_day_nonoverlap": null
+    }
+  },
+  "duration_comparison": {
+    "independently_screened": {
+      "common_ranked_features": 12,
+      "full_rank_Kendall_tau": 0.3636363636363636,
+      "top5_overlap": 3
+    },
+    "common_reference_dates": [
+      {
+        "release": "2026-08-26 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.3636363636363636,
+        "top5_overlap": 3,
+        "top5_168": [
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "soilT_0.1m",
+          "WS_10m",
+          "inv_max"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "dtheta_1_20",
+          "soilT_0.1m",
+          "inv_max",
+          "RH_2m"
+        ],
+        "target_scores": {
+          "168": {
+            "release": "2026-08-26 00:00:00",
+            "start": "2026-08-18 23:00:00",
+            "end": "2026-08-25 22:00:00",
+            "length_h": 168,
+            "common_valid": true,
+            "candidate_reference_windows": 86,
+            "reference_windows": 86,
+            "reference_counts_by_year": {
+              "2021": 31,
+              "2023": 31,
+              "2024": 24
+            },
+            "coverage": {
+              "WS_10m": 1.0,
+              "vector_shear_2_20m": 0.9821428571428571,
+              "Pressure": 1.0,
+              "VWC_0.1m": 1.0,
+              "VWC_0.4m": 1.0,
+              "soilT_0.1m": 1.0,
+              "ustar": 0.9880952380952381,
+              "TKE_obs": 0.9880952380952381,
+              "Ri_b": 0.9761904761904762,
+              "dtheta_1_20": 1.0,
+              "inv_max": 1.0,
+              "RH_2m": 1.0
+            },
+            "all12_complete_hours": 162,
+            "status": "可评估",
+            "rows": [
+              {
+                "feature": "WS_10m",
+                "name": "10米风速",
+                "unit": "m/s",
+                "mean": 1.7681130952380952,
+                "baseline_median": 1.939732267607642,
+                "robust_scale": 0.19700634453863333,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.17161917236954682,
+                "Z": -0.8711352559302574,
+                "A": 0.8711352559302574,
+                "tail_rank": 0.4367816091954023,
+                "rankable": true,
+                "full_rank": 4
+              },
+              {
+                "feature": "vector_shear_2_20m",
+                "name": "2—20米矢量风切变",
+                "unit": "1/s",
+                "mean": 0.07517313992428182,
+                "baseline_median": 0.08128367652419466,
+                "robust_scale": 0.009747252510402449,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.006110536599912841,
+                "Z": -0.6268983586289124,
+                "A": 0.6268983586289124,
+                "tail_rank": 0.5747126436781609,
+                "rankable": true,
+                "full_rank": 8
+              },
+              {
+                "feature": "Pressure",
+                "name": "MET气压",
+                "unit": "hPa",
+                "mean": 619.8285714285715,
+                "baseline_median": 619.5372023809524,
+                "robust_scale": 1.0214937499998835,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.29136904761912774,
+                "Z": 0.28523820886731904,
+                "A": 0.28523820886731904,
+                "tail_rank": 0.8160919540229885,
+                "rankable": true,
+                "full_rank": 11
+              },
+              {
+                "feature": "VWC_0.1m",
+                "name": "0.1米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.12710451845238094,
+                "baseline_median": 0.09340468124999998,
+                "robust_scale": 0.023893687500000003,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.033699837202380956,
+                "Z": 1.4104075481183451,
+                "A": 1.4104075481183451,
+                "tail_rank": 0.21839080459770116,
+                "rankable": true,
+                "full_rank": 2
+              },
+              {
+                "feature": "VWC_0.4m",
+                "name": "0.4米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.13038699404761905,
+                "baseline_median": 0.14152415773809524,
+                "robust_scale": 0.06458078519999998,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.011137163690476182,
+                "Z": -0.1724532096657782,
+                "A": 0.1724532096657782,
+                "tail_rank": 0.8735632183908046,
+                "rankable": true,
+                "full_rank": 12
+              },
+              {
+                "feature": "soilT_0.1m",
+                "name": "0.1米土温",
+                "unit": "degC",
+                "mean": 17.405367857142856,
+                "baseline_median": 18.594505357142857,
+                "robust_scale": 1.2393662325,
+                "scale_method": "MAD×1.4826",
+                "delta": -1.189137500000001,
+                "Z": -0.95947224381071,
+                "A": 0.95947224381071,
+                "tail_rank": 0.3218390804597701,
+                "rankable": true,
+                "full_rank": 3
+              },
+              {
+                "feature": "ustar",
+                "name": "摩擦速度",
+                "unit": "m/s",
+                "mean": 0.265593821626506,
+                "baseline_median": 0.2972217987797619,
+                "robust_scale": 0.03804666387749999,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.03162797715325588,
+                "Z": -0.831294361447549,
+                "A": 0.831294361447549,
+                "tail_rank": 0.40229885057471265,
+                "rankable": true,
+                "full_rank": 5
+              },
+              {
+                "feature": "TKE_obs",
+                "name": "观测湍流动能",
+                "unit": "m2/s2",
+                "mean": 0.9547604228313253,
+                "baseline_median": 1.083783990029762,
+                "robust_scale": 0.267371670592875,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.12902356719843655,
+                "Z": -0.48256259502862536,
+                "A": 0.48256259502862536,
+                "tail_rank": 0.6551724137931034,
+                "rankable": true,
+                "full_rank": 9
+              },
+              {
+                "feature": "Ri_b",
+                "name": "订正整体理查森数",
+                "unit": "1",
+                "mean": -0.4071586110429447,
+                "baseline_median": -1.4723554483816241,
+                "robust_scale": 1.5182951452917581,
+                "scale_method": "MAD×1.4826",
+                "delta": 1.0651968373386795,
+                "Z": 0.7015742891899911,
+                "A": 0.7015742891899911,
+                "tail_rank": 0.4942528735632184,
+                "rankable": true,
+                "full_rank": 7
+              },
+              {
+                "feature": "dtheta_1_20",
+                "name": "订正1—20米位温差",
+                "unit": "K",
+                "mean": -0.44197678046907096,
+                "baseline_median": -0.6102677967003804,
+                "robust_scale": 0.10768244932401477,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.1682910162313095,
+                "Z": 1.5628453595527392,
+                "A": 1.5628453595527392,
+                "tail_rank": 0.022988505747126436,
+                "rankable": true,
+                "full_rank": 1
+              },
+              {
+                "feature": "inv_max",
+                "name": "实际温度逆温强度",
+                "unit": "K/100m",
+                "mean": 2.0527777777777785,
+                "baseline_median": 1.1107142857142853,
+                "robust_scale": 1.1618112500000006,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.9420634920634932,
+                "Z": 0.8108576088099445,
+                "A": 0.8108576088099445,
+                "tail_rank": 0.40229885057471265,
+                "rankable": true,
+                "full_rank": 6
+              },
+              {
+                "feature": "RH_2m",
+                "name": "2米相对湿度",
+                "unit": "%",
+                "mean": 68.755,
+                "baseline_median": 66.7486011904762,
+                "robust_scale": 4.623373374999992,
+                "scale_method": "MAD×1.4826",
+                "delta": 2.0063988095238017,
+                "Z": 0.4339685867408027,
+                "A": 0.4339685867408027,
+                "tail_rank": 0.7011494252873564,
+                "rankable": true,
+                "full_rank": 10
+              }
+            ],
+            "full_order": [
+              "dtheta_1_20",
+              "VWC_0.1m",
+              "soilT_0.1m",
+              "WS_10m",
+              "ustar",
+              "inv_max",
+              "Ri_b",
+              "vector_shear_2_20m",
+              "TKE_obs",
+              "RH_2m",
+              "Pressure",
+              "VWC_0.4m"
+            ],
+            "display": [
+              {
+                "feature": "dtheta_1_20",
+                "name": "订正1—20米位温差",
+                "unit": "K",
+                "mean": -0.44197678046907096,
+                "baseline_median": -0.6102677967003804,
+                "robust_scale": 0.10768244932401477,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.1682910162313095,
+                "Z": 1.5628453595527392,
+                "A": 1.5628453595527392,
+                "tail_rank": 0.022988505747126436,
+                "rankable": true,
+                "full_rank": 1,
+                "cluster_id": 6,
+                "members": [
+                  "dtheta_1_20"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "VWC_0.1m",
+                "name": "0.1米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.12710451845238094,
+                "baseline_median": 0.09340468124999998,
+                "robust_scale": 0.023893687500000003,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.033699837202380956,
+                "Z": 1.4104075481183451,
+                "A": 1.4104075481183451,
+                "tail_rank": 0.21839080459770116,
+                "rankable": true,
+                "full_rank": 2,
+                "cluster_id": 3,
+                "members": [
+                  "VWC_0.1m",
+                  "VWC_0.4m"
+                ],
+                "excluded": [
+                  "VWC_0.4m"
+                ]
+              },
+              {
+                "feature": "soilT_0.1m",
+                "name": "0.1米土温",
+                "unit": "degC",
+                "mean": 17.405367857142856,
+                "baseline_median": 18.594505357142857,
+                "robust_scale": 1.2393662325,
+                "scale_method": "MAD×1.4826",
+                "delta": -1.189137500000001,
+                "Z": -0.95947224381071,
+                "A": 0.95947224381071,
+                "tail_rank": 0.3218390804597701,
+                "rankable": true,
+                "full_rank": 3,
+                "cluster_id": 4,
+                "members": [
+                  "soilT_0.1m"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "WS_10m",
+                "name": "10米风速",
+                "unit": "m/s",
+                "mean": 1.7681130952380952,
+                "baseline_median": 1.939732267607642,
+                "robust_scale": 0.19700634453863333,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.17161917236954682,
+                "Z": -0.8711352559302574,
+                "A": 0.8711352559302574,
+                "tail_rank": 0.4367816091954023,
+                "rankable": true,
+                "full_rank": 4,
+                "cluster_id": 1,
+                "members": [
+                  "WS_10m",
+                  "vector_shear_2_20m",
+                  "ustar",
+                  "TKE_obs",
+                  "RH_2m"
+                ],
+                "excluded": [
+                  "vector_shear_2_20m",
+                  "ustar",
+                  "TKE_obs",
+                  "RH_2m"
+                ]
+              },
+              {
+                "feature": "inv_max",
+                "name": "实际温度逆温强度",
+                "unit": "K/100m",
+                "mean": 2.0527777777777785,
+                "baseline_median": 1.1107142857142853,
+                "robust_scale": 1.1618112500000006,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.9420634920634932,
+                "Z": 0.8108576088099445,
+                "A": 0.8108576088099445,
+                "tail_rank": 0.40229885057471265,
+                "rankable": true,
+                "full_rank": 6,
+                "cluster_id": 7,
+                "members": [
+                  "inv_max"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "Ri_b",
+                "name": "订正整体理查森数",
+                "unit": "1",
+                "mean": -0.4071586110429447,
+                "baseline_median": -1.4723554483816241,
+                "robust_scale": 1.5182951452917581,
+                "scale_method": "MAD×1.4826",
+                "delta": 1.0651968373386795,
+                "Z": 0.7015742891899911,
+                "A": 0.7015742891899911,
+                "tail_rank": 0.4942528735632184,
+                "rankable": true,
+                "full_rank": 7,
+                "cluster_id": 5,
+                "members": [
+                  "Ri_b"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "Pressure",
+                "name": "MET气压",
+                "unit": "hPa",
+                "mean": 619.8285714285715,
+                "baseline_median": 619.5372023809524,
+                "robust_scale": 1.0214937499998835,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.29136904761912774,
+                "Z": 0.28523820886731904,
+                "A": 0.28523820886731904,
+                "tail_rank": 0.8160919540229885,
+                "rankable": true,
+                "full_rank": 11,
+                "cluster_id": 2,
+                "members": [
+                  "Pressure"
+                ],
+                "excluded": []
+              }
+            ],
+            "top5": [
+              "dtheta_1_20",
+              "VWC_0.1m",
+              "soilT_0.1m",
+              "WS_10m",
+              "inv_max"
+            ],
+            "maximum_A": 1.5628453595527392
+          },
+          "72": {
+            "release": "2026-08-26 00:00:00",
+            "start": "2026-08-22 23:00:00",
+            "end": "2026-08-25 22:00:00",
+            "length_h": 72,
+            "common_valid": true,
+            "candidate_reference_windows": 86,
+            "reference_windows": 86,
+            "reference_counts_by_year": {
+              "2021": 31,
+              "2023": 31,
+              "2024": 24
+            },
+            "coverage": {
+              "WS_10m": 1.0,
+              "vector_shear_2_20m": 0.9861111111111112,
+              "Pressure": 1.0,
+              "VWC_0.1m": 1.0,
+              "VWC_0.4m": 1.0,
+              "soilT_0.1m": 1.0,
+              "ustar": 1.0,
+              "TKE_obs": 1.0,
+              "Ri_b": 0.9861111111111112,
+              "dtheta_1_20": 1.0,
+              "inv_max": 1.0,
+              "RH_2m": 1.0
+            },
+            "all12_complete_hours": 71,
+            "status": "可评估",
+            "rows": [
+              {
+                "feature": "WS_10m",
+                "name": "10米风速",
+                "unit": "m/s",
+                "mean": 2.044513888888889,
+                "baseline_median": 1.9360902777777778,
+                "robust_scale": 0.2977823271713611,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.1084236111111112,
+                "Z": 0.36410357908418794,
+                "A": 0.36410357908418794,
+                "tail_rank": 0.735632183908046,
+                "rankable": true,
+                "full_rank": 8
+              },
+              {
+                "feature": "vector_shear_2_20m",
+                "name": "2—20米矢量风切变",
+                "unit": "1/s",
+                "mean": 0.08369289416338616,
+                "baseline_median": 0.08252854599136461,
+                "robust_scale": 0.014852972732410017,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.0011643481720215454,
+                "Z": 0.07839159156879569,
+                "A": 0.07839159156879569,
+                "tail_rank": 0.8505747126436781,
+                "rankable": true,
+                "full_rank": 10
+              },
+              {
+                "feature": "Pressure",
+                "name": "MET气压",
+                "unit": "hPa",
+                "mean": 620.0250000000001,
+                "baseline_median": 619.7854166666666,
+                "robust_scale": 1.0954766666667377,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.23958333333348492,
+                "Z": 0.21870236092063672,
+                "A": 0.21870236092063672,
+                "tail_rank": 0.7931034482758621,
+                "rankable": true,
+                "full_rank": 9
+              },
+              {
+                "feature": "VWC_0.1m",
+                "name": "0.1米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.10336358472222223,
+                "baseline_median": 0.09147916666666667,
+                "robust_scale": 0.02437023750000001,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.011884418055555568,
+                "Z": 0.48766115043218444,
+                "A": 0.48766115043218444,
+                "tail_rank": 0.632183908045977,
+                "rankable": true,
+                "full_rank": 6
+              },
+              {
+                "feature": "VWC_0.4m",
+                "name": "0.4米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.13150872222222224,
+                "baseline_median": 0.1351696666666667,
+                "robust_scale": 0.06371156491291666,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.0036609444444444528,
+                "Z": -0.05746122308325605,
+                "A": 0.05746122308325605,
+                "tail_rank": 0.9195402298850575,
+                "rankable": true,
+                "full_rank": 12
+              },
+              {
+                "feature": "soilT_0.1m",
+                "name": "0.1米土温",
+                "unit": "degC",
+                "mean": 17.92048472222222,
+                "baseline_median": 18.919763888888887,
+                "robust_scale": 1.541636308333337,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.9992791666666676,
+                "Z": -0.6481938452442056,
+                "A": 0.6481938452442056,
+                "tail_rank": 0.5287356321839081,
+                "rankable": true,
+                "full_rank": 3
+              },
+              {
+                "feature": "ustar",
+                "name": "摩擦速度",
+                "unit": "m/s",
+                "mean": 0.30053674583333334,
+                "baseline_median": 0.2974874370905887,
+                "robust_scale": 0.046556331032715184,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.0030493087427446164,
+                "Z": 0.06549718749533472,
+                "A": 0.06549718749533472,
+                "tail_rank": 0.9655172413793104,
+                "rankable": true,
+                "full_rank": 11
+              },
+              {
+                "feature": "TKE_obs",
+                "name": "观测湍流动能",
+                "unit": "m2/s2",
+                "mean": 1.2293377983333333,
+                "baseline_median": 1.0960386750694444,
+                "robust_scale": 0.2788103768732918,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.13329912326388893,
+                "Z": 0.47809957706297307,
+                "A": 0.47809957706297307,
+                "tail_rank": 0.7241379310344828,
+                "rankable": true,
+                "full_rank": 7
+              },
+              {
+                "feature": "Ri_b",
+                "name": "订正整体理查森数",
+                "unit": "1",
+                "mean": 0.25844622860488925,
+                "baseline_median": -0.8409091220161395,
+                "robust_scale": 1.1319945967206877,
+                "scale_method": "MAD×1.4826",
+                "delta": 1.0993553506210287,
+                "Z": 0.97116660610023,
+                "A": 0.97116660610023,
+                "tail_rank": 0.40229885057471265,
+                "rankable": true,
+                "full_rank": 1
+              },
+              {
+                "feature": "dtheta_1_20",
+                "name": "订正1—20米位温差",
+                "unit": "K",
+                "mean": -0.5032410112151146,
+                "baseline_median": -0.6159812293727364,
+                "robust_scale": 0.13400326680865832,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.11274021815762181,
+                "Z": 0.8413244008342142,
+                "A": 0.8413244008342142,
+                "tail_rank": 0.39080459770114945,
+                "rankable": true,
+                "full_rank": 2
+              },
+              {
+                "feature": "inv_max",
+                "name": "实际温度逆温强度",
+                "unit": "K/100m",
+                "mean": 1.4097222222222214,
+                "baseline_median": 0.8425925925925946,
+                "robust_scale": 0.9993822222222213,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.5671296296296269,
+                "Z": 0.5674802062904024,
+                "A": 0.5674802062904024,
+                "tail_rank": 0.632183908045977,
+                "rankable": true,
+                "full_rank": 4
+              },
+              {
+                "feature": "RH_2m",
+                "name": "2米相对湿度",
+                "unit": "%",
+                "mean": 62.81972222222222,
+                "baseline_median": 65.72229166666668,
+                "robust_scale": 5.898997708333358,
+                "scale_method": "MAD×1.4826",
+                "delta": -2.9025694444444596,
+                "Z": -0.4920445112809718,
+                "A": 0.4920445112809718,
+                "tail_rank": 0.5977011494252874,
+                "rankable": true,
+                "full_rank": 5
+              }
+            ],
+            "full_order": [
+              "Ri_b",
+              "dtheta_1_20",
+              "soilT_0.1m",
+              "inv_max",
+              "RH_2m",
+              "VWC_0.1m",
+              "TKE_obs",
+              "WS_10m",
+              "Pressure",
+              "vector_shear_2_20m",
+              "ustar",
+              "VWC_0.4m"
+            ],
+            "display": [
+              {
+                "feature": "Ri_b",
+                "name": "订正整体理查森数",
+                "unit": "1",
+                "mean": 0.25844622860488925,
+                "baseline_median": -0.8409091220161395,
+                "robust_scale": 1.1319945967206877,
+                "scale_method": "MAD×1.4826",
+                "delta": 1.0993553506210287,
+                "Z": 0.97116660610023,
+                "A": 0.97116660610023,
+                "tail_rank": 0.40229885057471265,
+                "rankable": true,
+                "full_rank": 1,
+                "cluster_id": 5,
+                "members": [
+                  "Ri_b"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "dtheta_1_20",
+                "name": "订正1—20米位温差",
+                "unit": "K",
+                "mean": -0.5032410112151146,
+                "baseline_median": -0.6159812293727364,
+                "robust_scale": 0.13400326680865832,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.11274021815762181,
+                "Z": 0.8413244008342142,
+                "A": 0.8413244008342142,
+                "tail_rank": 0.39080459770114945,
+                "rankable": true,
+                "full_rank": 2,
+                "cluster_id": 6,
+                "members": [
+                  "dtheta_1_20"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "soilT_0.1m",
+                "name": "0.1米土温",
+                "unit": "degC",
+                "mean": 17.92048472222222,
+                "baseline_median": 18.919763888888887,
+                "robust_scale": 1.541636308333337,
+                "scale_method": "MAD×1.4826",
+                "delta": -0.9992791666666676,
+                "Z": -0.6481938452442056,
+                "A": 0.6481938452442056,
+                "tail_rank": 0.5287356321839081,
+                "rankable": true,
+                "full_rank": 3,
+                "cluster_id": 4,
+                "members": [
+                  "soilT_0.1m"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "inv_max",
+                "name": "实际温度逆温强度",
+                "unit": "K/100m",
+                "mean": 1.4097222222222214,
+                "baseline_median": 0.8425925925925946,
+                "robust_scale": 0.9993822222222213,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.5671296296296269,
+                "Z": 0.5674802062904024,
+                "A": 0.5674802062904024,
+                "tail_rank": 0.632183908045977,
+                "rankable": true,
+                "full_rank": 4,
+                "cluster_id": 7,
+                "members": [
+                  "inv_max"
+                ],
+                "excluded": []
+              },
+              {
+                "feature": "RH_2m",
+                "name": "2米相对湿度",
+                "unit": "%",
+                "mean": 62.81972222222222,
+                "baseline_median": 65.72229166666668,
+                "robust_scale": 5.898997708333358,
+                "scale_method": "MAD×1.4826",
+                "delta": -2.9025694444444596,
+                "Z": -0.4920445112809718,
+                "A": 0.4920445112809718,
+                "tail_rank": 0.5977011494252874,
+                "rankable": true,
+                "full_rank": 5,
+                "cluster_id": 1,
+                "members": [
+                  "WS_10m",
+                  "vector_shear_2_20m",
+                  "ustar",
+                  "TKE_obs",
+                  "RH_2m"
+                ],
+                "excluded": [
+                  "WS_10m",
+                  "vector_shear_2_20m",
+                  "ustar",
+                  "TKE_obs"
+                ]
+              },
+              {
+                "feature": "VWC_0.1m",
+                "name": "0.1米土壤含水率",
+                "unit": "m3/m3",
+                "mean": 0.10336358472222223,
+                "baseline_median": 0.09147916666666667,
+                "robust_scale": 0.02437023750000001,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.011884418055555568,
+                "Z": 0.48766115043218444,
+                "A": 0.48766115043218444,
+                "tail_rank": 0.632183908045977,
+                "rankable": true,
+                "full_rank": 6,
+                "cluster_id": 3,
+                "members": [
+                  "VWC_0.1m",
+                  "VWC_0.4m"
+                ],
+                "excluded": [
+                  "VWC_0.4m"
+                ]
+              },
+              {
+                "feature": "Pressure",
+                "name": "MET气压",
+                "unit": "hPa",
+                "mean": 620.0250000000001,
+                "baseline_median": 619.7854166666666,
+                "robust_scale": 1.0954766666667377,
+                "scale_method": "MAD×1.4826",
+                "delta": 0.23958333333348492,
+                "Z": 0.21870236092063672,
+                "A": 0.21870236092063672,
+                "tail_rank": 0.7931034482758621,
+                "rankable": true,
+                "full_rank": 9,
+                "cluster_id": 2,
+                "members": [
+                  "Pressure"
+                ],
+                "excluded": []
+              }
+            ],
+            "top5": [
+              "Ri_b",
+              "dtheta_1_20",
+              "soilT_0.1m",
+              "inv_max",
+              "RH_2m"
+            ],
+            "maximum_A": 0.97116660610023
+          }
+        }
+      },
+      {
+        "release": "2025-08-11 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 88,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2121212121212121,
+        "top5_overlap": 3,
+        "top5_168": [
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "VWC_0.4m",
+          "vector_shear_2_20m",
+          "inv_max"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "Pressure",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-12 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 89,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2424242424242424,
+        "top5_overlap": 3,
+        "top5_168": [
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "Pressure",
+          "vector_shear_2_20m"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Pressure",
+          "RH_2m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-13 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 89,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": -0.2424242424242424,
+        "top5_overlap": 3,
+        "top5_168": [
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "Pressure",
+          "dtheta_1_20",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "WS_10m",
+          "VWC_0.4m",
+          "inv_max",
+          "soilT_0.1m",
+          "Ri_b"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-14 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 89,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.3333333333333333,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "Pressure",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "inv_max",
+          "VWC_0.4m",
+          "RH_2m",
+          "soilT_0.1m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-15 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 89,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.4848484848484848,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Pressure",
+          "RH_2m"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.4m",
+          "inv_max",
+          "soilT_0.1m",
+          "vector_shear_2_20m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-16 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 89,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.7878787878787877,
+        "top5_overlap": 5,
+        "top5_168": [
+          "Ri_b",
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Pressure",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Pressure",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-17 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 88,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.3333333333333333,
+        "top5_overlap": 4,
+        "top5_168": [
+          "Ri_b",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "Pressure"
+        ],
+        "top5_72": [
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "TKE_obs",
+          "Pressure"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-18 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 87,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.1515151515151515,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "Pressure"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "WS_10m",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-19 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.0303030303030303,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "Pressure"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "WS_10m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-20 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2121212121212121,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "vector_shear_2_20m",
+          "VWC_0.4m"
+        ],
+        "top5_72": [
+          "vector_shear_2_20m",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-21 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.6666666666666666,
+        "top5_overlap": 4,
+        "top5_168": [
+          "soilT_0.1m",
+          "vector_shear_2_20m",
+          "dtheta_1_20",
+          "VWC_0.4m",
+          "inv_max"
+        ],
+        "top5_72": [
+          "vector_shear_2_20m",
+          "soilT_0.1m",
+          "VWC_0.1m",
+          "dtheta_1_20",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-22 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.7878787878787877,
+        "top5_overlap": 5,
+        "top5_168": [
+          "soilT_0.1m",
+          "vector_shear_2_20m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "vector_shear_2_20m",
+          "Ri_b",
+          "dtheta_1_20",
+          "VWC_0.1m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-23 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.6666666666666666,
+        "top5_overlap": 5,
+        "top5_168": [
+          "soilT_0.1m",
+          "vector_shear_2_20m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "Ri_b",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "vector_shear_2_20m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-24 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2727272727272727,
+        "top5_overlap": 4,
+        "top5_168": [
+          "vector_shear_2_20m",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "Ri_b",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-25 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.5151515151515151,
+        "top5_overlap": 3,
+        "top5_168": [
+          "vector_shear_2_20m",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "WS_10m",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-26 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.5757575757575757,
+        "top5_overlap": 3,
+        "top5_168": [
+          "soilT_0.1m",
+          "vector_shear_2_20m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "WS_10m",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-27 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.8787878787878787,
+        "top5_overlap": 4,
+        "top5_168": [
+          "soilT_0.1m",
+          "WS_10m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "WS_10m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-28 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.8787878787878787,
+        "top5_overlap": 4,
+        "top5_168": [
+          "soilT_0.1m",
+          "WS_10m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "WS_10m",
+          "VWC_0.1m",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-29 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.303030303030303,
+        "top5_overlap": 3,
+        "top5_168": [
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "WS_10m",
+          "VWC_0.1m",
+          "Pressure"
+        ],
+        "top5_72": [
+          "soilT_0.1m",
+          "VWC_0.1m",
+          "inv_max",
+          "vector_shear_2_20m",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-30 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.0606060606060606,
+        "top5_overlap": 1,
+        "top5_168": [
+          "soilT_0.1m",
+          "VWC_0.1m",
+          "dtheta_1_20",
+          "WS_10m",
+          "Pressure"
+        ],
+        "top5_72": [
+          "inv_max",
+          "RH_2m",
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "Ri_b"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-08-31 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": -0.0303030303030303,
+        "top5_overlap": 4,
+        "top5_168": [
+          "soilT_0.1m",
+          "VWC_0.4m",
+          "inv_max",
+          "RH_2m",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "inv_max",
+          "RH_2m",
+          "dtheta_1_20",
+          "VWC_0.4m",
+          "Ri_b"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-01 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2424242424242424,
+        "top5_overlap": 2,
+        "top5_168": [
+          "soilT_0.1m",
+          "inv_max",
+          "VWC_0.4m",
+          "RH_2m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "inv_max",
+          "WS_10m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "Ri_b"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-02 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.2424242424242424,
+        "top5_overlap": 3,
+        "top5_168": [
+          "inv_max",
+          "RH_2m",
+          "VWC_0.4m",
+          "dtheta_1_20",
+          "soilT_0.1m"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.1m",
+          "inv_max",
+          "RH_2m",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-03 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": -0.2727272727272727,
+        "top5_overlap": 3,
+        "top5_168": [
+          "WS_10m",
+          "inv_max",
+          "dtheta_1_20",
+          "VWC_0.4m",
+          "Ri_b"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.1m",
+          "soilT_0.1m",
+          "inv_max",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-04 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": -0.4848484848484848,
+        "top5_overlap": 2,
+        "top5_168": [
+          "WS_10m",
+          "dtheta_1_20",
+          "inv_max",
+          "soilT_0.1m",
+          "VWC_0.4m"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "VWC_0.1m",
+          "soilT_0.1m",
+          "Pressure",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-05 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.0909090909090909,
+        "top5_overlap": 2,
+        "top5_168": [
+          "WS_10m",
+          "soilT_0.1m",
+          "dtheta_1_20",
+          "VWC_0.1m",
+          "inv_max"
+        ],
+        "top5_72": [
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Ri_b",
+          "vector_shear_2_20m",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-06 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.0303030303030303,
+        "top5_overlap": 2,
+        "top5_168": [
+          "soilT_0.1m",
+          "VWC_0.1m",
+          "WS_10m",
+          "Ri_b",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "VWC_0.4m",
+          "Pressure",
+          "Ri_b",
+          "vector_shear_2_20m",
+          "soilT_0.1m"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-07 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.1515151515151515,
+        "top5_overlap": 3,
+        "top5_168": [
+          "VWC_0.4m",
+          "soilT_0.1m",
+          "Ri_b",
+          "Pressure",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "Pressure",
+          "inv_max",
+          "vector_shear_2_20m",
+          "VWC_0.4m",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-08 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.1818181818181818,
+        "top5_overlap": 3,
+        "top5_168": [
+          "VWC_0.4m",
+          "Ri_b",
+          "Pressure",
+          "vector_shear_2_20m",
+          "soilT_0.1m"
+        ],
+        "top5_72": [
+          "Pressure",
+          "soilT_0.1m",
+          "inv_max",
+          "VWC_0.4m",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-09 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.1818181818181818,
+        "top5_overlap": 4,
+        "top5_168": [
+          "Pressure",
+          "VWC_0.4m",
+          "TKE_obs",
+          "inv_max",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "TKE_obs",
+          "soilT_0.1m",
+          "Pressure",
+          "inv_max",
+          "dtheta_1_20"
+        ],
+        "pseudo_scores_omitted": null
+      },
+      {
+        "release": "2025-09-10 00:00:00",
+        "both_durations_evaluable": true,
+        "shared_reference_windows": 86,
+        "common_ranked_features": 12,
+        "full_rank_Kendall_tau": 0.3333333333333333,
+        "top5_overlap": 3,
+        "top5_168": [
+          "Ri_b",
+          "Pressure",
+          "VWC_0.4m",
+          "TKE_obs",
+          "dtheta_1_20"
+        ],
+        "top5_72": [
+          "Ri_b",
+          "TKE_obs",
+          "dtheta_1_20",
+          "soilT_0.1m",
+          "inv_max"
+        ],
+        "pseudo_scores_omitted": null
+      }
+    ],
+    "scope": "共同日期对照对每个查询分别取两长度均合格的训练发布日交集；2025查询也报告两长度共同资格"
+  },
+  "observed_flux_policy": "ustar与TKE_obs来自FLUX观测统计量；仅屏蔽负值，不插补、不作未经元数据支持的上界饱和截尾；测量高度未知，不补为10米或20米",
+  "conditional_selection": "窗口审计CSV列出全部实际查询/参照小时起止与各项计数，含被共同覆盖规则排除的窗。FLUX缺测可使可用窗成为条件选样，数量不等于独立事件数。",
+  "feature_metadata": {
+    "pbl_right_censored_count": 31116,
+    "hydrostatic": {
+      "reference_height_m_assumed": 2,
+      "hydrostatic_corrected": true,
+      "iterations": 3,
+      "five_layer_common_hours": 45577,
+      "total_hours": 49545,
+      "missing_fraction": 0.08008880815420327,
+      "iteration_3_minus_2_max_hPa": 6.514255801448599e-11,
+      "iteration_3_minus_2_median_hPa": 9.094947017729282e-12,
+      "pressure_source": "MET Pressure; reference height assumed; FLUX PA not substituted"
+    },
+    "reference_height_m_assumed": 2,
+    "hydrostatic_corrected": true,
+    "iterations": 3,
+    "five_layer_common_hours": 45577,
+    "total_hours": 49545,
+    "missing_fraction": 0.08008880815420327,
+    "iteration_3_minus_2_max_hPa": 6.514255801448599e-11,
+    "iteration_3_minus_2_median_hPa": 9.094947017729282e-12,
+    "pressure_source": "MET Pressure; reference height assumed; FLUX PA not substituted",
+    "shear_mask_count": 136,
+    "eligible_count": 44154,
+    "shear_epsilon_m2_s2": 1e-06,
+    "api_missing_policy": "缺测重置；连续168小时有效后才提供API，不填0",
+    "feature_version": "v2-hydrostatic-five-layer-3iter",
+    "energy_units": {
+      "melt_energy": "W/m2, unadjusted proxy",
+      "cum_melt_energy": "MJ/m2 for one hour"
+    }
+  },
+  "limitations": "异常是同季节已选历史窗口中的特殊性，不是灾害关联系数、发生概率或因果效应。小时标签起止和仪器延迟未知；仅称冲击锚点前可用，不保证早于源区失稳。每日窗口重叠、参照自参与尺度拟合；配置训练年4年，但2022年因ustar与TKE_obs缺测无共同有效窗，实际参照年为2021/2023/2024三年；尾秩非显著性p值，年块区间非独立灾害置信区间，2025伪事件不是真实非灾日。",
+  "outputs": {
+    "summary": "求解结果\\数据\\01b_冲击前窗口异常.json",
+    "audit": "求解结果\\数据\\01b_窗口覆盖审计.csv",
+    "query_scores": "求解结果\\数据\\01b_查询逐项异常.csv",
+    "sensitivity_scores": "求解结果\\数据\\01b_背景敏感性逐项.csv",
+    "figures": [
+      "求解结果\\图表\\01b_冲击前窗口异常.png",
+      "求解结果\\图表\\01b_伪事件与背景敏感性.png"
+    ]
+  }
+}

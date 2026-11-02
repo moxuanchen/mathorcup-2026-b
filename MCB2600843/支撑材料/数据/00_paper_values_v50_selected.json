@@ -1,0 +1,880 @@
+{
+  "q1": {
+    "top5": [
+      {
+        "rank": 1,
+        "variable": "API",
+        "name": "前期降水指数",
+        "family": "MET",
+        "direction": "事件窗偏高",
+        "A_abs": 3.8290425800714973,
+        "signed_z": 3.8290425800714973,
+        "delta": 14.484464233114053,
+        "baseline_median": 9.007693897258807,
+        "tail_rank": 0.010638297872340425,
+        "cluster_members": [
+          "API",
+          "AP_7d"
+        ],
+        "cluster_representative_reason": "同簇内绝对稳健异常最大；只在展示层去冗余"
+      },
+      {
+        "rank": 2,
+        "variable": "Rn",
+        "name": "净辐射",
+        "family": "RADM",
+        "direction": "事件窗偏高",
+        "A_abs": 2.3436406435384014,
+        "signed_z": 2.3436406435384014,
+        "delta": 19.92830706845237,
+        "baseline_median": 138.55086521428572,
+        "tail_rank": 0.07446808510638298,
+        "cluster_members": [
+          "Ta_2m",
+          "RH_2m",
+          "VPD2",
+          "WS_10m",
+          "vector_shear_2_20m",
+          "shear_1_20m",
+          "dtheta_1_20",
+          "Rn",
+          "melt_energy_hourly",
+          "Rsd",
+          "USTAR",
+          "TKE",
+          "H"
+        ],
+        "cluster_representative_reason": "同簇内绝对稳健异常最大；只在展示层去冗余"
+      },
+      {
+        "rank": 3,
+        "variable": "rise_24h",
+        "name": "24 h升温",
+        "family": "MET",
+        "direction": "事件窗偏高",
+        "A_abs": 2.2344476050143953,
+        "signed_z": 2.2344476050143953,
+        "delta": 0.3123095238095238,
+        "baseline_median": -0.01867857142857146,
+        "tail_rank": 0.09574468085106383,
+        "cluster_members": [
+          "rise_24h"
+        ],
+        "cluster_representative_reason": "同簇内绝对稳健异常最大；只在展示层去冗余"
+      },
+      {
+        "rank": 4,
+        "variable": "VWC_0.1m",
+        "name": "0.1 m土壤含水率",
+        "family": "SOIL",
+        "direction": "事件窗偏高",
+        "A_abs": 1.4873309113872661,
+        "signed_z": 1.4873309113872661,
+        "delta": 0.03529499464285714,
+        "baseline_median": 0.0918095238095238,
+        "tail_rank": 0.18085106382978725,
+        "cluster_members": [
+          "VWC_0.1m",
+          "VWC_0.4m"
+        ],
+        "cluster_representative_reason": "同簇内绝对稳健异常最大；只在展示层去冗余"
+      },
+      {
+        "rank": 5,
+        "variable": "LE",
+        "name": "潜热通量",
+        "family": "FLUX",
+        "direction": "事件窗偏高",
+        "A_abs": 1.1332257049823602,
+        "signed_z": 1.1332257049823602,
+        "delta": 12.88322348811775,
+        "baseline_median": 42.033321931761776,
+        "tail_rank": 0.1724137931034483,
+        "cluster_members": [
+          "LE"
+        ],
+        "cluster_representative_reason": "同簇内绝对稳健异常最大；只在展示层去冗余"
+      }
+    ],
+    "refs": 93,
+    "sensitivity72": [
+      "melt_energy_hourly",
+      "API",
+      "Ri_b",
+      "rise_24h",
+      "P"
+    ],
+    "leave": {
+      "2021": 4,
+      "2023": 3,
+      "2024": 3
+    },
+    "pseudo": [
+      "vector_shear_2_20m",
+      "soilT_0.1m",
+      "rise_24h",
+      "Ri_b",
+      "VWC_0.1m"
+    ],
+    "pseudo_max_A": 3.336817142622748
+  },
+  "q2": {
+    "states": {
+      "water_controlled": 78,
+      "gravity_unstable": 6
+    },
+    "qcrit_q": {
+      "min": 7.180069e-05,
+      "p25": 12.61396,
+      "p50": 63.260658,
+      "p75": 228.441067,
+      "max": 1239.612137
+    },
+    "old_q": {
+      "n": 84,
+      "p50": 212.971338,
+      "note": "旧式缺少床体沿坡自重项，仅用于新旧对照"
+    },
+    "rank": {
+      "sample_n": 78,
+      "zero_or_not_evaluable_n": 6,
+      "total_flow_Q_crit_m3s": {
+        "kendall_vs_scale": {
+          "tau": 0.408386,
+          "p_value": 5.471436410144295e-06,
+          "p_display": "5.471436e-06"
+        },
+        "kendall_vs_frequency": {
+          "tau": -0.124797,
+          "p_value": 0.1590323701011872,
+          "p_display": "1.590324e-01"
+        },
+        "spearman_vs_scale": {
+          "rho": 0.498676,
+          "p_value": 3.3745699520687622e-06,
+          "p_display": "3.374570e-06"
+        }
+      },
+      "unit_width_q_crit_m2s": {
+        "kendall_vs_scale": {
+          "tau": 0.318602,
+          "p_value": 0.0003904720246143714,
+          "p_display": "3.904720e-04"
+        },
+        "kendall_vs_frequency": {
+          "tau": -0.130544,
+          "p_value": 0.14069957923181514,
+          "p_display": "1.406996e-01"
+        },
+        "spearman_vs_scale": {
+          "rho": 0.40062,
+          "p_value": 0.0002784782801479891,
+          "p_display": "2.784783e-04"
+        }
+      },
+      "note": "总起动流量Q_crit= q_crit B/kappa与单宽起动流量q_crit的秩检验分别保存；p值以双精度结果和科学计数法并列保存，零表示禁止静默下溢。"
+    },
+    "formal_qcrit_m2s": 67.587745,
+    "formal_C_N0": 85.0,
+    "CN_provenance": "explicit engineering scenario independent of land-cover classes; 75/85/95 sensitivity reported",
+    "CN_sensitivity": {
+      "formal_C_N0": 85.0,
+      "formal_event_window": [
+        "2026-08-26 08:00",
+        "2026-08-26 13:00"
+      ],
+      "event_window_semantics": "inclusive hourly labels on the frozen 08:00--13:00 local event window",
+      "scenario_values": [
+        75.0,
+        85.0,
+        95.0
+      ],
+      "AMC_adjustment": "API terciles from 2021-2025 training; factors 0.75/1.00/1.15 and clip [30,98]",
+      "provenance": "independent engineering scenario, not derived from unverified land-cover class codes and not calibrated to the 2026 event",
+      "scenarios": {
+        "75": {
+          "C_N0": 75.0,
+          "is_formal_scenario": false,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 748.061601,
+          "rain_2026_Qrain_peak_m3s": 202.468683,
+          "rain_2026_runoff_sum_mm": 4.642622
+        },
+        "85": {
+          "C_N0": 85.0,
+          "is_formal_scenario": true,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 1896.221099,
+          "rain_2026_Qrain_peak_m3s": 669.308332,
+          "rain_2026_runoff_sum_mm": 56.775899
+        },
+        "95": {
+          "C_N0": 95.0,
+          "is_formal_scenario": false,
+          "formal_event_window_start": "2026-08-26 08:00",
+          "formal_event_window_end": "2026-08-26 13:00",
+          "event_Qwater_peak_m3s": 202.650179,
+          "event_Qrain_peak_m3s": 0.0,
+          "event_Qmelt_peak_m3s": 202.650179,
+          "event_T_peak": 0.070032,
+          "event_T_peak_time": "2026-08-26 13:00:00",
+          "event_hours_T_ge_1": 0,
+          "event_valid_hours": 6,
+          "series_Qrain_peak_m3s": 1947.765274,
+          "rain_2026_Qrain_peak_m3s": 686.78612,
+          "rain_2026_runoff_sum_mm": 67.605074
+        }
+      }
+    },
+    "legacy_k": 11.19431,
+    "event_peak": 0.070032,
+    "event_T": 0.018814,
+    "event_first": null,
+    "api_quantiles": {
+      "q1": 3.574888,
+      "q3": 10.194567,
+      "source": "2021-2025 June-September observed training sample",
+      "training_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "training_months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "training_valid_hours": 14640,
+      "index_start": "2021-01-01 00:00:00",
+      "index_end": "2026-08-27 08:00:00"
+    },
+    "state_tuple": {
+      "fields": [
+        "G",
+        "H",
+        "Theta",
+        "F_ice",
+        "U_ice",
+        "C_ice"
+      ],
+      "ice_mechanics_unresolved": true,
+      "F_ice_definition": "附件4存在冰厚和坡度同时达到源区阈值的编目像元",
+      "source_thresholds": {
+        "h_thr_m": 50.0,
+        "sl_thr_deg": 25.0
+      },
+      "source_pixel_count": 335,
+      "target_catchment_G": "water_controlled",
+      "target_catchment_H_counts": {
+        "below_threshold": 33130,
+        "not_evaluable": 16415
+      },
+      "target_catchment_Theta_counts": {
+        "below_thermal_reference": 30504,
+        "not_evaluable": 17529,
+        "thermal_precondition": 1512
+      },
+      "gully_G_counts": {
+        "water_controlled": 78,
+        "gravity_unstable": 6
+      },
+      "gully_H_counts": {
+        "below_threshold": 44,
+        "hydraulic_candidate": 34,
+        "inapplicable": 6
+      },
+      "event_day_Theta": "below_thermal_reference",
+      "hourly_csv": "02_状态元组_逐小时.csv",
+      "objects_csv": "02_状态元组_逐沟道.csv"
+    },
+    "auc": 0.201288,
+    "reliability": {
+      "时间聚合": {
+        "3h": {
+          "T≥1的窗口数": 0,
+          "按峰值判据检出率": 0.0,
+          "按均值判据检出率": 0.0,
+          "峰值保持率(T_agg/T_max)": 0.722655,
+          "口径": "3h/6h须全窗有效，日>=20小时；同有效窗mean与max比",
+          "有效窗口数": 10583
+        },
+        "6h": {
+          "T≥1的窗口数": 0,
+          "按峰值判据检出率": 0.0,
+          "按均值判据检出率": 0.0,
+          "峰值保持率(T_agg/T_max)": 0.537989,
+          "口径": "3h/6h须全窗有效，日>=20小时；同有效窗mean与max比",
+          "有效窗口数": 4980
+        },
+        "日": {
+          "T≥1的窗口数": 0,
+          "按峰值判据检出率": 0.0,
+          "按均值判据检出率": 0.0,
+          "峰值保持率(T_agg/T_max)": 0.230808,
+          "口径": "3h/6h须全窗有效，日>=20小时；同有效窗mean与max比",
+          "有效窗口数": 1190
+        }
+      },
+      "提前量与报警日率": [
+        {
+          "阈值": 0.2,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.00084,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.3,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.00084,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.4,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.5,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.6,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.7,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.8,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        },
+        {
+          "阈值": 0.9,
+          "命中事件": false,
+          "提前量_h": null,
+          "全序列报警日率": 0.0,
+          "有效日数": 1190
+        }
+      ],
+      "报警率说明": "仅阈值超越日频度，无确证非灾日不能报真实伪警率",
+      "年际T峰值": {
+        "2021": 0.136392,
+        "2022": 0.195132,
+        "2023": 0.104129,
+        "2024": 0.540807,
+        "2025": 0.3976,
+        "2026": 0.235953
+      },
+      "空间分辨率敏感性": {
+        "1x": {
+          "像元_m": 28.901004,
+          "dy_m": 30.71104,
+          "dx_m": 27.197647,
+          "主沟像元数": 1321,
+          "主沟长度_km": 44.409652,
+          "主沟比降": 0.085484,
+          "起动单宽流量_m2s": 88.239322,
+          "口岸投影偏移_m": 5.186582,
+          "grid_center": {
+            "lon0": 85.189895,
+            "lat0": 28.564243,
+            "dlon": 0.000278,
+            "dlat": -0.000278,
+            "anchor": "pixel_center",
+            "raster_type": 1,
+            "preprocess_version": "qc-center-v4"
+          }
+        },
+        "2x": {
+          "像元_m": 57.802008,
+          "dy_m": 61.42208,
+          "dx_m": 54.395295,
+          "主沟像元数": 663,
+          "主沟长度_km": 45.028608,
+          "主沟比降": 0.084354,
+          "起动单宽流量_m2s": 89.99853,
+          "口岸投影偏移_m": 38.421858,
+          "grid_center": {
+            "lon0": 85.190034,
+            "lat0": 28.564105,
+            "dlon": 0.000555,
+            "dlat": -0.000555,
+            "anchor": "pixel_center",
+            "raster_type": 1,
+            "preprocess_version": "qc-center-v4"
+          }
+        },
+        "3x": {
+          "像元_m": 86.703012,
+          "dy_m": 92.13312,
+          "dx_m": 81.592942,
+          "主沟像元数": 435,
+          "主沟长度_km": 43.915668,
+          "主沟比降": 0.08618,
+          "起动单宽流量_m2s": 87.182737,
+          "口岸投影偏移_m": 63.063449,
+          "grid_center": {
+            "lon0": 85.190172,
+            "lat0": 28.563966,
+            "dlon": 0.000833,
+            "dlat": -0.000833,
+            "anchor": "pixel_center",
+            "raster_type": 1,
+            "preprocess_version": "qc-center-v4"
+          }
+        },
+        "4x": {
+          "像元_m": 115.604016,
+          "dy_m": 122.84416,
+          "dx_m": 108.790589,
+          "主沟像元数": 327,
+          "主沟长度_km": 44.173929,
+          "主沟比降": 0.084637,
+          "起动单宽流量_m2s": 89.553064,
+          "口岸投影偏移_m": 18.881053,
+          "grid_center": {
+            "lon0": 85.190311,
+            "lat0": 28.563827,
+            "dlon": 0.001111,
+            "dlat": -0.001111,
+            "anchor": "pixel_center",
+            "raster_type": 1,
+            "preprocess_version": "qc-center-v4"
+          }
+        },
+        "6x": {
+          "像元_m": 173.406024,
+          "dy_m": 184.26624,
+          "dx_m": 163.185884,
+          "主沟像元数": 209,
+          "主沟长度_km": 42.559512,
+          "主沟比降": 0.086502,
+          "起动单宽流量_m2s": 86.69896,
+          "口岸投影偏移_m": 83.413554,
+          "grid_center": {
+            "lon0": 85.190589,
+            "lat0": 28.563549,
+            "dlon": 0.001666,
+            "dlat": -0.001666,
+            "anchor": "pixel_center",
+            "raster_type": 1,
+            "preprocess_version": "qc-center-v4"
+          }
+        }
+      },
+      "基准主沟比降": 0.085484,
+      "基准起动单宽流量_m2s": 88.239322,
+      "集水区面积敏感性": {
+        "1x": {
+          "像元_m": 28.901004,
+          "集水区像元数": 975333,
+          "集水区面积_km2": 814.664476
+        },
+        "2x": {
+          "像元_m": 57.802008,
+          "集水区像元数": 243398,
+          "集水区面积_km2": 813.210275
+        },
+        "3x": {
+          "像元_m": 86.703012,
+          "集水区像元数": 108391,
+          "集水区面积_km2": 814.819836
+        },
+        "4x": {
+          "像元_m": 115.604016,
+          "集水区像元数": 60988,
+          "集水区面积_km2": 815.061228
+        },
+        "6x": {
+          "像元_m": 173.406024,
+          "集水区像元数": 27223,
+          "集水区面积_km2": 818.58606
+        }
+      },
+      "集水区面积_相对偏差": {
+        "2x": -0.001785,
+        "3x": 0.000191,
+        "4x": 0.000487,
+        "6x": 0.004814
+      },
+      "沟道迁移性": {
+        "历史沟道比降分位": {
+          "0.05": 0.107027,
+          "0.25": 0.174664,
+          "0.5": 0.260405,
+          "0.75": 0.433574,
+          "0.95": 0.584416
+        },
+        "口岸集水区主沟比降": 0.085484,
+        "在历史分布中的分位": 0.011905,
+        "历史沟道面积极值": [
+          0.031327,
+          112.671408
+        ]
+      }
+    }
+  },
+  "q3": {
+    "issue": "2026-08-26T08:00:00+08:00",
+    "tm": {
+      "status": "available",
+      "finite_n": 3000,
+      "lower_time": "2026-08-26 01:03:22.846963456+00:00",
+      "median_time": "2026-08-26 02:13:44.989810432+00:00",
+      "upper_time": "2026-08-26 02:57:51.046763776+00:00",
+      "width_hours": 1.9078332778666667,
+      "support_envelope_lower_time": "2026-08-26 01:00:00+00:00",
+      "support_envelope_upper_time": "2026-08-26 03:00:00+00:00",
+      "support_envelope_width_hours": 2.0,
+      "support_endpoint_95_lower_time": "2026-08-26 01:00:00+00:00",
+      "support_endpoint_95_upper_time": "2026-08-26 03:00:00+00:00",
+      "support_endpoint_95_width_hours": 2.0,
+      "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+    },
+    "ta": {
+      "status": "available",
+      "finite_n": 3000,
+      "lower_time": "2026-08-26 01:35:26.067790592+00:00",
+      "median_time": "2026-08-26 02:46:31.992000768+00:00",
+      "upper_time": "2026-08-26 03:31:59.409519616+00:00",
+      "width_hours": 1.942594924728889,
+      "support_envelope_lower_time": "2026-08-26 01:18:03.728130300+00:00",
+      "support_envelope_upper_time": "2026-08-26 03:45:13.333532579+00:00",
+      "support_envelope_width_hours": 2.452668167299722,
+      "support_endpoint_95_lower_time": "2026-08-26 01:26:42.679428096+00:00",
+      "support_endpoint_95_upper_time": "2026-08-26 03:45:13.170275840+00:00",
+      "support_endpoint_95_width_hours": 2.308469679928889,
+      "interval_semantics": "2.5% and 97.5% quantiles of one uniformly sampled event time within each paired half-open hourly support; conditional on finite members. The complete finite-member support envelope [min(L),max(U)] and the separately trimmed endpoint-quantile envelope are reported without being substituted for the event-time interval. The convex support envelope may contain gaps and is not the exact union of member supports."
+    },
+    "unconditional_status": "available",
+    "unconditional_status_by_target": {
+      "t_m": "available",
+      "t_a": "available"
+    },
+    "tm_state": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "tm_state_summary": {
+      "total_members": 3000,
+      "counts": {
+        "finite": 3000,
+        "no_event": 0,
+        "active_at_issue": 0,
+        "right_censored": 0,
+        "not_evaluable": 0
+      },
+      "p_finite": 1.0,
+      "p_no_event": 0.0,
+      "p_right_censored": 0.0,
+      "p_not_evaluable": 0.0,
+      "p_active_at_issue": 0.0,
+      "p_actionable": 1.0,
+      "state_sum_check": true
+    },
+    "ta_state": {
+      "finite": 3000,
+      "no_event": 0,
+      "active_at_issue_left_censored": 0,
+      "no_arrival": 0,
+      "right_censored": 0,
+      "not_evaluable": 0
+    },
+    "ta_state_summary": {
+      "total_members": 3000,
+      "counts": {
+        "finite": 3000,
+        "no_event": 0,
+        "active_at_issue_left_censored": 0,
+        "no_arrival": 0,
+        "right_censored": 0,
+        "not_evaluable": 0
+      },
+      "p_finite": 1.0,
+      "p_no_event": 0.0,
+      "p_right_censored": 0.0,
+      "p_not_evaluable": 0.0,
+      "p_active_at_issue_left_censored": 0.0,
+      "p_no_arrival": 0.0,
+      "p_actionable": 1.0,
+      "state_sum_check": true
+    },
+    "warning": {
+      "event_id": "port_hit_20260826_1030",
+      "target_definition": "true_debris_flow_warning",
+      "status": "not_estimable_release_model_unidentified",
+      "first_alarm_time": null,
+      "actionable_alarm_time": null,
+      "port_hit_time": "2026-08-26T10:30:00+08:00",
+      "lead_trigger_lower": null,
+      "lead_trigger_upper": null,
+      "lead_port": null,
+      "missed_alarm": null,
+      "late_alarm": null,
+      "reason": "melt advisory and instant-release transport do not determine actual release"
+    },
+    "coverage": {
+      "product_role": "auxiliary_instant_release_scenario_inclusion_only",
+      "true_t_trig": "not_estimable",
+      "actual_port_arrival": "not_estimable_release_model_unidentified",
+      "actual_port_coverage": null,
+      "port_hit_event": "1/1",
+      "port_hit_covered": true,
+      "evaluation_denominator": 1,
+      "interval_status": {
+        "t_m": "available",
+        "t_a": "available"
+      }
+    },
+    "distance": {
+      "schema_version": 1,
+      "status": "available",
+      "source_definition": [
+        85.533321,
+        28.284642
+      ],
+      "injection_definition": [
+        85.512636,
+        28.286779
+      ],
+      "port_proxy_definition": [
+        85.382651,
+        28.282613
+      ],
+      "route_metrics": {
+        "source_to_injection_horizontal_m": 2041.449140396932,
+        "injection_to_port_centerline_m": 20882.237,
+        "combined_route_m": 22923.686140396934,
+        "source_to_port_straight_m": 14771.715485293204,
+        "distances_not_added_across_metrics": true
+      },
+      "d8_port_arrival_s_range": [
+        1054.2262558361788,
+        2683.6684013949225
+      ],
+      "d8_final_runout_m_range": [
+        26045.494670325385,
+        26045.494670325385
+      ],
+      "right_censored": true,
+      "scope": "D8 network route and model-advected port proxy; not observed hazard extent or natural stopping distance"
+    },
+    "ifs": {
+      "path": "临时产物/外部数据/ifs_single_run_manifest.json",
+      "sha256": "dbfbe5262c26fc428179c5146b494b3ff7ef920683b8ec9911651732e002fc8b",
+      "actual_file_count": 4,
+      "source_runs": [
+        {
+          "file": "ifs_single_run_20260825T06_source.json",
+          "sha256": "435f7e393462efaadb33bd12fa40142e5ac19b66686389947c72837d0a9ca8ec",
+          "init_time_utc": "2026-08-25T06:00",
+          "available_at_utc": "2026-08-25 12:00:00+00:00",
+          "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+          "preissue_hour_available": true,
+          "valid_available_hours_including_preissue": 25,
+          "required_hours_including_preissue": 25,
+          "valid_future_hours": 24,
+          "required_future_hours": 24,
+          "trajectory_end_utc": "2026-09-01T04:00:00+00:00",
+          "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+          "time_support": {
+            "model_support": "[t,t+1h)",
+            "SW": "raw label t+1h; preceding-hour mean W/m2",
+            "P": "raw label t+1h; preceding-hour accumulation mm",
+            "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+            "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+            "nonlinearity_order": "hourly average first, then positive part and gate",
+            "missing_endpoint": "missing support; never a one-endpoint mean"
+          },
+          "all_future_hours_available": true
+        },
+        {
+          "file": "ifs_single_run_20260825T12_source.json",
+          "sha256": "2b72ed473fa517d1044ee87d0053d6f8b9f8c555bb9251392ca92d0eb6a9d29e",
+          "init_time_utc": "2026-08-25T12:00",
+          "available_at_utc": "2026-08-25 18:00:00+00:00",
+          "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+          "preissue_hour_available": true,
+          "valid_available_hours_including_preissue": 25,
+          "required_hours_including_preissue": 25,
+          "valid_future_hours": 24,
+          "required_future_hours": 24,
+          "trajectory_end_utc": "2026-09-01T10:00:00+00:00",
+          "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+          "time_support": {
+            "model_support": "[t,t+1h)",
+            "SW": "raw label t+1h; preceding-hour mean W/m2",
+            "P": "raw label t+1h; preceding-hour accumulation mm",
+            "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+            "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+            "nonlinearity_order": "hourly average first, then positive part and gate",
+            "missing_endpoint": "missing support; never a one-endpoint mean"
+          },
+          "all_future_hours_available": true
+        },
+        {
+          "file": "ifs_single_run_20260825T18_source.json",
+          "sha256": "0cb4936db76f4e5c2c5bbe53fd44c00ca1515cc97a5803c7507dbc77a2212a98",
+          "init_time_utc": "2026-08-25T18:00",
+          "available_at_utc": "2026-08-26 00:00:00+00:00",
+          "preissue_hour_utc": "2026-08-25T23:00:00+00:00",
+          "preissue_hour_available": true,
+          "valid_available_hours_including_preissue": 25,
+          "required_hours_including_preissue": 25,
+          "valid_future_hours": 24,
+          "required_future_hours": 24,
+          "trajectory_end_utc": "2026-09-01T16:00:00+00:00",
+          "trajectory_end_semantics": "last complete model-support start; raw final endpoint minus one hour",
+          "time_support": {
+            "model_support": "[t,t+1h)",
+            "SW": "raw label t+1h; preceding-hour mean W/m2",
+            "P": "raw label t+1h; preceding-hour accumulation mm",
+            "T": "trapezoidal mean of instantaneous raw t and t+1h degC",
+            "RH": "trapezoidal mean of instantaneous raw t and t+1h percent",
+            "nonlinearity_order": "hourly average first, then positive part and gate",
+            "missing_endpoint": "missing support; never a one-endpoint mean"
+          },
+          "all_future_hours_available": true
+        }
+      ],
+      "port_context_not_used_in_main_chain": [
+        "ifs_single_run_20260825T18_port.json"
+      ]
+    },
+    "fit": {
+      "status": "fitted",
+      "training_rows": 11986,
+      "training_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "training_months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "station_support_assumption": {
+        "MET": "point",
+        "RADM": "start_mean",
+        "SOIL": "start_mean",
+        "FLUX": "start_mean",
+        "metadata_verified": false,
+        "target_rebuilt_after_alignment": true
+      },
+      "source_elevation_m": 5109.653049238576,
+      "station_elevation_m": 3980.0,
+      "temperature_offset_C": -6.7779182954314585,
+      "beta": [
+        -119.02522837558186,
+        -5.852610585837479,
+        0.47057987040550875,
+        1.7154462201653589
+      ],
+      "coef_names": [
+        "intercept",
+        "positive_source_temperature",
+        "positive_shortwave",
+        "relative_humidity"
+      ],
+      "residual_sigma_W_m2": 41.015695032482256,
+      "residual_marginal_sigma_W_m2": 44.71557734199002,
+      "residual_ar1_phi": 0.4003283571195287,
+      "residual_adjacent_pair_n": 11772,
+      "residual_first_step": "zero-mean stationary AR(1) state with variance sigma^2/(1-phi^2)",
+      "residual_innovation": "N(0, sigma^2), including the first innovation",
+      "residual_mean_W_m2": -1.9592151843631743e-13,
+      "residual_quantiles_W_m2": [
+        -101.47359489545542,
+        0.4696926907510033,
+        95.8089549608618
+      ],
+      "coefficient_resampling": "5-year block bootstrap with replacement; 1000 draws, seed fixed",
+      "coefficient_draws_n": 1000
+    }
+  },
+  "q4": {
+    "base_arrival_s": 1965.9961740103686,
+    "base_arrival_min": 32.766602900172806,
+    "runout_L_m": 26045.494670325385,
+    "runout_right": true,
+    "termination_reason": "domain_censor",
+    "loop_termination_reason": "stationary_after_injection",
+    "natural_stop": false,
+    "domain_censor": true,
+    "critical_depth_slope_product_m": 0.04680025213635838,
+    "critical_depth_port_m": 2.3400126068179192,
+    "domain_front_max": 26045.494670325385,
+    "configs": 16,
+    "config_arrival_min": [
+      32.766602900172806,
+      44.727806689915376,
+      27.439926721817415,
+      17.570437597269645,
+      28.307732364159815,
+      36.98397723575808,
+      32.75290183151813,
+      32.79043676445067,
+      32.776846238587865,
+      32.75975762206844,
+      37.47757910516457,
+      28.8014678185898,
+      26.21962589253309,
+      37.72693810878209,
+      32.76317039952499,
+      32.77003482636441
+    ],
+    "max_depth": 13.312720844094919,
+    "final_max_depth": 2.3398039468935137,
+    "peak_port": 10.08530186014262,
+    "final_port": 2.298002229316345,
+    "peak_v": 6.601474228094511,
+    "closure": 2.075820191829099e-15,
+    "cfl": 0.18828135897640266,
+    "one_d_base_arrival_s": null,
+    "one_d_runout_km": 9.336769,
+    "one_d_reached_outlet": 0
+  }
+}

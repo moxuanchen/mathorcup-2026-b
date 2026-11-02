@@ -1,0 +1,37 @@
+Supplementary Information for
+Precursor of a powerful large glacier landslide causing tsunami floods in the 26 August 2026 Nepal disaster
+Tianchu Wanga, Shinji Sassab*, Wentao Yanga*, Rushi Lia, Chong Xuc, Wenwen Qic
+a School of Soil and Water Conservation, Beijing Forestry University, Beijing 100083, China
+b National Institute of Maritime, Port and Aviation Technology, 3-1-1 Nagase, Yokosuka, 239-0826, Japan
+c National Institute of Natural Hazards, Ministry of Emergency Management of China, Beijing, 100085, China
+*Corresponding Author: Shinji Sassa (sassa@p.mpat.go.jp) and Wentao Yang (yang_wentao@bjfu.edu.cn)
+Data used in enhanced POT
+Surface deformation was reconstructed using an enhanced multitemporal pixel offset tracking (POT) approach (Zhang et al., 2022; Yang et al., 2026a & 2026b) based on Sentinel-2 optical imagery. A total of 145 Sentinel-2 images acquired between 10 February 2017 and 24 August 2026 were obtained from Google Earth Engine (GEE). The red band (Band 4, B4), with a spatial resolution of 10 m, was used for displacement tracking. Basic image coregistration was performed before offset tracking to minimize residual geometric misalignment between individual images. The use of the Sentinel-2 red band for optical displacement measurements follows previous applications of POT to landslide deformation monitoring (Yang, 2020; Yang et al., 2020; Yang et al., 2026; Liu et al., 2024). Initially, we used 62 Sentinel-2 images with larger spatial extent to derive surface deformation (Supplementary Figure 1). As there are clouds in larger spatial extent, we further used a smaller area with 159 Sentinel-2 images to recalculate deformation time series (Supplementary Figure 2).
+
+Supplementary Figure 1. 62 Sentinel-2 images from 2017 to 2026 were used to derive surface deformation result in Figure 2b.
+Table S1. Acquisition dates of the long-term Sentinel-2 dataset (62 scenes, 2017.02–2026.03).
+
+Supplementary Figure 2. 159 Sentinel-2 images from 2024 to August 2026 were used to derive dense surface deformation in Figure 2a.
+
+
+
+Table S2. Acquisition dates of the high-cadence Sentinel-2 dataset (159 scenes, 2024.01–2026.08).
+
+Deriving time series deformation
+Pairwise surface displacements were derived using the frequency correlator implemented in the Co-registration of Optically Sensed Images and Correlation (COSI-Corr) software (Leprince et al., 2007). The correlation parameters were set to an initial window size of 64 × 64 pixels, a final window size of 32 × 32 pixels, a step size of 4 × 4 pixels, two robustness iterations, and a signal-to-noise ratio threshold of 0.9. The 64–32-pixel correlation-window configuration is consistent with that used by Yang (2020) for Sentinel-2-based slope deformation measurements.
+To construct a temporally redundant network for cumulative deformation inversion, all Sentinel-2 acquisitions separated by more than 1 day and less than 370 days were paired. Pairwise east–west and north–south displacements were first obtained using COSI-Corr and subsequently integrated into cumulative displacement time series using a multitemporal POT inversion framework. The time-series inversion strategy follows the optical deformation-field inversion framework of Bontemps et al. (2018) and its subsequent application to long-term landslide deformation monitoring by Liu et al. (2024). The redundant image-pair network allows multiple independent observations to constrain displacement at each acquisition epoch, thereby reducing the influence of errors associated with individual image pairs. Because the cumulative displacement estimates at the temporal boundaries were associated with relatively large uncertainties, the results corresponding to the first and last Sentinel-2 acquisitions were excluded when plotting the cumulative deformation time series.
+An independent stable area outside the actively deforming regions was used to evaluate the uncertainty of the POT-derived cumulative displacement. Apparent displacement within the stable area was assumed to represent residual uncertainties associated primarily with image coregistration and image correlation rather than actual ground motion. The dispersion of displacement measurements within this stable area was therefore used to characterize the uncertainty of the reconstructed deformation time series, following previous Sentinel-2 POT applications (Yang, 2020; Liu et al., 2024).
+Producing deformation time series
+For glacier deformation, all valid cumulative displacement measurements within a predefined glacier measurement region were extracted for each observation epoch. Their mean value was used to represent the overall cumulative glacier displacement. The first quartile (Q1) and third quartile (Q3) of the spatial displacement distribution were additionally calculated, and the interquartile range (Q1–Q3) was plotted as a shaded envelope around the mean displacement curve to characterize spatial variability within the glacier.
+Use of optical images to map hazard-affected area
+Post-event geomorphic changes were mapped using Sentinel-2 and Landsat 9 optical imagery. Landsat 9 panchromatic imagery (Band 8) was primarily used for visual interpretation and manual delineation of the post-event collapse area because of its higher spatial resolution than the Landsat multispectral bands. The debris-flow inundation extent was delineated through visual interpretation of complementary Sentinel-2 and Landsat 9 imagery based on changes in surface morphology, texture, and spectral characteristics between the affected area and the surrounding undisturbed terrain.
+References
+Bontemps, N., Lacroix, P., and Doin, M.-P. (2018). Inversion of deformation fields time-series from optical images, and application to the long term kinematics of slow-moving landslides in Peru. Remote Sensing of Environment, 210, 144–158. https://doi.org/10.1016/j.rse.2018.02.023
+Leprince, S., Barbot, S., Ayoub, F., and Avouac, J.-P. (2007). Automatic and precise orthorectification, coregistration, and subpixel correlation of satellite images, application to ground deformation measurements. IEEE Transactions on Geoscience and Remote Sensing, 45(6), 1529–1558. https://doi.org/10.1109/TGRS.2006.888937
+Liu, M., Yang, W., Xu, C., Yang, Y., Taylor, L., and Shi, P. (2024). Impact of precipitation on Beishan landslide deformation from 1986 to 2023. Frontiers in Earth Science, 11, 1304969. https://doi.org/10.3389/feart.2023.1304969
+Yang, W. (2020). Selecting the best image pairs to measure slope deformation. Sensors, 20(17), 4721. https://doi.org/10.3390/s20174721
+Yang, W., Wang, Y., Wang, Y., Ma, C., and Ma, Y. (2020). Retrospective deformation of the Baige landslide using optical remote sensing images. Landslides, 17(3), 659–668. https://doi.org/10.1007/s10346-019-01311-7
+Yang, W., Tian, J., Wang, Y., Fang, J., Qi, W., and Xu, C. (2026a). Anomalous summer warming drove the destabilization of the 2021 Chamoli ice-rock avalanche. Landslides, 23(3), 871–881. https://doi.org/10.1007/s10346-025-02634-4
+Yang W, Sassa S, Qi W, Wang T. (2026b) Enhanced Optical Pixel Offset Tracking (POT) for Early Warning of Landslides in cryospheric mountains. Thematic Issue on Landslide Science and Practice for Safe and Resilient Communities, Progress in Landslide Research and Technology 5(2) in press.
+Zhang D, Yang W, Xu C, Ye T, Liu Q. (2022). Extracting deforming landslides from time-series Sentinel-2 imagery. Landslides, 19(11): 2761-2774. https://doi.org/10.1007/s10346-022-01949-w
+
