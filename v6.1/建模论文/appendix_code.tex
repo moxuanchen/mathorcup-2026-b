@@ -1,0 +1,105 @@
+\subsection*{主流程}
+\noindent\textbf{\texttt{run\_all.py}}\quad 全流程入口、步骤顺序与断点续跑\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/run_all.py}
+\noindent\textbf{\texttt{prepare\_inputs.py}}\quad 附件清点、解压与输入准备\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/prepare_inputs.py}
+
+\subsection*{公共库}
+\noindent\textbf{\texttt{mmlib/\_\_init\_\_.py}}\quad 公共库入口\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/__init__.py}
+\noindent\textbf{\texttt{mmlib/finite\_inventory.py}}\quad 有限库存团块动力\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/finite_inventory.py}
+\noindent\textbf{\texttt{mmlib/geodesy.py}}\quad 坐标与距离换算\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/geodesy.py}
+\noindent\textbf{\texttt{mmlib/glacier\_masks.py}}\quad 冰川编目掩膜与面积交比\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/glacier_masks.py}
+\noindent\textbf{\texttt{mmlib/hydro.py}}\quad 水文过程与SCS-CN径流\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/hydro.py}
+\noindent\textbf{\texttt{mmlib/interval\_metrics.py}}\quad 区间与覆盖指标\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/interval_metrics.py}
+\noindent\textbf{\texttt{mmlib/io\_data.py}}\quad 数据读写与校验记录\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/io_data.py}
+\noindent\textbf{\texttt{mmlib/meteo.py}}\quad 气象产品读取与时间对齐\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/meteo.py}
+\noindent\textbf{\texttt{mmlib/ranking.py}}\quad 稳健异常与关联排序\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/ranking.py}
+\noindent\textbf{\texttt{mmlib/terrain.py}}\quad 地形、D8路由与断面\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/terrain.py}
+\noindent\textbf{\texttt{mmlib/terrain\_prep.py}}\quad DEM填洼与网格准备\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/terrain_prep.py}
+\noindent\textbf{\texttt{mmlib/trigger.py}}\quad 床面力平衡与触发判别\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/mmlib/trigger.py}
+
+\subsection*{问题一}
+\noindent\textbf{\texttt{step01\_boundary\_layer.py}}\quad 边界层结构与静力订正\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step01_boundary_layer.py}
+\noindent\textbf{\texttt{step01b\_preimpact.py}}\quad 冲击前窗口异常\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step01b_preimpact.py}
+\noindent\textbf{\texttt{step01c\_unified\_association.py}}\quad 31项统一候选关联与去冗余\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step01c_unified_association.py}
+
+\subsection*{问题二}
+\noindent\textbf{\texttt{step02\_trigger\_threshold.py}}\quad 沟道临界条件与机械状态\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step02_trigger_threshold.py}
+\noindent\textbf{\texttt{step02b\_spatial.py}}\quad 空间像元对照\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step02b_spatial.py}
+\noindent\textbf{\texttt{step02c\_spatial\_matched.py}}\quad 共同域空间隔离\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step02c_spatial_matched.py}
+\noindent\textbf{\texttt{step02\_figures.py}}\quad 问题二图件\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step02_figures.py}
+
+\subsection*{问题三}
+\noindent\textbf{\texttt{step03\_forecast.py}}\quad 3000成员前向预报\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step03_forecast.py}
+\noindent\textbf{\texttt{step03\_time\_support\_sensitivity.py}}\quad 时间支持敏感性\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step03_time_support_sensitivity.py}
+\noindent\textbf{\texttt{step03\_figures.py}}\quad 问题三图件\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step03_figures.py}
+
+\subsection*{问题四}
+\noindent\textbf{\texttt{step04\_simulation.py}}\quad 一维纵剖面仿真\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04_simulation.py}
+\noindent\textbf{\texttt{step04b\_sim2d.py}}\quad D8网络路由与质量收支\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04b_sim2d.py}
+\noindent\textbf{\texttt{step04b\_map.py}}\quad 到达时间与停积制图\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04b_map.py}
+\noindent\textbf{\texttt{step04c\_dynamics.py}}\quad 有限库存与分段动力\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04c_dynamics.py}
+\noindent\textbf{\texttt{step04\_figures.py}}\quad 问题四图件\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04_figures.py}
+\noindent\textbf{\texttt{step04b\_figures.py}}\quad D8图件\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step04b_figures.py}
+
+\subsection*{图表生成}
+\noindent\textbf{\texttt{step05\_figures.py}}\quad 论文图件生成\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step05_figures.py}
+
+\subsection*{数据整理与校验}
+\noindent\textbf{\texttt{step00\_data\_inventory.py}}\quad 附件清单与元数据\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step00_data_inventory.py}
+\noindent\textbf{\texttt{step06\_data\_audit.py}}\quad 数据可用性核查\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/step06_data_audit.py}
+\noindent\textbf{\texttt{archive\_external.py}}\quad 外部响应归档\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/archive_external.py}
+\noindent\textbf{\texttt{select\_paper\_values.py}}\quad 论文取值汇总\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/select_paper_values.py}
+\noindent\textbf{\texttt{validate\_v50.py}}\quad 确定性结果验收\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/validate_v50.py}
+\noindent\textbf{\texttt{export\_summary.py}}\quad 汇总结果导出\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/export_summary.py}
+
+\subsection*{测试}
+\noindent\textbf{\texttt{test01b\_hydrostatic.py}}\quad 静力层压测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test01b_hydrostatic.py}
+\noindent\textbf{\texttt{test01b\_preimpact.py}}\quad 冲击前窗口测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test01b_preimpact.py}
+\noindent\textbf{\texttt{test02c03\_protocols.py}}\quad 空间与预报协议测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test02c03_protocols.py}
+\noindent\textbf{\texttt{test04c\_dynamics.py}}\quad 有限库存动力测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test04c_dynamics.py}
+\noindent\textbf{\texttt{test\_scs\_event\_runoff.py}}\quad SCS-CN事件径流测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test_scs_event_runoff.py}
+\noindent\textbf{\texttt{test\_time\_support.py}}\quad 时间支持测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test_time_support.py}
+\noindent\textbf{\texttt{test\_v32\_data\_fixes.py}}\quad 数据修复回归测试\par\nopagebreak
+\lstinputlisting[language=Python]{代码清单/test_v32_data_fixes.py}

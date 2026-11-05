@@ -124,7 +124,6 @@ def main() -> int:
         })
     result = {
         "schema_version": 2,
-        "version": "v5.2",
         "network_access": "none during this run; hashes recomputed from archived responses",
         "sources": sources,
         "documentation": documentation,

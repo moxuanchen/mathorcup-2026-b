@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "enhanced-modeling-repair",
+  "contest": "mathorcup",
+  "language": "zh",
+  "network_policy": "offline_no_web_search",
+  "template_authority": "configured_local_template_unless_direct_user_override",
+  "version": "v6.1",
+  "frozen_parent": null,
+  "folder": "v6.1",
+  "released_at": "2026-11-05",
+  "release_status": "released",
+  "release_note": "内容与图件优化版，由 v6.0 直接替换定版为 v6.1。新增研究区与链式几何图、问题一完整31项排序附录图、问题二I-D包络图和问题四过程快照图；主图统一为青绿（计算）/琥珀（锚点或临界）/灰（不可识别）/红（右删失）四色语法，问题三改为条件区间—支持包络—不可识别行三层结构；重绘问题四沿程演进为纵剖面与过程量双栏，删除图内重复标题；四问各加一条结果卡片，讨论节新增改变负结果所需最小观测表，绪论增加逐问速览。全部数值沿用 v6.0 结果数据，未重新计算，仅图件刻度、标注和版面改变。按用户要求，旧 v6.0 目录已删除，本目录为唯一发布基线。"
+}
