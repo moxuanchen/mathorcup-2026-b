@@ -15,3 +15,14 @@
 *.xdv
 *.fls
 *.fdb_latexmk
+
+# Agent and assistant configuration stays local.
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.mcp.json
+.ai-memory.toml
+.cursorrules
+.cursor/
+.claude/
+.github/copilot-instructions.md
